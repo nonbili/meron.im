@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Giải phóng dung lượng hộp thư với Thư mục cục bộ"
+publishedAt: "2026-10-28"
+readingTime: "3 phút đọc"
+summary: "Chuyển thư cũ khỏi máy chủ về máy tính, sao lưu kho lưu trữ của bạn và theo dõi các sự kiện cùng công việc sắp tới ngay cạnh hộp thư đến."
+highlights: ["Thư mục cục bộ trên máy tính kèm bản sao lưu kho lưu trữ được mã hóa bằng cụm mật khẩu","Tạo và đổi tên thư mục trên máy chủ cũng như trong Thư mục cục bộ","Bảng lịch bên cạnh với lịch tháng thu nhỏ và lịch trình 7 ngày","Lời nhắc lịch và công việc với tùy chọn giờ đến hạn cho công việc","Cuộn trang thư bằng bàn phím (Space / Shift+Space) và chuyển chuỗi thư bằng Alt+Mũi tên"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Phát hành · v0.4.8"
+platformsSubtitle: "Thư mục cục bộ, bảng lịch bên cạnh và phím tắt đọc thư: máy tính 0.4.8. Quản lý thư mục và lời nhắc: cũng có trên iOS và Android 0.4.7."
+---
+
+<PostSection>
+
+Hộp thư đầy không có nghĩa là bạn phải xóa đi những email muốn giữ lại. Meron 0.4.8 bổ sung Thư mục cục bộ trên máy tính để bạn chuyển biên lai, dự án đã hoàn thành và các cuộc trò chuyện cũ về máy tính của mình. Bảng lịch bên cạnh mới cũng giúp bạn nắm bắt công việc sắp tới ngay trong lúc đọc thư.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Thư mục cục bộ</Badge>
+
+## Lưu giữ thư trên máy tính của bạn, tách khỏi máy chủ
+
+Giải phóng dung lượng cho hộp thư IMAP hoặc lưu lại thư từ trước khi đóng tài khoản. Thư mục cục bộ mang đến một kho lưu trữ ngoại tuyến ngay trên máy tính mà bạn có thể duyệt xem và tìm kiếm trong Meron.
+
+Thêm **Thư mục cục bộ** tại mục Cài đặt → Thư mục cục bộ. Tính năng này bắt đầu với thư mục Lưu trữ (Archive) và xuất hiện cùng các tài khoản email của bạn trên thanh điều hướng, bảng Kanban và tìm kiếm. Thư lưu tại đây sẽ nằm lại trên chính máy tính đó.
+
+- **Di chuyển hoặc sao chép từ bất kỳ tài khoản nào:** Kéo thẻ vào cột thư mục cục bộ trên bảng Kanban hoặc dùng Di chuyển tới… và Sao chép tới… từ menu của bất kỳ chuỗi thư nào. Khi di chuyển chuỗi thư, Meron sẽ xác minh mọi bức thư đã được lưu an toàn trên ổ đĩa trước khi chuyển bản sao trên máy chủ vào Thùng rác.
+- **Tổ chức kho lưu trữ cục bộ:** Tạo, đổi tên và lồng các thư mục con bên trong Thư mục cục bộ để sắp xếp kho lưu trữ ngoại tuyến theo ý muốn.
+- **Sao lưu kho lưu trữ được mã hóa bằng cụm mật khẩu:** Sau khi bạn xóa bản sao trên máy chủ, kho lưu trữ cục bộ có thể là bản sao duy nhất của những email đó. Hãy dùng Cài đặt → Thư mục cục bộ để xuất bản sao lưu và cất giữ ở một nơi tách biệt với máy tính. Bản sao lưu xuất ra được mã hóa bằng cụm mật khẩu và có thể khôi phục trong Meron trên một máy tính khác.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Cài đặt Meron hiển thị dung lượng sử dụng của Thư mục cục bộ cùng nút Xuất bản sao lưu và Khôi phục bản sao lưu" caption="Cài đặt → Thư mục cục bộ hiển thị dung lượng lưu trữ cục bộ và cho phép xuất hoặc khôi phục các bản sao lưu đã mã hóa bằng cụm mật khẩu." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Sắp xếp kho lưu trữ</Badge>
+
+## Đặt thư cũ ở nơi bạn có thể tìm thấy ngay
+
+Tạo thư mục riêng cho từng dự án, khách hàng hoặc từng năm mà không cần rời Meron. Bản máy tính 0.4.8 hỗ trợ tạo và đổi tên thư mục trên máy chủ IMAP và trong Thư mục cục bộ; bản iOS và Android 0.4.7 cũng mang các thao tác tương tự lên thư mục máy chủ.
+
+- **Tạo thư mục ở mọi nơi:** Tạo thư mục và thư mục con lồng nhau trực tiếp từ menu hộp thư và menu cột Kanban.
+- **Đổi tên thư mục tại chỗ:** Các cột Kanban và lối tắt chuyển thư gần đây sẽ tự động cập nhật theo tên thư mục mới.
+- **Tìm thư mục đích nhanh chóng:** Di chuyển tới… và Sao chép tới… nhóm các đích đến theo tài khoản và giữ những thư mục dùng gần đây ở trên cùng. Trên máy tính, Thư mục cục bộ xuất hiện song song với các tài khoản khác của bạn.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Menu ngữ cảnh của chuỗi thư hiển thị các thư mục gần đây ở trên cùng và menu con Di chuyển tới theo từng tài khoản đang mở rộng Thư mục cục bộ" caption="Menu Di chuyển tới và Sao chép tới đặt các đích đến gần đây ở đầu danh sách và nhóm mọi tài khoản—bao gồm cả Thư mục cục bộ—thành các menu con gọn gàng." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Lịch &amp; Lời nhắc</Badge>
+
+## Theo dõi công việc sắp tới ngay cạnh hộp thư đến
+
+Việc kiểm tra xem thứ Năm bạn có rảnh không chẳng nên làm gián đoạn bức thư bạn đang đọc. Trên máy tính, Lịch giờ đây nằm cạnh Công việc ở bảng bên phải.
+
+Xem lưới lịch tháng gọn gàng cùng lịch trình 7 ngày liên tiếp gồm các sự kiện và công việc đến hạn ngay bên cạnh hộp thư hoặc bảng Kanban. Mở rộng sang lịch tháng đầy đủ khi bạn cần lên kế hoạch xa hơn. Lời nhắc sự kiện và công việc hiện có trên bản máy tính 0.4.8 và di động 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Bảng Kanban của Meron đặt cạnh bảng Lịch mới ở bên phải hiển thị lưới tháng thu nhỏ và lịch trình 7 ngày" caption="Bảng Lịch neo bên cạnh bảng Kanban hoặc hộp thư với lịch tháng thu nhỏ và lịch trình 7 ngày cho các sự kiện và công việc đến hạn." width={1280} height={820} />
+
+- **Tùy chỉnh thông báo sự kiện:** Đặt thời gian nhắc mặc định cho sự kiện có giờ và sự kiện cả ngày trong Cài đặt, hoặc tùy chỉnh tối đa hai lời nhắc cho mỗi sự kiện.
+- **Giờ đến hạn của công việc:** Đặt thêm giờ tùy chọn bên cạnh ngày đến hạn của công việc để nhận lời nhắc đúng lúc. Công việc chỉ có ngày sẽ nhắc bạn vào 9:00 sáng theo giờ địa phương.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Hộp thoại chi tiết sự kiện hiển thị URL cuộc họp có thể nhấp kèm nút sao chép, menu thả xuống chọn Lời nhắc thứ nhất và thứ hai cùng ghi chú" caption="Cấu hình tối đa hai lời nhắc cho mỗi sự kiện, mở hoặc sao chép liên kết họp chỉ với một cú nhấp và quay lại ngay email lời mời gốc." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Phím tắt đọc thư</Badge>
+
+## Đọc thư liền mạch từ bàn phím
+
+Trên máy tính, cuộn từng trang của bức thư dài bằng Space hoặc Shift+Space, sau đó chuyển sang cuộc trò chuyện tiếp theo mà không cần chạm vào chuột.
+
+<KeyboardShortcuts title="Phím tắt đọc thư trên máy tính" items={[{"label":"Cuộn thư xuống một trang","keys":["Space"]},{"label":"Cuộn thư lên một trang","keys":["Shift + Space"]},{"label":"Chuỗi thư tiếp theo","keys":["J","Alt + ↓"]},{"label":"Chuỗi thư trước đó","keys":["K","Alt + ↑"]}]} or="hoặc" note="Alt+↓ và Alt+↑ vẫn hoạt động ngay cả khi đang đặt tiêu điểm trong nội dung thư." />
+
+</PostSection>
+
+<ReleaseCTA heading="Trải nghiệm Meron 0.4.8" text="Tải bản dựng mới nhất để bắt đầu kho lưu trữ của bạn. Meron miễn phí và mã nguồn mở, có ứng dụng cho macOS, Windows, Linux, iOS và Android. Nhật ký thay đổi đầy đủ liệt kê các cập nhật còn lại trên máy tính và di động." download="Tải Meron" changelog="Xem nhật ký thay đổi" github="Bản phát hành GitHub" />

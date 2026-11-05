@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Salvestatud otsingute muutmine Kanbani veergudeks"
+publishedAt: "2026-10-22"
+readingTime: "4 min lugemist"
+summary: "Kujunda oma tahvel olulisimate kirjade ümber: muuda Gmaili stiilis otsingud reaalajas Kanbani veergudeks. Lisaks kohalik kalender, kutsetele vastamine otse kirjalõimes ja kirjade liigutamine kontode vahel."
+highlights: ["Salvestatud otsingute Kanbani veerud ja Gmaili stiilis otsinguoperaatorid","Kohalik kalender sündmuste, vastuvõetud kutsete ja tähtaegadega","Interaktiivsed kutsekaardid valikutega Nõustu, Võib-olla ja Keeldu","Kirjalõimede liigutamine kontode vahel ja hiljutiste kaustade otseteed","Kirjasiseste piltide salvestamine ja kopeerimine kirjadest ja galeriist"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Väljalase · v0.4.7"
+platformsSubtitle: "Töölauaversioon 0.4.7 · iOS ja Android 0.4.6"
+---
+
+<PostSection>
+
+Võtmeklientide lugemata kirjad, eelmise kuu arved, vastust ootavad tärniga kirjalõimed: salvestatud otsinguveergudega leiab iga teema oma kindla koha Kanbani tahvlil. Salvesta otsing korra ning veerg püsib kirjade saabudes alati ajakohane.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban ja otsing</Badge>
+
+## Muuda otsing elavaks veeruks
+
+Kaust seob kirjalõime vaid ühe kindla kohaga. Salvestatud otsingud pakuvad paindlikke vaateid: saatja, kuupäeva, lugemisoleku või mistahes sobiva kombinatsiooni järgi.
+
+Alusta otsingut tuttavate **Gmaili stiilis operaatoritega** või visuaalse otsingukoostajaga ning vali *Salvesta otsing veeruna*. Sobivad kirjalõimed kuvatakse reaalajas veerus, mille päise all on päring igal ajal muudetav.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Toetatud otsinguoperaatorid
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Koosta otsing operaatoreid käsitsi tippimata:**  Ava otsinguvalikud, et filtreerida saatja, saaja, teema, märksõnade, kuupäevavahemiku või sihtveeru järgi.
+- **Kitsenda tahvlit salvestatud otsinguid kaotamata:**  Üle kogu tahvli tehtav otsing lisab igale salvestatud veerule lisafiltri, säilitades algse otsingupäringu.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Otsinguvalikute aken filtrite ja otsingu Kanbani veeruna salvestamise võimalusega" caption="Koosta otsing ja salvesta see oma tahvlile veeruna." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalender ja kutsed</Badge>
+
+## Kohalik kalender ja interaktiivsed kutsekaardid
+
+Kalendrikutsed kuvatakse nüüd kaartidena otse vestluse sees, näidates toimumisaega kohalikus ajavööndis, asukohta, korraldajat ja osalejate vastuseid. Saate kutsele vastata kirjalõimest lahkumata.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Kalendrikutse kaart vestlusvaates nuppudega Nõustu, Võib-olla ja Keeldu" caption="Vaadake sündmuse üksikasju ja vastake otse vestluses." width={1280} height={820} />
+
+- **Vali Nõustu, Võib-olla või Keeldu otse vestluses:**  Sinu vastus saadetakse korraldajale ja salvestatakse Meronis.
+- **Korraldaja uuenduste automaatne rakendamine:**  Meron võtab saabuvad ajamuudatused ja tühistamised automaatselt arvesse, sealhulgas korduvate koosolekute üksikute kordade puhul.
+- **Igakuine kohalik kalender:**  Lülita kalender sätetest sisse, et näha isiklikke sündmusi, vastuvõetud kutseid ja ülesannete tähtaegu ühes kohas. Loo terve päeva, kellaajalisi või korduvaid sündmusi ja liigu kutselt ühe klõpsuga tagasi meililõimele.
+
+Sinu kalender salvestatakse seadmesse kohapeal ja see sisaldub Meroni krüpteeritud varukoopiates.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Meroni igakuine kalendrivaade plaanitud sündmuste ja ülesannetega" caption="Isiklikud sündmused, vastuvõetud kutsed ja tähtaegadega ülesanded ühes vaates." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Kirjade korrastamine</Badge>
+
+## Liigutamine kontode vahel ja hiljutiste kaustade otseteed
+
+Soovid arhiveerida kirjalõime teise kontosse? Nüüd saad **liigutada kirjalõimi erinevate meilikontode vahel** nii arvutis kui mobiilis — lohistades kaarti Kanbani tahvlil kontode veergude vahel või valides *Liiguta kausta…* kirjalõime menüüst.
+
+Meron kopeerib kirjad sihtkohta ja kontrollib eduka ülekande enne originaalide prügikasti saatmist.
+
+Menüüd *Liiguta kausta* ja *Kopeeri kausta* kuvavad nüüd kõige üleval **hiljutiste sihtkaustade otseteid**, tehes tavapäraste kaustade valimise tunduvalt kiiremaks.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Kirjalõime menüü toiminguga Liiguta kausta... ja sihtkaustade valikuga" caption="Liiguta kirjalõimed teisele kontole või vali hiljutine sihtkaust." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Meedia ja viimistlus</Badge>
+
+## Kirjasiseste piltide kopeerimine/salvestamine ning töölaua täiustused
+
+Töölauaversioon sai mitmeid igapäevaseid mugavusuuendusi:
+
+- **Salvesta ja kopeeri kirjasiseseid pilte:**  Klõpsa kirjas oleval pildil parema hiireklahviga või ava see meediagaleriis, et see mugavalt kettale salvestada või lõikelauale kopeerida.
+- **Puhtamad menüüd ja dialoogid:**  Menüüd ja dialoogid alluvad sujuvamalt klaviatuurile, alammenüüde esiletõst on selgem ja värelust on vähem.
+- **Selgemad veateated ja rohkem tõlkeid:**  Nurjunud liigutamise või kopeerimise korral antakse täpsemat teavet põhjuse kohta. Mobiilirakendus sai laiendatud tõlked kõigis 19 toetatud keeles.
+
+</PostSection>
+
+<ReleaseCTA heading="Proovi Meron 0.4.7 versiooni" text="Meron on tasuta, avatud lähtekoodiga ja kohalikule privaatsusele suunatud e-posti klient platvormidele macOS, Windows, Linux, iOS ja Android. Laadi alla uusim versioon või tutvu muudatuste nimekirjaga." download="Laadi alla Meron" changelog="Vaata muudatuste logi" github="GitHubi väljalasked" />

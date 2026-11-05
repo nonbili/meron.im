@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Tee kirjadele ruumi kohalike kaustadega"
+publishedAt: "2026-10-28"
+readingTime: "3 min lugemist"
+summary: "Tõsta vanad kirjad serverist arvutisse, varunda oma arhiiv ning hoia eelseisvad sündmused ja ülesanded postkasti kõrval nähtaval."
+highlights: ["Kohalikud kaustad sinu arvutis koos paroolifraasiga krüpteeritud arhiivivarukoopiatega","Kaustade loomine ja ümbernimetamine nii serveris kui ka kohalikes kaustades","Kalendri külgpaneel väikese kuuvaate ja 7 päeva päevakavaga","Kalendri ja ülesannete meeldetuletused koos valikulise tähtaja kellaajaga","Kirjade lehekülgede kaupa kerimine klaviatuurilt (Tühik / Shift+Tühik) ja lõimede vahetamine Alt+Nooltega"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Väljalase · v0.4.8"
+platformsSubtitle: "Kohalikud kaustad, kalendri külgpaneel ja lugemise kiirklahvid: töölauaversioon 0.4.8. Kaustade haldus ja meeldetuletused: saadaval ka iOS-i ja Androidi versioonis 0.4.7."
+---
+
+<PostSection>
+
+Täis postkast ei peaks tähendama selliste kirjade kustutamist, mida soovid alles hoida. Meron 0.4.8 lisab arvutisse Kohalikud kaustad, et saaksid kviitungid, lõpetatud projektid ja vanad vestlused oma arvutisse tõsta. Uus kalendri külgpaneel hoiab eelseisvad tegemised kirjade lugemise ajal mugavalt silme ees.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Kohalikud kaustad</Badge>
+
+## Hoia kirju oma arvutis, eemal serverist
+
+Vabasta ruumi oma IMAP-postkastis või salvesta kirjad enne konto sulgemist. Kohalikud kaustad annavad sulle arvutis võrguühenduseta arhiivi, mida saad Meronis sirvida ja otsida.
+
+Lisa **Kohalikud kaustad** menüüst Sätted → Kohalikud kaustad. Alguses luuakse kaust Arhiiv ning see kuvatakse sinu meilikontode kõrval navigeerimisribal, Kanbani tahvlil ja otsingus. Sinna talletatud kirjad jäävad ainult sellesse arvutisse.
+
+- **Liiguta või kopeeri mistahes kontolt:** Lohista kaardid Kanbani tahvlil kohaliku kausta veergu või kasuta kirjalõime menüüst valikuid Liiguta kausta… ja Kopeeri kausta…. Kirjalõime liigutamisel kontrollib Meron enne serverikoopiate prügikasti saatmist, et iga sõnum on turvaliselt kettale salvestatud.
+- **Korrasta oma kohalikku arhiivi:** Loo, nimeta ümber ja paiguta alamkaustu Kohalike kaustade sees, et kujundada võrguühenduseta arhiiv täpselt oma käe järgi.
+- **Paroolifraasiga krüpteeritud arhiivivarukoopiad:** Kui oled koopiad serverist eemaldanud, võib kohalik arhiiv olla nende kirjade ainus eksemplar. Kasuta menüüd Sätted → Kohalikud kaustad varukoopia eksportimiseks ja hoia seda arvutist eraldi. Eksporditud varukoopia krüpteeritakse paroolifraasiga ning selle saab taastada teises arvutis asuvas Meronis.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Meroni sätted, kus on näha kohalike kaustade kettakasutus ning varukoopia eksportimise ja taastamise nupud" caption="Sätted → Kohalikud kaustad näitab kohaliku arhiivi ruumikasutust ning võimaldab eksportida ja taastada paroolifraasiga krüpteeritud arhiivitõmmiseid." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Korrasta arhiivi</Badge>
+
+## Paiguta vanad kirjad sinna, kust need üles leiad
+
+Loo Meronist lahkumata iga projekti, kliendi või aasta jaoks oma kaust. Töölauaversioon 0.4.8 toetab kaustade loomist ja ümbernimetamist nii IMAP-serveris kui ka Kohalikes kaustades; iOS ja Android 0.4.7 toovad samad võimalused serverikaustadele.
+
+- **Loo kaustu kõikjal:** Loo kaustu ja pesastatud alamkaustu otse postkasti ja Kanbani veergude menüüdest.
+- **Nimeta kaustu kohapeal ümber:** Kanbani veerud ja hiljutiste teisaldamiste otseteed võtavad uue kaustanime automaatselt kasutusele.
+- **Leia sihtkoht kiiresti:** Liiguta kausta… ja Kopeeri kausta… rühmitavad sihtkohad kontode kaupa ning hoiavad hiljutised kaustad nimekirja tipus. Arvutis kuvatakse Kohalikud kaustad sinu teiste kontode kõrval.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Kirjalõime kontekstimenüü, mis näitab üleval hiljutisi kaustu ning kontode kaupa rühmitatud Liiguta kausta alammenüüsid koos avatud Kohalike kaustadega" caption="Menüüd Liiguta kausta ja Kopeeri kausta hoiavad hiljutised sihtkohad üleval ning koondavad iga konto – sealhulgas Kohalikud kaustad – selgetesse alammenüüdesse." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Kalender ja meeldetuletused</Badge>
+
+## Hoia eelseisvad tööd postkasti kõrval
+
+Kontrollimine, kas oled neljapäeval vaba, ei peaks sind loetava kirja juurest eemale viima. Arvutis asub Kalender nüüd parempoolsel külgpaneelil Ülesannete kõrval.
+
+Sirvi postkasti või Kanbani tahvli kõrval kompaktset kuuvaadet ja jooksvat 7 päeva tegevuskava koos sündmuste ja tähtaegadega. Kui pead pikemalt ette planeerima, ava täismahus kuukalender. Sündmuste ja ülesannete meeldetuletused on saadaval töölauaversioonis 0.4.8 ja mobiiliversioonis 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Meroni Kanbani tahvel koos uue parempoolse kalendri külgpaneeliga, kus on väike kuuvõrgustik ja 7 päeva päevakava" caption="Kalendri külgpaneel haakub Kanbani tahvli või postkasti kõrvale, pakkudes väikest kuuvaadet ning 7 päeva sündmuste ja ülesannete ülevaadet." width={1280} height={820} />
+
+- **Seadistatavad sündmuste märguanded:** Määra sätetes vaikimisi meeldetuletusajad kellaajalistele ja terve päeva sündmustele või kohanda iga sündmuse jaoks kuni kaks märguannet.
+- **Ülesannete tähtaja kellaajad:** Määra ülesande tähtpäeva kõrvale valikuline kellaaeg, et saada meeldetuletus täpselt õigel ajal. Ainult kuupäevaga ülesanded tuletavad end meelde kell 9.00 kohaliku aja järgi.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Sündmuse üksikasjade aken klõpsatava koosoleku lingi ja kopeerimisnupuga, esimese ja teise märguande rippmenüüdega ning märkmetega" caption="Seadista sündmusele kuni kaks märguannet, ava või kopeeri koosoleku link ühe klõpsuga ning hüppa otse algse kutsekirja juurde." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Lugemise kiirklahvid</Badge>
+
+## Jätka lugemist käsi klaviatuurilt tõstmata
+
+Arvutis saad pikka kirja lehekülgede kaupa kerida klahvidega Tühik või Shift+Tühik ning liikuda seejärel järgmise vestluse juurde ilma hiirt haaramata.
+
+<KeyboardShortcuts title="Lugemise kiirklahvid arvutis" items={[{"label":"Keri sõnumit ühe lehekülje võrra alla","keys":["Space"]},{"label":"Keri sõnumit ühe lehekülje võrra üles","keys":["Shift + Space"]},{"label":"Järgmine kirjalõim","keys":["J","Alt + ↓"]},{"label":"Eelmine kirjalõim","keys":["K","Alt + ↑"]}]} or="või" note="Alt+↓ ja Alt+↑ töötavad ka siis, kui fookus on sõnumi sees." />
+
+</PostSection>
+
+<ReleaseCTA heading="Proovi Meron 0.4.8 versiooni" text="Laadi alla uusim versioon ja alusta oma arhiivi. Meron on tasuta ja avatud lähtekoodiga, rakendustega platvormidele macOS, Windows, Linux, iOS ja Android. Täielik muudatuste logi katab ülejäänud töölaua- ja mobiiliuuendused." download="Laadi alla Meron" changelog="Vaata muudatuste logi" github="GitHubi väljalasked" />

@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: 연락처 디렉터리, Markdown 메모, 지연 규칙"
+publishedAt: "2026-11-05"
+readingTime: "4분 분량"
+summary: "연락처에 메모를 남기고, 재시작 후에도 대화를 이어가며, 지연 규칙으로 불필요해진 메일을 자동으로 정리하세요."
+highlights: ["고정 연락처, 비공개 Markdown 메모, 대화 기록을 갖춘 연락처 패널","드래그 순서 변경과 세션 복원을 지원하는 브라우저 스타일 대화 탭","메일을 읽은 후 또는 지정한 시간이 지난 후 실행되는 지연 규칙","스프레드시트 열과 공백으로 구분된 목록을 수신자 필드에 직접 붙여넣기","단축키 A로 전체 답장 및 빠른 답장에서 대화 참여자 추가","데스크톱, iOS, Android 전반에 걸친 완전한 러시아어 현지화 지원"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "릴리스 · v0.4.11"
+---
+
+<PostSection>
+
+클라이언트에게 답장하기 전에, 새로운 연락처 패널에서 지난 통화 메모와 이전 대화 내용을 확인하세요. Meron 0.4.11에서는 연락처 고정과 비공개 Markdown 메모, 재시작 후 탭 복원, 읽은 후 메일을 정리해 주는 지연 규칙을 추가했습니다.
+
+<PlatformNote>Markdown 메모 기능이 포함된 연락처 패널, 브라우저 스타일 탭, 지연 규칙은 데스크톱 0.4.11에서 제공됩니다. 연락처 디렉터리, 원격 이미지 캐싱, 러시아어 현지화는 Android 및 iOS에서도 지원됩니다.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">연락처 및 메모</Badge>
+
+## 메모와 지난 대화를 한곳에서 확인하세요
+
+사이드바의 연락처 패널을 열어 이름으로 검색하거나 자주 찾는 순, 최근 순, 가나다순으로 주소록을 정렬하세요.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Sarah Jenkins가 선택된 연락처 사이드 패널, 비공개 Markdown 메모, 폴더 칩이 있는 대화 기록을 보여주는 Meron 데스크톱 앱" caption="답장을 작성하기 전에 메모와 이전 대화를 먼저 확인하세요." width={1280} height={820} />
+
+- <Strong>자주 연락하는 상대 고정:</Strong> 가장 자주 협업하는 사람들을 목록 최상단에 고정해 두세요.
+- <Strong>비공개 Markdown 메모:</Strong> 연락처마다 회의 핵심 내용, 전화번호, 업무 협의 사항을 기록하세요. 메모는 쓰기와 미리보기 탭이 있는 Markdown을 지원하며, 기기에만 안전하게 보관되고 원격 이미지는 차단됩니다.
+- <Strong>지난 대화 찾기:</Strong> 연락처를 선택해 함께 나눈 스레드를 둘러보세요. 폴더 라벨을 통해 받은편지함, 보낸편지함, 보관함 중 어디에 있는지 확인할 수 있으며, 스팸과 휴지통은 제외됩니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">탭 및 세션</Badge>
+
+## 작업하던 곳에서 바로 이어가세요
+
+Meron을 재시작해도 열려 있던 대화로 바로 돌아옵니다. 스레드와 임시보관 메일이 하나의 탭 표시줄을 공유하여 읽기와 쓰기를 매끄럽게 오갈 수 있습니다.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="활성 스레드와 임시보관 메일을 보여주는 상단 브라우저 탭이 있는 Meron 대화 뷰" caption="탭 표시줄에서 대화와 임시보관 메일을 함께 관리하세요." width={1280} height={820} />
+
+- <Strong>드래그하여 탭 순서 변경:</Strong> 탭 표시줄에서 스레드와 임시보관함을 드래그하여 관련된 대화를 나란히 모아 두세요.
+- <Strong>재시작 후 탭 자동 복원:</Strong> 앱이나 시스템이 재부팅된 후에도 Meron이 열려 있던 탭과 활성 대화를 그대로 복원합니다.
+- <Strong>탭을 닫아도 임시보관 메일 유지:</Strong> 작성기 탭을 닫거나 Meron을 종료해도 작성 중인 내용이 임시보관함 폴더에 안전하게 저장됩니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">받은편지함 자동화</Badge>
+
+## 읽은 메시지는 자동으로 깔끔하게 정리하세요
+
+인증 코드는 몇 분 동안만 유용하고, 뉴스레터는 한 달 정도 보관할 가치가 있을 수 있습니다. 지연 규칙은 0.4.10에서 도입된 받은편지함 규칙에 타이머와 실행 시점을 더해 줍니다.
+
+<Strong>설정 → 규칙</Strong>을 열어 일치시킬 메시지, 수행할 작업, 실행 시점을 선택하세요.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />즉시 실행
+
+</CardTitle>
+
+새 메시지가 받은편지함에 도착하는 즉시 실행됩니다.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />읽은 후 실행
+
+</CardTitle>
+
+메일을 읽었을 때 타이머가 시작됩니다(예: 5분). 안 읽음으로 표시하면 타이머가 취소됩니다.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />경과 시간 기준 실행
+
+</CardTitle>
+
+메시지 날짜를 기준으로 계산(예: 30일)하여 오래된 메일을 자동 보관합니다.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="일치 조건, 5분 후로 설정된 읽은 후 실행 타이밍 컨트롤, 휴지통으로 이동 작업을 보여주는 Meron 규칙 편집기" caption="2단계 인증 코드나 일회성 알림을 자동으로 휴지통에 버리도록 읽은 후 실행 규칙을 설정하세요." width={1280} height={820} />
+
+- <Strong>읽은 후 실행:</Strong> 인증 이메일의 경우 제목을 일치시키고 '읽은 후 5분 뒤'로 설정한 다음 '휴지통으로 이동'을 선택하세요. 메시지를 다시 안 읽음으로 표시하면 타이머가 취소됩니다.
+- <Strong>지정 시간 경과 후 실행:</Strong> 뉴스레터나 주문 영수증의 경우 '경과 시간 30일'로 설정하고 '보관함으로 이동'을 선택하세요. 분, 시간, 일 단위로 기간을 지정할 수 있습니다.
+- <Strong>독립된 규칙 편집기:</Strong> 규칙 편집기가 이제 독립 페이지로 제공됩니다. 규칙 목록에서 수동으로 규칙을 실행하고 활동 로그에서 실행 내역을 확인하세요.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="지연 타이머 설명, 수동 실행 버튼, 최근 활동 로그가 표시된 활성 규칙 목록을 보여주는 Meron 설정 화면" caption="지연 타이머와 활동 로그가 포함된 설정 → 규칙의 활성 규칙 목록." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">작성기 및 단축키</Badge>
+
+## 수신자 목록을 붙여넣고 A 키로 전체 답장
+
+스프레드시트에서 주소를 복사해 받는 사람, 참조, 숨은 참조에 붙여넣거나 키보드로 그룹 전체에 답장하세요.
+
+- <Strong>스프레드시트 주소 붙여넣기:</Strong> Google Sheets, Excel, CSV 파일에서 행이나 열을 붙여넣으세요. Meron이 붙여넣은 주소를 개별 수신자로 자동 변환하며 공백으로 구분된 목록도 지원합니다.
+- <Strong>단축키 A로 전체 답장:</Strong> 대화를 보는 중에 A를 누르면 전체 답장이 열립니다. 인라인 빠른 답장 창에서 수신자를 추가할 수도 있습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">디테일 개선 및 다국어</Badge>
+
+## 이번 릴리스의 추가 변경 사항
+
+데스크톱, iOS, Android에서 러시아어를 지원합니다. 이미지 미리보기 및 칸반 답장에서의 Esc 키 동작을 개선하고, 일반 텍스트 작성기의 스크롤바를 창 가장자리로 이동했으며, SVG 렌더링 및 RSS 이미지 캐싱 문제를 수정했습니다.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.11 사용해보기" text="Meron 0.4.11을 다운로드하여 연락처 메모를 기록하고, 탭을 복원하며, 예약된 받은편지함 정리를 경험해 보세요. Meron은 무료 오픈소스입니다." download="Meron 다운로드" changelog="변경 이력 보기" github="GitHub Releases" />

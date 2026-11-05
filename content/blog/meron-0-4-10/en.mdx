@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Tags and Rules for Your Inbox"
+publishedAt: "2026-11-02"
+readingTime: "3 min read"
+summary: "Give incoming mail a next step. Tags, Kanban columns, and inbox rules turn everyday messages into a workflow you can see."
+highlights: ["Mail tags stored locally and synced as IMAP keywords","Kanban tag columns with drag-and-drop to tag and retag threads","Inbox rules to tag, mark read, star, copy, or move mail across accounts","Run rules on existing Inbox mail with a recent activity log","has:attachment and tag: search operators, plus MCP tag tools"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Release · v0.4.10"
+---
+
+<PostSection>
+
+An invoice arrives. A rule adds invoice and todo tags, and the thread appears in your To do column on the Kanban board while staying in your Inbox. When it’s ready for approval, drag it to Review. Meron swaps the todo tag for review, and you can see what needs attention at a glance. Here’s how to set up that workflow in Meron 0.4.10.
+
+<PlatformNote>Tags, rules, and attachment search are available in desktop 0.4.10 and iOS and Android 0.4.8. MCP tag tools are available on desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Tags &amp; Kanban</Badge>
+
+## Give each thread a next step
+
+Start by adding todo and invoice tags from the conversation header or thread menu. Tags sync to your mail server as standard IMAP keywords so they follow your messages across devices. They’re also preserved in Local Folders and exported backups.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron Kanban board showing Inbox alongside tag:todo and tag:review columns with colored tag chips on thread cards and an unread badge on the board icon in the side rail" caption="Inbox, To do, and Review together on one board." width={1280} height={820} />
+
+- **Drag to tag and retag on your board:** Save tag:todo and tag:review searches as Kanban columns. Drag a card from Inbox to add a tag, or between those columns to replace one workflow tag with the other. Other tags, such as invoice, stay on the thread.
+- **Toggle tags in place:** Use the Tags submenu to toggle several tags without reopening it each time.
+- **Rename or delete a tag everywhere:** Under Settings → Messages → Tags, rename or remove a tag across all mail stored on your device, updating your rules and Kanban board columns at the same time.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Thread context menu with the Tags flyout open showing checked tags and an Add a tag action" caption="Toggle multiple tags directly from the thread menu, or click any tag chip on a card to filter by that tag." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Inbox Rules</Badge>
+
+## Let the next invoice sort itself
+
+To automate the first step, create a rule that matches a subject containing “invoice” and adds the invoice and todo tags. It runs on new Inbox messages, so the next matching invoice appears on your board ready to handle.
+
+Open **Settings → Rules** to choose the accounts, conditions, and actions. Match by sender, recipient, subject, keywords, or attachments. Empty conditions match all new mail.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron Settings showing the Rules list with drag handles, account avatars, rule summaries, Run buttons, and Recent activity log" caption="Run a rule on existing Inbox mail, then check Recent activity to see what ran." width={1280} height={820} />
+
+- **Combine actions in one rule:** Alongside tags, a rule can mark mail as read, star it, copy it, or move it to another folder—even across accounts or into Local Folders on desktop.
+- **Drag to reorder priority:** Rules run from top to bottom. The first rule that moves a message decides its destination. Reorder rules with their drag handles or the Up and Down arrow keys.
+- **Run on existing mail &amp; check activity:** Click the Run button on any rule to apply it to messages already in your Inbox, and check Recent activity below your rules to see what ran and when.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron Rule editor showing account scope, match conditions for From, Subject, and Has attachment, and Then actions for Add tags, Mark as read, Copy to, and Move to" caption="Choose which messages match and what should happen to them in the rule editor." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Search &amp; MCP</Badge>
+
+## Find the mail behind your workflow
+
+Search for tag:invoice has:attachment to find every invoice with an attachment, regardless of its workflow stage. Add sender or unread filters to narrow the results further.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Search examples
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />New MCP tools on desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Tag suggestions and attachment filter:** Search Options includes tag suggestions and a Has attachment checkbox if you prefer to build a filter with a form. Save the resulting search as a live Kanban column to keep it within reach.
+- **Tag tools for MCP clients:** On desktop, local MCP clients with message organization access can call list\_tags and tag\_messages to inspect tags in use and add or remove tags on threads.
+
+</PostSection>
+
+This release also adds Kanban unread badges, composer shortcuts, and notification cleanup across devices. [View Changelog](/changelog)
+
+<ReleaseCTA heading="Try Meron 0.4.10" text="Download the latest build to start tagging and automating your inbox. Meron is free and open source, with apps for macOS, Windows, Linux, iOS, and Android." download="Download Meron" changelog="View Changelog" github="GitHub Releases" />

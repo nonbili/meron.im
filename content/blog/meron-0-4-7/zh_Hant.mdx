@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7：將儲存的搜尋轉換為看板欄"
+publishedAt: "2026-10-22"
+readingTime: "4 分鐘閱讀"
+summary: "圍繞最重要的郵件建構看板：將類似 Gmail 的搜尋操作轉換為即時看板欄。此外還新增了本機日曆、內嵌邀請回覆以及跨帳戶對話移動。"
+highlights: ["儲存搜尋看板欄與類 Gmail 搜尋運算子","包含日程、已接受邀請和待辦任務的本機日曆","支援接受、暫定與謝絕的互動式日曆邀請卡片","跨帳戶對話移動與常用資料夾捷徑","直接從郵件與媒體庫儲存並複製內嵌圖片"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "發布 · v0.4.7"
+platformsSubtitle: "桌面端 0.4.7 · iOS 與 Android 0.4.6"
+---
+
+<PostSection>
+
+來自重要客戶的未讀郵件、上個月的發票、等待回覆的星號郵件——透過儲存的搜尋欄，你可以為每項內容在看板上留出專屬位置。只需儲存一次搜尋，看板欄就會隨郵件變動即時更新。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">看板與搜尋</Badge>
+
+## 將搜尋轉換為即時看板欄
+
+資料夾只能讓對話歸屬於單一處，而儲存的搜尋則能從更多角度呈現郵件：依寄件者、日期、已讀狀態，或任何符合你工作流程的組合條件。
+
+你可以使用熟悉的<Strong>類 Gmail 搜尋運算子</Strong>或視覺化搜尋建構器開始搜尋，然後選擇<Em>將搜尋儲存為欄</Em>。符合條件的對話會立即呈現在即時欄中，欄標題下方還可直接編輯查詢條件。
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />支援的搜尋運算子
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- <Strong>無需手動輸入運算子即可建構搜尋：</Strong> 開啟搜尋選項，即可依寄件者、收件者、主旨、關鍵字、日期範圍或目標欄進行篩選。
+- <Strong>在不丟失已儲存搜尋的前提下縮小看板範圍：</Strong> 全看板搜尋會為每個已儲存的搜尋欄附加過濾條件，同時保留其原本的查詢語句。
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="帶有篩選欄位及將搜尋儲存為看板欄選項的搜尋設定彈窗" caption="建構搜尋，然後將其儲存為看板上的一欄。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">日曆與邀請</Badge>
+
+## 本機優先的日曆與互動式邀請卡片
+
+日曆邀請現在會以卡片形式呈現在對話中，顯示你所在時區的時間、地點、發起人以及與會者回覆。無需離開對話即可直接處理邀請。
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="在對話檢視中呈現的日曆邀請卡片，帶有接受、暫定與謝絕按鈕" caption="直接在對話中檢視日程詳情並作出回覆。" width={1280} height={820} />
+
+- <Strong>就地選擇接受、暫定或謝絕：</Strong> 你的回覆會傳送給發起人並記錄在 Meron 中。
+- <Strong>自動同步發起人更新：</Strong> Meron 會自動套用傳來的日程變更與取消，包括對單次週期性會議的修改。
+- <Strong>月度本機日曆：</Strong> 在「設定」中啟用日曆，即可在一處檢視個人日程、已接受的邀請以及任務截止日期。支援建立全天、定時或重複日程，並可從受邀日程一鍵跳回對應的郵件對話。
+
+你的日曆完全保存在本機裝置上，並包含在 Meron 的加密備份中。
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Meron 中的月檢視日曆，展示已排定的日程與任務" caption="個人日程、已接受的邀請與任務截止日一覽無遺。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">郵件整理</Badge>
+
+## 跨帳戶移動與常用資料夾捷徑
+
+需要把對話歸檔到另一個帳戶？你現在可以在桌面端和行動端直接<Strong>跨不同郵件帳戶移動對話</Strong>——無論是在看板上將卡片拖曳到不同帳戶的欄中，還是在對話選單中選擇<Em>移動至…</Em>。
+
+Meron 會將郵件複製到目的地並在驗證傳輸無誤後，才將原始郵件移至垃圾桶。
+
+<Em>移動至</Em>與<Em>複製至</Em>選單現已在頂部顯示<Strong>常用目標資料夾捷徑</Strong>，讓你更快連至常用資料夾。
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="顯示移動至操作及目標資料夾選項的對話關聯功能表" caption="將郵件對話移動到另一帳戶或選擇最近使用的目標資料夾。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">媒體與細節優化</Badge>
+
+## 儲存與複製內嵌圖片，以及桌面端優化
+
+桌面端亦帶來了數項日常體驗改進：
+
+- <Strong>儲存與複製內嵌圖片：</Strong> 在郵件內的圖片上按一下右鍵，或在媒體庫中開啟它，即可快速儲存或複製至剪貼簿。
+- <Strong>更俐落的選單與覆蓋層：</Strong> 選單與對話方塊具備更一致的鍵盤焦點與關閉互動，子選單醒目提示更清晰，大幅減少了閃爍。
+- <Strong>更明確的錯誤訊息與更多翻譯：</Strong> 移動與複製失敗時會提供更詳盡的原因說明。行動端亦對其支援的 19 種語言進行了全面擴充翻譯。
+
+</PostSection>
+
+<ReleaseCTA heading="立即體驗 Meron 0.4.7" text="Meron 免費、開源且本機優先，適用於 macOS、Windows、Linux、iOS 和 Android。立即取得最新版本或瀏覽完整版本資訊。" download="下載 Meron" changelog="檢視更新日誌" github="GitHub Releases" />

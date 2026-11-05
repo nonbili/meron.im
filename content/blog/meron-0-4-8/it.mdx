@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Fai spazio alla tua posta con le Cartelle locali"
+publishedAt: "2026-10-28"
+readingTime: "3 min di lettura"
+summary: "Sposta le vecchie e-mail fuori dal server, esegui il backup del tuo archivio e tieni i prossimi eventi e le attività accanto alla posta in arrivo."
+highlights: ["Cartelle locali sul computer con backup dell'archivio crittografati tramite passphrase","Creazione e rinomina delle cartelle sul server e nelle Cartelle locali","Pannello laterale del calendario con mini vista mensile e agenda a 7 giorni","Promemoria per eventi e attività con orario di scadenza facoltativo","Scorrimento a pagine da tastiera (Spazio / Maiusc+Spazio) e cambio conversazione con Alt+Frecce"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Rilascio · v0.4.8"
+platformsSubtitle: "Cartelle locali, pannello laterale del calendario e scorciatoie di lettura: desktop 0.4.8. Gestione cartelle e promemoria: disponibili anche su iOS e Android 0.4.7."
+---
+
+<PostSection>
+
+Una casella di posta piena non dovrebbe costringerti a eliminare messaggi che desideri conservare. Meron 0.4.8 aggiunge le Cartelle locali su desktop, così puoi spostare ricevute, progetti conclusi e vecchie conversazioni direttamente sul tuo computer. Inoltre, il nuovo pannello laterale del calendario mantiene visibili i prossimi impegni mentre leggi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Cartelle locali</Badge>
+
+## Conserva le e-mail sul tuo computer, fuori dal server
+
+Libera spazio nella tua casella IMAP o metti al sicuro i messaggi prima di chiudere un account. Le Cartelle locali ti offrono un archivio offline sul computer che puoi sfogliare e cercare in Meron.
+
+Aggiungi **Cartelle locali** da Impostazioni → Cartelle locali. Inizia con una cartella Archivio e compare accanto ai tuoi account di posta nella barra di navigazione, nella bacheca Kanban e nella ricerca. La posta archiviata lì rimane su quel computer.
+
+- **Sposta o copia da qualsiasi account:** Trascina le schede in una colonna di cartella locale sulla bacheca Kanban oppure usa Sposta in… e Copia in… dal menu di qualsiasi conversazione. Quando sposti un thread, Meron verifica che ogni messaggio sia salvato correttamente su disco prima di spostare le copie sul server nel Cestino.
+- **Organizza il tuo archivio locale:** Crea, rinomina e annida sottocartelle all'interno delle Cartelle locali per strutturare il tuo archivio offline come preferisci.
+- **Backup dell'archivio crittografati con passphrase:** Una volta rimosse le copie dal server, l'archivio locale potrebbe essere l'unica copia di quelle e-mail. Usa Impostazioni → Cartelle locali per esportare un backup e conservarlo in un luogo separato dal computer. Il backup esportato è protetto da passphrase e può essere ripristinato in Meron su un altro computer.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Impostazioni di Meron che mostrano lo spazio utilizzato dalle Cartelle locali insieme ai pulsanti Esporta backup e Ripristina backup" caption="Impostazioni → Cartelle locali mostra lo spazio occupato dall'archivio locale e consente di esportare o ripristinare istantanee crittografate con passphrase." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Organizza l'archivio</Badge>
+
+## Metti le vecchie e-mail dove puoi ritrovarle subito
+
+Crea una cartella per ogni progetto, cliente o anno senza uscire da Meron. Desktop 0.4.8 supporta la creazione e la rinomina delle cartelle sul server IMAP e nelle Cartelle locali; iOS e Android 0.4.7 portano gli stessi controlli sulle cartelle del server.
+
+- **Crea cartelle ovunque:** Crea cartelle e sottocartelle annidate direttamente dai menu della casella di posta e delle colonne Kanban.
+- **Rinomina le cartelle sul posto:** Le colonne Kanban e le scorciatoie dei trasferimenti recenti si aggiornano automaticamente con il nuovo nome della cartella.
+- **Trova rapidamente una destinazione:** Sposta in… e Copia in… raggruppano le destinazioni per account e mantengono le cartelle recenti in cima. Su desktop, Cartelle locali appare accanto agli altri tuoi account.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Menu contestuale della conversazione con le cartelle recenti in alto e i sottomenu Sposta in raggruppati per account con Cartelle locali espanso" caption="I menu Sposta in e Copia in mantengono le destinazioni recenti in cima e raggruppano ogni account, incluse le Cartelle locali, in ordinati menu a comparsa." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Calendario e Promemoria</Badge>
+
+## Tieni i prossimi impegni accanto alla posta in arrivo
+
+Controllare se sei libero giovedì non dovrebbe distrarti dal messaggio che stai leggendo. Su desktop, il Calendario ora affianca le Attività nel pannello laterale destro.
+
+Consulta una griglia mensile compatta e un'agenda continua di 7 giorni con eventi e attività in scadenza accanto alla posta in arrivo o alla bacheca Kanban. Espandi al calendario mensile completo quando devi pianificare più a lungo termine. I promemoria per eventi e attività sono disponibili su desktop 0.4.8 e mobile 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Bacheca Kanban di Meron affiancata dal nuovo pannello laterale destro del Calendario con mini griglia mensile e agenda a 7 giorni" caption="Il pannello laterale del Calendario si affianca alla bacheca Kanban o alla casella di posta con una mini vista mensile e l'agenda dei prossimi 7 giorni." width={1280} height={820} />
+
+- **Avvisi evento configurabili:** Imposta gli orari di promemoria predefiniti per gli eventi con orario e per l'intera giornata nelle Impostazioni, oppure personalizza fino a due avvisi per singolo evento.
+- **Orario di scadenza delle attività:** Imposta un orario facoltativo accanto alla data di scadenza di un'attività per ricevere un promemoria puntuale. Le attività con sola data inviano un promemoria alle 9:00 ora locale.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Finestra dei dettagli dell'evento con URL della riunione cliccabile e pulsante di copia, menu a discesa Avviso e Secondo avviso e note dell'agenda" caption="Configura fino a due avvisi per evento, apri o copia gli URL delle riunioni con un clic e torna direttamente all'e-mail di invito originale." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Scorciatoie di lettura</Badge>
+
+## Continua a leggere usando solo la tastiera
+
+Su desktop, scorri un messaggio lungo pagina per pagina con Spazio o Maiusc+Spazio, poi passa alla conversazione successiva senza staccare le mani dalla tastiera.
+
+<KeyboardShortcuts title="Scorciatoie di lettura su desktop" items={[{"label":"Scorri il messaggio di una pagina verso il basso","keys":["Space"]},{"label":"Scorri il messaggio di una pagina verso l'alto","keys":["Shift + Space"]},{"label":"Conversazione successiva","keys":["J","Alt + ↓"]},{"label":"Conversazione precedente","keys":["K","Alt + ↑"]}]} or="o" note="Alt+↓ e Alt+↑ funzionano anche quando il focus è dentro il messaggio." />
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.4.8" text="Scarica l'ultima versione per iniziare il tuo archivio. Meron è gratuito e open source, con app per macOS, Windows, Linux, iOS e Android. Il changelog completo elenca tutti gli altri aggiornamenti per desktop e dispositivi mobili." download="Scarica Meron" changelog="Vedi il changelog" github="GitHub Releases" />

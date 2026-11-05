@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: 联系人目录、Markdown 笔记与延时规则"
+publishedAt: "2026-11-05"
+readingTime: "4 分钟阅读"
+summary: "为联系人记录笔记，重启后继续处理会话，让延时规则自动整理不再需要的邮件。"
+highlights: ["支持置顶、Markdown 笔记和往来历史的联系人面板","支持拖拽排序与重启会话恢复的浏览器风格标签页","支持在已读后或按邮件时间触发的延时收件箱规则","直接从电子表格复制列或粘贴以空格分隔的收件人列表","快捷键 A 全员回复，支持在快捷回复栏中展开收件人","桌面端、iOS 和 Android 全平台俄语本地化支持"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "发布 · v0.4.11"
+---
+
+<PostSection>
+
+回复客户之前，先在新的联系人面板中查看上次通话的笔记和以往会话。Meron 0.4.11 新增联系人置顶和私密 Markdown 笔记，支持重启后恢复标签页，还能通过延时规则在阅读后自动整理邮件。
+
+<PlatformNote>支持 Markdown 笔记的联系人面板、浏览器风格标签页以及延时规则现已在桌面版 0.4.11 提供。联系人目录及俄语本地化已同步支持 Android 与 iOS。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">联系人与笔记</Badge>
+
+## 把笔记和以往会话放在一起
+
+打开侧边栏的联系人面板，按姓名搜索，或按常用、最近联系、字母顺序排列通讯录。
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Meron 桌面应用展示联系人侧边栏，当前选中 Sarah Jenkins，显示私密 Markdown 笔记以及带文件夹标签的往来会话历史" caption="回复前先查看笔记和以往会话。" width={1280} height={820} />
+
+- <Strong>置顶重要联系人：</Strong>将经常联系的人固定在列表顶部。
+- <Strong>私密 Markdown 笔记：</Strong>为联系人记录会议要点、电话或合作约定。笔记支持 Markdown 编辑与预览，保存在本地设备，并阻止加载远程图片。
+- <Strong>查找以往会话：</Strong>选择联系人即可浏览往来会话。文件夹标签显示邮件位于收件箱、已发送还是归档；垃圾邮件和废纸篓会被排除。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">标签页与会话恢复</Badge>
+
+## 从上次停下的地方继续
+
+重启 Meron 后，回到之前打开的会话。邮件和草稿共用标签栏，方便在阅读与撰写之间切换。
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Meron 会话视图，标题栏展示等宽浏览器风格标签页，包含正在处理的会话与草稿" caption="在同一个标签栏中切换会话和草稿。" width={1280} height={820} />
+
+- <Strong>拖拽调整标签页顺序：</Strong>拖动会话和草稿标签，把相关讨论放在一起。
+- <Strong>重启后恢复打开的标签页：</Strong>重启应用或系统后，Meron 会恢复打开的标签页和当前会话。
+- <Strong>关闭标签页自动存为草稿：</Strong>关闭撰写标签页或退出 Meron 时，正在编写的内容会保存至草稿箱。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">收件箱自动化</Badge>
+
+## 读完后自动整理邮件
+
+验证码可能只需要保留几分钟，而订阅资讯可以留一个月。延时规则为 0.4.10 引入的收件箱规则增加了运行时间设置。
+
+进入 <Strong>设置 → 规则</Strong>，即可配置匹配条件、操作动作以及新增的运行时间控制。
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />立即运行
+
+</CardTitle>
+
+新邮件抵达收件箱时立即执行规则。
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />阅读后运行
+
+</CardTitle>
+
+邮件已读后启动倒计时（如 5 分钟）。若重新标为未读则取消计时。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />超出指定时长时
+
+</CardTitle>
+
+按邮件日期计算时限（如 30 天），适合自动归档过期通知与邮件。
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Meron 规则编辑器展示匹配条件、“阅读 5 分钟后”的执行时间控制以及“移至废纸篓”动作" caption="设置阅读后延时执行规则，自动清理二次验证码或一次性通知。" width={1280} height={820} />
+
+- <Strong>阅读后延时运行：</Strong>在邮件标记为已读后启动计时。例如针对二次验证码，匹配主题后设置“阅读 5 分钟后”执行“移至废纸篓”。若重新标为未读则取消计时。
+- <Strong>按邮件时间运行：</Strong>按邮件日期以分钟、小时或天数为单位执行操作。例如将“超过 30 天”的订阅资讯或收据自动“移至归档”。
+- <Strong>独立全屏规则编辑器：</Strong>规则编辑器现在有独立页面。在规则列表中手动运行规则，并通过活动日志查看执行情况。
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Meron 设置界面，展示带有延时说明、手动运行按钮与近期活动日志的活动规则列表" caption="“设置 → 规则”中的活动规则，显示延时计时器与活动日志。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">撰写与快捷键</Badge>
+
+## 粘贴收件人列表，按 A 全员回复
+
+将表格中的邮箱地址粘贴到收件人、抄送或密送栏，也可以用快捷键回复整个群组。
+
+- <Strong>电子表格与空格分隔粘贴：</Strong>粘贴 Google 表格、Excel 或 CSV 中的行或列，Meron 会把邮箱地址转换为独立收件人，也支持空格分隔的列表。
+- <Strong>快捷键 A 全员回复：</Strong>查看会话时按 A 打开全员回复，也可以从内嵌的快捷回复栏中添加收件人。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">细节打磨与多语言</Badge>
+
+## 本次更新还包括
+
+桌面端、iOS 和 Android 现已支持俄语。本次更新还改进了图片预览和看板回复中的 Esc 键行为，将纯文本撰写窗口的滚动条移至面板边缘，并修复了 SVG 渲染和 RSS 图片缓存。
+
+</PostSection>
+
+<ReleaseCTA heading="体验 Meron 0.4.11" text="下载 Meron 0.4.11，记录联系人笔记、恢复标签页并定时整理收件箱。Meron 是一款免费开源的邮件客户端。" download="下载 Meron" changelog="查看更新日志" github="GitHub Releases" />

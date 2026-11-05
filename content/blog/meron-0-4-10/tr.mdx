@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Gelen Kutunuz İçin Etiketler ve Kurallar"
+publishedAt: "2026-11-02"
+readingTime: "3 dk okuma"
+summary: "Gelen e-postalara bir sonraki adımı tanımlayın. Etiketler, Kanban sütunları ve gelen kutusu kuralları günlük iletileri görebileceğiniz bir iş akışına dönüştürür."
+highlights: ["Yerel olarak saklanan ve IMAP anahtar sözcükleri olarak eşitlenen e-posta etiketleri","Yazışmaları sürükleyip bırakarak etiketlemek ve etiket değiştirmek için Kanban etiket sütunları","Hesaplar arasında e-postaları etiketlemek, okundu işaretlemek, yıldızlamak, kopyalamak veya taşımak için gelen kutusu kuralları","Mevcut Gelen Kutusu postalarında kural çalıştırma ve son etkinlik günlüğü","has:attachment ve tag: arama operatörleri ile MCP etiket araçları"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Sürüm · v0.4.10"
+---
+
+<PostSection>
+
+Bir fatura gelir. Bir kural otomatik olarak invoice ve todo etiketlerini ekler; yazışma Gelen Kutusu'nda kalırken Kanban panonuzdaki Yapılacaklar sütununda görünür. Onaya hazır olduğunda İnceleme sütununa sürükleyin: Meron todo etiketini review ile değiştirir, böylece neyin ilgi beklediğini bir bakışta görürsünüz. Meron 0.4.10'da bu iş akışını nasıl kuracağınız aşağıda açıklanmıştır.
+
+<PlatformNote>Etiketler, kurallar ve ek arama özellikleri masaüstü 0.4.10 ile iOS ve Android 0.4.8 sürümlerinde kullanıma sunuldu. MCP etiket araçları masaüstünde mevcuttur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Etiketler ve Kanban</Badge>
+
+## Her yazışmaya bir sonraki adımı verin
+
+Yazışma başlığından veya yazışma menüsünden todo ve invoice etiketlerini ekleyerek başlayın. Etiketler, standart IMAP anahtar sözcükleri olarak posta sunucunuzla eşitlenir ve tüm cihazlarınızda iletilerinizi takip eder. Ayrıca Yerel Klasörler'de ve dışa aktarılan yedeklerde de korunur.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Yazışma kartlarında renkli etiket çipleri ve kenar çubuğundaki pano simgesinde okunmamış rozetiyle Gelen Kutusu'nu tag:todo ve tag:review sütunlarının yanında gösteren Meron Kanban panosu" caption="Gelen Kutusu, Yapılacaklar ve İnceleme tek bir panoda bir arada." width={1280} height={820} />
+
+- **Panonuzda sürükleyerek etiketleyin ve değiştirin:** tag:todo ve tag:review aramalarını Kanban sütunu olarak kaydedin. Bir etiket eklemek için Gelen Kutusu'ndan bir kart sürükleyin ya da bir iş akışı etiketini diğeriyle değiştirmek için kartı bu sütunlar arasında taşıyın. invoice gibi diğer etiketler yazışmada kalmaya devam eder.
+- **Menüyü kapatmadan birden çok etiketi değiştirin:** Etiketler alt menüsünü kullanarak her seferinde menüyü yeniden açmadan birden fazla etiketi açıp kapatın.
+- **Bir etiketi her yerde yeniden adlandırın veya silin:** Ayarlar → İletiler → Etiketler altında, cihazınızda saklanan tüm postalarda bir etiketi yeniden adlandırın veya kaldırın; kurallarınız ve Kanban panosu sütunlarınız da aynı anda güncellenir.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Seçili etiketleri ve Etiket ekle eylemini gösteren Etiketler alt menüsü açık durumdaki yazışma bağlam menüsü" caption="Yazışma menüsünden birden fazla etiketi doğrudan değiştirin veya o etikete göre filtrelemek için karttaki herhangi bir etikete tıklayın." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Gelen Kutusu Kuralları</Badge>
+
+## Bir sonraki faturanın kendini sınıflandırmasına izin verin
+
+İlk adımı otomatikleştirmek için konusu “invoice” içeren iletileri yakalayan ve invoice ile todo etiketlerini ekleyen bir kural oluşturun. Kural, yeni Gelen Kutusu iletilerinde çalışır; böylece eşleşen bir sonraki fatura doğrudan panonuzda işlenmeye hazır şekilde görünür.
+
+Hesapları, koşulları ve eylemleri seçmek için **Ayarlar → Kurallar** bölümünü açın. Gönderene, alıcıya, konuya, anahtar sözcüklere veya eklere göre eşleştirin. Boş koşullar tüm yeni postalarla eşleşir.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Sürükleme tutamaçları, hesap avatarları, kural özetleri, Çalıştır düğmeleri ve Son etkinlikler günlüğü ile Kurallar listesini gösteren Meron Ayarları" caption="Mevcut Gelen Kutusu postalarında bir kural çalıştırın, ardından neyin çalıştığını görmek için Son etkinlikler'i kontrol edin." width={1280} height={820} />
+
+- **Tek bir kuralda birden çok eylemi birleştirin:** Etiketlerin yanı sıra bir kural postayı okundu olarak işaretleyebilir, yıldızlayabilir, kopyalayabilir veya başka bir klasöre taşıyabilir; üstelik masaüstünde hesaplar arasında veya Yerel Klasörler'e bile taşıyabilir.
+- **Öncelik sırasını sürükleyerek değiştirin:** Kurallar yukarıdan aşağıya doğru çalışır. Bir iletiyi taşıyan ilk kural onun hedefini belirler. Sürükleme tutamaçlarıyla veya Yukarı ve Aşağı ok tuşlarıyla kuralları yeniden sıralayın.
+- **Mevcut postalarda çalıştırın ve etkinliği kontrol edin:** Halihazırda Gelen Kutunuzda bulunan iletilere uygulamak için herhangi bir kuraldaki Çalıştır düğmesine tıklayın ve neyin ne zaman çalıştığını görmek için kurallarınızın altındaki Son etkinlikler bölümünü kontrol edin.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Hesap kapsamını, Kimden, Konu ve Ek var eşleşme koşullarını ve Etiket ekle, Okundu olarak işaretle, Şuraya kopyala ve Şuraya taşı eylemlerini gösteren Meron Kural düzenleyicisi" caption="Kural düzenleyicide hangi iletilerin eşleşeceğini ve onlara ne yapılacağını seçin." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Arama ve MCP</Badge>
+
+## İş akışınızın arkasındaki postaları bulun
+
+Hangi iş akışı aşamasında olursa olsun eki olan her faturayı bulmak için tag:invoice has:attachment araması yapın. Sonuçları daha da daraltmak için gönderen veya okunmamış filtreleri ekleyin.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Arama örnekleri
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Masaüstünde yeni MCP araçları
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Etiket önerileri ve ek filtresi:** Bir form aracılığıyla filtre oluşturmayı tercih ederseniz Arama Seçenekleri etiket önerileri ve «Ek var» onay kutusu sunar. Elde ettiğiniz aramayı her zaman elinizin altında tutmak için canlı bir Kanban sütunu olarak kaydedin.
+- **MCP istemcileri için etiket araçları:** Masaüstünde, ileti düzenleme erişimine sahip yerel MCP istemcileri kullanımdaki etiketleri incelemek ve yazışmalara etiket eklemek veya kaldırmak için list\_tags ve tag\_messages araçlarını çağırabilir.
+
+</PostSection>
+
+Bu sürüm ayrıca Kanban okunmamış rozetleri, ileti oluşturucu kısayolları ve cihazlar arası bildirim temizliği ekler. [Değişiklik Günlüğünü Gör](/changelog)
+
+<ReleaseCTA heading="Meron 0.4.10'u deneyin" text="Gelen kutunuzu etiketlemeye ve otomatikleştirmeye başlamak için en son sürümü indirin. Meron ücretsiz ve açık kaynaklıdır; macOS, Windows, Linux, iOS ve Android uygulamaları mevcuttur." download="Meron'u İndir" changelog="Değişiklik Günlüğünü Gör" github="GitHub Sürümleri" />

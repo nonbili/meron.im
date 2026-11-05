@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8：用本地文件夹为邮箱腾出空间"
+publishedAt: "2026-10-28"
+readingTime: "3 分钟阅读"
+summary: "将旧邮件从服务器移至本地、备份你的归档，并在收件箱旁随时查看即将到来的日程与任务。"
+highlights: ["电脑端本地文件夹，支持口令加密的归档备份","在服务器与本地文件夹中创建和重命名文件夹","带有迷你月视图和 7 天日程的日历侧边栏","支持可选任务截止时间的日程与任务提醒","键盘邮件翻页（Space / Shift+Space）与 Alt+方向键切换会话"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "发布 · v0.4.8"
+platformsSubtitle: "本地文件夹、日历侧边栏与阅读快捷键：桌面端 0.4.8。文件夹管理与提醒：同时在 iOS 与 Android 0.4.7 提供。"
+---
+
+<PostSection>
+
+邮箱空间告急，不代表必须删除那些你想保留的邮件。Meron 0.4.8 在桌面端新增了“本地文件夹”，让你可以将收据、已结项的项目和旧对话转移到自己的电脑上。全新的日历侧边栏则让你在阅读邮件的同时，随时掌握接下来的工作安排。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">本地文件夹</Badge>
+
+## 将邮件保存在电脑上，释放服务器空间
+
+为你的 IMAP 邮箱腾出存储空间，或在注销账户前妥善保存历史邮件。本地文件夹在你的电脑上提供了一个离线归档库，可在 Meron 中随时浏览和搜索。
+
+前往“设置 → 本地文件夹”添加<Strong>本地文件夹</Strong>。它默认包含一个“归档”文件夹，并会与你的邮箱账户并列显示在导航栏、看板和搜索中。存放在这里的邮件仅保留在当前电脑上。
+
+- <Strong>从任意账户移动或复制：</Strong>在看板上将卡片拖入本地文件夹列，或使用任意会话菜单中的“移动到…”和“复制到…”。移动会话时，Meron 会先验证每封邮件都已安全写入磁盘，随后才将服务器上的副本移入废纸篓。
+- <Strong>整理你的本地归档：</Strong>在本地文件夹中创建、重命名和嵌套子文件夹，按你习惯的方式组织离线归档结构。
+- <Strong>口令加密的归档备份：</Strong>移除服务器副本后，本地归档可能成为这些邮件的唯一副本。你可以在“设置 → 本地文件夹”中导出备份，并将其存放在电脑之外的安全位置。导出的备份使用口令加密，可在另一台电脑的 Meron 中恢复。
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Meron 设置界面展示本地文件夹存储空间占用以及导出备份、恢复备份按钮" caption="“设置 → 本地文件夹”显示本地归档存储占用，并支持导出或恢复经口令加密的归档快照。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">整理归档</Badge>
+
+## 让旧邮件井井有条、触手可及
+
+无需离开 Meron，即可按项目、客户或年份创建专属文件夹。桌面端 0.4.8 支持在 IMAP 服务器和本地文件夹中创建及重命名文件夹；iOS 与 Android 0.4.7 也为服务器文件夹带来了相同的管理功能。
+
+- <Strong>随处创建文件夹：</Strong>直接从邮箱导航或看板列菜单中创建文件夹和嵌套子文件夹。
+- <Strong>就地重命名文件夹：</Strong>看板列和最近转移快捷方式会自动同步新的文件夹名称。
+- <Strong>快速定位目标文件夹：</Strong>“移动到…”和“复制到…”按账户对目标位置进行分组，并将最近使用的文件夹置顶。在桌面端，“本地文件夹”会与其他账户并列显示。
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="会话上下文菜单顶部展示最近目标文件夹，并按账户展开包含本地文件夹的“移动到”子菜单" caption="“移动到”与“复制到”菜单将最近使用的目标置顶，并将包括本地文件夹在内的每个账户整理为清晰的嵌套子菜单。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">日历与提醒</Badge>
+
+## 在收件箱旁掌控近期工作
+
+确认周四是否有空，不应该打断你正在阅读的邮件。在桌面端，“日历”现在与“任务”并列驻留在右侧边栏中。
+
+在收件箱或看板旁即可浏览紧凑的月历网格以及滚动的 7 天日程与到期任务。需要规划更远期的安排时，可一键展开完整月视图。日程与任务提醒功能现已同步登陆桌面端 0.4.8 和移动端 0.4.7。
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Meron 看板与全新的右侧日历侧边栏并列显示迷你月历网格与 7 天日程列表" caption="日历侧边栏停靠在看板或收件箱旁，提供迷你月视图以及未来 7 天的日程和到期任务概览。" width={1280} height={820} />
+
+- <Strong>可配置的日程提醒：</Strong>在“设置”中为定时日程和全天日程设置默认提醒时间，或为单个日程自定义最多两个提醒。
+- <Strong>任务截止时间：</Strong>在任务截止日期旁设置可选的具体时间，以便在到期时收到提醒。仅设置日期的任务会在当地时间上午 9:00 发出提醒。
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="日程详情对话框展示可点击的会议链接与复制按钮、可配置的首个提醒与第二提醒下拉菜单以及日程备注" caption="为每个日程配置最多两个提醒，一键打开或复制会议链接，并可直接跳回原始邀请邮件。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">阅读快捷键</Badge>
+
+## 双手不离键盘，畅快阅读邮件
+
+在桌面端，使用 Space 或 Shift+Space 即可在长邮件中上下翻页，无需触碰鼠标即可顺畅切换到下一个会话。
+
+<KeyboardShortcuts title="桌面端阅读快捷键" items={[{"label":"邮件向下翻一页","keys":["Space"]},{"label":"邮件向上翻一页","keys":["Shift + Space"]},{"label":"下一个会话","keys":["J","Alt + ↓"]},{"label":"上一个会话","keys":["K","Alt + ↑"]}]} or="或" note="焦点位于邮件正文时，Alt+↓ 和 Alt+↑ 同样有效。" />
+
+</PostSection>
+
+<ReleaseCTA heading="立即体验 Meron 0.4.8" text="下载最新版本，开始构建你的本地归档。Meron 免费且开源，提供 macOS、Windows、Linux、iOS 和 Android 客户端。完整更新日志涵盖了其余桌面端和移动端改进。" download="下载 Meron" changelog="查看更新日志" github="GitHub Releases" />

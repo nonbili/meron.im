@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Convierte búsquedas guardadas en columnas Kanban"
+publishedAt: "2026-10-22"
+readingTime: "4 min de lectura"
+summary: "Organiza tu tablero con el correo prioritario: convierte búsquedas estilo Gmail en columnas Kanban en vivo. Incluye calendario local, respuesta a invitaciones dentro del hilo y movimiento entre cuentas."
+highlights: ["Columnas Kanban de búsquedas guardadas y operadores estilo Gmail","Calendario local de eventos, invitaciones aceptadas y tareas pendientes","Tarjetas de invitación interactivas con Aceptar, Quizás y Rechazar","Movimiento de hilos entre cuentas y atajos a carpetas recientes","Guardado y copia de imágenes integradas desde mensajes y la galería"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Lanzamiento · v0.4.7"
+platformsSubtitle: "Escritorio 0.4.7 · iOS y Android 0.4.6"
+---
+
+<PostSection>
+
+Correos sin leer de clientes clave, facturas del último mes, hilos destacados que esperan respuesta: con las columnas de búsqueda guardada, cada uno tiene su propio espacio en tu tablero Kanban. Guarda una búsqueda una vez y la columna se mantendrá al día según cambie tu correo.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban y Búsqueda</Badge>
+
+## Convierte una búsqueda en una columna viva
+
+Una carpeta confina un hilo a un solo lugar. Las búsquedas guardadas te ofrecen múltiples perspectivas: por remitente, fecha, estado de lectura o cualquier combinación que se adapte a tu flujo.
+
+Inicia una búsqueda con los conocidos **operadores estilo Gmail** o con el creador visual de búsquedas y selecciona *Guardar búsqueda como columna*. Los hilos coincidentes aparecerán en una columna en vivo, con una consulta editable bajo el encabezado.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Operadores de búsqueda admitidos
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Crea una búsqueda sin escribir operadores:**  Abre las opciones de búsqueda para filtrar por remitente, destinatario, asunto, palabras clave, rango de fechas o columna objetivo.
+- **Acota tu tablero sin perder tus búsquedas guardadas:**  La búsqueda en todo el tablero añade un filtro a cada columna guardada, conservando intacta su consulta original.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Panel de opciones de búsqueda con filtros y opción para guardar la búsqueda como columna Kanban" caption="Crea una búsqueda y guárdala como columna en tu tablero." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Calendario e Invitaciones</Badge>
+
+## Calendario local y tarjetas de invitación interactivas
+
+Las invitaciones de calendario ahora se muestran como tarjetas dentro de la conversación, indicando la hora en tu zona horaria local, ubicación, organizador y respuestas de los asistentes. Puedes responder sin salir del hilo.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Tarjeta de invitación de calendario mostrada en la vista de conversación con botones de Aceptar, Quizás y Rechazar" caption="Consulta los detalles del evento y responde directamente desde la conversación." width={1280} height={820} />
+
+- **Acepta, Quizás o Rechaza al instante:**  Tu respuesta se envía al organizador y queda registrada en Meron.
+- **Actualizaciones automáticas del organizador:**  Meron aplica los cambios de horario y cancelaciones entrantes, incluso para reuniones recurrentes individuales.
+- **Calendario local mensual:**  Activa el Calendario en Configuración para ver eventos personales, invitaciones aceptadas y vencimientos en un solo lugar. Crea eventos de todo el día, programados o periódicos, y regresa al hilo de correo con un solo toque.
+
+Tu calendario se guarda localmente en tu dispositivo y se incluye en las copias de seguridad cifradas de Meron.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Vista mensual de calendario en Meron que muestra eventos y tareas programadas" caption="Eventos personales, invitaciones aceptadas y fechas límite en una sola vista." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Gestión de hilos</Badge>
+
+## Mover entre cuentas y accesos directos a carpetas recientes
+
+¿Necesitas archivar un hilo en otra cuenta? Ahora puedes **mover hilos entre diferentes cuentas de correo**, tanto en escritorio como en móvil: arrastra una tarjeta entre columnas de cuentas en el tablero Kanban o elige *Mover a…* en el menú del hilo.
+
+Meron copia los mensajes al destino y verifica la transferencia antes de enviar los originales a la Papelera.
+
+Los menús *Mover a* y *Copiar a* ahora muestran arriba **accesos rápidos a destinos recientes**, permitiéndote llegar más rápido a tus carpetas habituales.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Menú contextual del hilo con la acción Mover a... y opciones de carpeta de destino" caption="Mueve hilos a otra cuenta o selecciona un destino reciente." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Multimedia y Detalles</Badge>
+
+## Guardar y copiar imágenes integradas, más mejoras de escritorio
+
+La versión de escritorio también incorpora mejoras prácticas:
+
+- **Guardar y copiar imágenes en el texto:**  Haz clic derecho en una imagen dentro del mensaje o ábrela en la galería multimedia para guardarla o copiarla al portapapeles.
+- **Menús y ventanas emergentes más limpios:**  Menús y diálogos tienen un foco de teclado más consistente, submenús con resaltado más nítido y menos parpadeos.
+- **Errores más claros y más traducciones:**  Los fallos de mover o copiar detallan el motivo. Además, la versión móvil amplía las traducciones en los 19 idiomas admitidos.
+
+</PostSection>
+
+<ReleaseCTA heading="Prueba Meron 0.4.7" text="Meron es gratuito, de código abierto y local-first para macOS, Windows, Linux, iOS y Android. Descarga la versión más reciente o consulta el registro completo de cambios." download="Descargar Meron" changelog="Ver registro de cambios" github="GitHub Releases" />

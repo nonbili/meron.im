@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Thẻ và quy tắc cho hộp thư đến của bạn"
+publishedAt: "2026-11-02"
+readingTime: "3 phút đọc"
+summary: "Định rõ bước tiếp theo cho từng email gửi đến. Thẻ, cột Kanban và quy tắc hộp thư đến biến những tin nhắn hằng ngày thành một quy trình làm việc trực quan."
+highlights: ["Thẻ email được lưu cục bộ và đồng bộ dưới dạng từ khóa IMAP","Các cột thẻ Kanban hỗ trợ kéo và thả để gắn thẻ hoặc đổi thẻ cho chuỗi thư","Quy tắc hộp thư đến để gắn thẻ, đánh dấu đã đọc, gắn sao, sao chép hoặc di chuyển thư giữa các tài khoản","Chạy quy tắc trên thư hiện có trong Hộp thư đến kèm nhật ký hoạt động gần đây","Toán tử tìm kiếm has:attachment và tag:, cùng các công cụ thẻ MCP"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Phát hành · v0.4.10"
+---
+
+<PostSection>
+
+Một hóa đơn gửi đến. Quy tắc tự động gắn thẻ invoice và todo, giúp chuỗi thư xuất hiện trong cột Cần làm trên bảng Kanban trong khi vẫn nằm ở Hộp thư đến. Khi sẵn sàng phê duyệt, hãy kéo thẻ sang cột Duyệt. Meron sẽ đổi thẻ todo thành review để bạn nắm bắt ngay những việc cần chú ý. Dưới đây là cách thiết lập quy trình đó trong Meron 0.4.10.
+
+<PlatformNote>Thẻ, quy tắc và tìm kiếm tệp đính kèm hiện có trên bản máy tính 0.4.10 cũng như iOS và Android 0.4.8. Bộ công cụ thẻ MCP có trên bản máy tính.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Thẻ &amp; Kanban</Badge>
+
+## Định rõ bước tiếp theo cho mỗi chuỗi thư
+
+Bắt đầu bằng cách thêm thẻ todo và invoice từ tiêu đề cuộc trò chuyện hoặc menu chuỗi thư. Thẻ được đồng bộ lên máy chủ thư dưới dạng từ khóa IMAP tiêu chuẩn nên sẽ đi theo email của bạn trên mọi thiết bị. Chúng cũng được giữ nguyên trong Thư mục cục bộ và các bản sao lưu xuất ra.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Bảng Kanban của Meron hiển thị Hộp thư đến bên cạnh hai cột tag:todo và tag:review với nhãn thẻ màu trên từng thẻ chuỗi thư và huy hiệu chưa đọc trên biểu tượng bảng ở thanh bên" caption="Hộp thư đến, Cần làm và Duyệt cùng hiển thị trên một bảng." width={1280} height={820} />
+
+- **Kéo để gắn thẻ và đổi thẻ ngay trên bảng:** Lưu các tìm kiếm tag:todo và tag:review thành cột Kanban. Kéo một thẻ từ Hộp thư đến vào cột để thêm thẻ, hoặc kéo qua lại giữa các cột này để thay thế thẻ quy trình. Các thẻ khác như invoice vẫn được giữ nguyên trên chuỗi thư.
+- **Bật tắt nhiều thẻ tại chỗ:** Sử dụng menu con Thẻ để chọn hoặc bỏ chọn nhiều thẻ liên tiếp mà không cần mở lại menu mỗi lần.
+- **Đổi tên hoặc xóa thẻ ở mọi nơi:** Trong Cài đặt → Thư → Thẻ, bạn có thể đổi tên hoặc xóa một thẻ trên toàn bộ thư lưu trong thiết bị, đồng thời tự động cập nhật các quy tắc và cột trên bảng Kanban.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menu ngữ cảnh của chuỗi thư đang mở menu con Thẻ hiển thị các thẻ đã chọn và thao tác Thêm thẻ" caption="Bật tắt nhiều thẻ trực tiếp từ menu chuỗi thư, hoặc nhấp vào bất kỳ nhãn thẻ nào trên thẻ để lọc theo thẻ đó." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Quy tắc hộp thư đến</Badge>
+
+## Để hóa đơn tiếp theo tự động phân loại
+
+Để tự động hóa bước đầu tiên, hãy tạo một quy tắc khớp với tiêu đề chứa “invoice” và thêm thẻ invoice cùng todo. Quy tắc này chạy trên các thư mới vào Hộp thư đến, vì vậy hóa đơn phù hợp tiếp theo sẽ xuất hiện ngay trên bảng và sẵn sàng để bạn xử lý.
+
+Mở **Cài đặt → Quy tắc** để chọn tài khoản, điều kiện và hành động. Khớp theo người gửi, người nhận, tiêu đề, từ khóa hoặc tệp đính kèm. Để trống điều kiện sẽ khớp với mọi thư mới.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Cài đặt Meron hiển thị danh sách Quy tắc với tay nắm kéo, ảnh đại diện tài khoản, tóm tắt quy tắc, nút Chạy và nhật ký Hoạt động gần đây" caption="Chạy quy tắc trên thư hiện có trong Hộp thư đến, rồi kiểm tra Hoạt động gần đây để xem kết quả." width={1280} height={820} />
+
+- **Kết hợp nhiều hành động trong một quy tắc:** Bên cạnh việc gắn thẻ, quy tắc còn có thể đánh dấu thư đã đọc, gắn sao, sao chép hoặc di chuyển thư sang thư mục khác—thậm chí chuyển giữa các tài khoản hoặc vào Thư mục cục bộ trên máy tính.
+- **Kéo để sắp xếp thứ tự ưu tiên:** Các quy tắc chạy lần lượt từ trên xuống dưới. Quy tắc đầu tiên di chuyển thư sẽ quyết định đích đến của thư đó. Sắp xếp lại quy tắc bằng tay nắm kéo hoặc phím mũi tên Lên và Xuống.
+- **Chạy trên thư hiện có và kiểm tra hoạt động:** Nhấp vào nút Chạy trên bất kỳ quy tắc nào để áp dụng cho những thư đã có sẵn trong Hộp thư đến, sau đó xem mục Hoạt động gần đây bên dưới để biết quy tắc nào đã chạy và vào lúc nào.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Trình chỉnh sửa quy tắc của Meron hiển thị phạm vi tài khoản, điều kiện khớp cho Từ, Tiêu đề và Có tệp đính kèm, cùng các hành động Thêm thẻ, Đánh dấu đã đọc, Sao chép tới và Di chuyển tới" caption="Chọn điều kiện khớp thư và hành động tương ứng trong trình chỉnh sửa quy tắc." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Tìm kiếm &amp; MCP</Badge>
+
+## Tìm lại những bức thư đằng sau quy trình của bạn
+
+Tìm kiếm tag:invoice has:attachment để lọc ra mọi hóa đơn có tệp đính kèm, bất kể chúng đang ở bước nào trong quy trình. Thêm bộ lọc người gửi hoặc chưa đọc để thu hẹp kết quả hơn nữa.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Ví dụ tìm kiếm
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Công cụ MCP mới trên máy tính
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Gợi ý thẻ và bộ lọc tệp đính kèm:** Tùy chọn tìm kiếm có sẵn gợi ý thẻ và hộp kiểm «Có tệp đính kèm» nếu bạn thích tạo bộ lọc bằng biểu mẫu. Lưu kết quả tìm kiếm thành cột Kanban trực tiếp để luôn tiện tra cứu.
+- **Công cụ thẻ cho ứng dụng khách MCP:** Trên máy tính, các ứng dụng khách MCP cục bộ có quyền tổ chức thư có thể gọi list\_tags và tag\_messages để kiểm tra các thẻ đang dùng cũng như thêm hoặc gỡ thẻ trên các chuỗi thư.
+
+</PostSection>
+
+Bản phát hành này cũng bổ sung huy hiệu chưa đọc trên Kanban, phím tắt trong trình soạn thư và tính năng dọn dẹp thông báo đồng bộ giữa các thiết bị. [Xem nhật ký thay đổi](/changelog)
+
+<ReleaseCTA heading="Trải nghiệm Meron 0.4.10" text="Tải bản dựng mới nhất để bắt đầu gắn thẻ và tự động hóa hộp thư đến của bạn. Meron miễn phí và mã nguồn mở, có ứng dụng cho macOS, Windows, Linux, iOS và Android." download="Tải Meron" changelog="Xem nhật ký thay đổi" github="Bản phát hành GitHub" />

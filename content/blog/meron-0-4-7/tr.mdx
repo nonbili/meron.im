@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Kaydedilen Aramaları Kanban Sütunlarına Dönüştürün"
+publishedAt: "2026-10-22"
+readingTime: "4 dk okuma"
+summary: "Panonuzu önemli e-postalarınızın etrafında inşa edin: Gmail tarzı aramaları canlı Kanban sütunlarına dönüştürün. Artık yerel takvim, doğrudan davet yanıtları ve hesaplar arası ileti taşıma da dahil."
+highlights: ["Kaydedilen arama Kanban sütunları ve Gmail tarzı arama işleçleri","Etkinlikler, kabul edilen davetler ve görevleri birleştiren yerel takvim","Kabul Et, Belki ve Reddet seçenekli etkileşimli davet kartları","Hesaplar arası ileti taşıma ve son kullanılan klasör kısayolları","İletilerden ve galeriden satır içi resimleri kaydetme ve kopyalama"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Sürüm · v0.4.7"
+platformsSubtitle: "Masaüstü 0.4.7 · iOS ve Android 0.4.6"
+---
+
+<PostSection>
+
+Önemli müşterilerden gelen okunmamış e-postalar, geçen ayın faturaları, yanıt bekleyen yıldızlı iletiler: Kaydedilen arama sütunlarıyla her birine Kanban panonuzda özel bir yer açabilirsiniz. Aramayı bir kez kaydedin, sütun gelen e-postalarınızla birlikte daima güncel kalsın.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban ve Arama</Badge>
+
+## Bir aramayı canlı bir sütuna dönüştürün
+
+Bir klasör iletiye tek bir yer tayin eder. Kaydedilen aramalar ise e-postalarınızı gönderene, tarihe, okunma durumuna veya iş akışınıza uygun herhangi bir birleşime göre çok yönlü görmenizi sağlar.
+
+Alışık olduğunuz **Gmail tarzı arama işleçleri** veya görsel arama oluşturucuyla arama yapıp *Aramayı sütun olarak kaydet* seçeneğini belirleyin. Eşleşen iletiler, başlığın altında düzenlenebilir bir sorguyla birlikte canlı bir sütunda belirir.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Desteklenen arama işleçleri
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **İşleç yazmadan arama oluşturun:**  Arama seçeneklerini açarak gönderene, alıcıya, konuya, anahtar sözcüklere, tarih aralığına veya hedef sütuna göre kolayca filtreleyin.
+- **Kaydedilen aramalarınızı kaybetmeden panoyu daraltın:**  Pano genelindeki arama, her kayıtlı sütuna ek bir filtre uygularken özgün arama sorgusunu korur.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Filtre alanları ve aramayı Kanban sütunu olarak kaydetme seçeneğini içeren arama ayarları penceresi" caption="Bir arama oluşturun ve panonuzda bir sütun olarak kaydedin." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Takvim ve Davetler</Badge>
+
+## Yerel öncelikli takvim ve etkileşimli davet kartları
+
+Takvim davetleri artık doğrudan yazışmanın içinde kart olarak görünür; yerel saat diliminizdeki saati, konumu, düzenleyeni ve katılımcı yanıtlarını gösterir. İletiden çıkmadan davetleri yanıtlayabilirsiniz.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Yazışma görünümünde Kabul Et, Belki ve Reddet düğmeleriyle görüntülenen takvim davet kartı" caption="Etkinlik ayrıntılarını görün ve doğrudan yazışma içinden yanıtlayın." width={1280} height={820} />
+
+- **Anında Kabul Et, Belki veya Reddet:**  Yanıtınız düzenleyene gönderilir ve Meron'a kaydedilir.
+- **Düzenleyenden otomatik güncellemeler:**  Meron, yinelenen toplantıların tekil örneklerindeki düzenlemeler de dahil olmak üzere gelen saat değişikliklerini ve iptalleri otomatik uygular.
+- **Aylık yerel takvim:**  Kişisel etkinlikleri, kabul edilen davetleri ve görev son tarihlerini bir arada görmek için Ayarlar'dan Takvim'i etkinleştirin. Tam günlük, saatli veya yinelenen etkinlikler oluşturun ve davetten ilgili e-posta iletisine tek tıkla dönün.
+
+Takviminiz cihazınızda yerel olarak saklanır ve Meron'un şifrelenmiş yedeklerine dahil edilir.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Planlanan etkinlikleri ve görevleri gösteren Meron aylık takvim görünümü" caption="Kişisel etkinlikler, kabul edilen davetler ve görev son tarihleri tek görünümde." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">İleti Düzenleme</Badge>
+
+## Hesaplar arası taşıma ve son klasör kısayolları
+
+Bir iletiyi başka bir hesapta mı dosyalamak istiyorsunuz? Artık hem masaüstünde hem mobilde **iletileri farklı e-posta hesapları arasında taşıyabilirsiniz**: Kanban panosunda bir kartı hesap sütunları arasında sürükleyin ya da menüden *Şuraya taşı…* seçeneğini kullanın.
+
+Meron, iletileri hedefe kopyalar ve aktarımı doğruladıktan sonra orijinallerini Çöp Kutusuna taşır.
+
+*Şuraya taşı* ve *Şuraya kopyala* menüleri en üstte **son hedef klasör kısayollarını** göstererek sık kullandığınız klasörlere daha hızlı erişmenizi sağlar.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Şuraya taşı eylemini ve hedef klasör seçeneklerini gösteren ileti bağlam menüsü" caption="İletileri başka bir hesaba taşıyın veya son kullanılan bir hedefi seçin." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Medya ve İyileştirmeler</Badge>
+
+## Satır içi resimleri kaydetme/kopyalama ve masaüstü iyileştirmeleri
+
+Masaüstü sürümünde günlük deneyimi kolaylaştıran geliştirmeler yapıldı:
+
+- **Satır içi resimleri kaydedin ve kopyalayın:**  Bir iletideki resme sağ tıklayarak veya medya galerisinde açarak resmi kaydedebilir ya da panonuza kopyalayabilirsiniz.
+- **Daha akıcı menüler ve pencereler:**  Menü ve pencereler daha tutarlı klavye odağına ve kapatma davranışına kavuştu; alt menü vurguları netleşti ve titremeler azaldı.
+- **Daha net hata bildirimleri ve genişletilmiş çeviriler:**  Taşıma ve kopyalama hatalarında neden hakkında daha fazla ayrıntı sunulur. Mobil sürümde de desteklenen 19 dil genelinde çeviriler kapsamlı şekilde genişletildi.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.7'yi deneyin" text="Meron; macOS, Windows, Linux, iOS ve Android için ücretsiz, açık kaynaklı ve yerel önceliklidir. En son sürümü indirin veya tüm sürüm notlarını inceleyin." download="Meron'u İndir" changelog="Değişiklik Günlüğünü Gör" github="GitHub Sürümleri" />

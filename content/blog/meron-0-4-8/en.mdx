@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Make room for your mail with Local Folders"
+publishedAt: "2026-10-28"
+readingTime: "3 min read"
+summary: "Move old mail off the server, back up your archive, and keep upcoming events and tasks beside your inbox."
+highlights: ["Local Folders on your computer with passphrase-encrypted archive backups","Create and rename folders on the server and in Local Folders","Calendar side panel with mini month view and 7-day agenda","Calendar and task reminders with optional task due times","Keyboard message paging (Space / Shift+Space) and Alt+Arrow thread stepping"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Release · v0.4.8"
+platformsSubtitle: "Local Folders, the calendar side panel, and reading shortcuts: desktop 0.4.8. Folder management and reminders: also available on iOS and Android 0.4.7."
+---
+
+<PostSection>
+
+A full mailbox shouldn’t mean deleting mail you want to keep. Meron 0.4.8 adds Local Folders on desktop so you can move receipts, finished projects, and old conversations onto your computer. A new calendar side panel keeps upcoming work in view while you read.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Local Folders</Badge>
+
+## Keep mail on your computer, off the server
+
+Free up space in your IMAP mailbox or save your mail before closing an account. Local Folders give you an offline archive on your computer that you can browse and search in Meron.
+
+Add **Local Folders** under Settings → Local folders. It starts with an Archive folder and appears alongside your mail accounts in the navigation rail, Kanban board, and search. Mail stored there stays on that computer.
+
+- **Move or copy from any account:** Drag cards onto a local folder column on your Kanban board, or use Move to… and Copy to… from any thread menu. Moving a thread verifies that every message is safely stored on disk before moving the server copies to Trash.
+- **Organize your local archive:** Create, rename, and nest folders inside Local Folders to structure your offline archive however you like.
+- **Passphrase-encrypted archive backups:** Once you remove the server copies, your local archive may be the only copy of that mail. Use Settings → Local folders to export a backup and keep it somewhere separate from your computer. The exported backup is encrypted with a passphrase and can be restored in Meron on another computer.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Meron Settings showing Local Folders storage usage along with Export backup and Restore backup controls" caption="Settings → Local Folders shows local archive storage usage and lets you export or restore passphrase-encrypted archive snapshots." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Organize your archive</Badge>
+
+## Put old mail where you can find it
+
+Create a folder for each project, client, or year without leaving Meron. Desktop 0.4.8 supports folder creation and renaming on your IMAP server and in Local Folders; iOS and Android 0.4.7 bring the same controls to server folders.
+
+- **Create folders anywhere:** Create folders and nested subfolders from mailbox and Kanban column menus.
+- **Rename folders in place:** Kanban columns and recent transfer shortcuts follow the new folder name.
+- **Find a destination quickly:** Move to… and Copy to… group destinations by account and keep recent folders at the top. On desktop, Local Folders appears alongside your other accounts.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Thread context menu showing recent folder targets at the top and account-grouped Move to flyouts expanding Local Folders" caption="Move to and Copy to menus keep recent targets at the top and group every account—including Local Folders—into clean nested flyouts." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Calendar &amp; Reminders</Badge>
+
+## Keep upcoming work beside your inbox
+
+Checking whether you are free on Thursday shouldn’t pull you away from the message you are reading. On desktop, Calendar now lives alongside Tasks in the right-hand side panel.
+
+Browse a compact month grid and a rolling 7-day agenda of events and due tasks beside your inbox or Kanban board. Expand to the full monthly calendar when you need to plan further ahead. Event and task reminders are available on desktop 0.4.8 and mobile 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Meron Kanban board alongside the new right-hand Calendar side panel showing a mini month grid and 7-day agenda" caption="The Calendar side panel docks next to your Kanban board or mailbox with a mini month view and a rolling 7-day agenda of events and due tasks." width={1280} height={820} />
+
+- **Configurable event alerts:** Set default reminder times for timed and all-day events in Settings, or customize up to two alerts per event.
+- **Task due times:** Set an optional time next to a task’s due date to get a reminder when it is due. Tasks with only a date remind you at 9:00 a.m. local time.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Event details dialog showing a clickable meeting URL with copy button, configurable Alert and Second alert dropdowns, and agenda notes" caption="Configure up to two alerts per event, open or copy meeting URLs in one click, and jump straight back to the source invitation email." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Reading shortcuts</Badge>
+
+## Keep reading from the keyboard
+
+On desktop, page through a long message with Space or Shift+Space, then move to the next conversation without reaching for the mouse.
+
+<KeyboardShortcuts title="Reading shortcuts on desktop" items={[{"label":"Scroll message down one page","keys":["Space"]},{"label":"Scroll message up one page","keys":["Shift + Space"]},{"label":"Next thread","keys":["J","Alt + ↓"]},{"label":"Previous thread","keys":["K","Alt + ↑"]}]} or="or" note="Alt+↓ and Alt+↑ also work while a message is focused." />
+
+</PostSection>
+
+<ReleaseCTA heading="Try Meron 0.4.8" text="Download the latest build to start your archive. Meron is free and open source, with apps for macOS, Windows, Linux, iOS, and Android. The full changelog covers the remaining desktop and mobile updates." download="Download Meron" changelog="View Changelog" github="GitHub Releases" />

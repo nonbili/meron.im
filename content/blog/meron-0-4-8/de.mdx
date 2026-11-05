@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Platz im Postfach schaffen mit lokalen Ordnern"
+publishedAt: "2026-10-28"
+readingTime: "3 Min. Lesezeit"
+summary: "Verschieben Sie alte E-Mails vom Server auf Ihren Computer, sichern Sie Ihr Archiv und behalten Sie anstehende Termine und Aufgaben direkt neben dem Posteingang im Blick."
+highlights: ["Lokale Ordner auf Ihrem Computer mit passphrasenverschlüsselten Archiv-Backups","Ordner auf dem Server und in lokalen Ordnern erstellen und umbenennen","Kalender-Seitenleiste mit kompakter Monatsansicht und 7-Tage-Agenda","Kalender- und Aufgabenerinnerungen mit optionaler Fälligkeitszeit","Seitenweises Blättern per Tastatur (Leertaste / Umschalt+Leertaste) und Thread-Wechsel mit Alt+Pfeiltasten"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Release · v0.4.8"
+platformsSubtitle: "Lokale Ordner, Kalender-Seitenleiste und Lese-Tastenkürzel: Desktop 0.4.8. Ordnerverwaltung und Erinnerungen: auch auf iOS und Android 0.4.7 verfügbar."
+---
+
+<PostSection>
+
+Ein volles Postfach sollte nicht bedeuten, dass Sie E-Mails löschen müssen, die Sie eigentlich aufbewahren möchten. Meron 0.4.8 führt auf dem Desktop lokale Ordner ein, damit Sie Belege, abgeschlossene Projekte und ältere Unterhaltungen auf Ihren Computer übertragen können. Eine neue Kalender-Seitenleiste hält zudem anstehende Termine und Aufgaben während des Lesens im Blick.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Lokale Ordner</Badge>
+
+## E-Mails auf dem Computer behalten statt auf dem Server
+
+Schaffen Sie Platz in Ihrem IMAP-Postfach oder sichern Sie Ihre Nachrichten, bevor Sie ein Konto schließen. Lokale Ordner bieten Ihnen ein Offline-Archiv auf Ihrem Computer, das Sie in Meron wie gewohnt durchsuchen und durchblättern können.
+
+Fügen Sie **Lokale Ordner** unter Einstellungen → Lokale Ordner hinzu. Zu Beginn wird ein Archivordner angelegt, der neben Ihren E-Mail-Konten in der Navigationsleiste, auf dem Kanban-Board und in der Suche erscheint. Dort gespeicherte Nachrichten verbleiben ausschließlich auf diesem Computer.
+
+- **Aus jedem Konto verschieben oder kopieren:** Ziehen Sie Karten auf Ihrem Kanban-Board in eine Spalte für lokale Ordner oder nutzen Sie „Verschieben nach…“ und „Kopieren nach…“ im Thread-Menü. Beim Verschieben prüft Meron, ob jede Nachricht sicher auf der Festplatte gespeichert wurde, bevor die Serverkopien in den Papierkorb verschoben werden.
+- **Lokales Archiv frei strukturieren:** Erstellen, verschachteln und benennen Sie Ordner innerhalb von „Lokale Ordner“ um, damit Ihr Offline-Archiv genau zu Ihrer Arbeitsweise passt.
+- **Passphrasenverschlüsselte Archiv-Backups:** Sobald Sie die Kopien vom Server entfernen, ist Ihr lokales Archiv womöglich die einzige Kopie dieser E-Mails. Über Einstellungen → Lokale Ordner können Sie ein Backup exportieren und getrennt von Ihrem Computer aufbewahren. Das exportierte Backup ist mit einer Passphrase verschlüsselt und lässt sich in Meron auf einem anderen Computer wiederherstellen.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Meron-Einstellungen mit Speicherplatzanzeige für lokale Ordner sowie Schaltflächen zum Exportieren und Wiederherstellen von Backups" caption="Einstellungen → Lokale Ordner zeigt den belegten Speicherplatz des lokalen Archivs und ermöglicht das Exportieren oder Wiederherstellen passphrasenverschlüsselter Archiv-Snapshots." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Archiv organisieren</Badge>
+
+## Alte E-Mails dort ablegen, wo Sie sie wiederfinden
+
+Legen Sie für jedes Projekt, jeden Kunden oder jedes Jahr einen eigenen Ordner an, ohne Meron zu verlassen. Desktop 0.4.8 unterstützt das Erstellen und Umbenennen von Ordnern auf Ihrem IMAP-Server und in lokalen Ordnern; iOS und Android 0.4.7 bringen dieselben Funktionen für Serverordner.
+
+- **Ordner überall erstellen:** Erstellen Sie Ordner und verschachtelte Unterordner direkt über die Postfach- und Kanban-Spaltenmenüs.
+- **Ordner direkt umbenennen:** Kanban-Spalten und Schnellzugriffe für letzte Zielordner übernehmen automatisch den neuen Ordnernamen.
+- **Zielordner schnell finden:** „Verschieben nach…“ und „Kopieren nach…“ gruppieren Ziele nach Konto und halten zuletzt verwendete Ordner ganz oben. Auf dem Desktop erscheinen lokale Ordner direkt neben Ihren übrigen Konten.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Thread-Kontextmenü mit zuletzt genutzten Zielordnern oben und nach Konten gruppierten Untermenüs für „Verschieben nach“ inklusive Lokale Ordner" caption="Die Menüs „Verschieben nach“ und „Kopieren nach“ zeigen letzte Ziele ganz oben und gliedern jedes Konto – einschließlich lokaler Ordner – in übersichtliche Untermenüs." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Kalender &amp; Erinnerungen</Badge>
+
+## Anstehende Aufgaben direkt neben dem Posteingang
+
+Um kurz zu prüfen, ob Sie am Donnerstag Zeit haben, sollten Sie die E-Mail, die Sie gerade lesen, nicht verlassen müssen. Auf dem Desktop befindet sich der Kalender jetzt neben den Aufgaben in der rechten Seitenleiste.
+
+Überblicken Sie ein kompaktes Monatsraster und eine rollierende 7-Tage-Agenda mit Terminen und fälligen Aufgaben direkt neben Ihrem Posteingang oder Kanban-Board. Für die längerfristige Planung wechseln Sie mit einem Klick zur großen Monatsansicht. Termin- und Aufgabenerinnerungen stehen unter Desktop 0.4.8 und Mobile 0.4.7 bereit.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Meron-Kanban-Board neben der neuen rechten Kalender-Seitenleiste mit Mini-Monatsraster und 7-Tage-Agenda" caption="Die Kalender-Seitenleiste dockt neben Ihrem Kanban-Board oder Postfach an und zeigt eine kompakte Monatsansicht sowie eine 7-Tage-Agenda für Termine und fällige Aufgaben." width={1280} height={820} />
+
+- **Konfigurierbare Terminerinnerungen:** Legen Sie in den Einstellungen Standard-Erinnerungszeiten für terminierte und ganztägige Ereignisse fest oder richten Sie bis zu zwei Erinnerungen pro Termin ein.
+- **Fälligkeitszeiten für Aufgaben:** Ergänzen Sie das Fälligkeitsdatum einer Aufgabe optional um eine Uhrzeit, um pünktlich erinnert zu werden. Aufgaben, die nur ein Datum haben, erinnern Sie um 9:00 Uhr Ortszeit.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Termindialog mit anklickbarer Meeting-URL samt Kopier-Button, Auswahlfeldern für erste und zweite Erinnerung sowie Notizen" caption="Konfigurieren Sie bis zu zwei Erinnerungen pro Termin, öffnen oder kopieren Sie Meeting-Links mit einem Klick und springen Sie direkt zur Einladungs-E-Mail zurück." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Lese-Tastenkürzel</Badge>
+
+## Komfortabel weiterlesen per Tastatur
+
+Blättern Sie auf dem Desktop mit der Leertaste oder Umschalt+Leertaste seitenweise durch lange Nachrichten und wechseln Sie ohne Maus direkt zur nächsten Unterhaltung.
+
+<KeyboardShortcuts title="Lese-Tastenkürzel auf dem Desktop" items={[{"label":"Nachricht eine Seite nach unten scrollen","keys":["Space"]},{"label":"Nachricht eine Seite nach oben scrollen","keys":["Shift + Space"]},{"label":"Nächster Thread","keys":["J","Alt + ↓"]},{"label":"Vorheriger Thread","keys":["K","Alt + ↑"]}]} or="oder" note="Alt+↓ und Alt+↑ funktionieren auch, während eine Nachricht fokussiert ist." />
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.8 ausprobieren" text="Laden Sie die aktuelle Version herunter, um Ihr lokales Archiv anzulegen. Meron ist kostenlos und quelloffen, mit Apps für macOS, Windows, Linux, iOS und Android. Das vollständige Changelog enthält alle weiteren Neuerungen für Desktop und Mobilgeräte." download="Meron herunterladen" changelog="Changelog ansehen" github="GitHub Releases" />

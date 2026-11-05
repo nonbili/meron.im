@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10：为你的收件箱引入标签与规则"
+publishedAt: "2026-11-02"
+readingTime: "3 分钟阅读"
+summary: "为每封来信指明下一步。标签、看板列与收件箱规则，将日常邮件转化为一目了然的工作流。"
+highlights: ["本地存储并作为 IMAP 关键字同步的邮件标签","支持拖放添加与替换标签的看板标签列","可跨账户添加标签、标记已读、加星标、复制或移动邮件的收件箱规则","支持对收件箱现有邮件运行规则并提供近期活动记录","has:attachment 与 tag: 搜索运算符，以及 MCP 标签工具"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "发布 · v0.4.10"
+---
+
+<PostSection>
+
+收到一张发票时，规则会自动为其加上 invoice 和 todo 标签，该会话随即出现在看板的“待办”列中，同时仍保留在收件箱内。等准备好审批时，只需将它拖到“审核”列，Meron 就会将 todo 标签替换为 review，让你一眼看清哪些事项需要处理。下面来看看如何在 Meron 0.4.10 中搭建这一工作流。
+
+<PlatformNote>标签、规则和附件搜索已在桌面端 0.4.10 以及 iOS 和 Android 0.4.8 中提供。MCP 标签工具已在桌面端提供。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">标签与看板</Badge>
+
+## 为每个会话指明下一步
+
+首先从会话标题栏或会话菜单中添加 todo 和 invoice 标签。标签会作为标准 IMAP 关键字同步到邮件服务器，因此可在不同设备间跟随你的邮件；同时它们也会保留在本地文件夹和导出的备份中。
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron 看板同时显示收件箱以及 tag:todo 和 tag:review 列，会话卡片上带有彩色标签，侧边栏的看板图标上显示未读角标" caption="在同一块看板上并列查看收件箱、待办与审核。" width={1280} height={820} />
+
+- <Strong>在看板上拖放即可添加或替换标签：</Strong>将 tag:todo 和 tag:review 搜索保存为看板列。将卡片从收件箱拖入即可添加标签，在这两列之间拖动则会替换对应的工作流标签，而 invoice 等其他标签仍会保留在会话上。
+- <Strong>就地切换多个标签：</Strong>使用“标签”子菜单即可连续勾选或取消多个标签，无需每次重新打开菜单。
+- <Strong>全局重命名或删除标签：</Strong>前往“设置 → 邮件 → 标签”，即可在设备存储的所有邮件中重命名或移除某个标签，并同步更新你的规则和看板列。
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="会话上下文菜单展开“标签”子菜单，显示已勾选的标签以及“添加标签”操作" caption="直接从会话菜单切换多个标签，或点击卡片上的任意标签进行筛选。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">收件箱规则</Badge>
+
+## 让下一张发票自动归类
+
+要让第一步自动完成，可以创建一条匹配主题包含“invoice”的规则，并自动添加 invoice 和 todo 标签。规则会对新到达收件箱的邮件生效，因此下一张匹配的发票会直接出现在看板上等待处理。
+
+打开<Strong>设置 → 规则</Strong>即可选择适用账户、匹配条件和执行动作。支持按发件人、收件人、主题、关键词或附件进行匹配；留空条件则会匹配所有新邮件。
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron 设置界面展示带有拖动手柄、账户头像、规则摘要、运行按钮以及近期活动记录的规则列表" caption="对收件箱中的现有邮件运行规则，然后在“近期活动”中查看执行结果。" width={1280} height={820} />
+
+- <Strong>在单条规则中组合多项动作：</Strong>除了添加标签外，规则还可以将邮件标记为已读、加星标、复制或移动到其他文件夹——在桌面端甚至支持跨账户移动或移入本地文件夹。
+- <Strong>拖动调整优先级顺序：</Strong>规则按从上到下的顺序依次运行，第一条移动邮件的规则将决定邮件的最终去向。你可以通过拖动手柄或上下方向键调整规则顺序。
+- <Strong>对现有邮件运行并查看活动记录：</Strong>点击任意规则上的“运行”按钮即可将其应用到收件箱中已有的邮件，并在规则列表下方的“近期活动”中查看执行记录和时间。
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron 规则编辑器展示账户范围、发件人/主题/包含附件等匹配条件，以及添加标签、标记为已读、复制到和移动到等执行动作" caption="在规则编辑器中选择要匹配的邮件以及随后要执行的动作。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">搜索与 MCP</Badge>
+
+## 快速找出工作流背后的邮件
+
+搜索 tag:invoice has:attachment 即可找出所有带附件的发票邮件，无论它们当前处于哪个工作流阶段。还可以叠加发件人或未读条件来进一步缩小范围。
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />搜索示例
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />桌面端新增 MCP 工具
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- <Strong>标签建议与附件筛选：</Strong>如果你更喜欢通过表单构建筛选条件，“搜索选项”提供了标签建议和“包含附件”复选框。你还可以将搜索结果保存为实时看板列，方便随时查看。
+- <Strong>面向 MCP 客户端的标签工具：</Strong>在桌面端，拥有邮件整理权限的本地 MCP 客户端可以调用 list\_tags 和 tag\_messages 来查看正在使用的标签，或为会话添加、移除标签。
+
+</PostSection>
+
+本次更新还带来了看板未读角标、撰写窗口快捷键以及跨设备的通知清理。 [查看更新日志](/changelog)
+
+<ReleaseCTA heading="立即体验 Meron 0.4.10" text="下载最新版本，开始使用标签和规则打理你的收件箱。Meron 免费且开源，提供 macOS、Windows、Linux、iOS 和 Android 客户端。" download="下载 Meron" changelog="查看更新日志" github="GitHub Releases" />

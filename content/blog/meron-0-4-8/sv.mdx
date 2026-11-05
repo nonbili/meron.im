@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Gör plats för din e-post med Lokala mappar"
+publishedAt: "2026-10-28"
+readingTime: "3 min läsning"
+summary: "Flytta gammal e-post från servern, säkerhetskopiera ditt arkiv och ha kommande händelser och uppgifter precis bredvid inkorgen."
+highlights: ["Lokala mappar på din dator med lösenfraskrypterade säkerhetskopior av arkivet","Skapa och byt namn på mappar på servern och i Lokala mappar","Sidopanel för kalender med minimånadsvy och 7-dagarsagenda","Kalender- och uppgiftspåminnelser med valfri förfallotid för uppgifter","Bläddra sida för sida med tangentbordet (Blanksteg / Skift+Blanksteg) och byt tråd med Alt+Piltangenter"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Release · v0.4.8"
+platformsSubtitle: "Lokala mappar, kalenderns sidopanel och läsgenvägar: desktop 0.4.8. Mapphantering och påminnelser: finns även på iOS och Android 0.4.7."
+---
+
+<PostSection>
+
+En full brevlåda ska inte behöva betyda att du raderar mejl du vill behålla. Meron 0.4.8 lägger till Lokala mappar på desktop så att du kan flytta kvitton, avslutade projekt och gamla konversationer till din dator. En ny sidopanel för kalendern håller dessutom kommande arbete synligt medan du läser.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Lokala mappar</Badge>
+
+## Behåll mejlen på din dator, borta från servern
+
+Frigör utrymme i din IMAP-brevlåda eller spara dina mejl innan du avslutar ett konto. Lokala mappar ger dig ett offlinearkiv på datorn som du kan bläddra och söka i direkt i Meron.
+
+Lägg till **Lokala mappar** under Inställningar → Lokala mappar. Det startar med mappen Arkiv och visas bredvid dina e-postkonton i navigeringsfältet, på Kanban-tavlan och i sökningen. Mejl som lagras där stannar på den datorn.
+
+- **Flytta eller kopiera från valfritt konto:** Dra kort till en kolumn för en lokal mapp på Kanban-tavlan, eller använd Flytta till… och Kopiera till… från valfri trådmeny. När du flyttar en tråd kontrollerar Meron att varje meddelande har sparats säkert på disken innan serverkopiorna flyttas till Papperskorgen.
+- **Organisera ditt lokala arkiv:** Skapa, byt namn på och kapsla mappar inuti Lokala mappar för att strukturera ditt offlinearkiv precis som du vill.
+- **Lösenfraskrypterade säkerhetskopior av arkivet:** När du har tagit bort kopiorna från servern kan ditt lokala arkiv vara det enda exemplaret av de mejlen. Använd Inställningar → Lokala mappar för att exportera en säkerhetskopia och förvara den separat från datorn. Den exporterade säkerhetskopian är krypterad med en lösenfras och kan återställas i Meron på en annan dator.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Merons inställningar som visar lagringsanvändning för Lokala mappar samt knappar för att exportera och återställa säkerhetskopia" caption="Inställningar → Lokala mappar visar det lokala arkivets lagringsutrymme och låter dig exportera eller återställa lösenfraskrypterade ögonblicksbilder." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Organisera ditt arkiv</Badge>
+
+## Lägg gamla mejl där du hittar dem
+
+Skapa en mapp för varje projekt, kund eller år utan att lämna Meron. Desktop 0.4.8 stöder att skapa och byta namn på mappar både på din IMAP-server och i Lokala mappar; iOS och Android 0.4.7 ger samma kontroll för servermappar.
+
+- **Skapa mappar var som helst:** Skapa mappar och kapslade undermappar direkt från brevlåde- och Kanban-kolumnmenyer.
+- **Byt namn på mappar direkt:** Kanban-kolumner och genvägar till senaste överföringar uppdateras automatiskt med det nya mappnamnet.
+- **Hitta rätt målmapp snabbt:** Flytta till… och Kopiera till… grupperar mål efter konto och håller de senaste mapparna överst. På desktop visas Lokala mappar sida vid sida med dina övriga konton.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Trådens snabbmeny med senaste målmappar överst och kontogrupperade Flytta till-undermenyer som expanderar Lokala mappar" caption="Menyerna Flytta till och Kopiera till håller senaste mål överst och grupperar varje konto – inklusive Lokala mappar – i tydliga undermenyer." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Kalender &amp; Påminnelser</Badge>
+
+## Ha kommande arbete bredvid inkorgen
+
+Att kolla om du är ledig på torsdag ska inte behöva ta dig bort från meddelandet du läser. På desktop bor nu Kalendern bredvid Uppgifter i den högra sidopanelen.
+
+Bläddra i ett kompakt månadsrutnät och en rullande 7-dagarsagenda med händelser och förfallande uppgifter bredvid din inkorg eller Kanban-tavla. Expandera till den fullständiga månadskalendern när du behöver planera längre fram. Påminnelser för händelser och uppgifter finns på desktop 0.4.8 och mobil 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Merons Kanban-tavla bredvid den nya högra sidopanelen för Kalender med minimånadsrutnät och 7-dagarsagenda" caption="Kalenderns sidopanel fästs bredvid din Kanban-tavla eller brevlåda med en minimånadsvy och en rullande 7-dagarsagenda för händelser och uppgifter." width={1280} height={820} />
+
+- **Konfigurerbara händelsepåminnelser:** Ange standardtider för påminnelser för tidsbestämda händelser och heldagshändelser i Inställningar, eller anpassa upp till två påminnelser per händelse.
+- **Förfallotider för uppgifter:** Ange en valfri tid bredvid en uppgifts förfallodatum för att få en påminnelse när det är dags. Uppgifter som bara har ett datum påminner dig kl. 09:00 lokal tid.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Dialogruta med händelsedetaljer som visar en klickbar möteslänk med kopieringsknapp, rullgardinsmenyer för första och andra påminnelse samt anteckningar" caption="Konfigurera upp till två påminnelser per händelse, öppna eller kopiera möteslänkar med ett klick och hoppa direkt tillbaka till inbjudningsmejlet." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Läsgenvägar</Badge>
+
+## Fortsätt läsa från tangentbordet
+
+På desktop kan du bläddra sida för sida genom långa meddelanden med Blanksteg eller Skift+Blanksteg och sedan gå vidare till nästa konversation utan att sträcka dig efter musen.
+
+<KeyboardShortcuts title="Läsgenvägar på desktop" items={[{"label":"Rulla meddelandet en sida nedåt","keys":["Space"]},{"label":"Rulla meddelandet en sida uppåt","keys":["Shift + Space"]},{"label":"Nästa tråd","keys":["J","Alt + ↓"]},{"label":"Föregående tråd","keys":["K","Alt + ↑"]}]} or="eller" note="Alt+↓ och Alt+↑ fungerar även när ett meddelande är i fokus." />
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.4.8" text="Ladda ner den senaste versionen för att starta ditt arkiv. Meron är gratis och öppen källkod, med appar för macOS, Windows, Linux, iOS och Android. Den fullständiga ändringsloggen täcker övriga uppdateringar för desktop och mobil." download="Ladda ner Meron" changelog="Visa ändringslogg" github="GitHub Releases" />

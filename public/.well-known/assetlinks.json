@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "jp.nonbili.meron",
+      "sha256_cert_fingerprints": [
+        "5B:CF:A1:0B:8D:50:9F:F2:81:49:85:65:8B:90:12:8F:10:13:78:47:50:F1:20:15:6B:B8:A5:2D:9C:DF:76:2C",
+        "D3:77:B8:AE:9A:31:76:86:58:10:76:74:EB:DB:F6:BF:2D:58:59:27:7A:0A:95:2A:B4:4D:E0:83:76:13:D2:04"
+      ]
+    }
+  }
+]

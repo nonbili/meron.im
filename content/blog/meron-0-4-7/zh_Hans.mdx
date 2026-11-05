@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7：将保存的搜索转换为看板列"
+publishedAt: "2026-10-22"
+readingTime: "4 分钟阅读"
+summary: "围绕最重要的邮件构建看板：将类似 Gmail 的搜索操作转换为实时看板列。此外还新增了本地日历、内联邀请回复以及跨账户邮件移动。"
+highlights: ["保存搜索看板列与类 Gmail 搜索运算符","包含日程、已接受邀请和待办任务的本地日历","支持接受、待定和谢绝的交互式日历邀请卡片","跨账户会话移动与最近文件夹快捷方式","直接从邮件和媒体库保存并复制内联图片"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "发布 · v0.4.7"
+platformsSubtitle: "桌面端 0.4.7 · iOS 与 Android 0.4.6"
+---
+
+<PostSection>
+
+来自重要客户的未读邮件、上个月的发票、需要回复的星标会话——通过保存的搜索列，你可以为每项内容在看板上留出专属位置。只需保存一次搜索，看板列就会随着邮件变化实时更新。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">看板与搜索</Badge>
+
+## 将搜索转化为实时看板列
+
+文件夹只能让会话归属于一处，而保存的搜索则能从更多维度呈现邮件：按发件人、日期、已读状态，或任何符合你工作流的组合条件。
+
+你可以使用熟悉的<Strong>类 Gmail 搜索运算符</Strong>或可视化搜索构建器开始搜索，然后选择<Em>将搜索保存为列</Em>。匹配的会话会立即呈现在实时列中，列标题下方还支持直接编辑查询条件。
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />支持的搜索运算符
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- <Strong>无需手动输入运算符即可构建搜索：</Strong> 打开搜索选项，即可按发件人、收件人、主题、关键词、日期范围或目标列进行筛选。
+- <Strong>在不丢失保存搜索的前提下缩小看板范围：</Strong> 全看板搜索会为每个保存的搜索列追加过滤条件，同时保留其原有的查询语句。
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="带有筛选字段及将搜索保存为看板列选项的搜索设置弹窗" caption="构建搜索，然后将其保存为看板上的一列。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">日历与邀请</Badge>
+
+## 本地优先的日历与交互式邀请卡片
+
+日历邀请现在会以卡片形式呈现在会话中，显示你所在本地时区的时间、地点、组织者以及与会者回复。无需离开会话即可直接处理邀请。
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="在会话视图中呈现的日历邀请卡片，带有接受、待定和谢绝按钮" caption="直接在会话中查看日程详情并作出回复。" width={1280} height={820} />
+
+- <Strong>就地选择接受、待定或谢绝：</Strong> 你的回复会发送给组织者并记录在 Meron 中。
+- <Strong>自动同步组织者更新：</Strong> Meron 会自动同步传来的日程变更与取消，包括对单次周期性会议的修改。
+- <Strong>月度本地日历：</Strong> 在“设置”中开启日历，即可在一处查看个人日程、已接受的邀请以及任务截止日期。支持创建全天、定时或重复日程，并可从邀请日程一键跳回对应的邮件会话。
+
+你的日历完全保存在本地设备上，并包含在 Meron 的加密备份中。
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Meron 中的月视图日历，展示已安排的日程与任务" caption="个人日程、已接受的邀请与任务截止日一览无余。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">邮件整理</Badge>
+
+## 跨账户移动与最近文件夹快捷方式
+
+需要把会话归档到另一个账户？你现在可以在桌面端和移动端直接<Strong>跨不同邮件账户移动会话</Strong>——无论是在看板上将卡片拖动到不同账户的列中，还是在会话菜单中选择<Em>移动到…</Em>。
+
+Meron 会将邮件复制到目标位置并在确认传输成功后，才会将原始邮件移入废纸篓。
+
+<Em>移动到</Em>与<Em>复制到</Em>菜单现已在顶部展示<Strong>最近目标文件夹快捷方式</Strong>，让你更快触达常用文件夹。
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="显示移动到操作及目标文件夹选项的会话上下文菜单" caption="将邮件会话移动到另一账户或选择最近使用的目标文件夹。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">媒体与细节优化</Badge>
+
+## 保存与复制内联图片，以及桌面端优化
+
+桌面端还带来了一系列日常体验改进：
+
+- <Strong>保存与复制正文内嵌图片：</Strong> 在邮件正文的图片上右键点击，或在媒体库中打开它，即可快速保存或复制到剪贴板。
+- <Strong>更清爽的菜单与弹窗：</Strong> 菜单和对话框拥有更一致的键盘焦点与关闭行为，子菜单高亮更加清晰，大幅减少了闪烁。
+- <Strong>更清晰的错误提示与更多翻译：</Strong> 移动与复制失败时会提供更详细的原因说明。移动端也对所支持的 19 种语言进行了全面扩充翻译。
+
+</PostSection>
+
+<ReleaseCTA heading="立即体验 Meron 0.4.7" text="Meron 免费、开源且本地优先，适用于 macOS、Windows、Linux、iOS 和 Android。立即下载最新版本或浏览完整更新日志。" download="下载 Meron" changelog="查看更新日志" github="GitHub Releases" />

@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Zmień zapisane wyszukiwania w kolumny Kanban"
+publishedAt: "2026-10-22"
+readingTime: "4 min czytania"
+summary: "Uporządkuj tablicę wokół najważniejszej poczty: zamień wyszukiwania w stylu Gmaila w dynamiczne kolumny Kanban. Odkryj też lokalny kalendarz, odpowiedzi na zaproszenia wewnątrz wątku i przenoszenie wiadomości między kontami."
+highlights: ["Kolumny Kanban zapisanych wyszukiwań i operatory w stylu Gmaila","Lokalny kalendarz wydarzeń, zaakceptowanych zaproszeń i terminów zadań","Interaktywne karty zaproszeń z opcjami Zaakceptuj, Być może i Odrzuć","Przenoszenie wątków między kontami i skróty do ostatnich folderów","Zapisywanie i kopiowanie obrazów w treści wiadomości oraz z galerii"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Wydanie · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS i Android 0.4.6"
+---
+
+<PostSection>
+
+Nieprzeczytane maile od kluczowych klientów, faktury z ostatniego miesiąca, wątki z gwiazdką oczekujące na odpowiedź: dzięki kolumnom zapisanych wyszukiwań każde z nich zyska własne miejsce na tablicy Kanban. Zapisz wyszukiwanie raz, a kolumna będzie aktualizować się na bieżąco.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban i Wyszukiwanie</Badge>
+
+## Zamień wyszukiwanie w aktywną kolumnę
+
+Folder przypisuje wątek tylko do jednego miejsca. Zapisane wyszukiwania dają wiele perspektyw: według nadawcy, daty, statusu przeczytania lub dowolnej kombinacji dopasowanej do Twojej pracy.
+
+Rozpocznij wyszukiwanie, korzystając ze znanych **operatorów w stylu Gmaila** lub wizualnego kreatora, a następnie wybierz *Zapisz wyszukiwanie jako kolumnę*. Pasujące wątki pojawią się w aktywnej kolumnie z edytowalnym zapytaniem pod nagłówkiem.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Obsługiwane operatory wyszukiwania
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Twórz wyszukiwania bez wpisywania operatorów:**  Otwórz opcje wyszukiwania, aby filtrować według nadawcy, odbiorcy, tematu, słów kluczowych, zakresu dat lub kolumny docelowej.
+- **Zawężaj tablicę bez utraty zapisanych wyszukiwań:**  Wyszukiwanie obejmujące całą tablicę nakłada filtr na każdą zapisaną kolumnę, zachowując jej pierwotne zapytanie.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Okno opcji wyszukiwania z polami filtrów i opcją zapisu jako kolumny Kanban" caption="Stwórz wyszukiwanie i zapisz je jako kolumnę na tablicy." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalendarz i Zaproszenia</Badge>
+
+## Lokalny kalendarz i interaktywne karty zaproszeń
+
+Zaproszenia w kalendarzu pojawiają się teraz jako karty wewnątrz rozmowy, wyświetlając czas w lokalnej strefie czasowej, lokalizację, organizatora i odpowiedzi uczestników. Możesz odpowiedzieć na zaproszenie bez opuszczania wątku.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Karta zaproszenia w kalendarzu wyświetlana w widoku rozmowy z przyciskami Zaakceptuj, Być może i Odrzuć" caption="Zobacz szczegóły wydarzenia i odpowiedz bezpośrednio w rozmowie." width={1280} height={820} />
+
+- **Zaakceptuj, Być może lub Odrzuć na miejscu:**  Twoja odpowiedź zostanie wysłana do organizatora i zapisana w Meron.
+- **Automatyczne aktualizacje od organizatora:**  Meron automatycznie nanosi zmiany terminów i odwołania, także dla pojedynczych wystąpień spotkań cyklicznych.
+- **Miesięczny kalendarz lokalny:**  Włącz Kalendarz w Ustawieniach, aby w jednym widoku śledzić wydarzenia osobiste, zaakceptowane zaproszenia i terminy zadań. Twórz wydarzenia całodniowe, terminowe lub powtarzające się i wracaj do wątku mailowego jednym kliknięciem.
+
+Twój kalendarz jest przechowywany lokalnie na Twoim urządzeniu i objęty szyfrowanymi kopiami zapasowymi Meron.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Miesięczny widok kalendarza w Meron z zaplanowanymi wydarzeniami i zadaniami" caption="Osobiste wydarzenia, zaakceptowane zaproszenia i terminy zadań w jednym miejscu." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Zarządzanie wątkami</Badge>
+
+## Przenoszenie między kontami i skróty do ostatnich folderów
+
+Musisz zarchiwizować wątek na innym koncie? Możesz teraz **przenosić wątki między różnymi kontami e-mail** zarówno na komputerze, jak i w telefonie — przeciągając kartę między kolumnami kont na tablicy Kanban lub wybierając *Przenieś do…* z menu wątku.
+
+Meron kopiuje wiadomości do miejsca docelowego i weryfikuje transfer przed przeniesieniem oryginałów do Kosza.
+
+Menu *Przenieś do* oraz *Kopiuj do* wyświetlają teraz na samej górze **skróty do ostatnich folderów docelowych**, przyspieszając codzienne porządkowanie wiadomości.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Menu kontekstowe wątku z akcją Przenieś do... i opcjami folderów docelowych" caption="Przenieś wątki na inne konto lub wybierz ostatnio używany folder docelowy." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Multimedia i Udoskonalenia</Badge>
+
+## Zapisywanie i kopiowanie obrazów oraz ulepszenia desktopowe
+
+Wersja na komputery otrzymała także szereg praktycznych ulepszeń:
+
+- **Zapisuj i kopiuj obrazy w treści wiadomości:**  Kliknij prawym przyciskiem myszy obraz w wiadomości lub otwórz go w galerii multimediów, aby zapisać go lub skopiować do schowka.
+- **Czystsze menu i okna dialogowe:**  Menu i okna dialogowe zyskały bardziej spójną obsługę klawiatury, wyraźniejsze podświetlenie podmenu i mniej migotania.
+- **Czytelniejsze komunikaty błędów i więcej tłumaczeń:**  Niepowodzenia przenoszenia lub kopiowania podają dokładniejszy powód błędu. Aplikacja mobilna zyskała też rozszerzone tłumaczenia we wszystkich 19 obsługiwanych językach.
+
+</PostSection>
+
+<ReleaseCTA heading="Wypróbuj Meron 0.4.7" text="Meron jest darmowy, otwartoźródłowy i lokalny dla macOS, Windows, Linux, iOS i Android. Pobierz najnowsze wydanie lub przejrzyj pełne informacje o wersji." download="Pobierz Meron" changelog="Zobacz listę zmian" github="Wydania na GitHubie" />

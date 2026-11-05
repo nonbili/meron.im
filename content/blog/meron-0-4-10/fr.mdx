@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10 : Des étiquettes et des règles pour votre boîte de réception"
+publishedAt: "2026-11-02"
+readingTime: "3 min de lecture"
+summary: "Donnez une suite claire à chaque message entrant. Les étiquettes, les colonnes Kanban et les règles de réception transforment vos e-mails quotidiens en un flux de travail visuel."
+highlights: ["Étiquettes d'e-mail stockées localement et synchronisées comme mots-clés IMAP","Colonnes Kanban par étiquette avec glisser-déposer pour étiqueter et réétiqueter les fils","Règles de boîte de réception pour étiqueter, marquer comme lu, suivre, copier ou déplacer des messages entre comptes","Exécution des règles sur les messages existants avec journal d'activité récente","Opérateurs de recherche has:attachment et tag:, ainsi que de nouveaux outils MCP"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Version · v0.4.10"
+---
+
+<PostSection>
+
+Une facture arrive. Une règle lui ajoute automatiquement les étiquettes invoice et todo, et la conversation apparaît dans votre colonne « À faire » sur le tableau Kanban tout en restant dans votre boîte de réception. Lorsqu'elle est prête pour validation, faites-la glisser vers « En révision ». Meron remplace alors l'étiquette todo par review, vous permettant de voir d'un coup d'œil ce qui requiert votre attention. Voici comment mettre en place ce flux de travail dans Meron 0.4.10.
+
+<PlatformNote>Les étiquettes, les règles et la recherche de pièces jointes sont disponibles sur ordinateur (0.4.10) ainsi que sur iOS et Android (0.4.8). Les outils MCP d'étiquetage sont disponibles sur ordinateur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Étiquettes &amp; Kanban</Badge>
+
+## Donnez une prochaine étape à chaque conversation
+
+Commencez par ajouter les étiquettes todo et invoice depuis l'en-tête de la conversation ou le menu du fil. Les étiquettes sont synchronisées avec votre serveur de messagerie sous forme de mots-clés IMAP standards afin de suivre vos messages sur tous vos appareils. Elles sont également conservées dans les Dossiers locaux et les sauvegardes exportées.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Tableau Kanban de Meron affichant la boîte de réception aux côtés des colonnes tag:todo et tag:review avec des pastilles d'étiquettes colorées sur les cartes et un badge de non-lus sur l'icône du tableau" caption="Boîte de réception, À faire et En révision réunis sur un même tableau." width={1280} height={820} />
+
+- **Glissez-déposez pour étiqueter sur votre tableau :** Enregistrez les recherches tag:todo et tag:review comme colonnes Kanban. Faites glisser une carte depuis la boîte de réception pour lui ajouter une étiquette, ou d'une colonne à l'autre pour remplacer une étiquette d'étape par la suivante. Les autres étiquettes, comme invoice, restent attachées au fil.
+- **Activez plusieurs étiquettes à la volée :** Utilisez le sous-menu Étiquettes pour cocher ou décocher plusieurs étiquettes sans avoir à rouvrir le menu à chaque fois.
+- **Renommez ou supprimez une étiquette partout :** Dans Paramètres → Messages → Étiquettes, renommez ou supprimez une étiquette sur l'ensemble des messages stockés sur votre appareil, tout en mettant automatiquement à jour vos règles et vos colonnes Kanban.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menu contextuel d'un fil avec le sous-menu Étiquettes ouvert montrant les étiquettes cochées et l'action Ajouter une étiquette" caption="Activez ou désactivez plusieurs étiquettes depuis le menu du fil, ou cliquez sur une étiquette sur une carte pour filtrer la vue." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Règles de réception</Badge>
+
+## Laissez la prochaine facture se trier toute seule
+
+Pour automatiser la première étape, créez une règle qui détecte un objet contenant « invoice » et ajoute les étiquettes invoice et todo. Elle s'exécute sur les nouveaux messages arrivant dans la boîte de réception : la prochaine facture correspondante apparaîtra directement sur votre tableau, prête à être traitée.
+
+Ouvrez **Paramètres → Règles** pour choisir les comptes, les conditions et les actions. Filtrez par expéditeur, destinataire, objet, mots-clés ou pièce jointe. Des conditions vides correspondent à tous les nouveaux messages.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Paramètres de Meron affichant la liste des règles avec poignées de glissement, avatars de compte, résumés de règles, boutons Exécuter et journal d'activité récente" caption="Exécutez une règle sur les messages existants de la boîte de réception, puis consultez l'Activité récente pour voir le résultat." width={1280} height={820} />
+
+- **Combinez plusieurs actions dans une même règle :** En plus des étiquettes, une règle peut marquer un message comme lu, ajouter une étoile, le copier ou le déplacer vers un autre dossier — y compris vers un autre compte ou dans les Dossiers locaux sur ordinateur.
+- **Faites glisser pour ajuster la priorité :** Les règles s'exécutent de haut en bas. La première règle qui déplace un message décide de sa destination. Réordonnez vos règles à l'aide des poignées de glissement ou des touches fléchées Haut et Bas.
+- **Exécutez sur les messages existants et suivez l'activité :** Cliquez sur le bouton Exécuter d'une règle pour l'appliquer aux messages déjà présents dans votre boîte de réception, puis consultez l'Activité récente juste en dessous pour vérifier ce qui a été traité.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Éditeur de règle Meron affichant la portée des comptes, les conditions De, Objet et Avec pièce jointe, ainsi que les actions Ajouter des étiquettes, Marquer comme lu, Copier vers et Déplacer vers" caption="Choisissez les messages ciblés et les actions à appliquer dans l'éditeur de règle." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Recherche &amp; MCP</Badge>
+
+## Retrouvez les messages derrière votre flux de travail
+
+Recherchez tag:invoice has:attachment pour retrouver toutes les factures accompagnées d'une pièce jointe, quelle que soit leur étape d'avancement. Ajoutez un filtre d'expéditeur ou de statut non lu pour affiner encore les résultats.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Exemples de recherche
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nouveaux outils MCP sur ordinateur
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Suggestions d'étiquettes et filtre de pièce jointe :** Les options de recherche proposent des suggestions d'étiquettes et une case « Avec pièce jointe » si vous préférez construire votre filtre via un formulaire. Enregistrez ensuite la recherche comme colonne Kanban dynamique pour la garder sous la main.
+- **Outils d'étiquetage pour les clients MCP :** Sur ordinateur, les clients MCP locaux disposant de l'accès d'organisation des messages peuvent appeler list\_tags et tag\_messages pour inspecter les étiquettes existantes et en ajouter ou en retirer sur les fils.
+
+</PostSection>
+
+Cette version ajoute également des badges de non-lus sur le Kanban, des raccourcis dans le compositeur et la synchronisation de la fermeture des notifications entre appareils. [Voir le journal des modifications](/changelog)
+
+<ReleaseCTA heading="Essayez Meron 0.4.10" text="Téléchargez la dernière version pour commencer à étiqueter et automatiser votre boîte de réception. Meron est gratuit et open source, avec des applications pour macOS, Windows, Linux, iOS et Android." download="Télécharger Meron" changelog="Voir le journal des modifications" github="GitHub Releases" />

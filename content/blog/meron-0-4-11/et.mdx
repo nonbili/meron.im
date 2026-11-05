@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Kontaktide kataloog, Markdowni märkmed ja viivitusega reeglid"
+publishedAt: "2026-11-05"
+readingTime: "4 min lugemist"
+summary: "Tee kontaktide kohta märkmeid, jätka vestlusi pärast taaskäivitamist ja lase viivitusega reeglitel mittevajalikud kirjad automaatselt kustutada."
+highlights: ["Kontaktipaneel kinnitatud inimeste, privaatsete Markdowni märkmete ja vestlusajalooga","Brauserilaadsed vestluse vahelehed lohistatava järjestuse ja seansi taastamisega","Viivitusega reeglid, mis käivituvad pärast lugemist või kui kiri saavutab kindla vanuse","Arvutustabeli veergude ja tühikutega eraldatud loendite kleepimine otse saajaväljadele","Vasta kõigile klahviga A ja lisa osalejaid otse kiirvastuse ribalt","Täielik venekeelne tõlge töölaual, iOS-is ja Androidis"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Väljalase · v0.4.11"
+---
+
+<PostSection>
+
+Enne kliendile vastamist vaata üle eelmise kõne märkmed ja leia varasemad vestlused — seda kõike uuelt Kontaktide paneelilt. Meron 0.4.11 lisab kontaktide kinnitamise ja privaatsed Markdowni märkmed, taastab pärast taaskäivitamist vahelehed ning võimaldab reeglitel kirjad pärast läbilugemist ära koristada.
+
+<PlatformNote>Markdowni märkmetega kontaktipaneel, brauserilaadsed vahelehed ja viivitusega reeglid on saadaval töölauaversioonis 0.4.11. Kontaktide kataloog, kaugpiltide vahemällu salvestamine ja venekeelne lokaliseerimine on saadaval ka Androidis ja iOS-is.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kontaktid ja märkmed</Badge>
+
+## Hoia märkmed ja varasemad vestlused ühes kohas
+
+Ava külgribal Kontaktide paneel, et otsida nime järgi või sortida aadressiraamatut sageduse, viimaste suhtluste või tähestiku järgi.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Meroni töölauarakendus, mis näitab Kontaktide külgpaneeli valitud Sarah Jenkinsiga, privaatseid Markdowni märkmeid ja vestlusajalugu kaustasiltidega" caption="Vaata enne vastuse kirjutamist üle märkmed ja varasemad vestlused." width={1280} height={820} />
+
+- **Kinnita sagedased kontaktid:** Hoia inimesed, kellega kõige rohkem töötad, loendi alguses.
+- **Privaatsed Markdowni märkmed:** Pane iga kontakti juurde kirja koosolekute kokkuvõtted, telefoninumbrid või kokkulepped. Märkmed toetavad Markdowni vormingut koos Kirjuta ja Eelvaade vahelehtedega, jäävad sinu seadmesse ja blokeerivad välised pildid.
+- **Leia varasemad vestlused:** Vali kontakt, et sirvida kõiki ühiseid lõimi. Kaustasildid näitavad, mis asub kaustades Saabunud, Saadetud või Arhiiv; Rämpspost ja Prügikast on välja jäetud.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Vahelehed ja seansid</Badge>
+
+## Jätka täpselt sealt, kus pooleli jäid
+
+Taaskäivita Meron ja naase kohe avatud vestluste juurde. Vestluslõimed ja mustandid jagavad sama vaheleheriba, võimaldades mugavalt lugemise ja kirjutamise vahel lülituda.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Meroni vestlusvaade võrdse laiusega brauserivahelehtedega päises, mis näitavad aktiivseid lõimi ja mustandeid" caption="Hoia vestlused ja mustandid koos vaheleheribal." width={1280} height={820} />
+
+- **Lohista vahelehtede ümberjärjestamiseks:** Lohista vestlusi ja mustandeid vaheleheribal, et hoida seotud teemad kõrvuti.
+- **Taasta vahelehed pärast taaskäivitust:** Meron taastab avatud vahelehed ja aktiivse vestluse pärast rakenduse või süsteemi taaskäivitamist.
+- **Säilita mustandid vahelehtede sulgemisel:** Kirjutamisvahelehe sulgemisel või Meroni sulgemisel salvestatakse kirjutatu automaatselt kausta Mustandid.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Postkasti automatiseerimine</Badge>
+
+## Kustuta kirjad automaatselt pärast nende läbilugemist
+
+Kinnituskood on kasulik vaid mõne minuti; uudiskirja tasub ehk kuu aega alles hoida. Viivitusega reeglid lisavad versioonis 0.4.10 tutvustatud postkastireeglitele ajastamise võimaluse.
+
+Ava **Sätted → Reeglid**, et valida vastavad kirjad, toiming ja käivitamise aeg.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Kohe
+
+</CardTitle>
+
+Käivitub kohe, kui uued kirjad saabuvad kausta Saabunud.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Pärast lugemist
+
+</CardTitle>
+
+Käivitab pärast kirja lugemist taimeri (nt 5 min). Mitteloetuks märkimine tühistab selle.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Kui vanem kui
+
+</CardTitle>
+
+Hindab kirja vanust (nt 30 päeva), et vanemad kirjad automaatselt arhiivida.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Meroni reeglite redaktor, mis näitab vastavustingimusi, ajastamise juhtelemente (Pärast lugemist seatud 5 minutile) ja toimingut Teisalda prügikasti" caption="Seadista reeglid käivituma pärast lugemist, et 2FA koodid või ühekordsed teavitused automaatselt prügikasti saata." width={1280} height={820} />
+
+- **Käivita pärast lugemist:** Kinnituskirjade puhul vasta teemale, määra «Pärast lugemist» väärtuseks 5 minutit ja vali «Teisalda prügikasti». Kirja uuesti mitteloetuks märkimine tühistab taimeri.
+- **Käivita, kui on vanem kui:** Uudiskirjade või tellimuskviitungite puhul määra «Kui vanem kui» väärtuseks 30 päeva ja vali «Teisalda arhiivi». Aega saab määrata minutites, tundides või päevades.
+- **Eraldi reeglite redaktori leht:** Reeglite redaktoril on nüüd oma lehekülg. Käivita reegleid reegliloendist käsitsi ja vaata tegevuste logist, mis täpselt käivitati.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Meroni sätted, mis näitavad aktiivseid reegleid koos viivituse kirjelduste, käsitsi käivitamise nuppude ja viimaste tegevuste logiga" caption="Aktiivsed reeglid menüüs Sätted → Reeglid koos viivitustaimerite ja tegevuste logiga." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Koostaja ja kiirklahvid</Badge>
+
+## Kleebi saajate nimekiri ja vasta kõigile klahviga A
+
+Kopeeri aadressid arvutustabelist väljadele Saaja, Koopia või Pimekoopia või kasuta klaviatuuri kogu grupile vastamiseks.
+
+- **Kleebi aadresse arvutustabelitest:** Kleebi ridu või veerge Google Sheetsist, Excelist või CSV-failist. Meron muudab kleebitud aadressid eraldi saajateks ja aktsepteerib ka tühikutega eraldatud loendeid.
+- **Vajuta A, et vastata kõigile:** Vajuta vestluse vaatamisel klahvi A, et avada funktsioon Vasta kõigile. Saajaid saad lisada ka otse sisseehitatud kiirvastuse aknast.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Viimistlused ja keeled</Badge>
+
+## Veel selles versioonis
+
+Vene keel on nüüd saadaval töölaual, iOS-is ja Androidis. See väljalase täiustab ka Esc-klahvi käitumist piltide eelvaadetes ja Kanbani vastustes, viib lihttekstikoostaja kerimisriba paneeli serva ning parandab SVG renderdamise ja RSS-piltide vahemällu salvestamise.
+
+</PostSection>
+
+<ReleaseCTA heading="Proovi Meron 0.4.11 versiooni" text="Laadi alla Meron 0.4.11 kontaktide märkmete tegemiseks, vahelehtede taastamiseks ja postkasti ajastatud koristamiseks. Meron on tasuta ja avatud lähtekoodiga." download="Laadi alla Meron" changelog="Vaata muudatuste logi" github="GitHubi väljalasked" />

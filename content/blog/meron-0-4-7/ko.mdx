@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: 저장된 검색을 칸반 열로 변환"
+publishedAt: "2026-10-22"
+readingTime: "4분 소요"
+summary: "중요한 메일을 중심으로 보드를 구성하세요: Gmail 스타일 검색을 실시간 칸반 열로 변환할 수 있습니다. 로컬 캘린더, 인라인 초대 응답, 계정 간 스레드 이동도 지원합니다."
+highlights: ["저장된 검색 칸반 열 및 Gmail 스타일 검색 연산자","일정, 수락된 초대, 마감 작업을 보여주는 로컬 캘린더","수락, 미정, 거절을 지원하는 인터랙티브 캘린더 초대 카드","계정 간 스레드 이동 및 최근 폴더 바로가기","메시지 및 갤러리에서 인라인 이미지 저장 및 복사"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "릴리스 · v0.4.7"
+platformsSubtitle: "데스크톱 0.4.7 · iOS 및 Android 0.4.6"
+---
+
+<PostSection>
+
+주요 고객의 안 읽은 메일, 지난달 청구서, 회신이 필요한 별표 스레드까지. 저장된 검색 열을 활용하면 칸반 보드에서 각각의 전용 자리를 지정할 수 있습니다. 한 번 검색을 저장하면 메일 변경 사항에 맞춰 열이 실시간으로 업데이트됩니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">칸반 및 검색</Badge>
+
+## 검색을 실시간 칸반 열로 변환
+
+폴더는 스레드를 한곳에만 보관하지만, 저장된 검색을 사용하면 보낸 사람, 날짜, 읽음 여부 등 작업 흐름에 맞는 다양한 기준으로 메일을 살펴볼 수 있습니다.
+
+익숙한 <Strong>Gmail 스타일 연산자</Strong>나 시각적 검색 도구로 검색한 뒤, <Em>검색을 열로 저장</Em>을 선택하세요. 일치하는 스레드가 실시간 열에 표시되며 헤더 아래에서 쿼리를 즉시 수정할 수 있습니다.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />지원하는 검색 연산자
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- <Strong>연산자 입력 없이 검색 구성:</Strong>  검색 옵션을 열어 보낸 사람, 받는 사람, 제목, 키워드, 날짜 범위 또는 대상 열로 간편하게 필터링할 수 있습니다.
+- <Strong>저장된 검색을 유지하면서 보드 범위 좁히기:</Strong>  보드 전체 검색은 각 저장된 검색 열에 추가 필터를 적용하며, 원래 쿼리는 그대로 유지됩니다.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="필터 필드와 검색을 칸반 열로 저장하는 옵션이 포함된 검색 옵션 팝오버" caption="검색을 구성하고 보드의 열로 저장해보세요." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">캘린더 및 초대</Badge>
+
+## 로컬 우선 캘린더와 인터랙티브 초대 카드
+
+이제 대화 내에 캘린더 초대가 카드로 표시되어 로컬 시간대 기준 이벤트 시간, 위치, 주최자 및 참석자 응답을 보여줍니다. 스레드를 벗어나지 않고 바로 응답할 수 있습니다.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="수락, 미정, 거절 버튼이 있는 대화 보기 내 캘린더 초대 카드" caption="대화 내에서 이벤트 세부 정보를 확인하고 바로 응답하세요." width={1280} height={820} />
+
+- <Strong>즉시 수락, 미정 또는 거절:</Strong>  응답이 주최자에게 전송되고 Meron에 기록됩니다.
+- <Strong>주최자 업데이트 자동 반영:</Strong>  Meron은 반복 미팅의 개별 회차 변경을 포함하여 수신된 일정 변경 및 취소를 자동으로 반영합니다.
+- <Strong>월간 로컬 캘린더:</Strong>  설정에서 캘린더를 활성화하여 개인 일정, 수락된 초대, 마감 작업을 한곳에서 확인하세요. 종일, 시간 지정 또는 반복 일정을 생성하고 초대된 이벤트에서 해당 이메일 스레드로 바로 이동할 수 있습니다.
+
+캘린더 데이터는 기기에 로컬로 저장되며 Meron의 암호화된 백업에 포함됩니다.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="예정된 이벤트와 작업을 보여주는 Meron의 월간 캘린더 보기" caption="개인 일정, 수락된 초대, 작업 마감일을 한눈에 확인하세요." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">스레드 정리</Badge>
+
+## 계정 간 이동 및 최근 폴더 바로가기
+
+다른 계정으로 스레드를 옮겨야 하나요? 이제 데스크톱과 모바일 모두에서 <Strong>서로 다른 이메일 계정 간에 스레드를 이동</Strong>할 수 있습니다. 칸반 보드에서 계정 열 사이로 카드를 드래그하거나 스레드 메뉴에서 <Em>이동…</Em>을 선택하세요.
+
+Meron은 메시지를 대상 위치로 복사하고 안전하게 전송된 것을 확인한 뒤 원본을 휴지통으로 이동합니다.
+
+'<Em>이동</Em>' 및 '<Em>복사</Em>' 메뉴 상단에 <Strong>최근 대상 폴더 바로가기</Strong>가 표시되어 자주 쓰는 폴더에 더 빠르게 접근할 수 있습니다.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="이동 작업 및 대상 폴더 옵션을 보여주는 스레드 메뉴" caption="스레드를 다른 계정으로 이동하거나 최근 대상을 선택하세요." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">미디어 및 완성도 개선</Badge>
+
+## 인라인 이미지 저장·복사 및 데스크톱 개선 사항
+
+데스크톱 버전에도 다양한 일상적 개선이 적용되었습니다:
+
+- <Strong>인라인 이미지 저장 및 복사:</Strong>  메시지 내 이미지를 마우스 오른쪽 버튼으로 클릭하거나 미디어 갤러리에서 열어 저장하거나 클립보드에 복사할 수 있습니다.
+- <Strong>더 깔끔해진 메뉴와 오버레이:</Strong>  메뉴와 대화상자의 키보드 포커스와 닫기 동작이 일관되게 개선되었으며 하위 메뉴 강조 표시가 더 명확해져 깜빡임이 줄었습니다.
+- <Strong>명확해진 오류 메시지와 번역 확대:</Strong>  이동 및 복사 실패 시 원인에 대한 상세 정보가 제공됩니다. 모바일 버전에서도 지원되는 19개 언어 전반에 걸쳐 번역이 대폭 확충되었습니다.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.7 사용해보기" text="Meron은 macOS, Windows, Linux, iOS, Android를 지원하는 무료 오픈소스 로컬 우선 이메일 클라이언트입니다. 최신 빌드를 다운로드하거나 전체 릴리스 노트를 확인해보세요." download="Meron 다운로드" changelog="변경 이력 보기" github="GitHub Releases" />

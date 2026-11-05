@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Tags und Regeln für Ihren Posteingang"
+publishedAt: "2026-11-02"
+readingTime: "3 Min. Lesezeit"
+summary: "Geben Sie eingehenden E-Mails einen klaren nächsten Schritt. Tags, Kanban-Spalten und Posteingangsregeln machen aus alltäglichen Nachrichten einen sichtbaren Workflow."
+highlights: ["Lokal gespeicherte und als IMAP-Schlüsselwörter synchronisierte E-Mail-Tags","Kanban-Tag-Spalten zum Taggen und Umtaggen von Threads per Drag-and-drop","Posteingangsregeln zum Taggen, Als-gelesen-Markieren, Markieren, Kopieren oder kontoübergreifenden Verschieben","Regeln auf vorhandene E-Mails im Posteingang anwenden – inklusive Aktivitätsprotokoll","Suchoperatoren has:attachment und tag: sowie MCP-Tag-Tools"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Release · v0.4.10"
+---
+
+<PostSection>
+
+Eine Rechnung trifft ein. Eine Regel vergibt automatisch die Tags invoice und todo, und der Thread erscheint in Ihrer „To do“-Spalte auf dem Kanban-Board, während er im Posteingang bleibt. Sobald er zur Freigabe bereit ist, ziehen Sie ihn einfach nach „Review“. Meron tauscht das Tag todo gegen review aus, sodass Sie auf einen Blick sehen, was als Nächstes ansteht. So richten Sie diesen Workflow in Meron 0.4.10 ein.
+
+<PlatformNote>Tags, Regeln und Anhangssuche sind in Desktop 0.4.10 sowie iOS und Android 0.4.8 verfügbar. MCP-Tag-Tools stehen auf dem Desktop bereit.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Tags &amp; Kanban</Badge>
+
+## Geben Sie jedem Thread einen nächsten Schritt
+
+Fügen Sie zunächst über die Konversationskopfzeile oder das Thread-Menü die Tags todo und invoice hinzu. Tags werden als standardmäßige IMAP-Schlüsselwörter mit Ihrem Mailserver synchronisiert und begleiten Ihre Nachrichten über alle Geräte hinweg. Auch in Lokalen Ordnern und exportierten Backups bleiben sie erhalten.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron-Kanban-Board mit Posteingang neben den Spalten tag:todo und tag:review, farbigen Tag-Chips auf den Thread-Karten und einem Ungelesen-Badge am Board-Symbol in der Seitenleiste" caption="Posteingang, To do und Review gemeinsam auf einem Board." width={1280} height={820} />
+
+- **Per Drag-and-drop auf dem Board taggen und umtaggen:** Speichern Sie die Suchen tag:todo und tag:review als Kanban-Spalten. Ziehen Sie eine Karte aus dem Posteingang in eine Spalte, um ein Tag hinzuzufügen, oder zwischen diesen Spalten, um das eine Workflow-Tag durch das andere zu ersetzen. Weitere Tags wie invoice bleiben erhalten.
+- **Mehrere Tags direkt umschalten:** Über das Untermenü „Tags“ können Sie mehrere Tags nacheinander aktivieren oder deaktivieren, ohne das Menü jedes Mal neu öffnen zu müssen.
+- **Tags überall umbenennen oder löschen:** Unter Einstellungen → Nachrichten → Tags lassen sich Tags in allen auf Ihrem Gerät gespeicherten E-Mails umbenennen oder entfernen – Ihre Regeln und Kanban-Spalten werden dabei automatisch aktualisiert.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Thread-Kontextmenü mit geöffnetem Tags-Untermenü, ausgewählten Tags und der Aktion „Tag hinzufügen“" caption="Schalten Sie mehrere Tags direkt im Thread-Menü um oder klicken Sie auf ein Tag auf einer Karte, um danach zu filtern." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Posteingangsregeln</Badge>
+
+## Lassen Sie die nächste Rechnung sich selbst sortieren
+
+Um den ersten Schritt zu automatisieren, erstellen Sie eine Regel, die auf einen Betreff mit „invoice“ prüft und die Tags invoice sowie todo hinzufügt. Sie wird auf neue Nachrichten im Posteingang angewendet, sodass die nächste passende Rechnung direkt bearbeitungsbereit auf Ihrem Board erscheint.
+
+Öffnen Sie **Einstellungen → Regeln**, um Konten, Bedingungen und Aktionen festzulegen. Filtern Sie nach Absender, Empfänger, Betreff, Stichwörtern oder Anhängen. Leere Bedingungen erfassen alle neuen E-Mails.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron-Einstellungen mit der Regelliste samt Ziehpunkten, Konto-Avataren, Regelzusammenfassungen, Ausführen-Schaltflächen und dem Protokoll „Letzte Aktivitäten“" caption="Wenden Sie eine Regel auf bestehende Nachrichten im Posteingang an und sehen Sie unter „Letzte Aktivitäten“ nach, was ausgeführt wurde." width={1280} height={820} />
+
+- **Mehrere Aktionen in einer Regel kombinieren:** Neben dem Vergeben von Tags kann eine Regel E-Mails als gelesen markieren, mit einem Stern versehen, kopieren oder in einen anderen Ordner verschieben – auf dem Desktop sogar über Kontogrenzen hinweg oder in Lokale Ordner.
+- **Priorität per Drag-and-drop ändern:** Regeln werden von oben nach unten ausgeführt. Die erste Regel, die eine Nachricht verschiebt, bestimmt ihr Ziel. Ordnen Sie Regeln über die Ziehpunkte oder mit den Pfeiltasten nach oben und unten neu an.
+- **Auf vorhandene E-Mails anwenden &amp; Aktivität prüfen:** Klicken Sie bei einer beliebigen Regel auf „Ausführen“, um sie auf bereits im Posteingang liegende Nachrichten anzuwenden, und prüfen Sie unter „Letzte Aktivitäten“, wann welche Regel gegriffen hat.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron-Regeleditor mit Kontenauswahl, Bedingungen für Von, Betreff und Hat Anhang sowie Aktionen für Tags hinzufügen, Als gelesen markieren, Kopieren nach und Verschieben nach" caption="Legen Sie im Regeleditor fest, welche Nachrichten erfasst werden und was mit ihnen geschehen soll." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Suche &amp; MCP</Badge>
+
+## Finden Sie die E-Mails hinter Ihrem Workflow
+
+Suchen Sie nach tag:invoice has:attachment, um jede Rechnung mit Anhang zu finden – unabhängig von ihrer aktuellen Workflow-Phase. Ergänzen Sie Absender- oder Ungelesen-Filter, um die Treffer weiter einzugrenzen.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Suchbeispiele
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Neue MCP-Tools auf dem Desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Tag-Vorschläge und Anhangsfilter:** Wenn Sie Filter lieber über ein Formular zusammenstellen, bieten die Suchoptionen Tag-Vorschläge und das Kontrollkästchen „Hat Anhang“. Speichern Sie die Suche als dynamische Kanban-Spalte, um sie jederzeit griffbereit zu haben.
+- **Tag-Tools für MCP-Clients:** Auf dem Desktop können lokale MCP-Clients mit Berechtigung zur Nachrichtenorganisation list\_tags und tag\_messages aufrufen, um verwendete Tags einzusehen sowie Tags bei Threads hinzuzufügen oder zu entfernen.
+
+</PostSection>
+
+Dieses Release bringt außerdem Ungelesen-Badges für das Kanban-Board, Tastenkürzel im Editor und eine geräteübergreifende Bereinigung von Benachrichtigungen. [Changelog ansehen](/changelog)
+
+<ReleaseCTA heading="Meron 0.4.10 ausprobieren" text="Laden Sie die aktuelle Version herunter, um Ihren Posteingang mit Tags und Regeln zu strukturieren. Meron ist kostenlos und quelloffen, mit Apps für macOS, Windows, Linux, iOS und Android." download="Meron herunterladen" changelog="Changelog ansehen" github="GitHub Releases" />

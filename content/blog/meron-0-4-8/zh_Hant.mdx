@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8：用本機資料夾為信箱騰出空間"
+publishedAt: "2026-10-28"
+readingTime: "3 分鐘閱讀"
+summary: "將舊郵件從伺服器移至本機、備份你的封存檔案，並在收件匣旁隨時查看即將到來的日程與任務。"
+highlights: ["電腦端本機資料夾，支援通行密語加密的封存備份","在伺服器與本機資料夾中建立及重新命名資料夾","具備迷你月檢視與 7 天行程的日曆側邊欄","支援選填任務截止時間的日程與任務提醒","鍵盤郵件翻頁（Space / Shift+Space）與 Alt+方向鍵切換對話"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "發布 · v0.4.8"
+platformsSubtitle: "本機資料夾、日曆側邊欄與閱讀快速鍵：桌面端 0.4.8。資料夾管理與提醒：同時於 iOS 與 Android 0.4.7 提供。"
+---
+
+<PostSection>
+
+信箱空間爆滿，不代表必須刪除那些你想留存的郵件。Meron 0.4.8 在桌面端新增了「本機資料夾」，讓你可以將收據、已結案的專案和舊對話移至自己的電腦上。全新的日曆側邊欄則讓你在閱讀郵件的同時，隨時掌握接下來的工作安排。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">本機資料夾</Badge>
+
+## 將郵件保存在電腦上，釋放伺服器空間
+
+為你的 IMAP 信箱騰出儲存空間，或在關閉帳戶前妥善保存歷史郵件。本機資料夾在你的電腦上提供了一個離線封存庫，可在 Meron 中隨時瀏覽與搜尋。
+
+前往「設定 → 本機資料夾」新增<Strong>本機資料夾</Strong>。它預設包含一個「封存」資料夾，並會與你的郵件帳戶並列顯示在導覽列、看板和搜尋中。存放在這裡的郵件只會保留在該台電腦上。
+
+- <Strong>從任意帳戶移動或複製：</Strong>在看板上將卡片拖曳至本機資料夾欄，或使用任意對話選單中的「移動至…」和「複製至…」。移動對話時，Meron 會先驗證每封郵件都已安全寫入磁碟，隨後才將伺服器上的副本移至垃圾桶。
+- <Strong>整理你的本機封存：</Strong>在本機資料夾中建立、重新命名及巢狀建立子資料夾，依你習慣的方式組織離線封存結構。
+- <Strong>通行密語加密的封存備份：</Strong>移除伺服器副本後，本機封存可能成為這些郵件的唯一副本。你可以在「設定 → 本機資料夾」中匯出備份，並將其存放在電腦以外的安全位置。匯出的備份以通行密語加密，可在另一台電腦的 Meron 中還原。
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Meron 設定畫面展示本機資料夾儲存空間用量以及匯出備份、還原備份控制項" caption="「設定 → 本機資料夾」會顯示本機封存儲存空間用量，並讓你匯出或還原以通行密語加密的封存快照。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">整理封存</Badge>
+
+## 讓舊郵件井然有序、隨時可查
+
+無需離開 Meron，即可依專案、客戶或年份建立專屬資料夾。桌面端 0.4.8 支援在 IMAP 伺服器和本機資料夾中建立及重新命名資料夾；iOS 與 Android 0.4.7 也為伺服器資料夾帶來了相同的管理控制。
+
+- <Strong>隨處建立資料夾：</Strong>直接從信箱導覽或看板欄選單中建立資料夾與巢狀子資料夾。
+- <Strong>就地重新命名資料夾：</Strong>看板欄與最近轉移捷徑會自動同步新的資料夾名稱。
+- <Strong>快速找到目標位置：</Strong>「移動至…」和「複製至…」會依帳戶將目標位置分組，並將最近使用的資料夾置頂。在桌面端，「本機資料夾」會與其他帳戶並列顯示。
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="對話關聯選單頂部顯示最近目標資料夾，並依帳戶展開包含本機資料夾的「移動至」子選單" caption="「移動至」與「複製至」選單會將最近使用的目標置頂，並將包含本機資料夾在內的每個帳戶整理為清晰的巢狀子選單。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">日曆與提醒</Badge>
+
+## 在收件匣旁掌握近期工作
+
+確認週四是否有空，不應該打斷你正在閱讀的郵件。在桌面端，「日曆」現在與「任務」並列常駐於右側邊欄中。
+
+在收件匣或看板旁即可瀏覽精簡的月曆網格以及滾動的 7 天行程與到期任務。需要規劃更長遠的安排時，可展開完整月檢視。日程與任務提醒功能現已於桌面端 0.4.8 和行動端 0.4.7 同步提供。
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Meron 看板與全新的右側日曆側邊欄並列顯示迷你月曆網格與 7 天行程列表" caption="日曆側邊欄停靠在看板或信箱旁，提供迷你月檢視以及未來 7 天的日程和到期任務概覽。" width={1280} height={820} />
+
+- <Strong>可自訂的日程提醒：</Strong>在「設定」中為定時日程和全天日程設定預設提醒時間，或為單一日程自訂最多兩個提醒。
+- <Strong>任務截止時間：</Strong>在任務截止日期旁設定選填的具體時間，以便在到期時收到提醒。僅設定日期的任務會在當地時間上午 9:00 發出提醒。
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="日程詳情對話方塊展示可點擊的會議連結與複製按鈕、可設定的提醒與第二提醒下拉選單以及行程備註" caption="為每個日程設定最多兩個提醒，一鍵開啟或複製會議連結，並可直接跳回原始邀請郵件。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">閱讀快速鍵</Badge>
+
+## 雙手不離鍵盤，流暢閱讀郵件
+
+在桌面端，使用 Space 或 Shift+Space 即可在長郵件中上下翻頁，無需伸手拿滑鼠即可順暢切換到下一個對話。
+
+<KeyboardShortcuts title="桌面端閱讀快速鍵" items={[{"label":"郵件向下捲動一頁","keys":["Space"]},{"label":"郵件向上捲動一頁","keys":["Shift + Space"]},{"label":"下一個對話","keys":["J","Alt + ↓"]},{"label":"上一個對話","keys":["K","Alt + ↑"]}]} or="或" note="焦點位於郵件內文時，Alt+↓ 和 Alt+↑ 同樣有效。" />
+
+</PostSection>
+
+<ReleaseCTA heading="立即體驗 Meron 0.4.8" text="下載最新版本，開始建立你的本機封存。Meron 免費且開源，提供 macOS、Windows、Linux、iOS 和 Android 應用程式。完整更新日誌涵蓋了其餘桌面端與行動端更新。" download="下載 Meron" changelog="檢視更新日誌" github="GitHub Releases" />

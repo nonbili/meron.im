@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Pārvērtiet saglabātos meklējumus par Kanban kolonnām"
+publishedAt: "2026-10-22"
+readingTime: "4 min lasīšanai"
+summary: "Veidojiet savu e-pastu dēli ap svarīgāko: pārvērtiet Gmail stila meklējumus par dinamiskām Kanban kolonnām. Ietver arī lokālu kalendāru, tūlītējas atbildes uz ielūgumiem un ziņojumu pārvietošanu starp kontiem."
+highlights: ["Saglabāto meklējumu Kanban kolonnas un Gmail stila meklēšanas operatori","Lokāls kalendārs notikumiem, pieņemtajiem ielūgumiem un veicamajiem uzdevumiem","Interaktīvas ielūgumu kartītes ar iespējām Pieņemt, Varbūt un Noraidīt","Sarakstes pārvietošana starp kontiem un nesen izmantoto mapju saīsnes","Iegulto attēlu saglabāšana un kopēšana no ziņojumiem un galerijas"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Laidiens · v0.4.7"
+platformsSubtitle: "Darbvirsmas 0.4.7 · iOS un Android 0.4.6"
+---
+
+<PostSection>
+
+Nelasītie e-pasti no svarīgiem klientiem, pagājušā mēneša rēķini, ar zvaigznīti atzīmētās sarakstes, kas gaida atbildi: ar saglabāto meklējumu kolonnām katram no tiem ir sava vieta jūsu Kanban dēlī. Saglabājiet meklēšanu vienreiz, un kolonna automātiski atjaunosies līdz ar jūsu pastu.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban un Meklēšana</Badge>
+
+## Pārvērtiet meklēšanu par dinamisku kolonnu
+
+Mape piesaista saraksti vienai konkrētai vietai. Saglabātie meklējumi sniedz daudzveidīgāku skatu: pēc sūtītāja, datuma, lasīšanas statusa vai jebkuras kombinācijas, kas piemērota jūsu darba ritmam.
+
+Sāciet meklēšanu ar pazīstamiem **Gmail stila meklēšanas operatoriem** vai vizuālo meklēšanas rīku un izvēlieties *Saglabāt meklēšanu kā kolonnu*. Atbilstošās sarakstes parādīsies dinamiskā kolonnā ar rediģējamu vaicājumu tieši zem virsraksta.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Atbalstītie meklēšanas operatori
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Izveidojiet meklēšanu bez operatoru rakstīšanas:**  Atveriet meklēšanas opcijas, lai filtrētu pēc sūtītāja, saņēmēja, tēmas, atslēgvārdiem, datumu diapazona vai mērķa kolonnas.
+- **Samaziniet dēļa apjomu, nezaudējot saglabātos meklējumus:**  Visā dēlī veiktā meklēšana pievieno papildu filtru katrai saglabātajai kolonnai, saglabājot tās sākotnējo vaicājumu neskartu.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Meklēšanas opciju logs ar filtru laukiem un iespēju saglabāt meklēšanu kā Kanban kolonnu" caption="Izveidojiet meklēšanu un saglabājiet to kā kolonnu savā dēlī." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalendārs un Ielūgumi</Badge>
+
+## Lokāls kalendārs un interaktīvas ielūgumu kartītes
+
+Kalendāra ielūgumi tagad parādās kā kartītes pašā sarakstē, norādot pasākuma laiku jūsu vietējā laika joslā, vietu, rīkotāju un dalībnieku atbildes. Varat atbildēt, nepametot sarakstes pavedienu.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Kalendāra ielūguma kartīte sarunas skatā ar pogām Pieņemt, Varbūt un Noraidīt" caption="Skatiet pasākuma detaļas un atbildiet tieši sarunā." width={1280} height={820} />
+
+- **Pieņemt, Varbūt vai Noraidīt uz vietas:**  Jūsu atbilde tiek nosūtīta rīkotājam un reģistrēta Meron lietotnē.
+- **Automātiski rīkotāja atjauninājumi:**  Meron automātiski piemēro saņemtās grafika izmaiņas un atcelšanas, tostarp izmaiņas atsevišķās periodisko sapulču reizēs.
+- **Ikmēneša lokālais kalendārs:**  Ieslēdziet kalendāru Iestatījumos, lai vienkopus redzētu personīgos notikumus, pieņemtos ielūgumus un uzdevumu termiņus. Izveidojiet visas dienas, noteikta laika vai atkārtotus notikumus un no ielūguma viegli atgriezieties attiecīgajā e-pasta sarakstē.
+
+Jūsu kalendārs tiek glabāts lokāli ierīcē un ir iekļauts Meron šifrētajās rezerves kopijās.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Ikmēneša kalendāra skats Meron lietotnē ar ieplānotajiem notikumiem un uzdevumiem" caption="Personīgie notikumi, pieņemtie ielūgumi un uzdevumu termiņi vienā kopsavilkumā." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">E-pastu kārtošana</Badge>
+
+## Pārvietošana starp kontiem un neseno mapju saīsnes
+
+Vēlaties arhivēt saraksti citā kontā? Tagad varat **pārvietot sarakstes starp dažādiem e-pasta kontiem** gan datorā, gan mobilajā ierīcē — pārvelkot kartīti starp kontu kolonnām Kanban dēlī vai izvēloties *Pārvietot uz…* sarakstes izvēlnē.
+
+Meron iekopē ziņojumus mērķa vietā un pārbauda veiksmīgu pārsūtīšanu pirms oriģinālu pārvietošanas uz Miskasti.
+
+Izvēlnēs *Pārvietot uz* un *Kopēt uz* augšgalā tagad redzamas **nesen izmantoto mērķa mapju saīsnes**, ļaujot daudz ātrāk piekļūt jūsu iecienītākajām mapēm.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Sarakstes izvēlne ar darbību Pārvietot uz... un mērķa mapju iespējām" caption="Pārvietojiet sarakstes uz citu kontu vai izvēlieties nesen izmantotu mērķi." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Multivide un Uzlabojumi</Badge>
+
+## Iegulto attēlu saglabāšana un kopēšana, kā arī darbvirsmas uzlabojumi
+
+Darbvirsmas versija ir saņēmusi arī vairākus noderīgus ikdienas uzlabojumus:
+
+- **Saglabājiet un kopējiet iegultos attēlus:**  Noklikšķiniet ar peles labo pogu uz attēla ziņojumā vai atveriet to multivides galerijā, lai to saglabātu vai kopētu starpliktuvē.
+- **Tīrākas izvēlnes un logi:**  Izvēlnes un dialoglodziņi nodrošina konsekventāku tastatūras fokusu un aizvēršanu, skaidrāku apakšizvēļņu izcelšanu un mazāku mirgošanu.
+- **Skaidrāki kļūdu paziņojumi un paplašināti tulkojumi:**  Neveiksmīgas pārvietošanas vai kopēšanas gadījumos tiek sniegta detalizētāka informācija par cēloni. Mobilajai lietotnei ir paplašināti tulkojumi visās 19 atbalstītajās valodās.
+
+</PostSection>
+
+<ReleaseCTA heading="Izmēģiniet Meron 0.4.7" text="Meron ir bezmaksas, atvērtā koda un lokāli orientēts e-pasta klients operētājsistēmām macOS, Windows, Linux, iOS un Android. Lejupielādējiet jaunāko versiju vai lasiet pilnas laidiena piezīmes." download="Lejupielādēt Meron" changelog="Skatīt izmaiņu žurnālu" github="GitHub laidieni" />

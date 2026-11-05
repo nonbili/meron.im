@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Biến tìm kiếm đã lưu thành các cột Kanban"
+publishedAt: "2026-10-22"
+readingTime: "4 phút đọc"
+summary: "Tổ chức bảng làm việc quanh những email quan trọng nhất: chuyển đổi các tìm kiếm kiểu Gmail thành các cột Kanban trực tiếp. Bổ sung lịch cục bộ, phản hồi lời mời ngay trong chuỗi thư và di chuyển thư giữa các tài khoản."
+highlights: ["Các cột Kanban tìm kiếm đã lưu và toán tử tìm kiếm kiểu Gmail","Lịch cục bộ hiển thị sự kiện, lời mời đã chấp nhận và thời hạn công việc","Thẻ lời mời tương tác hỗ trợ Chấp nhận, Có thể và Từ chối","Di chuyển chuỗi thư giữa các tài khoản và lối tắt thư mục gần đây","Lưu và sao chép hình ảnh nội tuyến từ thư và thư viện phương tiện"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Phát hành · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS và Android 0.4.6"
+---
+
+<PostSection>
+
+Thư chưa đọc từ khách hàng trọng điểm, hóa đơn tháng trước, chuỗi thư gắn sao đang đợi hồi âm: với các cột tìm kiếm đã lưu, bạn có thể dành riêng một vị trí cho từng nội dung trên bảng Kanban. Chỉ cần lưu tìm kiếm một lần, cột sẽ tự động cập nhật đồng bộ theo hộp thư.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban &amp; Tìm kiếm</Badge>
+
+## Biến tìm kiếm thành một cột trực tiếp
+
+Thư mục chỉ lưu một chuỗi thư tại một nơi cố định. Tìm kiếm đã lưu mang lại cho bạn nhiều góc nhìn linh hoạt: theo người gửi, ngày tháng, trạng thái đọc hoặc bất kỳ tiêu chí kết hợp nào phù hợp với công việc.
+
+Bắt đầu tìm kiếm bằng các **toán tử kiểu Gmail quen thuộc** hoặc bộ công cụ tìm kiếm trực quan, sau đó chọn *Lưu tìm kiếm thành cột*. Các chuỗi thư phù hợp sẽ xuất hiện trong cột trực tiếp, đi kèm truy vấn có thể chỉnh sửa ngay dưới tiêu đề.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Các toán tử tìm kiếm được hỗ trợ
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Tạo tìm kiếm không cần gõ toán tử:**  Mở tùy chọn tìm kiếm để lọc theo người gửi, người nhận, chủ đề, từ khóa, khoảng thời gian hoặc cột đích.
+- **Thu hẹp bảng mà không mất đi các tìm kiếm đã lưu:**  Tìm kiếm trên toàn bảng sẽ bổ sung bộ lọc vào từng cột tìm kiếm đã lưu mà vẫn giữ nguyên truy vấn ban đầu.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Cửa sổ tùy chọn tìm kiếm với các trường lọc và tùy chọn lưu tìm kiếm thành cột Kanban" caption="Thiết lập tìm kiếm và lưu thành một cột trên bảng làm việc." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Lịch &amp; Lời mời</Badge>
+
+## Lịch ưu tiên lưu cục bộ và thẻ lời mời tương tác
+
+Lời mời lịch giờ đây hiển thị dưới dạng thẻ ngay trong cuộc trò chuyện, kèm thời gian theo múi giờ địa phương, địa điểm, người tổ chức và phản hồi của người tham dự. Bạn có thể phản hồi trực tiếp mà không cần rời chuỗi thư.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Thẻ lời mời lịch hiển thị trong giao diện trò chuyện với các nút Chấp nhận, Có thể và Từ chối" caption="Xem chi tiết sự kiện và phản hồi trực tiếp ngay trong cuộc trò chuyện." width={1280} height={820} />
+
+- **Chấp nhận, Có thể hoặc Từ chối tức thì:**  Phản hồi của bạn được gửi tới người tổ chức và ghi nhận trên Meron.
+- **Tự động cập nhật thay đổi từ người tổ chức:**  Meron tự động áp dụng các thay đổi lịch trình và hủy lịch gửi đến, bao gồm cả cập nhật cho từng buổi họp lặp lại riêng lẻ.
+- **Lịch cục bộ theo tháng:**  Bật Lịch trong Cài đặt để theo dõi sự kiện cá nhân, lời mời đã chấp nhận và thời hạn công việc tại một nơi. Tạo sự kiện cả ngày, theo giờ hoặc lặp lại và dễ dàng quay lại chuỗi email liên quan.
+
+Dữ liệu lịch được lưu trữ an toàn trên thiết bị của bạn và nằm trong các bản sao lưu mã hóa của Meron.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Giao diện lịch tháng trong Meron hiển thị các sự kiện và nhiệm vụ đã lên lịch" caption="Sự kiện cá nhân, lời mời đã nhận và thời hạn nhiệm vụ trong cùng một góc nhìn." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Phân loại email</Badge>
+
+## Di chuyển giữa các tài khoản và lối tắt thư mục gần đây
+
+Cần lưu trữ chuỗi thư sang một tài khoản khác? Bạn hiện có thể **di chuyển chuỗi thư giữa các tài khoản email khác nhau** trên cả máy tính và di động — bằng cách kéo thẻ giữa các cột tài khoản trên bảng Kanban hoặc chọn *Di chuyển tới…* từ menu của chuỗi thư.
+
+Meron sao chép thư tới vị trí đích và kiểm tra truyền dữ liệu thành công trước khi chuyển bản gốc vào Thùng rác.
+
+Menu *Di chuyển tới* và *Sao chép tới* giờ đây hiển thị nổi bật ở trên cùng **lối tắt tới các thư mục đích gần đây**, giúp bạn truy cập thư mục quen thuộc nhanh chóng hơn.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Menu ngữ cảnh của chuỗi thư hiển thị thao tác Di chuyển tới... và các tùy chọn thư mục đích" caption="Di chuyển chuỗi thư sang tài khoản khác hoặc chọn thư mục đích gần đây." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Đa phương tiện &amp; Tinh chỉnh</Badge>
+
+## Lưu và sao chép hình ảnh nội tuyến cùng cải tiến cho máy tính
+
+Phiên bản máy tính cũng nhận được nhiều cải tiến tiện ích mỗi ngày:
+
+- **Lưu &amp; sao chép hình ảnh nội tuyến:**  Nhấp chuột phải vào ảnh trong thư hoặc mở ảnh trong thư viện để lưu về máy hoặc sao chép vào bộ nhớ tạm.
+- **Menu và hộp thoại mượt mà hơn:**  Các menu và hộp thoại có tiêu điểm bàn phím và thao tác đóng nhất quán hơn, làm nổi bật menu con rõ ràng và giảm hiện tượng nhấp nháy.
+- **Thông báo lỗi rõ ràng và mở rộng bản dịch:**  Lỗi khi di chuyển hoặc sao chép giải thích chi tiết nguyên nhân. Bản di động cũng được bổ sung bản dịch mở rộng trên toàn bộ 19 ngôn ngữ hỗ trợ.
+
+</PostSection>
+
+<ReleaseCTA heading="Trải nghiệm Meron 0.4.7" text="Meron hoàn toàn miễn phí, mã nguồn mở và ưu tiên lưu trữ cục bộ cho macOS, Windows, Linux, iOS và Android. Tải ngay bản mới nhất hoặc xem toàn bộ nhật ký thay đổi." download="Tải Meron" changelog="Xem nhật ký thay đổi" github="Bản phát hành GitHub" />

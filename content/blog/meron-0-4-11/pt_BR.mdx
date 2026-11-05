@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Diretório de contatos, notas em Markdown e regras adiadas"
+publishedAt: "2026-11-05"
+readingTime: "Leitura de 4 min"
+summary: "Faça anotações sobre seus contatos, retome conversas após reiniciar e deixe que regras adiadas limpem e-mails que você não precisa mais."
+highlights: ["Painel de contatos com pessoas fixadas, notas privadas em Markdown e histórico de conversas","Abas de conversa estilo navegador com reordenação por arrasto e restauração de sessão","Regras adiadas que são executadas após a leitura ou quando o e-mail atinge determinada idade","Cole colunas de planilhas e listas separadas por espaço diretamente nos campos de destinatários","Responda a todos com o atalho A e adicione participantes a partir da resposta rápida","Localização completa para o russo no desktop, iOS e Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Lançamento · v0.4.11"
+---
+
+<PostSection>
+
+Antes de responder a um cliente, consulte as anotações da última chamada e encontre conversas anteriores, tudo a partir do novo painel Contatos. O Meron 0.4.11 adiciona contatos fixados e notas privadas em Markdown, restaura suas abas após reiniciar e permite que regras limpem mensagens assim que você terminar de ler.
+
+<PlatformNote>O painel de contatos com notas em Markdown, as abas estilo navegador e as regras adiadas estão disponíveis no desktop 0.4.11. O diretório de contatos, o cache de imagens remotas e a tradução para russo também estão disponíveis no Android e iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Contatos e notas</Badge>
+
+## Reúna suas anotações e conversas anteriores em um só lugar
+
+Abra o painel Contatos na barra lateral para encontrar alguém por nome ou ordenar seus contatos por frequência, recentes ou ordem alfabética.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Aplicativo Meron para desktop exibindo o painel lateral Contatos com Sarah Jenkins selecionada, notas privadas em Markdown e histórico de conversas com etiquetas de pasta" caption="Consulte anotações e conversas anteriores antes de redigir uma resposta." width={1280} height={820} />
+
+- **Fixe contatos frequentes:** Mantenha as pessoas com quem você mais trabalha no topo da sua lista.
+- **Notas privadas em Markdown:** Registre pontos-chave de reuniões, telefones ou combinados de trabalho para cada contato. As notas suportam Markdown com abas Escrever e Visualizar, ficam salvas no seu dispositivo e bloqueiam imagens remotas.
+- **Encontre conversas anteriores:** Selecione um contato para navegar por todas as conversas em comum. Etiquetas de pasta indicam o que está na Caixa de entrada, Enviados ou Arquivo; Spam e Lixeira são excluídos.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Abas e sessões</Badge>
+
+## Continue exatamente de onde você parou
+
+Reinicie o Meron e retorne imediatamente às suas conversas abertas. Tópicos e rascunhos compartilham a mesma barra de abas para alternar com facilidade entre leitura e escrita.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Visualização de conversa do Meron com abas de navegador de largura uniforme no cabeçalho exibindo conversas ativas e rascunhos" caption="Mantenha conversas e rascunhos juntos na barra de abas." width={1280} height={820} />
+
+- **Arraste para reorganizar as abas:** Arraste conversas e rascunhos pela barra de abas para manter discussões relacionadas lado a lado.
+- **Restaure abas após reiniciar:** O Meron restaura as abas abertas e a conversa ativa após reiniciar o aplicativo ou o sistema operacional.
+- **Mantenha rascunhos ao fechar abas:** Fechar abas de composição ou sair do Meron salva automaticamente seu texto na pasta Rascunhos.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Automação da caixa de entrada</Badge>
+
+## Limpe as mensagens depois de lê-las
+
+Um código de verificação é útil apenas por alguns minutos; uma newsletter pode valer a pena guardar por um mês. As regras adiadas adicionam controle de tempo às regras introduzidas na versão 0.4.10.
+
+Abra **Configurações → Regras** para escolher mensagens correspondentes, uma ação e quando executá-la.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Imediatamente
+
+</CardTitle>
+
+Executa assim que novas mensagens chegam à Caixa de entrada.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Após leitura
+
+</CardTitle>
+
+Inicia um temporizador após a leitura (ex.: 5 min). Marcar como não lido cancela a contagem.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Quando for mais antigo que
+
+</CardTitle>
+
+Avalia a data da mensagem (ex.: 30 dias) para arquivar automaticamente e-mails antigos.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Editor de regras do Meron exibindo condições de correspondência, controles de tempo com Após a leitura definido para 5 minutos e ação Mover para a lixeira" caption="Configure regras para rodar após a leitura e mandar códigos 2FA ou alertas pontuais direto para a lixeira." width={1280} height={820} />
+
+- **Executar após a leitura:** Para e-mails de verificação, filtre por assunto, defina «Após a leitura» para 5 minutos e escolha «Mover para a lixeira». Marcar a mensagem como não lida cancela o temporizador.
+- **Executar quando for mais antigo que:** Para newsletters ou recibos de compras, defina «Quando for mais antigo que» para 30 dias e escolha «Mover para o arquivo». Você pode configurar o período em minutos, horas ou dias.
+- **Página dedicada para edição de regras:** O editor de regras agora tem uma página própria. Execute regras manualmente pela lista e confira no log de atividades tudo o que foi processado.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Configurações do Meron mostrando regras ativas com descrições de temporizadores adiados, botões de execução manual e registro de atividade recente" caption="Regras ativas em Configurações → Regras com temporizadores adiados e registro de atividade." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Composição e atalhos</Badge>
+
+## Cole listas de destinatários e responda a todos com a tecla A
+
+Copie endereços de uma planilha para Para, Cc ou Cco, ou use o teclado para responder a um grupo inteiro.
+
+- **Cole endereços a partir de planilhas:** Cole linhas ou colunas do Google Planilhas, Excel ou arquivos CSV. O Meron converte os endereços em destinatários individuais e também aceita listas separadas por espaço.
+- **Pressione A para responder a todos:** Pressione A ao visualizar uma conversa para abrir o Responder a todos. Você também pode adicionar destinatários a partir da barra de resposta rápida em linha.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Ajustes e idiomas</Badge>
+
+## Também nesta versão
+
+O russo agora está disponível no desktop, iOS e Android. Esta versão também aprimora o comportamento da tecla Esc em visualizações de imagens e respostas no Kanban, move a barra de rolagem do editor de texto simples para a borda do painel e corrige a renderização de SVG e o cache de imagens de RSS.
+
+</PostSection>
+
+<ReleaseCTA heading="Experimente o Meron 0.4.11" text="Baixe o Meron 0.4.11 para criar notas sobre contatos, restaurar abas e programar a limpeza da sua caixa de entrada. O Meron é gratuito e de código aberto." download="Baixar Meron" changelog="Ver histórico de versões" github="GitHub Releases" />

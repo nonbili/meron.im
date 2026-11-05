@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Turn Saved Searches into Kanban Columns"
+publishedAt: "2026-10-22"
+readingTime: "4 min read"
+summary: "Build your board around the mail that matters: turn Gmail-style searches into live Kanban columns. Plus, a local calendar, inline invitation responses, and cross-account thread moves."
+highlights: ["Saved search Kanban columns and Gmail-style search operators","Local calendar of events, accepted invitations, and due tasks","Interactive calendar invite cards with Accept, Maybe, and Decline","Cross-account thread moves and recent folder shortcuts","Save and copy inline images from messages and the gallery"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Release · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS and Android 0.4.6"
+---
+
+<PostSection>
+
+Unread mail from key clients. Invoices from the past month. Starred threads that need a reply. With saved search columns, you can give each of these a place on your Kanban board. Save a search once, and the column stays up to date as your mail changes.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban &amp; Search</Badge>
+
+## Turn a search into a live column
+
+A folder gives a thread one place to live. Saved searches give you more ways to see it: by sender, date, read status, or a combination that fits your workflow.
+
+Start with a search using familiar **Gmail-style operators** or the visual search builder, then choose *Save search as column*. Matching threads appear in a live column, with an editable query beneath its header.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Supported search operators
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Build a search without typing operators:**  Open the search options to filter by sender, recipient, subject, keywords, date range, or target column.
+- **Narrow your board without losing your saved searches:**  The board-wide search adds a filter to each saved search column, keeping its original query in place.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Search options popover with filter fields and option to save search as a Kanban column" caption="Build a search, then save it as a column on your board." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Calendar &amp; Invitations</Badge>
+
+## A local-first calendar and interactive invite cards
+
+Calendar invitations now appear as cards inside the conversation, with the event time in your local timezone, location, organizer, and attendee responses. You can act on an invitation without leaving the thread.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Calendar invite card rendered inside the conversation view with Accept, Maybe, and Decline buttons" caption="See event details and respond directly inside the conversation." width={1280} height={820} />
+
+- **Accept, Maybe, or Decline in place:**  Your response is sent to the organizer and recorded in Meron.
+- **Automatic organizer updates:**  Meron applies incoming schedule changes and cancellations, including updates to individual recurring meetings.
+- **Monthly local calendar:**  Enable Calendar in Settings to see personal events, accepted invitations, and task due dates together. Create all-day, timed, or repeating events, and jump from an invited event back to its email thread.
+
+Your calendar is stored on your device and included in Meron's encrypted backups.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Monthly calendar view in Meron showing scheduled events and tasks" caption="Personal events, accepted invitations, and task deadlines in one view." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Thread Triage</Badge>
+
+## Cross-account moves and recent folder shortcuts
+
+Need to file a thread in another account? You can now **move threads across different email accounts** on both desktop and mobile—either by dragging a card between account columns on the Kanban board or choosing *Move to…* from the thread menu.
+
+Meron copies the messages to the destination and verifies the transfer before moving the originals to Trash.
+
+The *Move to* and *Copy to* menus now surface **recent destination shortcuts** at the top, making your usual folders quicker to reach.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Thread context menu displaying Move to... action and destination folder options" caption="Move threads to another account or choose a recent destination." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Media &amp; Polish</Badge>
+
+## Save and copy inline images, plus desktop refinements
+
+Desktop also gets a few everyday improvements:
+
+- **Save &amp; copy inline images:**  Right-click an image in a message or open it in the media gallery to save it or copy it to your clipboard.
+- **Cleaner menus and overlays:**  Menus and dialogs have more consistent keyboard focus and dismissal, with clearer submenu highlights and less flicker.
+- **Clearer errors and more translations:**  Move and copy failures include more detail about the cause. Mobile also gets expanded translations across its 19 supported languages.
+
+</PostSection>
+
+<ReleaseCTA heading="Try Meron 0.4.7" text="Meron is free, open source, and local-first for macOS, Windows, Linux, iOS, and Android. Grab the latest build or browse the full release notes." download="Download Meron" changelog="View Changelog" github="GitHub Releases" />

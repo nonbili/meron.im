@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Rubrica contatti, note Markdown e regole posticipate"
+publishedAt: "2026-11-05"
+readingTime: "4 min di lettura"
+summary: "Prendi appunti sui tuoi contatti, riprendi le conversazioni dopo un riavvio e lascia che le regole posticipate eliminino le email che non ti servono più."
+highlights: ["Pannello contatti con persone fissate in alto, note Markdown private e cronologia delle conversazioni","Schede di conversazione in stile browser con riordinamento tramite trascinamento e ripristino della sessione","Regole posticipate eseguite dopo la lettura o quando i messaggi raggiungono una certa età","Incolla colonne di fogli di calcolo ed elenchi separati da spazi direttamente nei campi dei destinatari","Rispondi a tutti con la scorciatoia A e aggiungi partecipanti dalla risposta rapida","Localizzazione completa in russo su desktop, iOS e Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Rilascio · v0.4.11"
+---
+
+<PostSection>
+
+Prima di rispondere a un cliente, controlla gli appunti dell'ultima chiamata e ritrova i messaggi precedenti, tutto dal nuovo pannello Contatti. Meron 0.4.11 introduce contatti fissati in alto e note Markdown private, ripristina le schede dopo il riavvio e permette alle regole di fare pulizia una volta che hai letto i messaggi.
+
+<PlatformNote>Il pannello dei contatti con note Markdown, le schede in stile browser e le regole posticipate sono disponibili nella versione desktop 0.4.11. La rubrica dei contatti, la memorizzazione nella cache delle immagini remote e la localizzazione in russo sono disponibili anche su Android e iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Contatti e note</Badge>
+
+## Conserva appunti e conversazioni passate nello stesso posto
+
+Apri il pannello Contatti nella barra laterale per cercare qualcuno per nome o ordinare la rubrica per frequenza, messaggi recenti o ordine alfabetico.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="App desktop Meron con il pannello laterale Contatti aperto, Sarah Jenkins selezionata, note Markdown private e cronologia conversazioni con etichette delle cartelle" caption="Verifica appunti e conversazioni precedenti prima di scrivere una risposta." width={1280} height={820} />
+
+- **Fissa i contatti frequenti:** Tieni in cima alla lista le persone con cui collabori più spesso.
+- **Note Markdown private:** Annota conclusioni delle riunioni, numeri di telefono o accordi di lavoro per ciascun contatto. Le note supportano Markdown con schede Scrivi e Anteprima, rimangono sul tuo dispositivo e bloccano le immagini remote.
+- **Trova le conversazioni passate:** Seleziona un contatto per esplorare tutti i messaggi condivisi. Le etichette mostrano se si trovano in Posta in arrivo, Inviati o Archivio; Spam e Cestino sono esclusi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Schede e sessioni</Badge>
+
+## Riprendi esattamente da dove avevi interrotto
+
+Riavvia Meron e torna subito alle tue conversazioni aperte. Messaggi e bozze condividono la stessa barra delle schede per passare agevolmente dalla lettura alla scrittura.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Visualizzazione conversazione di Meron con schede del browser di uguale larghezza nell'intestazione che mostrano conversazioni attive e bozze" caption="Tieni conversazioni e bozze insieme nella barra delle schede." width={1280} height={820} />
+
+- **Trascina per riordinare le schede:** Trascina conversazioni e bozze lungo la barra per tenere vicine le discussioni collegate.
+- **Ripristino delle schede dopo il riavvio:** Meron ripristina le schede aperte e la conversazione attiva dopo un riavvio dell'applicazione o del sistema.
+- **Salva le bozze alla chiusura delle schede:** Chiudere le schede dell'editor o uscire da Meron salva automaticamente il testo nella cartella Bozze.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Automazione della posta in arrivo</Badge>
+
+## Rimuovi i messaggi dopo averli letti
+
+Un codice di verifica serve per pochi minuti; una newsletter può valere la pena di essere conservata per un mese. Le regole posticipate aggiungono la gestione temporale alle regole di posta introdotte nella versione 0.4.10.
+
+Apri **Impostazioni → Regole** per scegliere i messaggi corrispondenti, un'azione e il momento in cui eseguirla.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Subito
+
+</CardTitle>
+
+Viene eseguito immediatamente all'arrivo dei nuovi messaggi nella Posta in arrivo.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Dopo la lettura
+
+</CardTitle>
+
+Avvia un timer dopo la lettura (es. 5 min). Contrassegnare come non letto lo annulla.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Quando ha più di
+
+</CardTitle>
+
+Valuta l'età del messaggio (es. 30 giorni) per archiviare automaticamente la posta meno recente.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Editor delle regole di Meron con condizioni di corrispondenza, controlli temporali con Dopo la lettura impostato su 5 minuti e azione Sposta nel cestino" caption="Configura le regole per l'esecuzione dopo la lettura per spostare automaticamente nel cestino codici 2FA o avvisi usa e getta." width={1280} height={820} />
+
+- **Esegui dopo la lettura:** Per le email di verifica, filtra l'oggetto, imposta «Dopo la lettura» su 5 minuti e scegli «Sposta nel cestino». Contrassegnare nuovamente il messaggio come non letto annulla il timer.
+- **Esegui quando ha più di:** Per newsletter o ricevute d'ordine, imposta «Quando ha più di» su 30 giorni e scegli «Sposta in archivio». Puoi specificare la durata in minuti, ore o giorni.
+- **Editor delle regole dedicato:** L'editor ora ha una pagina a sé stante. Esegui le regole manualmente dall'elenco e controlla il registro delle attività per vedere cosa è stato eseguito.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Impostazioni di Meron che mostrano le regole attive con descrizioni dei timer posticipati, controlli di esecuzione manuale e registro attività recenti" caption="Regole attive in Impostazioni → Regole con timer posticipati e registro delle attività." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Composizione e scorciatoie</Badge>
+
+## Incolla un elenco di destinatari e rispondi a tutti con A
+
+Copia indirizzi da un foglio di calcolo in A, Cc o Ccn, oppure usa la tastiera per rispondere a un intero gruppo.
+
+- **Incolla indirizzi da fogli di calcolo:** Incolla righe o colonne da Google Fogli, Excel o un file CSV. Meron trasforma gli indirizzi in singoli destinatari e accetta anche elenchi separati da spazi.
+- **Premi A per rispondere a tutti:** Premi A mentre leggi una conversazione per aprire Rispondi a tutti. Puoi anche aggiungere destinatari direttamente dalla barra di risposta rapida in linea.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Miglioramenti e lingue</Badge>
+
+## Novità aggiuntive di questa versione
+
+Il russo è ora disponibile su desktop, iOS e Android. Questo aggiornamento perfeziona anche il tasto Esc nelle anteprime delle immagini e nelle risposte Kanban, sposta la barra di scorrimento dell'editor di testo semplice sul bordo del pannello e risolve il rendering SVG e la cache delle immagini RSS.
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.4.11" text="Scarica Meron 0.4.11 per annotare appunti sui contatti, ripristinare le schede e pianificare la pulizia della posta. Meron è gratuito e open source." download="Scarica Meron" changelog="Vedi il changelog" github="GitHub Releases" />

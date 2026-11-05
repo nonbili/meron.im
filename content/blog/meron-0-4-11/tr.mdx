@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Kişi Rehberi, Markdown Notları ve Gecikmeli Kurallar"
+publishedAt: "2026-11-05"
+readingTime: "4 dk okuma süresi"
+summary: "Kişileriniz hakkında notlar alın, yeniden başlatma sonrası konuşmalarınıza kaldığınız yerden devam edin ve gecikmeli kurallarla artık gerekmeyen postaları otomatik temizleyin."
+highlights: ["Sabitlenmiş kişiler, özel Markdown notları ve ileti geçmişi içeren Kişiler paneli","Sürükleyerek yeniden sıralama ve oturum geri yükleme destekli tarayıcı stili konuşma sekmeleri","Okunduktan sonra veya posta belirli bir süreye ulaştığında çalışan gecikmeli kurallar","E-tablo sütunlarını ve boşlukla ayrılmış listeleri doğrudan alıcı alanlarına yapıştırma","A kısayoluyla tümünü yanıtlama ve hızlı yanıttan yazışma katılımcılarını ekleme","Masaüstü, iOS ve Android genelinde tam Rusça yerelleştirme"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Sürüm · v0.4.11"
+---
+
+<PostSection>
+
+Bir müşteriyi yanıtlamadan önce, son görüşmenizdeki notları kontrol edin ve önceki yazışmalarınızı bulun — tümü yeni Kişiler panelinde. Meron 0.4.11 sabitlenmiş kişiler ve özel Markdown notları ekler, yeniden başlatma sonrası sekmelerinizi geri yükler ve kuralların postaları okuduktan sonra temizlemesini sağlar.
+
+<PlatformNote>Markdown notlu kişiler paneli, tarayıcı stili sekmeler ve gecikmeli kurallar masaüstü 0.4.11 sürümünde mevcuttur. Kişi rehberi, uzak görsel önbelleğe alma ve Rusça yerelleştirme Android ve iOS'ta da sunulmuştur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kişiler ve Notlar</Badge>
+
+## Notlarınızı ve geçmiş konuşmalarınızı bir arada tutun
+
+İsme göre aramak veya adres defterinizi sık kullanılanlara, son aramalara veya alfabetik sıraya göre dizmek için kenar çubuğundaki Kişiler panelini açın.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Sarah Jenkins seçiliyken Kişiler yan panelini, özel Markdown notlarını ve klasör etiketli konuşma geçmişini gösteren Meron masaüstü uygulaması" caption="Yanıt yazmadan önce notlarınızı ve önceki konuşmalarınızı kontrol edin." width={1280} height={820} />
+
+- **Sık görüştüğünüz kişileri sabitleyin:** En çok birlikte çalıştığınız kişileri listenizin en başında tutun.
+- **Özel Markdown notları:** Her kişi için toplantı notlarını, telefon numaralarını veya çalışma anlaşmalarını kaydedin. Notlar Yazma ve Önizleme sekmeleriyle Markdown'ı destekler, cihazınızda kalır ve uzak görselleri engeller.
+- **Geçmiş konuşmaları bulun:** Birlikte gerçekleştirdiğiniz yazışmaları incelemek için bir kişi seçin. Klasör etiketleri iletinin Gelen Kutusu, Gönderilenler veya Arşiv'de olduğunu gösterir; İstenmeyen ve Çöp Kutusu hariç tutulur.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Sekmeler ve Oturumlar</Badge>
+
+## Kaldığınız yerden devam edin
+
+Meron'u yeniden başlatın ve açık konuşmalarınıza anında geri dönün. Yazışmalar ve taslaklar aynı sekme çubuğunu paylaşır; böylece okuma ve yazma arasında kolayca geçiş yapabilirsiniz.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Etkin yazışmaları ve taslakları gösteren başlık boyunca eşit genişlikte tarayıcı sekmelerine sahip Meron konuşma görünümü" caption="Konuşmaları ve taslakları sekme çubuğunda bir arada tutun." width={1280} height={820} />
+
+- **Sekmeleri yeniden sıralamak için sürükleyin:** İlgili konuşmaları bir arada tutmak için yazışmaları ve taslakları sekme çubuğu boyunca sürükleyin.
+- **Yeniden başlatma sonrası sekmeleri geri yükleyin:** Meron, bir uygulama veya sistem yeniden başlatmasının ardından açık sekmelerinizi ve etkin konuşmanızı geri yükler.
+- **Sekmeleri kapatırken taslakları koruyun:** İleti oluşturma sekmelerini kapatmak veya Meron'dan çıkmak, yazdıklarınızı Taslaklar klasörüne kaydeder.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Gelen Kutusu Otomasyonu</Badge>
+
+## Okuduktan sonra iletileri otomatik olarak temizleyin
+
+Bir doğrulama kodu birkaç dakika boyunca yararlıdır; bir bülten bir ay saklanmaya değer olabilir. Gecikmeli kurallar, 0.4.10 sürümünde sunulan gelen kutusu kurallarına zamanlama ekler.
+
+Eşleşen postaları, bir eylemi ve ne zaman çalışacağını seçmek için **Ayarlar → Kurallar** bölümünü açın.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Hemen
+
+</CardTitle>
+
+Yeni iletiler Gelen Kutunuza ulaştığı anda çalışır.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Okunduktan sonra
+
+</CardTitle>
+
+Okunduğunda bir zamanlayıcı başlatır (ör. 5 dk). Okunmadı olarak işaretlemek iptal eder.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Daha eskiyse
+
+</CardTitle>
+
+Eski postaları otomatik arşivlemek için ileti yaşını değerlendirir (ör. 30 gün).
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Eşleşme koşullarını, Okunduktan sonra 5 dakikaya ayarlanmış çalıştırma zamanlama kontrollerini ve Çöp Kutusuna Taşı eylemini gösteren Meron Kural düzenleyicisi" caption="2FA kodlarını veya tek seferlik bildirimleri otomatik olarak çöpe atmak için kuralları okuduktan sonra çalışacak şekilde ayarlayın." width={1280} height={820} />
+
+- **Okunduktan sonra çalıştır:** Doğrulama e-postaları için konuyu eşleştirin, «Okunduktan sonra» seçeneğini 5 dakikaya ayarlayın ve «Çöp Kutusuna Taşı» eylemini seçin. İletiyi okunmadı olarak işaretlemek sayacı iptal eder.
+- **Belirli bir süreden eskiyse çalıştır:** Bültenler veya sipariş makbuzları için «Daha eskiyse» seçeneğini 30 güne ayarlayın ve «Arşive Taşı» eylemini seçin. Süreyi dakika, saat veya gün cinsinden belirleyebilirsiniz.
+- **Ayrı kural düzenleyici sayfası:** Kural düzenleyicisinin artık kendi sayfası var. Kuralları kural listesinden manuel olarak çalıştırın ve nelerin işlendiğini görmek için etkinlik günlüğünü inceleyin.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Gecikmeli zamanlayıcı açıklamaları, manuel çalıştırma kontrolleri ve son etkinlik günlüğü içeren etkin kuralları gösteren Meron Ayarları" caption="Gecikmeli zamanlayıcılar ve etkinlik günlüğü ile Ayarlar → Kurallar bölümündeki etkin kurallar." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Oluşturucu ve Kısayollar</Badge>
+
+## Alıcı listesi yapıştırın ve A tuşuyla tümünü yanıtlayın
+
+E-tablodaki adresleri Kime, Bilgi veya Gizli alanlarına kopyalayın ya da bir gruba yanıt vermek için klavyeyi kullanın.
+
+- **E-tablodan adres yapıştırın:** Google E-Tablolar, Excel veya bir CSV dosyasından satır veya sütun yapıştırın. Meron yapıştırılan adresleri bağımsız alıcılara dönüştürür ve boşlukla ayrılmış listeleri de destekler.
+- **Tümünü yanıtlamak için A'ya basın:** Tümünü Yanıtla'yı açmak için bir konuşmayı görüntülerken A tuşuna basın. Doğrudan hızlı yanıt alanından da alıcı ekleyebilirsiniz.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">İyileştirmeler ve Diller</Badge>
+
+## Bu sürümdeki diğer yenilikler
+
+Rusça artık masaüstü, iOS ve Android'de kullanılabilir. Bu sürüm ayrıca görsel önizlemelerinde ve Kanban yanıtlarındaki Esc tuşu davranışını iyileştirir, düz metin oluşturucu kaydırma çubuğunu panel kenarına taşır ve SVG oluşturma ile RSS görsel önbelleğe almasını düzeltir.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.11'i Deneyin" text="Kişi notları tutmak, sekmelerinizi geri yüklemek ve gelen kutusu temizliğini zamanlamak için Meron 0.4.11'i indirin. Meron ücretsiz ve açık kaynaklıdır." download="Meron'u İndir" changelog="Değişiklik Günlüğünü Gör" github="GitHub Sürümleri" />

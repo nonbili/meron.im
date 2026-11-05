@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Taggar och regler för din inkorg"
+publishedAt: "2026-11-02"
+readingTime: "3 min läsning"
+summary: "Ge inkommande mejl ett tydligt nästa steg. Taggar, Kanban-kolumner och inkorgsregler förvandlar vardagens meddelanden till ett arbetsflöde du kan se."
+highlights: ["Mejltaggar som lagras lokalt och synkas som IMAP-nyckelord","Kanban-taggkolumner med dra-och-släpp för att tagga och omtagga trådar","Inkorgsregler för att tagga, markera som läst, stjärnmärka, kopiera eller flytta mejl mellan konton","Kör regler på befintliga mejl i Inkorgen med en logg över senaste aktivitet","Sökoperatorerna has:attachment och tag:, plus MCP-taggverktyg"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Release · v0.4.10"
+---
+
+<PostSection>
+
+En faktura kommer in. En regel lägger till taggarna invoice och todo, och tråden dyker upp i kolumnen Att göra på Kanban-tavlan samtidigt som den ligger kvar i Inkorgen. När den är redo för godkännande drar du den till Granska. Meron byter ut taggen todo mot review, så att du direkt ser vad som behöver hanteras. Så här sätter du upp det arbetsflödet i Meron 0.4.10.
+
+<PlatformNote>Taggar, regler och bilagesökning finns i desktop 0.4.10 samt iOS och Android 0.4.8. MCP-taggverktyg finns på desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Taggar &amp; Kanban</Badge>
+
+## Ge varje tråd ett nästa steg
+
+Börja med att lägga till taggarna todo och invoice från konversationsrubriken eller trådmenyn. Taggar synkas till din e-postserver som vanliga IMAP-nyckelord så att de följer dina meddelanden mellan enheter. De bevaras även i Lokala mappar och exporterade säkerhetskopior.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Merons Kanban-tavla som visar Inkorgen bredvid kolumnerna tag:todo och tag:review med färgade taggar på trådkorten och en oläst-bricka på tavelikonen i sidofältet" caption="Inkorg, Att göra och Granska tillsammans på en och samma tavla." width={1280} height={820} />
+
+- **Dra för att tagga och byta tagg på tavlan:** Spara sökningarna tag:todo och tag:review som Kanban-kolumner. Dra ett kort från Inkorgen för att lägga till en tagg, eller mellan kolumnerna för att ersätta en arbetsflödestagg med en annan. Andra taggar, som invoice, ligger kvar på tråden.
+- **Växla flera taggar på plats:** Använd undermenyn Taggar för att slå på eller av flera taggar i följd utan att behöva öppna menyn på nytt varje gång.
+- **Byt namn på eller ta bort en tagg överallt:** Under Inställningar → Meddelanden → Taggar kan du byta namn på eller ta bort en tagg i alla mejl som finns lagrade på enheten, samtidigt som dina regler och Kanban-kolumner uppdateras automatiskt.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Trådens snabbmeny med undermenyn Taggar öppen som visar markerade taggar och åtgärden Lägg till en tagg" caption="Växla flera taggar direkt från trådmenyn eller klicka på en tagg på ett kort för att filtrera på den." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Inkorgsregler</Badge>
+
+## Låt nästa faktura sortera sig själv
+
+För att automatisera det första steget skapar du en regel som matchar ett ämne som innehåller ”invoice” och lägger till taggarna invoice och todo. Den körs på nya meddelanden i Inkorgen, så nästa matchande faktura dyker upp på tavlan redo att hanteras.
+
+Öppna **Inställningar → Regler** för att välja konton, villkor och åtgärder. Matcha efter avsändare, mottagare, ämne, nyckelord eller bilagor. Tomma villkor matchar alla nya mejl.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Merons inställningar som visar regellistan med dra-handtag, kontoavatarer, regelsammanfattningar, Kör-knappar och loggen Senaste aktivitet" caption="Kör en regel på befintliga mejl i Inkorgen och kolla sedan Senaste aktivitet för att se vad som hände." width={1280} height={820} />
+
+- **Kombinera åtgärder i en regel:** Utöver taggar kan en regel markera mejl som lästa, stjärnmärka dem, kopiera dem eller flytta dem till en annan mapp – även mellan konton eller till Lokala mappar på desktop.
+- **Dra för att ändra prioritet:** Regler körs uppifrån och ned. Den första regeln som flyttar ett meddelande bestämmer dess destination. Ändra ordningen med dra-handtagen eller piltangenterna Upp och Ned.
+- **Kör på befintliga mejl och se aktivitet:** Klicka på knappen Kör på valfri regel för att tillämpa den på meddelanden som redan finns i Inkorgen, och kontrollera Senaste aktivitet under dina regler för att se vad som kördes och när.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Merons regelredigerare som visar kontoomfattning, villkor för Från, Ämne och Har bilaga samt åtgärder för Lägg till taggar, Markera som läst, Kopiera till och Flytta till" caption="Välj vilka meddelanden som ska matcha och vad som ska hända med dem i regelredigeraren." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Sök &amp; MCP</Badge>
+
+## Hitta mejlen bakom ditt arbetsflöde
+
+Sök efter tag:invoice has:attachment för att hitta varje faktura med en bilaga, oavsett var i arbetsflödet den befinner sig. Lägg till filter för avsändare eller oläst för att begränsa resultaten ytterligare.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Sökexempel
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nya MCP-verktyg på desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Taggförslag och bilagefilter:** Sökalternativ innehåller taggförslag och kryssrutan ”Har bilaga” om du föredrar att bygga ett filter med ett formulär. Spara den färdiga sökningen som en levande Kanban-kolumn så har du den alltid nära till hands.
+- **Taggverktyg för MCP-klienter:** På desktop kan lokala MCP-klienter med behörighet för meddelandeorganisation anropa list\_tags och tag\_messages för att inspektera taggar som används samt lägga till eller ta bort taggar på trådar.
+
+</PostSection>
+
+Den här versionen lägger även till oläst-brickor i Kanban, genvägar i skrivfönstret och synkad rensning av aviseringar mellan enheter. [Visa ändringslogg](/changelog)
+
+<ReleaseCTA heading="Prova Meron 0.4.10" text="Ladda ner den senaste versionen för att börja tagga och automatisera din inkorg. Meron är gratis och öppen källkod, med appar för macOS, Windows, Linux, iOS och Android." download="Ladda ner Meron" changelog="Visa ändringslogg" github="GitHub Releases" />

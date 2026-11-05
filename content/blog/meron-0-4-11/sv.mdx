@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Kontaktkatalog, Markdown-anteckningar och fördröjda regler"
+publishedAt: "2026-11-05"
+readingTime: "4 min läsning"
+summary: "Skriv anteckningar om dina kontakter, återuppta konversationer efter en omstart och låt fördröjda regler rensa mejl du inte längre behöver."
+highlights: ["Kontaktpanel med fästa personer, privata Markdown-anteckningar och trådhistorik","Konversationsflikar i webbläsarstil med omsortering via dra-och-släpp och sessionsåterställning","Fördröjda regler som körs efter läsning eller när mejlet nått en viss ålder","Klistra in kalkylbladskolumner och blankstegsseparerade listor direkt i mottagarfälten","Svara alla med snabbkommandot A och lägg till deltagare från snabbsvarsfältet","Fullständig rysk lokalisering på dator, iOS och Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Utgåva · v0.4.11"
+---
+
+<PostSection>
+
+Innan du svarar en kund kan du kolla anteckningarna från ert senaste samtal och hitta tidigare konversationer – direkt från den nya Kontaktpanelen. Meron 0.4.11 lägger till fästa kontakter och privata Markdown-anteckningar, återställer dina flikar efter en omstart och låter regler städa undan mejl när du har läst dem.
+
+<PlatformNote>Kontaktpanelen med Markdown-anteckningar, flikar i webbläsarstil och fördröjda regler finns i skrivbordsversion 0.4.11. Kontaktkatalog, cachning av fjärrbilder och rysk lokalisering är också tillgängliga på Android och iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kontakter och anteckningar</Badge>
+
+## Samla dina anteckningar och tidigare konversationer på ett ställe
+
+Öppna Kontaktpanelen i sidofältet för att söka efter namn eller sortera adressboken efter vanliga, senaste eller i bokstavsordning.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Meron skrivbordsapp som visar kontaktpanelen med Sarah Jenkins vald, privata Markdown-anteckningar och konversationshistorik med mappbrickor" caption="Kontrollera anteckningar och tidigare konversationer innan du skriver ett svar." width={1280} height={820} />
+
+- **Fäst vanliga kontakter:** Behåll personerna du arbetar mest med högst upp i listan.
+- **Privata Markdown-anteckningar:** Anteckna mötespunkter, telefonnummer eller överenskommelser för varje kontakt. Anteckningar stöder Markdown med Skriv- och Förhandsgranska-flikar, stannar på din enhet och blockerar fjärrbilder.
+- **Hitta tidigare konversationer:** Välj en kontakt för att bläddra bland era gemensamma trådar. Mappetiketter visar vad som finns i Inkorg, Skickat eller Arkiv; Skräppost och Papperskorg utesluts.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Flikar och sessioner</Badge>
+
+## Fortsätt precis där du slutade
+
+Starta om Meron och kom direkt tillbaka till dina öppna konversationer. Trådar och utkast delar flikfält, så att du enkelt kan växla mellan att läsa och skriva.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Meron konversationsvy med webbläsarflikar med jämn bredd i rubriken som visar aktiva trådar och utkast" caption="Håll konversationer och utkast samlade i flikfältet." width={1280} height={820} />
+
+- **Dra för att ordna om flikar:** Dra trådar och utkast längs flikfältet för att hålla sammanhängande konversationer intill varandra.
+- **Återställ flikar efter omstart:** Meron återställer öppna flikar och aktiv konversation efter att appen eller datorn startats om.
+- **Behåll utkast när flikar stängs:** När du stänger en skrivflik eller avslutar Meron sparas din text säkert i mappen Utkast.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Inkorgsautomatisering</Badge>
+
+## Rensa bort meddelanden när du har läst dem
+
+En verifieringskod är användbar i några minuter; ett nyhetsbrev kan vara värt att spara i en månad. Fördröjda regler lägger till tidsstyrning till inkorgsreglerna som introducerades i 0.4.10.
+
+Öppna **Inställningar → Regler** för att välja matchande meddelanden, en åtgärd och när regeln ska köras.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Direkt
+
+</CardTitle>
+
+Körs omedelbart när nya meddelanden anländer till Inkorgen.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Efter läsning
+
+</CardTitle>
+
+Startar en timer när mejlet läses (t.ex. 5 min). Att markera som oläst avbryter klockan.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />När det är äldre än
+
+</CardTitle>
+
+Bedömer meddelandets ålder (t.ex. 30 dagar) för att automatiskt arkivera äldre mejl.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Meron regelredigerare som visar matchningsvillkor, tidskontroller med Efter läsning satt till 5 minuter och åtgärden Flytta till papperskorgen" caption="Ställ in regler som körs efter läsning för att automatiskt slänga 2FA-koder eller engångsnotiser i papperskorgen." width={1280} height={820} />
+
+- **Kör efter läsning:** För verifieringsmejl: matcha ämnet, sätt «Efter läsning» till 5 minuter och välj «Flytta till papperskorgen». Om du markerar mejlet som oläst avbryts timern.
+- **Kör när det är äldre än:** För nyhetsbrev eller kvitton: sätt «När det är äldre än» till 30 dagar och välj «Flytta till arkiv». Du kan ange ålder i minuter, timmar eller dagar.
+- **Dedikerad regelredigerare:** Regelredigeraren har nu en egen sida. Kör regler manuellt från regellistan och se i aktivitetsloggen vad som har körts.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Meron-inställningar som visar aktiva regler med fördröjningsbeskrivningar, manuella körknappar och senaste aktivitetslogg" caption="Aktiva regler i Inställningar → Regler med fördröjningstimer och aktivitetslogg." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Skrivfönster och kortkommandon</Badge>
+
+## Klistra in mottagarlistor och svara alla med A
+
+Kopiera adresser från ett kalkylblad till Till, Kopia eller Dold kopia, eller använd tangentbordet för att svara en grupp.
+
+- **Klistra in adresser från kalkylblad:** Klistra in rader eller kolumner från Google Kalkylark, Excel eller en CSV-fil. Meron gör om adresserna till enskilda mottagare och stöder även blankstegsseparerade listor.
+- **Tryck på A för att svara alla:** Tryck på A när du visar en konversation för att öppna Svara alla. Du kan också lägga till mottagare från det integrerade snabbsvarsfältet.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Förfiningar och språk</Badge>
+
+## Även i denna utgåva
+
+Ryska finns nu tillgängligt på dator, iOS och Android. Denna utgåva förbättrar även Esc-tangentens beteende i bildförhandsgranskningar och Kanban-svar, flyttar rullningslisten i ren text-skrivaren till panelens kant samt åtgärdar SVG-rendering och RSS-bildcachning.
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.4.11" text="Ladda ner Meron 0.4.11 för att föra kontaktanteckningar, återställa flikar och schemalägga inkorgsstädning. Meron är gratis och har öppen källkod." download="Ladda ner Meron" changelog="Visa ändringslogg" github="GitHub Releases" />

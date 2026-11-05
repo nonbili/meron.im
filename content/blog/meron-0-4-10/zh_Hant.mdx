@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10：為你的收件匣引入標籤與規則"
+publishedAt: "2026-11-02"
+readingTime: "3 分鐘閱讀"
+summary: "為每封來信指明下一步。標籤、看板欄與收件匣規則，將日常郵件轉化為一目了然的工作流程。"
+highlights: ["儲存在本機並作為 IMAP 關鍵字同步的郵件標籤","支援拖放新增與替換標籤的看板標籤欄","可跨帳戶加上標籤、標示為已讀、加星號、複製或移動郵件的收件匣規則","支援對收件匣現有郵件執行規則並提供近期活動記錄","has:attachment 與 tag: 搜尋運算子，以及 MCP 標籤工具"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "發布 · v0.4.10"
+---
+
+<PostSection>
+
+收到一張發票時，規則會自動為其加上 invoice 和 todo 標籤，該對話隨即出現在看板的「待辦」欄中，同時仍保留在收件匣內。等準備好審核時，只需將它拖曳到「審核」欄，Meron 就會將 todo 標籤替換為 review，讓你一眼看清哪些事項需要處理。以下介紹如何在 Meron 0.4.10 中建立這套工作流程。
+
+<PlatformNote>標籤、規則與附件搜尋已於桌面端 0.4.10 以及 iOS 和 Android 0.4.8 提供。MCP 標籤工具已於桌面端提供。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">標籤與看板</Badge>
+
+## 為每個對話指明下一步
+
+首先從對話標題列或對話選單中新增 todo 和 invoice 標籤。標籤會作為標準 IMAP 關鍵字同步至郵件伺服器，因此可在不同裝置間跟隨你的郵件；同時它們也會保留在本機資料夾與匯出的備份中。
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron 看板同時顯示收件匣以及 tag:todo 和 tag:review 欄，對話卡片上帶有彩色標籤，側邊欄的看板圖示上顯示未讀徽章" caption="在同一塊看板上並列檢視收件匣、待辦與審核。" width={1280} height={820} />
+
+- <Strong>在看板上拖放即可新增或替換標籤：</Strong>將 tag:todo 和 tag:review 搜尋儲存為看板欄。將卡片從收件匣拖入即可加上標籤，在這兩欄之間拖曳則會替換對應的工作流程標籤，而 invoice 等其他標籤仍會保留在對話上。
+- <Strong>就地切換多個標籤：</Strong>使用「標籤」子選單即可連續勾選或取消多個標籤，無需每次重新開啟選單。
+- <Strong>全域重新命名或刪除標籤：</Strong>前往「設定 → 郵件 → 標籤」，即可在裝置儲存的所有郵件中重新命名或移除某個標籤，並同步更新你的規則與看板欄。
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="對話關聯選單展開「標籤」子選單，顯示已勾選的標籤以及「新增標籤」操作" caption="直接從對話選單切換多個標籤，或點擊卡片上的任意標籤進行篩選。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">收件匣規則</Badge>
+
+## 讓下一張發票自動歸類
+
+要讓第一步自動完成，可以建立一條比對主旨包含「invoice」的規則，並自動加上 invoice 和 todo 標籤。規則會對新送達收件匣的郵件生效，因此下一張符合條件的發票會直接出現在看板上等待處理。
+
+開啟<Strong>設定 → 規則</Strong>即可選擇適用帳戶、比對條件與執行動作。支援依寄件者、收件者、主旨、關鍵字或附件進行比對；空白條件則會比對所有新郵件。
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron 設定畫面展示帶有拖曳控點、帳戶頭像、規則摘要、執行按鈕以及近期活動記錄的規則列表" caption="對收件匣中的現有郵件執行規則，然後在「近期活動」中查看執行結果。" width={1280} height={820} />
+
+- <Strong>在單一規則中組合多項動作：</Strong>除了加上標籤外，規則還可以將郵件標示為已讀、加星號、複製或移動至其他資料夾——在桌面端甚至支援跨帳戶移動或移入本機資料夾。
+- <Strong>拖曳調整優先順序：</Strong>規則會由上而下依序執行，第一條移動郵件的規則將決定郵件的最終去向。你可以透過拖曳控點或上下方向鍵調整規則順序。
+- <Strong>對現有郵件執行並查看活動記錄：</Strong>點擊任意規則上的「執行」按鈕即可將其套用至收件匣中既有的郵件，並在規則列表下方的「近期活動」中查看執行項目與時間。
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron 規則編輯器展示帳戶範圍、寄件者/主旨/包含附件等比對條件，以及新增標籤、標示為已讀、複製至和移動至等執行動作" caption="在規則編輯器中選擇要比對的郵件以及隨後要執行的動作。" width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">搜尋與 MCP</Badge>
+
+## 快速找出工作流程背後的郵件
+
+搜尋 tag:invoice has:attachment 即可找出所有帶附件的發票郵件，無論它們目前處於哪個工作流程階段。還可以加上寄件者或未讀條件來進一步縮小範圍。
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />搜尋範例
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />桌面端新增 MCP 工具
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- <Strong>標籤建議與附件篩選：</Strong>如果你偏好透過表單建立篩選條件，「搜尋選項」提供了標籤建議與「包含附件」核取方塊。你還可以將搜尋結果儲存為即時看板欄，方便隨時查看。
+- <Strong>適用於 MCP 用戶端的標籤工具：</Strong>在桌面端，具備郵件整理權限的本機 MCP 用戶端可以呼叫 list\_tags 和 tag\_messages 來檢視使用中的標籤，或為對話新增、移除標籤。
+
+</PostSection>
+
+本次更新還帶來了看板未讀徽章、撰寫視窗快速鍵以及跨裝置的通知清理。 [檢視更新日誌](/changelog)
+
+<ReleaseCTA heading="立即體驗 Meron 0.4.10" text="下載最新版本，開始使用標籤與規則整理你的收件匣。Meron 免費且開源，提供 macOS、Windows、Linux、iOS 和 Android 應用程式。" download="下載 Meron" changelog="檢視更新日誌" github="GitHub Releases" />

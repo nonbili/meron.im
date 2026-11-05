@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Etiquetas y reglas para tu bandeja de entrada"
+publishedAt: "2026-11-02"
+readingTime: "3 min de lectura"
+summary: "Dale un siguiente paso al correo entrante. Las etiquetas, las columnas Kanban y las reglas de entrada convierten los mensajes diarios en un flujo de trabajo visible."
+highlights: ["Etiquetas de correo guardadas localmente y sincronizadas como palabras clave IMAP","Columnas Kanban de etiquetas con arrastrar y soltar para etiquetar y reetiquetar hilos","Reglas de bandeja de entrada para etiquetar, marcar como leído, destacar, copiar o mover correo entre cuentas","Ejecución de reglas sobre el correo existente en Recibidos con registro de actividad reciente","Operadores de búsqueda has:attachment y tag:, además de herramientas de etiquetas para MCP"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Lanzamiento · v0.4.10"
+---
+
+<PostSection>
+
+Llega una factura. Una regla le añade las etiquetas invoice y todo, y el hilo aparece en tu columna «Por hacer» del tablero Kanban sin salir de Recibidos. Cuando esté lista para aprobarse, arrástrala a «Revisión»: Meron cambia la etiqueta todo por review para que veas de un vistazo qué necesita atención. Así puedes configurar este flujo de trabajo en Meron 0.4.10.
+
+<PlatformNote>Las etiquetas, las reglas y la búsqueda de adjuntos están disponibles en escritorio 0.4.10 y en iOS y Android 0.4.8. Las herramientas de etiquetas para MCP están disponibles en escritorio.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Etiquetas y Kanban</Badge>
+
+## Dale un siguiente paso a cada conversación
+
+Empieza añadiendo las etiquetas todo e invoice desde la cabecera de la conversación o el menú del hilo. Las etiquetas se sincronizan con tu servidor de correo como palabras clave IMAP estándar para acompañar a tus mensajes en todos tus dispositivos, y también se conservan en las Carpetas locales y en las copias de seguridad exportadas.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Tablero Kanban de Meron mostrando Recibidos junto a las columnas tag:todo y tag:review con etiquetas de colores en las tarjetas y un indicador de no leídos en el icono del tablero en la barra lateral" caption="Recibidos, Por hacer y Revisión juntos en un mismo tablero." width={1280} height={820} />
+
+- **Arrastra para etiquetar y cambiar etiquetas en tu tablero:** Guarda las búsquedas tag:todo y tag:review como columnas Kanban. Arrastra una tarjeta desde Recibidos para añadirle una etiqueta, o entre esas columnas para sustituir una etiqueta del flujo de trabajo por otra. El resto de etiquetas, como invoice, se mantienen en el hilo.
+- **Alterna varias etiquetas al instante:** Usa el submenú Etiquetas para marcar o desmarcar varias etiquetas seguidas sin tener que reabrir el menú cada vez.
+- **Renombra o elimina una etiqueta en todas partes:** En Configuración → Mensajes → Etiquetas, renombra o elimina una etiqueta en todo el correo almacenado en tu dispositivo, actualizando al mismo tiempo tus reglas y columnas del tablero Kanban.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menú contextual del hilo con el submenú Etiquetas desplegado mostrando las etiquetas marcadas y la acción Añadir una etiqueta" caption="Marca varias etiquetas directamente desde el menú del hilo o haz clic en cualquier etiqueta de una tarjeta para filtrar por ella." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Reglas de entrada</Badge>
+
+## Deja que la próxima factura se clasifique sola
+
+Para automatizar el primer paso, crea una regla que coincida con los asuntos que contengan «invoice» y añada las etiquetas invoice y todo. Se ejecuta sobre los nuevos mensajes de Recibidos, por lo que la siguiente factura aparecerá en tu tablero lista para gestionar.
+
+Abre **Configuración → Reglas** para elegir las cuentas, condiciones y acciones. Filtra por remitente, destinatario, asunto, palabras clave o archivos adjuntos. Si dejas las condiciones vacías, la regla coincidirá con todo el correo nuevo.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Configuración de Meron mostrando la lista de Reglas con controles de arrastre, avatares de cuenta, resúmenes de reglas, botones Ejecutar y el registro de Actividad reciente" caption="Ejecuta una regla sobre el correo existente en Recibidos y comprueba la Actividad reciente para ver el resultado." width={1280} height={820} />
+
+- **Combina acciones en una sola regla:** Además de etiquetar, una regla puede marcar el correo como leído, destacarlo con estrella, copiarlo o moverlo a otra carpeta, incluso entre distintas cuentas o hacia Carpetas locales en escritorio.
+- **Arrastra para reordenar la prioridad:** Las reglas se ejecutan de arriba abajo. La primera regla que mueve un mensaje decide su destino. Reordena las reglas con sus controles de arrastre o con las flechas Arriba y Abajo.
+- **Ejecuta sobre el correo existente y revisa la actividad:** Haz clic en el botón Ejecutar de cualquier regla para aplicarla a los mensajes que ya están en Recibidos y consulta la Actividad reciente debajo de tus reglas para ver qué se ejecutó y cuándo.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Editor de reglas de Meron mostrando el alcance de cuentas, condiciones para De, Asunto y Tiene adjunto, y acciones para Añadir etiquetas, Marcar como leído, Copiar a y Mover a" caption="Elige qué mensajes coinciden y qué debe ocurrir con ellos en el editor de reglas." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Búsqueda y MCP</Badge>
+
+## Encuentra el correo detrás de tu flujo de trabajo
+
+Busca tag:invoice has:attachment para encontrar todas las facturas con archivo adjunto, sin importar en qué etapa del flujo de trabajo estén. Añade filtros por remitente o no leídos para acotar aún más los resultados.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Ejemplos de búsqueda
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nuevas herramientas MCP en escritorio
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Sugerencias de etiquetas y filtro de adjuntos:** Las Opciones de búsqueda incluyen sugerencias de etiquetas y una casilla «Tiene adjunto» si prefieres construir el filtro mediante un formulario. Guarda la búsqueda resultante como columna Kanban en vivo para tenerla siempre a mano.
+- **Herramientas de etiquetas para clientes MCP:** En escritorio, los clientes MCP locales con permiso de organización de mensajes pueden llamar a list\_tags y tag\_messages para consultar las etiquetas en uso y añadir o quitar etiquetas en los hilos.
+
+</PostSection>
+
+Esta versión también incorpora indicadores de no leídos en Kanban, atajos en el redactor y limpieza sincronizada de notificaciones entre dispositivos. [Ver registro de cambios](/changelog)
+
+<ReleaseCTA heading="Prueba Meron 0.4.10" text="Descarga la última versión para empezar a etiquetar y automatizar tu bandeja de entrada. Meron es gratuito y de código abierto, con aplicaciones para macOS, Windows, Linux, iOS y Android." download="Descargar Meron" changelog="Ver registro de cambios" github="GitHub Releases" />

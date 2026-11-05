@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Gör sparade sökningar till Kanban-kolumner"
+publishedAt: "2026-10-22"
+readingTime: "4 min läsning"
+summary: "Bygg din tavla kring de viktigaste mejlen: förvandla sökningar i Gmail-stil till dynamiska Kanban-kolumner. Nu även med lokal kalender, inbjudningssvar direkt i tråden och flytt mellan konton."
+highlights: ["Kanban-kolumner för sparade sökningar och sökoperatorer i Gmail-stil","Lokal kalender för händelser, accepterade inbjudningar och uppgifter","Interaktiva inbjudningskort med Acceptera, Kanske och Avböj","Trådflytt mellan olika konton och genvägar till senaste mappar","Spara och kopiera infogade bilder från meddelanden och galleriet"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Release · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS och Android 0.4.6"
+---
+
+<PostSection>
+
+Olästa mejl från viktiga kunder, förra månadens fakturor, stjärnmärkta trådar som väntar på svar: med sparade sökkolumner får varje ärende en självklar plats på din Kanban-tavla. Spara en sökning en gång så håller sig kolumnen automatiskt uppdaterad.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban &amp; Sökning</Badge>
+
+## Gör en sökning till en levande kolumn
+
+En mapp placerar en tråd på ett enda ställe. Sparade sökningar ger dig flera perspektiv: efter avsändare, datum, lässtatus eller valfri kombination anpassad efter ditt arbetsflöde.
+
+Börja med att söka med välbekanta **sökoperatorer i Gmail-stil** eller den visuella sökbyggaren och välj *Spara sökning som kolumn*. Matchande trådar visas i en dynamisk kolumn med redigerbar sökfråga under rubriken.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Sökoperatorer som stöds
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Skapa en sökning utan att skriva operatorer:**  Öppna sökalternativen för att filtrera på avsändare, mottagare, ämne, nyckelord, datumintervall eller målkolumn.
+- **Avgränsa tavlan utan att förlora sparade sökningar:**  Sökning över hela tavlan lägger till ett filter på varje sparad sökkolumn samtidigt som ursprungsfrågan bevaras.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Sökalternativ med filterfält och möjlighet att spara sökning som Kanban-kolumn" caption="Bygg en sökning och spara den som en kolumn på din tavla." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalender &amp; Inbjudningar</Badge>
+
+## Lokal kalender och interaktiva inbjudningskort
+
+Kalenderinbjudningar visas nu som kort i själva konversationen, med tid i din lokala tidszon, plats, organisatör och deltagarsvar. Du kan svara direkt utan att lämna tråden.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Kalenderinbjudningskort i konversationsvyn med knapparna Acceptera, Kanske och Avböj" caption="Se händelseinformation och svara direkt inuti konversationen." width={1280} height={820} />
+
+- **Svara Acceptera, Kanske eller Avböj direkt:**  Ditt svar skickas till organisatören och registreras i Meron.
+- **Automatiska uppdateringar från organisatören:**  Meron tillämpar schemarättningar och avbokningar automatiskt, även för enskilda tillfällen i återkommande möten.
+- **Månadsbaserad lokal kalender:**  Aktivera Kalender i inställningarna för att samla personliga händelser, accepterade inbjudningar och deadlines på ett ställe. Skapa heldags-, tidsatta eller återkommande händelser och hoppa tillbaka till mejltråden med ett klick.
+
+Din kalender sparas lokalt på din enhet och ingår i Merons krypterade säkerhetskopior.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Månadskalendervy i Meron som visar schemalagda händelser och uppgifter" caption="Personliga händelser, accepterade inbjudningar och deadlines i en och samma vy." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">E-postsortering</Badge>
+
+## Flytt mellan konton och genvägar till senaste mappar
+
+Behöver du arkivera en tråd i ett annat konto? Nu kan du **flytta trådar mellan olika e-postkonton** på både desktop och mobil – antingen genom att dra ett kort mellan kontokolumner på Kanban-tavlan eller välja *Flytta till…* i trådmenyn.
+
+Meron kopierar meddelandena till målet och verifierar överföringen innan originalen flyttas till papperskorgen.
+
+Menyerna *Flytta till* och *Kopiera till* visar nu överst **genvägar till senaste målmappar**, vilket gör det snabbare att nå dina vanliga mappar.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Trådmeny som visar åtgärden Flytta till... och målmappsalternativ" caption="Flytta trådar till ett annat konto eller välj en nyligen använd målmapp." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Media &amp; Finjusteringar</Badge>
+
+## Spara och kopiera infogade bilder samt skrivbordsförbättringar
+
+Desktopversionen har även fått flera praktiska förbättringar:
+
+- **Spara och kopiera bilder i texten:**  Högerklicka på en bild i ett meddelande eller öppna den i mediegalleriet för att spara den eller kopiera den till urklipp.
+- **Renare menyer och dialogrutor:**  Menyer och dialoger har fått mer konsekvent tangentbordsfokus och stängning, tydligare undermenyer och minskat flimmer.
+- **Tydligare felmeddelanden och fler översättningar:**  Misslyckade flytt- och kopieringsåtgärder ger mer detaljerad felinformation. Mobilappen har också fått utökade översättningar på alla 19 språk som stöds.
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.4.7" text="Meron är gratis, öppen källkod och lokal-först för macOS, Windows, Linux, iOS och Android. Hämta den senaste versionen eller läs hela ändringsloggen." download="Ladda ner Meron" changelog="Visa ändringslogg" github="GitHub Releases" />

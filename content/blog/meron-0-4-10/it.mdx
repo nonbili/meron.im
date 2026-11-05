@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Etichette e regole per la tua posta in arrivo"
+publishedAt: "2026-11-02"
+readingTime: "3 min di lettura"
+summary: "Dai a ogni messaggio in arrivo un passo successivo. Etichette, colonne Kanban e regole trasforma le e-mail di tutti i giorni in un flusso di lavoro visibile."
+highlights: ["Etichette e-mail salvate localmente e sincronizzate come parole chiave IMAP","Colonne Kanban basate su etichette con trascinamento per assegnare e cambiare etichette","Regole della posta in arrivo per etichettare, segnare come letto, aggiungere speciale, copiare o spostare messaggi tra account","Esecuzione delle regole sulla posta già presente in Posta in arrivo con registro delle attività recenti","Operatori di ricerca has:attachment e tag:, più strumenti MCP dedicati alle etichette"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Rilascio · v0.4.10"
+---
+
+<PostSection>
+
+Arriva una fattura. Una regola aggiunge le etichette invoice e todo, e la conversazione compare nella colonna «Da fare» sulla bacheca Kanban pur restando in Posta in arrivo. Quando è pronta per l'approvazione, trascinala in «Revisione»: Meron sostituisce l'etichetta todo con review, così vedi a colpo d'occhio cosa richiede attenzione. Ecco come impostare questo flusso di lavoro in Meron 0.4.10.
+
+<PlatformNote>Etichette, regole e ricerca degli allegati sono disponibili su desktop 0.4.10 e su iOS e Android 0.4.8. Gli strumenti MCP per le etichette sono disponibili su desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Etichette e Kanban</Badge>
+
+## Dai a ogni conversazione un passo successivo
+
+Inizia aggiungendo le etichette todo e invoice dall'intestazione della conversazione o dal menu del thread. Le etichette vengono sincronizzate con il server di posta come parole chiave IMAP standard, così seguono i tuoi messaggi su tutti i dispositivi. Vengono inoltre preservate nelle Cartelle locali e nei backup esportati.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Bacheca Kanban di Meron che mostra la Posta in arrivo accanto alle colonne tag:todo e tag:review con chip colorati sulle schede e un badge dei non letti sull'icona della bacheca nella barra laterale" caption="Posta in arrivo, Da fare e Revisione insieme su un'unica bacheca." width={1280} height={820} />
+
+- **Trascina per assegnare e sostituire etichette sulla bacheca:** Salva le ricerche tag:todo e tag:review come colonne Kanban. Trascina una scheda dalla Posta in arrivo per aggiungere un'etichetta, oppure da una colonna all'altra per sostituire un'etichetta del flusso di lavoro con la successiva. Le altre etichette, come invoice, restano sulla conversazione.
+- **Attiva o disattiva più etichette sul posto:** Usa il sottomenu Etichette per selezionare o deselezionare più etichette senza doverlo riaprire ogni volta.
+- **Rinomina o elimina un'etichetta ovunque:** In Impostazioni → Messaggi → Etichette puoi rinominare o rimuovere un'etichetta su tutta la posta salvata sul dispositivo, aggiornando contemporaneamente regole e colonne della bacheca Kanban.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menu contestuale della conversazione con il sottomenu Etichette aperto che mostra le etichette selezionate e l'azione Aggiungi un'etichetta" caption="Attiva o disattiva più etichette direttamente dal menu della conversazione, oppure fai clic su un'etichetta in una scheda per filtrare." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regole della posta in arrivo</Badge>
+
+## Lascia che la prossima fattura si smisti da sola
+
+Per automatizzare il primo passaggio, crea una regola che individua un oggetto contenente «invoice» e aggiunge le etichette invoice e todo. Viene eseguita sui nuovi messaggi in Posta in arrivo, così la prossima fattura comparirà sulla bacheca già pronta da gestire.
+
+Apri **Impostazioni → Regole** per scegliere account, condizioni e azioni. Puoi filtrare per mittente, destinatario, oggetto, parole chiave o allegati. Condizioni vuote corrispondono a tutta la nuova posta.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Impostazioni di Meron che mostrano l'elenco delle Regole con maniglie di trascinamento, avatar degli account, riepiloghi, pulsanti Esegui e il registro Attività recente" caption="Esegui una regola sulla posta già presente in Posta in arrivo, poi controlla Attività recente per verificare il risultato." width={1280} height={820} />
+
+- **Combina più azioni in una sola regola:** Oltre alle etichette, una regola può segnare la posta come letta, aggiungerla agli speciali, copiarla o spostarla in un'altra cartella, anche tra account diversi o nelle Cartelle locali su desktop.
+- **Trascina per riordinare la priorità:** Le regole vengono eseguite dall'alto verso il basso. La prima regola che sposta un messaggio ne decide la destinazione. Riordina le regole con le maniglie di trascinamento o con i tasti freccia Su e Giù.
+- **Esegui sulla posta esistente e controlla l'attività:** Fai clic sul pulsante Esegui di qualsiasi regola per applicarla ai messaggi già presenti in Posta in arrivo e controlla Attività recente sotto l'elenco delle regole per vedere cosa è stato eseguito e quando.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Editor delle regole di Meron che mostra l'ambito degli account, le condizioni Da, Oggetto e Ha allegato e le azioni Aggiungi etichette, Segna come letto, Copia in e Sposta in" caption="Scegli quali messaggi intercettare e quali azioni applicare nell'editor delle regole." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Ricerca e MCP</Badge>
+
+## Trova i messaggi dietro il tuo flusso di lavoro
+
+Cerca tag:invoice has:attachment per trovare ogni fattura con allegato, indipendentemente dalla fase del flusso di lavoro in cui si trova. Aggiungi filtri per mittente o non letti per restringere ulteriormente i risultati.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Esempi di ricerca
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nuovi strumenti MCP su desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Suggerimenti di etichette e filtro allegati:** Le Opzioni di ricerca includono i suggerimenti per le etichette e la casella «Ha allegato» se preferisci comporre il filtro tramite un modulo. Salva la ricerca risultante come colonna Kanban dinamica per averla sempre a portata di mano.
+- **Strumenti per le etichette nei client MCP:** Su desktop, i client MCP locali con accesso all'organizzazione dei messaggi possono invocare list\_tags e tag\_messages per ispezionare le etichette in uso e aggiungere o rimuovere etichette dalle conversazioni.
+
+</PostSection>
+
+Questa versione aggiunge anche i badge dei non letti sul Kanban, nuove scorciatoie nell'editor di scrittura e la pulizia sincronizzata delle notifiche tra dispositivi. [Vedi il changelog](/changelog)
+
+<ReleaseCTA heading="Prova Meron 0.4.10" text="Scarica l'ultima versione per iniziare a organizzare con etichette e regole la tua posta in arrivo. Meron è gratuito e open source, con app per macOS, Windows, Linux, iOS e Android." download="Scarica Meron" changelog="Vedi il changelog" github="GitHub Releases" />

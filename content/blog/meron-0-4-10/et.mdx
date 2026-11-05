@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Sildid ja reeglid sinu postkastile"
+publishedAt: "2026-11-02"
+readingTime: "3 min lugemist"
+summary: "Anna saabuvale kirjale selge järgmine samm. Sildid, Kanbani veerud ja postkasti reeglid muudavad igapäevased kirjad nähtavaks töövooguks."
+highlights: ["Kohalikult talletatud ja IMAP-märksõnadena sünkroonitavad kirjasildid","Kanbani sildiveerud, kus saab lohistades lõimedele silte lisada ja neid vahetada","Postkasti reeglid kirjade sildistamiseks, loetuks märkimiseks, tärniga tähistamiseks, kopeerimiseks või kontode vahel liigutamiseks","Reeglite käivitamine olemasolevatel Saabunud-kausta kirjadel koos hiljutise tegevuse logiga","has:attachment ja tag: otsinguoperaatorid ning MCP silditööriistad"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Väljalase · v0.4.10"
+---
+
+<PostSection>
+
+Saabub arve. Reegel lisab sellele sildid invoice ja todo ning kirjalõim ilmub Kanbani tahvlil veergu „To do“, jäädes samal ajal kausta Saabunud. Kui arve on kinnitamiseks valmis, lohista see veergu „Review“. Meron vahetab sildi todo sildi review vastu ja näed ühe pilguga, mis ootab tähelepanu. Vaata, kuidas see töövoog Meron 0.4.10 versioonis üles seada.
+
+<PlatformNote>Sildid, reeglid ja manuste otsing on saadaval töölauaversioonis 0.4.10 ning iOS-i ja Androidi versioonis 0.4.8. MCP silditööriistad on saadaval arvutis.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Sildid ja Kanban</Badge>
+
+## Anna igale kirjalõimele järgmine samm
+
+Alusta siltide todo ja invoice lisamisega vestluse päisest või lõime menüüst. Sildid sünkroonitakse meiliserveriga tavaliste IMAP-märksõnadena, nii et need liiguvad koos kirjadega kõigis sinu seadmetes. Samuti säilivad need Kohalikes kaustades ja eksporditud varukoopiates.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meroni Kanbani tahvel, kus kaust Saabunud on kõrvuti veergudega tag:todo ja tag:review, kaartidel on värvilised sildimärgised ning külgriba tahvliikoonil lugemata kirjade märgis" caption="Saabunud, To do ja Review koos ühel tahvlil." width={1280} height={820} />
+
+- **Lohista tahvlil sildistamiseks ja sildi vahetamiseks:** Salvesta otsingud tag:todo ja tag:review Kanbani veergudena. Lohista kaart kaustast Saabunud veergu, et lisada silt, või nende veergude vahel, et asendada üks töövoosilt teisega. Muud sildid, nagu invoice, jäävad lõimele alles.
+- **Lülita mitut silti korraga:** Kasuta alammenüüd Sildid, et märkida või eemaldada mitu silti järjest ilma menüüd iga kord uuesti avamata.
+- **Nimeta silt ümber või kustuta see kõikjal:** Jaotises Sätted → Sõnumid → Sildid saad sildi ümber nimetada või eemaldada kõigilt seadmesse salvestatud kirjadelt, uuendades samal ajal automaatselt ka oma reegleid ja Kanbani tahvli veerge.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Kirjalõime kontekstimenüü avatud alammenüüga Sildid, kus on näha valitud sildid ja toiming Lisa silt" caption="Lülita mitut silti otse lõime menüüst või klõpsa kaardil oleval sildil, et selle järgi filtreerida." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Postkasti reeglid</Badge>
+
+## Lase järgmisel arvel end ise sorteerida
+
+Esimese sammu automatiseerimiseks loo reegel, mis otsib teemarealt sõna „invoice“ ning lisab sildid invoice ja todo. Reegel rakendub uutele Saabunud-kausta sõnumitele, nii et järgmine sobiv arve ilmub otse sinu tahvlile käsitlemiseks valmis.
+
+Ava **Sätted → Reeglid**, et valida kontod, tingimused ja toimingud. Leia vasteid saatja, saaja, teema, märksõnade või manuste järgi. Tühjad tingimused vastavad kõigile uutele kirjadele.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meroni sätted, kus on näha reeglite loend koos lohistamispidemete, kontoavataride, reeglikokkuvõtete, Käivita-nuppude ja Hiljutise tegevuse logiga" caption="Käivita reegel olemasolevatel Saabunud-kausta kirjadel ja vaata seejärel tulemust jaotisest Hiljutine tegevus." width={1280} height={820} />
+
+- **Kombineeri ühes reeglis mitu toimingut:** Lisaks siltidele saab reegel märkida kirja loetuks, lisada tärni, kopeerida või liigutada selle teise kausta – arvutis isegi teisele kontole või Kohalikesse kaustadesse.
+- **Lohista prioriteedi muutmiseks:** Reeglid käivitatakse ülalt alla. Esimene reegel, mis kirja teisaldab, määrab selle sihtkoha. Muuda reeglite järjekorda lohistamispidemete või üles- ja allanooltega.
+- **Käivita olemasolevatel kirjadel ja kontrolli tegevust:** Klõpsa mis tahes reegli juures nuppu Käivita, et rakendada seda juba kaustas Saabunud olevatele kirjadele, ning vaata reeglite all olevat jaotist Hiljutine tegevus, et näha, mis ja millal käivitati.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meroni reegliredaktor, mis näitab kontode ulatust, tingimusi väljadele Saatja, Teema ja Sisaldab manust ning toiminguid Lisa sildid, Märgi loetuks, Kopeeri kausta ja Liiguta kausta" caption="Vali reegliredaktoris, millised sõnumid klapivad ja mida nendega ette võtta." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Otsing ja MCP</Badge>
+
+## Leia oma töövoo taga olevad kirjad
+
+Otsi fraasi tag:invoice has:attachment, et leida iga manusega arve sõltumata selle töövoo etapist. Lisa saatja või lugemata kirjade filtrid, et tulemusi veelgi täpsustada.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Otsingunäited
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Uued MCP tööriistad arvutis
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Sildisoovitused ja manusefilter:** Otsinguvalikud sisaldavad sildisoovitusi ja märkeruutu „Sisaldab manust“, kui eelistad filtrit koostada vormi abil. Salvesta saadud otsing reaalajas Kanbani veeruna, et see oleks alati käepärast.
+- **Silditööriistad MCP klientidele:** Arvutis saavad sõnumite korrastamise õigusega kohalikud MCP kliendid kutsuda välja tööriistad list\_tags ja tag\_messages, et vaadata kasutusel olevaid silte ning lisada või eemaldada lõimedelt silte.
+
+</PostSection>
+
+See väljalase lisab ka Kanbani lugemata kirjade märgised, koostamisakna kiirklahvid ja teavituste sünkroonitud puhastamise seadmete vahel. [Vaata muudatuste logi](/changelog)
+
+<ReleaseCTA heading="Proovi Meron 0.4.10 versiooni" text="Laadi alla uusim versioon, et alustada oma postkasti sildistamist ja automatiseerimist. Meron on tasuta ja avatud lähtekoodiga, rakendustega platvormidele macOS, Windows, Linux, iOS ja Android." download="Laadi alla Meron" changelog="Vaata muudatuste logi" github="GitHubi väljalasked" />

@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Libere espaço para seus e-mails com as Pastas locais"
+publishedAt: "2026-10-28"
+readingTime: "3 min de leitura"
+summary: "Tire os e-mails antigos do servidor, faça backup do seu arquivo e mantenha os próximos eventos e tarefas ao lado da sua caixa de entrada."
+highlights: ["Pastas locais no seu computador com backups de arquivo criptografados por frase-senha","Crie e renomeie pastas no servidor e nas Pastas locais","Painel lateral de calendário com minivisualização mensal e agenda de 7 dias","Lembretes de calendário e tarefas com horário de vencimento opcional","Paginação de mensagens pelo teclado (Espaço / Shift+Espaço) e navegação entre conversas com Alt+Setas"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Lançamento · v0.4.8"
+platformsSubtitle: "Pastas locais, painel lateral de calendário e atalhos de leitura: desktop 0.4.8. Gerenciamento de pastas e lembretes: também disponíveis no iOS e Android 0.4.7."
+---
+
+<PostSection>
+
+Uma caixa de correio cheia não deveria significar apagar e-mails que você quer guardar. O Meron 0.4.8 adiciona Pastas locais no desktop para que você possa mover recibos, projetos concluídos e conversas antigas para o seu computador. Um novo painel lateral de calendário mantém seus próximos compromissos à vista enquanto você lê.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Pastas locais</Badge>
+
+## Mantenha seus e-mails no computador, fora do servidor
+
+Libere espaço na sua caixa IMAP ou salve suas mensagens antes de encerrar uma conta. As Pastas locais oferecem um arquivo offline no seu computador que você pode navegar e pesquisar dentro do Meron.
+
+Adicione **Pastas locais** em Configurações → Pastas locais. Ele começa com uma pasta Arquivo e aparece ao lado das suas contas de e-mail na barra de navegação, no quadro Kanban e na busca. Os e-mails armazenados ali ficam naquele computador.
+
+- **Mova ou copie de qualquer conta:** Arraste cartões para uma coluna de pasta local no seu quadro Kanban ou use Mover para… e Copiar para… no menu de qualquer conversa. Ao mover uma conversa, o Meron verifica se cada mensagem foi gravada com segurança no disco antes de mover as cópias do servidor para a Lixeira.
+- **Organize seu arquivo local:** Crie, renomeie e aninhe pastas dentro das Pastas locais para estruturar seu arquivo offline do seu jeito.
+- **Backups do arquivo criptografados com frase-senha:** Depois que você remove as cópias do servidor, seu arquivo local pode ser a única cópia daqueles e-mails. Use Configurações → Pastas locais para exportar um backup e guarde-o em um local separado do computador. O backup exportado é criptografado com uma frase-senha e pode ser restaurado no Meron em outro computador.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Configurações do Meron mostrando o uso de armazenamento das Pastas locais junto aos controles Exportar backup e Restaurar backup" caption="Configurações → Pastas locais mostra o uso de espaço do arquivo local e permite exportar ou restaurar snapshots criptografados com frase-senha." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Organize seu arquivo</Badge>
+
+## Guarde e-mails antigos onde você possa encontrá-los
+
+Crie uma pasta para cada projeto, cliente ou ano sem sair do Meron. O desktop 0.4.8 oferece suporte à criação e renomeação de pastas no servidor IMAP e nas Pastas locais; o iOS e o Android 0.4.7 trazem os mesmos controles para as pastas do servidor.
+
+- **Crie pastas em qualquer lugar:** Crie pastas e subpastas aninhadas diretamente pelos menus da caixa de correio e das colunas Kanban.
+- **Renomeie pastas na hora:** As colunas Kanban e os atalhos de transferências recentes acompanham automaticamente o novo nome da pasta.
+- **Encontre um destino rapidamente:** Mover para… e Copiar para… agrupam os destinos por conta e mantêm as pastas recentes no topo. No desktop, as Pastas locais aparecem ao lado das suas outras contas.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="Menu de contexto da conversa mostrando pastas recentes no topo e submenus Mover para agrupados por conta expandindo as Pastas locais" caption="Os menus Mover para e Copiar para mantêm os destinos recentes no topo e agrupam cada conta — incluindo as Pastas locais — em submenus organizados." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Calendário e Lembretes</Badge>
+
+## Mantenha os próximos compromissos ao lado da caixa de entrada
+
+Conferir se você está livre na quinta-feira não deveria tirar você da mensagem que está lendo. No desktop, o Calendário agora fica ao lado das Tarefas no painel lateral direito.
+
+Navegue por uma grade mensal compacta e uma agenda contínua de 7 dias com eventos e tarefas a vencer ao lado da sua caixa de entrada ou quadro Kanban. Expanda para o calendário mensal completo quando precisar planejar mais adiante. Os lembretes de eventos e tarefas estão disponíveis no desktop 0.4.8 e no mobile 0.4.7.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Quadro Kanban do Meron ao lado do novo painel lateral direito de Calendário mostrando uma minigrade mensal e agenda de 7 dias" caption="O painel lateral de Calendário fica ao lado do quadro Kanban ou da caixa de correio com uma minivisualização mensal e a agenda dos próximos 7 dias." width={1280} height={820} />
+
+- **Alertas de evento configuráveis:** Defina horários padrão de lembrete para eventos com hora marcada e de dia inteiro nas Configurações, ou personalize até dois alertas por evento.
+- **Horários de vencimento de tarefas:** Defina um horário opcional ao lado da data de vencimento de uma tarefa para receber um lembrete no momento certo. Tarefas apenas com data enviam um lembrete às 9h00 no horário local.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Janela de detalhes do evento mostrando uma URL de reunião clicável com botão de cópia, seletores de Alerta e Segundo alerta e notas da pauta" caption="Configure até dois alertas por evento, abra ou copie URLs de reunião em um clique e volte direto para o e-mail de convite original." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Atalhos de leitura</Badge>
+
+## Continue lendo pelo teclado
+
+No desktop, avance ou volte páginas em uma mensagem longa com Espaço ou Shift+Espaço e passe para a próxima conversa sem precisar do mouse.
+
+<KeyboardShortcuts title="Atalhos de leitura no desktop" items={[{"label":"Rolar mensagem uma página para baixo","keys":["Space"]},{"label":"Rolar mensagem uma página para cima","keys":["Shift + Space"]},{"label":"Próxima conversa","keys":["J","Alt + ↓"]},{"label":"Conversa anterior","keys":["K","Alt + ↑"]}]} or="ou" note="Alt+↓ e Alt+↑ também funcionam enquanto uma mensagem está em foco." />
+
+</PostSection>
+
+<ReleaseCTA heading="Experimente o Meron 0.4.8" text="Baixe a versão mais recente para começar seu arquivo. O Meron é gratuito e de código aberto, com aplicativos para macOS, Windows, Linux, iOS e Android. O histórico de versões completo traz o restante das atualizações para desktop e dispositivos móveis." download="Baixar Meron" changelog="Ver histórico de versões" github="GitHub Releases" />

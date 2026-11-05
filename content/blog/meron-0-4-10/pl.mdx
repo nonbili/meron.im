@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Etykiety i reguły dla Twojej skrzynki odbiorczej"
+publishedAt: "2026-11-02"
+readingTime: "3 min czytania"
+summary: "Nadaj przychodzącym wiadomościom kolejny krok. Etykiety, kolumny Kanban i reguły skrzynki odbiorczej zamieniają codzienne e-maile w przejrzysty przepływ pracy."
+highlights: ["Etykiety wiadomości zapisywane lokalnie i synchronizowane jako słowa kluczowe IMAP","Kolumny Kanban oparte na etykietach z przeciąganiem i upuszczaniem do oznaczania wątków","Reguły skrzynki odbiorczej do etykietowania, oznaczania jako przeczytane, oznaczania gwiazdką, kopiowania lub przenoszenia poczty między kontami","Uruchamianie reguł na istniejących wiadomościach w Odebranych wraz z dziennikiem ostatniej aktywności","Operatory wyszukiwania has:attachment i tag: oraz narzędzia etykiet MCP"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Wydanie · v0.4.10"
+---
+
+<PostSection>
+
+Przychodzi faktura. Reguła automatycznie dodaje etykiety invoice oraz todo, dzięki czemu wątek pojawia się w kolumnie „Do zrobienia” na tablicy Kanban, pozostając jednocześnie w Odebranych. Gdy dokument jest gotowy do akceptacji, przeciągnij go do kolumny „Do sprawdzenia” — Meron podmieni etykietę todo na review, więc od razu widzisz, czym trzeba się zająć. Oto jak skonfigurować taki przepływ pracy w Meron 0.4.10.
+
+<PlatformNote>Etykiety, reguły i wyszukiwanie załączników są dostępne w wersji desktopowej 0.4.10 oraz na iOS i Androidzie 0.4.8. Narzędzia etykiet MCP są dostępne na komputerach.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Etykiety i Kanban</Badge>
+
+## Nadaj każdemu wątkowi kolejny krok
+
+Zacznij od dodania etykiet todo oraz invoice z nagłówka rozmowy lub menu wątku. Etykiety synchronizują się z serwerem pocztowym jako standardowe słowa kluczowe IMAP, dzięki czemu podążają za wiadomościami między urządzeniami. Są również zachowywane w Folderach lokalnych i wyeksportowanych kopiach zapasowych.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Tablica Kanban w Meron pokazująca Odebrane obok kolumn tag:todo i tag:review z kolorowymi etykietami na kartach wątków oraz plakietką nieprzeczytanych na ikonie tablicy w pasku bocznym" caption="Odebrane, Do zrobienia i Do sprawdzenia razem na jednej tablicy." width={1280} height={820} />
+
+- **Przeciągaj karty, aby dodawać i zmieniać etykiety:** Zapisz wyszukiwania tag:todo oraz tag:review jako kolumny Kanban. Przeciągnij kartę z Odebranych, aby przypisać etykietę, lub pomiędzy tymi kolumnami, aby zastąpić jedną etykietę etapu drugą. Pozostałe etykiety, takie jak invoice, zostają na wątku.
+- **Przełączaj wiele etykiet bez zamykania menu:** Skorzystaj z podmenu Etykiety, aby zaznaczyć lub odznaczyć kilka etykiet naraz bez konieczności ponownego otwierania menu.
+- **Zmień nazwę lub usuń etykietę we wszystkich wiadomościach:** W sekcji Ustawienia → Wiadomości → Etykiety zmienisz nazwę lub usuniesz etykietę ze wszystkich wiadomości zapisanych na urządzeniu, jednocześnie aktualizując powiązane reguły i kolumny tablicy Kanban.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menu kontekstowe wątku z otwartym podmenu Etykiety pokazującym zaznaczone etykiety oraz akcję Dodaj etykietę" caption="Przełączaj wiele etykiet bezpośrednio z menu wątku lub kliknij dowolną etykietę na karcie, aby przefiltrować widok." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Reguły skrzynki odbiorczej</Badge>
+
+## Niech kolejna faktura posortuje się sama
+
+Aby zautomatyzować pierwszy krok, utwórz regułę dopasowującą temat zawierający „invoice” i dodającą etykiety invoice oraz todo. Działa ona na nowe wiadomości w Odebranych, więc kolejna pasująca faktura od razu pojawi się na tablicy gotowa do obsługi.
+
+Otwórz **Ustawienia → Reguły**, aby wybrać konta, warunki i akcje. Dopasowuj wiadomości według nadawcy, odbiorcy, tematu, słów kluczowych lub załączników. Puste warunki oznaczają dopasowanie każdej nowej wiadomości.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Ustawienia Meron pokazujące listę Reguł z uchwytami przeciągania, awatarami kont, podsumowaniami reguł, przyciskami Uruchom i dziennikiem Ostatniej aktywności" caption="Uruchom regułę na istniejących wiadomościach w Odebranych, a następnie sprawdź Ostatnią aktywność." width={1280} height={820} />
+
+- **Łącz wiele akcji w jednej regule:** Oprócz nadawania etykiet reguła może oznaczyć wiadomość jako przeczytaną, dodać gwiazdkę, skopiować ją lub przenieść do innego folderu — na komputerze także między kontami lub do Folderów lokalnych.
+- **Przeciągaj, aby zmienić priorytet:** Reguły wykonują się od góry do dołu. Pierwsza reguła, która przenosi wiadomość, decyduje o jej miejscu docelowym. Zmieniaj kolejność reguł za pomocą uchwytów przeciągania lub klawiszy strzałek W górę i W dół.
+- **Uruchamiaj na istniejącej poczcie i sprawdzaj historię:** Kliknij przycisk Uruchom przy dowolnej regule, aby zastosować ją do wiadomości znajdujących się już w Odebranych, i sprawdź Ostatnią aktywność poniżej listy reguł, aby zobaczyć, co i kiedy zostało wykonane.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Edytor reguł Meron pokazujący zakres kont, warunki dopasowania dla pól Od, Temat i Ma załącznik oraz akcje Dodaj etykiety, Oznacz jako przeczytane, Kopiuj do i Przenieś do" caption="W edytorze reguł określ, które wiadomości mają pasować i co ma się z nimi stać." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Wyszukiwanie i MCP</Badge>
+
+## Znajdź wiadomości stojące za Twoim przepływem pracy
+
+Wyszukaj tag:invoice has:attachment, aby znaleźć każdą fakturę z załącznikiem niezależnie od etapu, na którym się znajduje. Dodaj filtry nadawcy lub nieprzeczytanych, aby jeszcze bardziej zawęzić wyniki.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Przykłady wyszukiwania
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nowe narzędzia MCP na komputerze
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Podpowiedzi etykiet i filtr załączników:** Opcje wyszukiwania zawierają podpowiedzi etykiet oraz pole wyboru „Ma załącznik”, jeśli wolisz budować filtr za pomocą formularza. Zapisz utworzone zapytanie jako dynamiczną kolumnę Kanban, aby mieć je zawsze pod ręką.
+- **Narzędzia etykiet dla klientów MCP:** Na komputerze lokalni klienci MCP z uprawnieniem do organizacji wiadomości mogą wywoływać list\_tags oraz tag\_messages, aby sprawdzać używane etykiety oraz dodawać lub usuwać je z wątków.
+
+</PostSection>
+
+To wydanie wprowadza również plakietki nieprzeczytanych na tablicy Kanban, skróty w edytorze wiadomości oraz czyszczenie powiadomień między urządzeniami. [Zobacz listę zmian](/changelog)
+
+<ReleaseCTA heading="Wypróbuj Meron 0.4.10" text="Pobierz najnowszą wersję, aby zacząć oznaczać etykietami i automatyzować swoją skrzynkę odbiorczą. Meron jest darmowy i otwartoźródłowy, z aplikacjami dla macOS, Windows, Linux, iOS oraz Androida." download="Pobierz Meron" changelog="Zobacz listę zmian" github="Wydania na GitHubie" />

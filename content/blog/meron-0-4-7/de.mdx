@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Gespeicherte Suchen als Kanban-Spalten"
+publishedAt: "2026-10-22"
+readingTime: "4 Min. Lesezeit"
+summary: "Gestalten Sie Ihr Board nach Ihren Prioritäten: Verwandeln Sie Suchen im Gmail-Stil in dynamische Kanban-Spalten. Dazu gibt es einen lokalen Kalender, Antworten auf Einladungen direkt im Thread und kontoübergreifendes Verschieben."
+highlights: ["Gespeicherte Suchen als Kanban-Spalten mit Gmail-Suchoperatoren","Lokaler Kalender für Termine, angenommene Einladungen und Fälligkeiten","Interaktive Einladungskarten mit Zusagen, Vielleicht und Ablehnen","Kontoübergreifendes Verschieben und Schnellzugriff auf letzte Ordner","Eingebettete Bilder aus Nachrichten und Galerie speichern und kopieren"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Release · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS und Android 0.4.6"
+---
+
+<PostSection>
+
+Ungelesene E-Mails von wichtigen Kunden, Rechnungen des letzten Monats oder markierte Threads, die auf Antwort warten: Mit gespeicherten Suchspalten geben Sie jedem Anliegen einen festen Platz auf Ihrem Kanban-Board. Einmal speichern genügt – die Spalte aktualisiert sich automatisch mit Ihren E-Mails.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban &amp; Suche</Badge>
+
+## Verwandeln Sie eine Suche in eine dynamische Spalte
+
+Ein Ordner weist einem Thread genau einen Ort zu. Gespeicherte Suchen eröffnen Ihnen flexiblere Ansichten: nach Absender, Datum, Lesestatus oder einer Kombination, die genau zu Ihrem Workflow passt.
+
+Starten Sie eine Suche mit vertrauten **Gmail-Suchoperatoren** oder dem visuellen Suchassistenten und wählen Sie *Suche als Spalte speichern*. Passende Threads erscheinen in einer dynamischen Spalte mit bearbeitbarer Suchanfrage unter der Kopfzeile.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Unterstützte Suchoperatoren
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Suchen ohne Eintippen von Operatoren erstellen:**  Öffnen Sie die Suchoptionen, um nach Absender, Empfänger, Betreff, Stichwörtern, Zeitraum oder Zielspalte zu filtern.
+- **Board eingrenzen, ohne gespeicherte Suchen zu verlieren:**  Die boardweite Suche ergänzt jede gespeicherte Suchspalte um einen Filter, während die ursprüngliche Abfrage erhalten bleibt.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Suchoptions-Popover mit Filterfeldern und Option zum Speichern der Suche als Kanban-Spalte" caption="Erstellen Sie eine Suche und speichern Sie sie als Spalte auf Ihrem Board." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalender &amp; Einladungen</Badge>
+
+## Lokaler Kalender und interaktive Einladungskarten
+
+Kalendereinladungen erscheinen jetzt als Karten direkt in der Konversation – mit Terminzeit in Ihrer lokalen Zeitzone, Ort, Organisator und Teilnehmerantworten. Antworten Sie direkt, ohne den Thread zu verlassen.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Kalender-Einladungskarte in der Konversationsansicht mit Schaltflächen für Zusagen, Vielleicht und Ablehnen" caption="Termindetails einsehen und direkt in der Konversation antworten." width={1280} height={820} />
+
+- **Direkt Zusagen, Vielleicht oder Ablehnen:**  Ihre Antwort wird an den Organisator gesendet und in Meron vermerkt.
+- **Automatische Aktualisierungen durch Organisatoren:**  Meron übernimmt eingehende Terminänderungen und Absagen, einschließlich Änderungen an einzelnen wiederkehrenden Terminen.
+- **Monatlicher lokaler Kalender:**  Aktivieren Sie den Kalender in den Einstellungen, um persönliche Termine, angenommene Einladungen und Fristen gebündelt zu sehen. Erstellen Sie ganztägige, terminierte oder wiederkehrende Ereignisse und springen Sie mit einem Klick zurück zum E-Mail-Thread.
+
+Ihr Kalender wird lokal auf Ihrem Gerät gespeichert und in den verschlüsselten Backups von Meron gesichert.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Monatskalenderansicht in Meron mit geplanten Ereignissen und Aufgaben" caption="Persönliche Termine, angenommene Einladungen und Aufgabenfristen in einer Ansicht." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">E-Mail-Organisation</Badge>
+
+## Kontoübergreifendes Verschieben und Schnellzugriff auf Ordner
+
+Möchten Sie einen Thread in einem anderen Konto ablegen? Sie können Threads jetzt **zwischen verschiedenen E-Mail-Konten verschieben** – sowohl auf dem Desktop als auch mobil, indem Sie Karten zwischen Kontospalten im Kanban-Board ziehen oder im Menü *Verschieben nach…* wählen.
+
+Meron kopiert die Nachrichten an das Ziel und überprüft die Übertragung, bevor die Originale in den Papierkorb verschoben werden.
+
+Die Menüs *Verschieben nach* und *Kopieren nach* zeigen nun ganz oben **kürzlich genutzte Zielordner**, sodass Sie Ihre gewohnten Ordner noch schneller erreichen.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Thread-Kontextmenü mit Aktion 'Verschieben nach...' und Zielordner-Optionen" caption="Verschieben Sie Threads in ein anderes Konto oder wählen Sie ein kürzlich genutztes Ziel." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Medien &amp; Detailpflege</Badge>
+
+## Eingebettete Bilder speichern/kopieren und Desktop-Verfeinerungen
+
+Auf dem Desktop gibt es weitere praktische Verbesserungen:
+
+- **Bilder im Text speichern &amp; kopieren:**  Klicken Sie mit der rechten Maustaste auf ein Bild in einer Nachricht oder öffnen Sie es in der Mediengalerie, um es zu speichern oder in die Zwischenablage zu kopieren.
+- **Sauberere Menüs und Dialoge:**  Menüs und Overlays reagieren zuverlässiger auf Tastatureingaben, heben Untermenüs klarer hervor und flackern nicht mehr.
+- **Präzisere Fehlermeldungen und mehr Übersetzungen:**  Fehlgeschlagene Verschiebungen oder Kopien liefern genauere Fehlerursachen. Auf mobilen Geräten wurden die Übersetzungen für alle 19 unterstützten Sprachen erweitert.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.7 ausprobieren" text="Meron ist kostenlos, quelloffen und lokal orientiert für macOS, Windows, Linux, iOS und Android verfügbar. Holen Sie sich das neueste Release oder lesen Sie das komplette Änderungsprotokoll." download="Meron herunterladen" changelog="Changelog ansehen" github="GitHub Releases" />

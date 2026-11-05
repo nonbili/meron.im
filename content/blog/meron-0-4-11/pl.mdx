@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Katalog kontaktów, notatki Markdown i odroczone reguły"
+publishedAt: "2026-11-05"
+readingTime: "4 min czytania"
+summary: "Rób notatki o kontaktach, wznawiaj rozmowy po ponownym uruchomieniu i pozwól odroczonym regułom usuwać wiadomości, gdy przestaną być potrzebne."
+highlights: ["Panel kontaktów z przypiętymi osobami, prywatnymi notatkami Markdown i historią wątków","Karty wątków w stylu przeglądarki z przeciąganiem i przywracaniem sesji","Odroczone reguły uruchamiane po przeczytaniu wiadomości lub po upływie określonego czasu","Wklejanie kolumn z arkusza kalkulacyjnego i list rozdzielanych spacjami bezpośrednio do pól odbiorców","Odpowiedz wszystkim skrótem A i dodawaj uczestników wątku z szybkiej odpowiedzi","Pełna rosyjska wersja językowa na komputerach, iOS i Androidzie"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Wydanie · v0.4.11"
+---
+
+<PostSection>
+
+Zanim odpowiesz klientowi, sprawdź notatki z ostatniej rozmowy i odszukaj wcześniejsze wątki — wszystko z poziomu nowego panelu Kontaktów. Meron 0.4.11 dodaje przypinanie kontaktów i prywatne notatki Markdown, przywraca otwarte karty po restarcie oraz pozwala regułom porządkować wiadomości po ich przeczytaniu.
+
+<PlatformNote>Panel kontaktów z notatkami Markdown, karty w stylu przeglądarki i odroczone reguły są dostępne w wersji desktopowej 0.4.11. Katalog kontaktów, buforowanie zdalnych obrazów i lokalizacja w języku rosyjskim są również dostępne na Androidzie i iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kontakty i notatki</Badge>
+
+## Trzymaj notatki i wcześniejsze rozmowy w jednym miejscu
+
+Otwórz panel Kontaktów na pasku bocznym, aby znaleźć kogoś po nazwisku lub posortować książkę adresową według częstotliwości, ostatnich rozmów lub alfabetycznie.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Aplikacja desktopowa Meron z otwartym panelem bocznym Kontaktów, wybraną Sarah Jenkins, prywatnymi notatkami Markdown i historią rozmów z etykietami folderów" caption="Sprawdź notatki i dotychczasowe wątki przed napisaniem odpowiedzi." width={1280} height={820} />
+
+- **Przypinaj częste kontakty:** Miej osoby, z którymi współpracujesz najczęściej, na samej górze listy.
+- **Prywatne notatki Markdown:** Zapisuj wnioski ze spotkań, numery telefonów lub ustalenia dla każdego kontaktu. Notatki obsługują Markdown z kartami Pisanie i Podgląd, pozostają na Twoim urządzeniu i blokują zdalne obrazy.
+- **Znajduj wcześniejsze rozmowy:** Wybierz kontakt, aby przeglądać wspólne wątki. Etykiety folderów pokazują, czy wiadomość znajduje się w Odebranych, Wysłanych czy w Archiwum; Spam i Kosz są wykluczone.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Karty i sesje</Badge>
+
+## Wznów pracę dokładnie tam, gdzie została przerwana
+
+Uruchom ponownie Meron i natychmiast wróć do otwartych rozmów. Wątki i wersje robocze dzielą ten sam pasek kart, dzięki czemu możesz swobodnie przełączać się między czytaniem a pisaniem.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Widok rozmowy w programie Meron z kartami o równej szerokości w nagłówku, pokazującymi aktywne wątki i wersje robocze" caption="Trzymaj rozmowy i wersje robocze razem na pasku kart." width={1280} height={820} />
+
+- **Przeciągaj, aby zmienić kolejność kart:** Przeciągaj wątki i wersje robocze wzdłuż paska kart, aby trzymać powiązane rozmowy obok siebie.
+- **Przywracanie kart po restarcie:** Meron przywraca otwarte karty i aktywną rozmowę po ponownym uruchomieniu aplikacji lub systemu.
+- **Zachowuj wersje robocze przy zamykaniu kart:** Zamknięcie karty tworzenia wiadomości lub wyjście z programu Meron zapisuje treść w folderze Wersje robocze.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Automatyzacja skrzynki</Badge>
+
+## Usuwaj wiadomości po ich przeczytaniu
+
+Kod weryfikacyjny przydaje się przez kilka minut; biuletyn warto zachować na miesiąc. Odroczone reguły dodają harmonogram czasowy do reguł skrzynki odbiorczej wprowadzonych w wersji 0.4.10.
+
+Otwórz **Ustawienia → Reguły**, aby wybrać pasujące wiadomości, akcję oraz czas jej uruchomienia.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Od razu
+
+</CardTitle>
+
+Uruchamia się natychmiast po nadejściu nowej wiadomości do Odebranych.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Po przeczytaniu
+
+</CardTitle>
+
+Uruchamia licznik po przeczytaniu (np. 5 min). Oznaczenie jako nieprzeczytane anuluje go.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Gdy starsze niż
+
+</CardTitle>
+
+Sprawdza wiek wiadomości (np. 30 dni), aby automatycznie archiwizować starszą pocztę.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Edytor reguł Meron pokazujący warunki dopasowania, kontrolki czasu z Po przeczytaniu ustawionym na 5 minut oraz akcję Przenieś do kosza" caption="Ustawiaj reguły uruchamiane po przeczytaniu, aby automatycznie wyrzucać kody 2FA i jednorazowe powiadomienia do kosza." width={1280} height={820} />
+
+- **Uruchom po przeczytaniu:** Dla e-maili weryfikacyjnych dopasuj temat, ustaw „Po przeczytaniu” na 5 minut i wybierz „Przenieś do kosza”. Ponowne oznaczenie jako nieprzeczytane anuluje odliczanie.
+- **Uruchom, gdy starsze niż:** Dla newsletterów lub potwierdzeń zamówień ustaw „Gdy starsze niż” na 30 dni i wybierz „Przenieś do archiwum”. Czas można podać w minutach, godzinach lub dniach.
+- **Dedykowana strona edytora reguł:** Edytor reguł ma teraz osobną stronę. Uruchamiaj reguły ręcznie z listy i sprawdzaj dziennik aktywności, aby zobaczyć wykonane operacje.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Ustawienia Meron pokazujące aktywne reguły z opisami opóźnień, przyciskami ręcznego uruchomienia i dziennikiem aktywności" caption="Aktywne reguły w Ustawienia → Reguły z odroczonymi licznikami i dziennikiem aktywności." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Tworzenie i skróty</Badge>
+
+## Wklej listę odbiorców i odpowiedz wszystkim klawiszem A
+
+Skopiuj adresy z arkusza do pól Do, DW lub UDW albo użyj klawiatury, aby odpowiedzieć całej grupie.
+
+- **Wklejanie adresów z arkuszy kalkulacyjnych:** Wklejaj wiersze lub kolumny z Arkuszy Google, Excela lub pliku CSV. Meron przekształca adresy w osobnych odbiorców i obsługuje też listy rozdzielane spacjami.
+- **Naciśnij A, aby odpowiedzieć wszystkim:** Naciśnij A podczas czytania wątku, aby otworzyć Odpowiedz wszystkim. Możesz także dodawać odbiorców wprost z wbudowanego okna szybkiej odpowiedzi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Udoskonalenia i języki</Badge>
+
+## Również w tym wydaniu
+
+Język rosyjski jest teraz dostępny na komputerach, iOS i Androidzie. To wydanie ulepsza także działanie klawisza Esc w podglądzie obrazów i odpowiedziach Kanban, przenosi pasek przewijania edytora zwykłego tekstu na krawędź panelu oraz naprawia renderowanie SVG i buforowanie obrazów RSS.
+
+</PostSection>
+
+<ReleaseCTA heading="Wypróbuj Meron 0.4.11" text="Pobierz Meron 0.4.11, aby tworzyć notatki do kontaktów, przywracać karty i zaplanować automatyczne porządki w skrzynce. Meron jest darmowy i otwartoźródłowy." download="Pobierz Meron" changelog="Zobacz listę zmian" github="Wydania na GitHubie" />

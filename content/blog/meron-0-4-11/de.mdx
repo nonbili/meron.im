@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Kontaktverzeichnis, Markdown-Notizen und verzögerte Regeln"
+publishedAt: "2026-11-05"
+readingTime: "4 Min. Lesezeit"
+summary: "Notizen zu Kontakten erfassen, Konversationen nach einem Neustart fortsetzen und E-Mails per Zeitverzögerung automatisch aufräumen lassen."
+highlights: ["Kontakt-Panel mit angepinnten Kontakten, privaten Markdown-Notizen und Konversationsverlauf","Browserähnliche Konversationstabs mit Neuordnung per Drag-and-Drop und Sitzungswiederherstellung","Verzögerte Regeln, die nach dem Lesen oder nach Ablauf einer Zeitspanne greifen","Tabellenspalten und leerzeichengetrennte Listen direkt in Empfängerfelder einfügen","Allen antworten mit Tastenkürzel A und Teilnehmer direkt aus der Schnellantwort hinzufügen","Vollständige russische Lokalisierung auf Desktop, iOS und Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Release · v0.4.11"
+---
+
+<PostSection>
+
+Bevor Sie einem Kunden antworten, werfen Sie einen Blick auf Ihre Notizen aus dem letzten Gespräch und finden Sie frühere Unterhaltungen – direkt im neuen Kontakt-Panel. Meron 0.4.11 bringt angepinnte Kontakte und private Markdown-Notizen, stellt Ihre Tabs nach einem Neustart wieder her und lässt Regeln Nachrichten aufräumen, sobald Sie sie gelesen haben.
+
+<PlatformNote>Das Kontakt-Panel mit Markdown-Notizen, browserähnliche Tabs und verzögerte Regeln stehen in Desktop 0.4.11 zur Verfügung. Kontaktverzeichnis, Remote-Bild-Caching und die russische Lokalisierung sind auch auf Android und iOS verfügbar.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kontakte &amp; Notizen</Badge>
+
+## Notizen und frühere Unterhaltungen an einem Ort
+
+Öffnen Sie das Kontakt-Panel in der Seitenleiste, um Kontakte nach Namen zu suchen oder Ihr Adressbuch nach Häufigkeit, Aktualität oder Alphabet zu sortieren.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Meron-Desktop-App mit geöffnetem Kontakt-Panel, ausgewählter Sarah Jenkins, privaten Markdown-Notizen und Konversationsverlauf mit Ordner-Chips" caption="Prüfen Sie Notizen und bisherige Unterhaltungen, bevor Sie eine Antwort verfassen." width={1280} height={820} />
+
+- **Häufige Kontakte anpinnen:** Halten Sie die Personen, mit denen Sie am meisten zusammenarbeiten, ganz oben in Ihrer Liste.
+- **Private Markdown-Notizen:** Halten Sie Besprechungsnotizen, Telefonnummern oder Vereinbarungen für jeden Kontakt fest. Notizen unterstützen Markdown mit Bearbeiten- und Vorschau-Tabs, bleiben sicher auf Ihrem Gerät und blockieren externe Bilder.
+- **Frühere Konversationen finden:** Wählen Sie einen Kontakt aus, um alle gemeinsamen Threads zu durchsuchen. Ordner-Labels zeigen, was im Posteingang, unter Gesendet oder im Archiv liegt; Spam und Papierkorb bleiben außen vor.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Tabs &amp; Sitzungen</Badge>
+
+## Nahtlos dort weitermachen, wo Sie aufgehört haben
+
+Starten Sie Meron neu und kehren Sie direkt zu Ihren geöffneten Konversationen zurück. Threads und Entwürfe teilen sich eine Tableiste, sodass Sie mühelos zwischen Lesen und Schreiben wechseln.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Meron-Konversationsansicht mit gleich breiten Browser-Tabs in der Kopfzeile für aktive Threads und Entwürfe" caption="Behalten Sie Konversationen und Entwürfe gemeinsam in der Tableiste." width={1280} height={820} />
+
+- **Tabs per Drag-and-Drop anordnen:** Verschieben Sie Threads und Entwürfe in der Tableiste, um zusammengehörige Konversationen nebeneinander zu halten.
+- **Tabs nach Neustart wiederherstellen:** Meron stellt geöffnete Tabs und die aktive Konversation nach einem Neustart der App oder des Systems automatisch wieder her.
+- **Entwürfe beim Schließen von Tabs behalten:** Beim Schließen von Entwurfs-Tabs oder Beenden von Meron wird Geschriebenes sicher im Entwürfe-Ordner gesichert.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Posteingangs-Automation</Badge>
+
+## Nachrichten aufräumen, nachdem Sie sie gelesen haben
+
+Ein Verifizierungscode ist für wenige Minuten wichtig; ein Newsletter darf gern einen Monat bleiben. Verzögerte Regeln ergänzen die in 0.4.10 eingeführten Posteingangsregeln um präzise Zeitsteuerung.
+
+Öffnen Sie **Einstellungen → Regeln**, um passende Nachrichten, eine Aktion und den Ausführungszeitpunkt festzulegen.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Sofort
+
+</CardTitle>
+
+Wird unmittelbar ausgeführt, sobald neue Nachrichten im Posteingang eintreffen.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Nach dem Lesen
+
+</CardTitle>
+
+Startet nach dem Lesen einen Timer (z. B. 5 Min.). Ein Markieren als ungelesen bricht den Countdown ab.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Wenn älter als
+
+</CardTitle>
+
+Prüft das Alter der Nachricht (z. B. 30 Tage), um ältere E-Mails automatisch zu archivieren.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Meron-Regeleditor mit Bedingungen, Zeitsteuerungen für die Ausführung (Nach dem Lesen auf 5 Minuten gesetzt) und Aktion „In den Papierkorb verschieben“" caption="Regeln so konfigurieren, dass sie nach dem Lesen 2FA-Codes oder Einmal-Benachrichtigungen automatisch in den Papierkorb werfen." width={1280} height={820} />
+
+- **Nach dem Lesen ausführen:** Filtern Sie bei Verifizierungs-E-Mails nach dem Betreff, setzen Sie „Nach dem Lesen“ auf 5 Minuten und wählen Sie „In den Papierkorb verschieben“. Ein erneutes Markieren als ungelesen bricht den Timer ab.
+- **Ausführen, wenn älter als:** Setzen Sie bei Newslettern oder Bestellbelegen „Wenn älter als“ auf 30 Tage und wählen Sie „Ins Archiv verschieben“. Die Zeitspanne lässt sich in Minuten, Stunden oder Tagen angeben.
+- **Eigene Regelseite:** Der Regeleditor hat jetzt eine eigene Seite. Führen Sie Regeln direkt aus der Regelliste manuell aus und sehen Sie im Aktivitätsprotokoll, was gelaufen ist.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Meron-Einstellungen mit aktiven Regeln, Beschreibungen zu verzögerten Timern, manuellen Ausführen-Schaltflächen und Aktivitätsprotokoll" caption="Aktive Regeln unter Einstellungen → Regeln mit verzögerten Timern und Aktivitätsprotokoll." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Editor &amp; Tastenkürzel</Badge>
+
+## Empfängerliste einfügen und allen mit A antworten
+
+Kopieren Sie Adressen aus einer Tabelle in An, Cc oder Bcc oder nutzen Sie die Tastatur, um der gesamten Runde zu antworten.
+
+- **Adressen aus Tabellen einfügen:** Fügen Sie Zeilen oder Spalten aus Google Sheets, Excel oder einer CSV-Datei ein. Meron trennt eingefügte Adressen in einzelne Empfänger auf und akzeptiert auch leerzeichengetrennte Listen.
+- **Taste A für Allen antworten:** Drücken Sie beim Lesen einer Nachricht A, um „Allen antworten“ zu öffnen. Sie können Empfänger auch direkt in der Schnellantwort ergänzen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Feinschliff &amp; Sprachen</Badge>
+
+## Ebenfalls in diesem Release
+
+Russisch ist nun auf Desktop, iOS und Android verfügbar. Dieses Release verbessert zudem das Verhalten der Esc-Taste in Bildvorschauen und Kanban-Antworten, platziert die Scrollleiste im Nur-Text-Editor am Fensterrand und behebt SVG-Rendering sowie RSS-Bild-Caching.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.11 ausprobieren" text="Laden Sie Meron 0.4.11 herunter, um Kontaktnotizen zu führen, Ihre Tabs wiederherzustellen und Ihren Posteingang automatisch aufzuräumen. Meron ist kostenlos und quelloffen." download="Meron herunterladen" changelog="Changelog ansehen" github="GitHub Releases" />

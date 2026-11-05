@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Contacts Directory, Markdown Notes, and Delayed Rules"
+publishedAt: "2026-11-05"
+readingTime: "4 min read"
+summary: "Keep notes on your contacts, pick up conversations after a restart, and let delayed rules clear mail when you no longer need it."
+highlights: ["Contacts panel with pinned people, private Markdown notes, and thread history","Browser-style conversation tabs with drag reordering and session restore","Delayed rules that run after reading or when mail reaches a certain age","Paste spreadsheet columns and space-separated lists directly into recipient fields","Reply all with shortcut A and add thread participants from quick reply","Full Russian localization across desktop, iOS, and Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Release · v0.4.11"
+---
+
+<PostSection>
+
+Before replying to a client, check your notes from the last call and find your previous conversations—all from the new Contacts panel. Meron 0.4.11 adds pinned contacts and private Markdown notes, restores your tabs after restarting, and lets rules clean up messages after you’ve read them.
+
+<PlatformNote>Contacts panel with Markdown notes, browser-style tabs, and delayed rules are available in desktop 0.4.11. Contacts directory, remote image caching, and Russian localization are also available on Android and iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Contacts &amp; Notes</Badge>
+
+## Keep your notes and past conversations together
+
+Open the Contacts panel in the sidebar to find someone by name or sort your address book by frequent, recent, or alphabetical order.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Meron desktop app showing the Contacts side panel with Sarah Jenkins selected, private Markdown notes, and conversation history with folder chips" caption="Check your notes and past conversations before writing a reply." width={1280} height={820} />
+
+- **Pin frequent contacts:** Keep the people you work with most at the top of your list.
+- **Private Markdown notes:** Record meeting takeaways, phone numbers, or working agreements for each contact. Notes support Markdown with Write and Preview tabs, stay on your device, and block remote images.
+- **Find past conversations:** Select a contact to browse your threads together. Folder labels show which are in Inbox, Sent, or Archive; Spam and Trash are excluded.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Tabs &amp; Sessions</Badge>
+
+## Pick up where you left off
+
+Restart Meron and return to your open conversations. Threads and drafts share a tab bar, so you can switch between reading and writing.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Meron conversation view with equal-width browser tabs across the header showing active threads and drafts" caption="Keep conversations and drafts together in the tab bar." width={1280} height={820} />
+
+- **Drag to reorder tabs:** Drag threads and drafts along the tab bar to keep related conversations together.
+- **Restore tabs after restart:** Meron restores your open tabs and active conversation after an app or system restart.
+- **Keep drafts when closing tabs:** Closing composer tabs or quitting Meron saves your writing to the Drafts folder.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Inbox Automation</Badge>
+
+## Clear messages after you’ve read them
+
+A verification code is useful for a few minutes; a newsletter might be worth keeping for a month. Delayed rules add timing to the inbox rules introduced in 0.4.10.
+
+Open **Settings → Rules** to choose matching messages, an action, and when it should run.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Right away
+
+</CardTitle>
+
+Runs immediately as new messages arrive in your Inbox.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />After it's read
+
+</CardTitle>
+
+Starts a timer when read (e.g. 5 min). Marking unread cancels the clock.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />When it's older than
+
+</CardTitle>
+
+Evaluates message age (e.g. 30 days) to auto-archive older mail.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Meron Rule editor showing match conditions, When to run timing controls with After it's read set to 5 minutes, and Move to Trash action" caption="Set rules to run after reading to automatically trash 2FA codes or one-time alerts." width={1280} height={820} />
+
+- **Run after it's read:** For verification emails, match the subject, set After it’s read to 5 minutes, and choose Move to Trash. Marking the message unread cancels the timer.
+- **Run when it's older than:** For newsletters or order receipts, set When it’s older than to 30 days and choose Move to Archive. You can set the age in minutes, hours, or days.
+- **Review your rules:** The editor now has its own page. Run rules manually from the rules list and check the activity log to see what ran.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Meron Settings showing active rules with delayed timing descriptions, manual run controls, and recent activity log" caption="Active rules in Settings → Rules with delayed timers and an activity log." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Composer &amp; Shortcuts</Badge>
+
+## Paste a recipient list and reply all with A
+
+Copy addresses from a spreadsheet into To, Cc, or Bcc, or use the keyboard to reply to a group.
+
+- **Paste addresses from a spreadsheet:** Paste rows or columns from Google Sheets, Excel, or a CSV file. Meron turns pasted addresses into individual recipients and accepts space-separated lists too.
+- **Press A to reply all:** Use A while viewing a conversation to open Reply All. You can also add recipients from the inline Quick Reply composer.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Refinements &amp; Languages</Badge>
+
+## Also in this release
+
+Russian is now available on desktop, iOS, and Android. This release also improves Esc handling in image previews and Kanban replies, moves the plain-text composer scrollbar to the pane edge, and fixes SVG rendering and RSS image caching.
+
+</PostSection>
+
+<ReleaseCTA heading="Try Meron 0.4.11" text="Download Meron 0.4.11 to keep contact notes, restore your tabs, and schedule inbox cleanup. Meron is free and open source." download="Download Meron" changelog="View changelog" github="GitHub releases" />

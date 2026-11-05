@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Transforme pesquisas guardadas em colunas Kanban"
+publishedAt: "2026-10-22"
+readingTime: "4 min de leitura"
+summary: "Organize o seu quadro em torno do correio mais relevante: transforme pesquisas estilo Gmail em colunas Kanban dinâmicas. Inclui ainda calendário local, respostas diretas a convites e mudança de mensagens entre contas."
+highlights: ["Colunas Kanban de pesquisas guardadas e operadores estilo Gmail","Calendário local de eventos, convites aceites e tarefas pendentes","Cartões de convite interativos com Aceitar, Talvez e Recusar","Mover conversas entre contas e atalhos para pastas recentes","Guardar e copiar imagens incorporadas nas mensagens e na galeria"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Lançamento · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS e Android 0.4.6"
+---
+
+<PostSection>
+
+E-mails não lidos de clientes importantes, faturas do mês passado, conversas assinaladas a aguardar resposta: com as colunas de pesquisa guardada, pode atribuir a cada uma o seu próprio espaço no quadro Kanban. Guarde uma pesquisa uma vez e a coluna mantém-se atualizada à medida que o seu correio muda.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban e Pesquisa</Badge>
+
+## Transforme uma pesquisa numa coluna dinâmica
+
+Uma pasta confina uma conversa a um único local. As pesquisas guardadas dão-lhe várias perspetivas: por remetente, data, estado de leitura ou qualquer combinação que se adeque ao seu fluxo.
+
+Inicie uma pesquisa usando os habituais **operadores estilo Gmail** ou o construtor visual de pesquisa e escolha *Guardar pesquisa como coluna*. As conversas correspondentes surgem numa coluna dinâmica, com a consulta editável logo abaixo do cabeçalho.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Operadores de pesquisa suportados
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Crie pesquisas sem escrever operadores:**  Abra as opções de pesquisa para filtrar por remetente, destinatário, assunto, palavras-chave, intervalo de datas ou coluna de destino.
+- **Restrinja o quadro sem perder as pesquisas guardadas:**  A pesquisa geral no quadro adiciona um filtro a cada coluna guardada, preservando a consulta original.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Painel de opções de pesquisa com filtros e opção para guardar pesquisa como coluna Kanban" caption="Crie uma pesquisa e guarde-a como coluna no seu quadro." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Calendário e Convites</Badge>
+
+## Calendário local e cartões de convite interativos
+
+Os convites de calendário aparecem agora como cartões dentro da conversa, indicando o horário no seu fuso horário local, localização, organizador e respostas dos participantes. Pode responder sem sair da conversa.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Cartão de convite de calendário exibido na conversa com botões Aceitar, Talvez e Recusar" caption="Consulte os detalhes do evento e responda diretamente na conversa." width={1280} height={820} />
+
+- **Aceitar, Talvez ou Recusar de imediato:**  A sua resposta é enviada ao organizador e registada no Meron.
+- **Atualizações automáticas do organizador:**  O Meron aplica alterações de agendamento e cancelamentos recebidos, incluindo modificações a instâncias isoladas de reuniões recorrentes.
+- **Calendário local mensal:**  Ative o Calendário nas Definições para ver eventos pessoais, convites aceites e prazos de tarefas num só lugar. Crie eventos de dia inteiro, com hora marcada ou recorrentes, e volte à conversa de e-mail com um simples clique.
+
+O seu calendário fica armazenado localmente no seu dispositivo e está incluído nas cópias de segurança encriptadas do Meron.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Vista mensal do calendário no Meron exibindo eventos e tarefas agendadas" caption="Eventos pessoais, convites aceites e prazos de tarefas numa única vista." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Gestão de conversas</Badge>
+
+## Mover entre contas e atalhos de pastas recentes
+
+Precisa de arquivar uma conversa noutra conta? Pode agora **mover conversas entre diferentes contas de e-mail**, tanto no desktop como no telemóvel — arrastando um cartão entre colunas de contas no quadro Kanban ou escolhendo *Mover para…* no menu da conversa.
+
+O Meron copia as mensagens para o destino e verifica a transferência antes de enviar os originais para o Lixo.
+
+Os menus *Mover para* e *Copiar para* destacam agora no topo **atalhos para destinos recentes**, facilitando o acesso às suas pastas habituais.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Menu de contexto da conversa com ação Mover para... e opções de pastas de destino" caption="Mova conversas para outra conta ou escolha um destino recente." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Multimédia e Acabamentos</Badge>
+
+## Guardar e copiar imagens no texto, além de melhorias no desktop
+
+A versão para computador conta ainda com refinamentos práticos:
+
+- **Guardar e copiar imagens no corpo do e-mail:**  Clique com o botão direito numa imagem numa mensagem ou abra-a na galeria multimédia para guardar ou copiar para a área de transferência.
+- **Menus e janelas mais organizados:**  Menus e caixas de diálogo têm foco de teclado mais consistente, submenus com realce mais claro e menor cintilação.
+- **Erros mais claros e mais traduções:**  As falhas ao mover ou copiar fornecem mais detalhes sobre o motivo. No telemóvel, as traduções foram alargadas a todos os 19 idiomas suportados.
+
+</PostSection>
+
+<ReleaseCTA heading="Experimente o Meron 0.4.7" text="O Meron é gratuito, de código aberto e local-first para macOS, Windows, Linux, iOS e Android. Descarregue a versão mais recente ou consulte as notas de versão completas." download="Descarregar Meron" changelog="Ver histórico de versões" github="GitHub Releases" />

@@ -1,0 +1,85 @@
+---
+slug: "meron-0-4-8"
+version: "0.4.8"
+title: "Meron 0.4.8: Yerel Klasörler ile e-postalarınıza yer açın"
+publishedAt: "2026-10-28"
+readingTime: "3 dk okuma"
+summary: "Eski e-postaları sunucudan bilgisayarınıza taşıyın, arşivinizi yedekleyin ve yaklaşan etkinliklerle görevleri gelen kutunuzun yanında tutun."
+highlights: ["Parola cümlesiyle şifrelenmiş arşiv yedeklerine sahip bilgisayarınızda Yerel Klasörler","Sunucuda ve Yerel Klasörler içinde klasör oluşturma ve yeniden adlandırma","Mini ay görünümü ve 7 günlük ajanda içeren takvim yan paneli","İsteğe bağlı görev bitiş saatleriyle takvim ve görev hatırlatıcıları","Klavyeyle sayfa sayfa ileti kaydırma (Boşluk / Shift+Boşluk) ve Alt+Ok tuşlarıyla konu geçişi"]
+image: "/screenshots/blog/meron-048-calendar-panel.png"
+releaseBadge: "Sürüm · v0.4.8"
+platformsSubtitle: "Yerel Klasörler, takvim yan paneli ve okuma kısayolları: masaüstü 0.4.8. Klasör yönetimi ve hatırlatıcılar: iOS ve Android 0.4.7 sürümünde de mevcut."
+---
+
+<PostSection>
+
+Dolu bir posta kutusu, saklamak istediğiniz e-postaları silmek zorunda kalacağınız anlamına gelmemeli. Meron 0.4.8, makbuzları, tamamlanmış projeleri ve eski yazışmaları bilgisayarınıza taşıyabilmeniz için masaüstüne Yerel Klasörler özelliğini ekliyor. Yeni takvim yan paneli ise siz okurken yaklaşan işlerinizi göz önünde tutuyor.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Yerel Klasörler</Badge>
+
+## E-postaları sunucuda değil, bilgisayarınızda tutun
+
+IMAP posta kutunuzda yer açın veya bir hesabı kapatmadan önce postalarınızı kaydedin. Yerel Klasörler, bilgisayarınızda Meron içinden göz atabileceğiniz ve arama yapabileceğiniz çevrimdışı bir arşiv sunar.
+
+Ayarlar → Yerel klasörler altından **Yerel Klasörler** özelliğini ekleyin. Bir Arşiv klasörüyle başlar ve gezinti çubuğunda, Kanban panosunda ve aramada e-posta hesaplarınızın yanında görünür. Burada saklanan postalar yalnızca o bilgisayarda kalır.
+
+- **Herhangi bir hesaptan taşıyın veya kopyalayın:** Kanban panonuzda kartları yerel klasör sütununa sürükleyin veya herhangi bir yazışma menüsünden Şuraya taşı… ve Şuraya kopyala… seçeneklerini kullanın. Bir yazışmayı taşırken Meron, sunucudaki kopyaları Çöp Kutusu'na taşımadan önce her iletinin diske güvenle kaydedildiğini doğrular.
+- **Yerel arşivinizi düzenleyin:** Çevrimdışı arşivinizi istediğiniz gibi yapılandırmak için Yerel Klasörler içinde klasörler oluşturun, yeniden adlandırın ve iç içe alt klasörler ekleyin.
+- **Parola cümlesiyle şifrelenmiş arşiv yedekleri:** Sunucudaki kopyaları kaldırdığınızda, yerel arşiviniz o postaların tek kopyası olabilir. Bir yedek dışa aktarmak için Ayarlar → Yerel klasörler bölümünü kullanın ve yedeği bilgisayarınızdan ayrı bir yerde saklayın. Dışa aktarılan yedek bir parola cümlesiyle şifrelenir ve başka bir bilgisayardaki Meron'da geri yüklenebilir.
+
+<BlogImage src="/screenshots/blog/meron-048-local-folders.png" alt="Yerel Klasörler depolama kullanımını, Yedeği dışa aktar ve Yedeği geri yükle düğmeleriyle birlikte gösteren Meron Ayarları" caption="Ayarlar → Yerel Klasörler, yerel arşiv depolama kullanımını gösterir ve parola cümlesiyle şifrelenmiş arşiv yedeklerini dışa aktarmanıza veya geri yüklemenize olanak tanır." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FolderTree">Arşivinizi düzenleyin</Badge>
+
+## Eski e-postaları kolayca bulabileceğiniz yere koyun
+
+Meron'dan ayrılmadan her proje, müşteri veya yıl için bir klasör oluşturun. Masaüstü 0.4.8, IMAP sunucunuzda ve Yerel Klasörler'de klasör oluşturmayı ve yeniden adlandırmayı destekler; iOS ve Android 0.4.7 aynı kontrolleri sunucu klasörlerine getirir.
+
+- **Her yerde klasör oluşturun:** Posta kutusu ve Kanban sütunu menülerinden klasörler ve iç içe alt klasörler oluşturun.
+- **Klasörleri bulunduğu yerde yeniden adlandırın:** Kanban sütunları ve son aktarım kısayolları yeni klasör adını otomatik olarak takip eder.
+- **Hedefi hızla bulun:** Şuraya taşı… ve Şuraya kopyala… menüleri hedefleri hesaba göre gruplar ve son kullanılan klasörleri en üstte tutar. Masaüstünde Yerel Klasörler diğer hesaplarınızın yanında yer alır.
+
+<BlogImage src="/screenshots/blog/meron-048-move-picker.png" alt="En üstte son kullanılan klasör hedeflerini ve Yerel Klasörler'i açan hesap bazlı Şuraya taşı alt menülerini gösteren bağlam menüsü" caption="Şuraya taşı ve Şuraya kopyala menüleri son hedefleri en üstte tutar ve Yerel Klasörler dahil her hesabı düzenli alt menüler halinde gruplar." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Takvim ve Hatırlatıcılar</Badge>
+
+## Yaklaşan işleri gelen kutunuzun yanında tutun
+
+Perşembe günü müsait olup olmadığınızı kontrol etmek sizi okuduğunuz iletiden koparmamalı. Masaüstünde Takvim artık sağ yan panelde Görevler'in yanında yer alıyor.
+
+Gelen kutunuzun veya Kanban panonuzun yanında kompakt bir ay görünümüne ve yaklaşan 7 günlük etkinlik ile görev ajandasına göz atın. Daha ilerisini planlamanız gerektiğinde tam aylık takvime genişletin. Etkinlik ve görev hatırlatıcıları masaüstü 0.4.8 ve mobil 0.4.7 sürümlerinde kullanılabilir.
+
+<BlogImage src="/screenshots/blog/meron-048-calendar-panel.png" alt="Mini ay görünümü ve 7 günlük ajanda gösteren yeni sağ Takvim yan panelinin yanında Meron Kanban panosu" caption="Takvim yan paneli, mini ay görünümü ve 7 günlük etkinlik ve görev ajandasıyla Kanban panonuzun veya posta kutunuzun yanına yerleşir." width={1280} height={820} />
+
+- **Yapılandırılabilir etkinlik uyarıları:** Ayarlar'da saatli ve tam gün etkinlikler için varsayılan hatırlatma süreleri belirleyin veya etkinlik başına en fazla iki uyarı özelleştirin.
+- **Görev bitiş saatleri:** Zamanı geldiğinde bildirim almak için görevin son tarihinin yanına isteğe bağlı bir saat ekleyin. Yalnızca tarihi olan görevler yerel saatle 09:00'da hatırlatılır.
+
+<BlogImage src="/screenshots/blog/meron-048-event-alerts.png" alt="Kopyalama düğmeli tıklanabilir toplantı URL'si, Uyarı ve İkinci uyarı açılır menüleri ile gündem notlarını gösteren etkinlik ayrıntıları penceresi" caption="Etkinlik başına ikiye kadar uyarı yapılandırın, toplantı bağlantılarını tek tıkla açın veya kopyalayın ve doğrudan kaynak davet e-postasına dönün." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Keyboard">Okuma kısayolları</Badge>
+
+## Klavyeden okumaya devam edin
+
+Masaüstünde Boşluk veya Shift+Boşluk ile uzun bir iletide sayfa sayfa ilerleyin, ardından fareye uzanmadan bir sonraki yazışmaya geçin.
+
+<KeyboardShortcuts title="Masaüstünde okuma kısayolları" items={[{"label":"İletiyi bir sayfa aşağı kaydır","keys":["Space"]},{"label":"İletiyi bir sayfa yukarı kaydır","keys":["Shift + Space"]},{"label":"Sonraki yazışma","keys":["J","Alt + ↓"]},{"label":"Önceki yazışma","keys":["K","Alt + ↑"]}]} or="veya" note="Alt+↓ ve Alt+↑ kısayolları bir ileti odaklanmış durumdayken de çalışır." />
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.4.8'i deneyin" text="Arşivinizi başlatmak için en son sürümü indirin. Meron ücretsiz ve açık kaynaklıdır; macOS, Windows, Linux, iOS ve Android uygulamaları mevcuttur. Tam değişiklik günlüğü geri kalan masaüstü ve mobil güncellemeleri kapsar." download="Meron'u İndir" changelog="Değişiklik Günlüğünü Gör" github="GitHub Sürümleri" />

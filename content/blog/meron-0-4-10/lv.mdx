@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Birkas un kārtulas jūsu iesūtnei"
+publishedAt: "2026-11-02"
+readingTime: "3 min lasīšanai"
+summary: "Piešķiriet ienākošajam e-pastam nākamo soli. Birkas, Kanban kolonnas un iesūtnes kārtulas pārvērš ikdienas ziņojumus pārskatāmā darbplūsmā."
+highlights: ["E-pasta birkas, kas tiek glabātas lokāli un sinhronizētas kā IMAP atslēgvārdi","Kanban birku kolonnas ar vilkšanu un nomešanu, lai pievienotu un mainītu birkas sarakstēm","Iesūtnes kārtulas, lai pievienotu birkas, atzīmētu kā izlasītu, pievienotu zvaigznīti, kopētu vai pārvietotu e-pastus starp kontiem","Kārtulu izpilde esošajiem Iesūtnes ziņojumiem ar neseno darbību žurnālu","Meklēšanas operatori has:attachment un tag:, kā arī MCP birku rīki"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Laidiens · v0.4.10"
+---
+
+<PostSection>
+
+Pienāk rēķins. Kārtula pievieno birkas invoice un todo, un sarakste parādās jūsu Kanban dēļa kolonnā “Darāmie”, vienlaikus paliekot Iesūtnē. Kad rēķins ir gatavs apstiprināšanai, velciet to uz kolonnu “Pārskatīt”. Meron nomaina birku todo pret review, un jūs vienā mirklī redzat, kam jāpievērš uzmanība. Lūk, kā iestatīt šo darbplūsmu Meron 0.4.10.
+
+<PlatformNote>Birkas, kārtulas un pielikumu meklēšana ir pieejama datoru versijā 0.4.10, kā arī iOS un Android versijā 0.4.8. MCP birku rīki ir pieejami datorā.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Birkas un Kanban</Badge>
+
+## Piešķiriet katrai sarakstei nākamo soli
+
+Sāciet, pievienojot birkas todo un invoice no sarunas galvenes vai sarakstes izvēlnes. Birkas tiek sinhronizētas ar jūsu pasta serveri kā standarta IMAP atslēgvārdi, tāpēc tās seko jūsu ziņojumiem visās ierīcēs. Tās tiek saglabātas arī Lokālajās mapēs un eksportētajās rezerves kopijās.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron Kanban dēlis, kurā redzama Iesūtne līdzās kolonnām tag:todo un tag:review ar krāsainām birku iezīmēm uz kartītēm un neizlasīto ziņojumu žetonu uz dēļa ikonas sānu joslā" caption="Iesūtne, Darāmie un Pārskatīt kopā uz viena dēļa." width={1280} height={820} />
+
+- **Velciet, lai pievienotu un mainītu birkas dēlī:** Saglabājiet meklējumus tag:todo un tag:review kā Kanban kolonnas. Velciet kartīti no Iesūtnes, lai pievienotu birku, vai starp šīm kolonnām, lai aizstātu vienu darbplūsmas birku ar otru. Pārējās birkas, piemēram, invoice, paliek pievienotas sarakstei.
+- **Pārslēdziet vairākas birkas uz vietas:** Izmantojiet apakšizvēlni Birkas, lai ieslēgtu vai izslēgtu vairākas birkas pēc kārtas, katru reizi neatverot izvēlni no jauna.
+- **Pārdēvējiet vai dzēsiet birku visur:** Sadaļā Iestatījumi → Ziņojumi → Birkas pārdēvējiet vai noņemiet birku visos ierīcē saglabātajos e-pastos, vienlaikus atjauninot kārtulas un Kanban dēļa kolonnas.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Sarakstes konteksta izvēlne ar atvērtu apakšizvēlni Birkas, kurā redzamas atzīmētās birkas un darbība Pievienot birku" caption="Pārslēdziet vairākas birkas tieši no sarakstes izvēlnes vai noklikšķiniet uz jebkuras birkas kartītē, lai filtrētu pēc tās." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Iesūtnes kārtulas</Badge>
+
+## Ļaujiet nākamajam rēķinam sašķiroties pašam
+
+Lai automatizētu pirmo soli, izveidojiet kārtulu, kas atbilst tematam, kurā ietverts vārds “invoice”, un pievieno birkas invoice un todo. Tā darbojas uz jauniem Iesūtnes ziņojumiem, tāpēc nākamais atbilstošais rēķins uzreiz parādīsies jūsu dēlī gatavs apstrādei.
+
+Atveriet **Iestatījumi → Kārtulas**, lai izvēlētos kontus, nosacījumus un darbības. Atlasiet pēc sūtītāja, saņēmēja, temata, atslēgvārdiem vai pielikumiem. Tukši nosacījumi atbilst visam jaunajam pastam.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron iestatījumi, kuros redzams Kārtulu saraksts ar vilkšanas turētājiem, kontu ikonām, kārtulu kopsavilkumiem, pogām Izpildīt un Neseno darbību žurnālu" caption="Izpildiet kārtulu esošajiem Iesūtnes e-pastiem un pēc tam pārbaudiet Nesenās darbības, lai redzētu rezultātu." width={1280} height={820} />
+
+- **Apvienojiet vairākas darbības vienā kārtulā:** Papildus birkām kārtula var atzīmēt e-pastu kā izlasītu, pievienot tam zvaigznīti, kopēt to vai pārvietot uz citu mapi — datorā pat starp dažādiem kontiem vai uz Lokālajām mapēm.
+- **Velciet, lai mainītu prioritātes secību:** Kārtulas tiek izpildītas no augšas uz leju. Pirmā kārtula, kas pārvieto ziņojumu, nosaka tā galamērķi. Mainiet kārtulu secību ar vilkšanas turētājiem vai bulttaustiņiem Uz augšu un Uz leju.
+- **Izpildiet esošajam pastam un pārbaudiet aktivitāti:** Noklikšķiniet uz pogas Izpildīt pie jebkuras kārtulas, lai piemērotu to ziņojumiem, kas jau atrodas Iesūtnē, un pārbaudiet sadaļu Nesenās darbības zem kārtulām, lai redzētu, kas un kad tika izpildīts.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron kārtulu redaktors, kurā redzams kontu tvērums, atbilstības nosacījumi laukiem No, Temats un Ir pielikums, kā arī darbības Pievienot birkas, Atzīmēt kā izlasītu, Kopēt uz un Pārvietot uz" caption="Kārtulu redaktorā izvēlieties, kuri ziņojumi atbilst nosacījumiem un kas ar tiem jādara." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Meklēšana un MCP</Badge>
+
+## Atrodiet e-pastus savas darbplūsmas pamatā
+
+Meklējiet tag:invoice has:attachment, lai atrastu katru rēķinu ar pielikumu neatkarīgi no tā darbplūsmas posma. Pievienojiet sūtītāja vai neizlasīto vēstuļu filtrus, lai vēl vairāk sašaurinātu rezultātus.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Meklēšanas piemēri
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Jauni MCP rīki datorā
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Birku ieteikumi un pielikumu filtrs:** Meklēšanas opcijās ir iekļauti birku ieteikumi un izvēles rūtiņa “Ir pielikums”, ja vēlaties izveidot filtru ar veidlapu. Saglabājiet iegūto meklējumu kā dinamisku Kanban kolonnu, lai tā vienmēr būtu pa rokai.
+- **Birku rīki MCP klientiem:** Datorā lokālie MCP klienti ar ziņojumu organizēšanas piekļuvi var izsaukt list\_tags un tag\_messages, lai pārbaudītu izmantotās birkas un pievienotu vai noņemtu birkas sarakstēm.
+
+</PostSection>
+
+Šajā laidienā ir pievienoti arī Kanban neizlasīto ziņojumu žetoni, ziņojumu sastādītāja saīsnes un paziņojumu sinhronizēta notīrīšana starp ierīcēm. [Skatīt izmaiņu žurnālu](/changelog)
+
+<ReleaseCTA heading="Izmēģiniet Meron 0.4.10" text="Lejupielādējiet jaunāko laidienu, lai sāktu izmantot birkas un automatizēt savu iesūtni. Meron ir bezmaksas un atvērtā pirmkoda lietotne operētājsistēmām macOS, Windows, Linux, iOS un Android." download="Lejupielādēt Meron" changelog="Skatīt izmaiņu žurnālu" github="GitHub laidieni" />

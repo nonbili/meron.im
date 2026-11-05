@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11 : Répertoire de contacts, notes Markdown et règles différées"
+publishedAt: "2026-11-05"
+readingTime: "4 min de lecture"
+summary: "Prenez des notes sur vos contacts, reprenez vos conversations après un redémarrage et laissez les règles différées nettoyer les messages devenus inutiles."
+highlights: ["Panneau de contacts avec personnes épinglées, notes Markdown privées et historique des fils","Onglets de conversation façon navigateur avec réorganisation par glisser-déposer et restauration de session","Règles différées qui s'exécutent après lecture ou après un délai défini","Collez directement des colonnes de tableur ou des listes séparées par des espaces dans les champs de destinataires","Répondez à tous avec le raccourci A et ajoutez des participants depuis la réponse rapide","Localisation complète en russe sur ordinateur, iOS et Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Publication · v0.4.11"
+---
+
+<PostSection>
+
+Avant de répondre à un client, consultez vos notes du dernier appel et retrouvez vos échanges passés, le tout depuis le nouveau panneau Contacts. Meron 0.4.11 ajoute les contacts épinglés et les notes Markdown privées, restaure vos onglets après un redémarrage et permet aux règles de supprimer les messages une fois que vous les avez lus.
+
+<PlatformNote>Le panneau de contacts avec notes Markdown, les onglets façon navigateur et les règles différées sont disponibles dans la version de bureau 0.4.11. Le répertoire de contacts, la mise en cache des images distantes et la localisation en russe sont également disponibles sur Android et iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Contacts et notes</Badge>
+
+## Conservez vos notes et vos conversations passées au même endroit
+
+Ouvrez le panneau Contacts dans la barre latérale pour trouver un contact par son nom ou trier votre carnet d'adresses par fréquence, récence ou ordre alphabétique.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Application de bureau Meron montrant le panneau latéral Contacts avec Sarah Jenkins sélectionnée, des notes Markdown privées et l'historique des conversations avec étiquettes de dossier" caption="Consultez vos notes et vos échanges passés avant de rédiger une réponse." width={1280} height={820} />
+
+- **Épinglez vos contacts fréquents :** Gardez les personnes avec qui vous travaillez le plus en haut de votre liste.
+- **Notes privées en Markdown :** Consignez les points clés des réunions, des numéros de téléphone ou des accords de travail pour chaque contact. Les notes prennent en charge le Markdown avec des onglets Rédiger et Aperçu, restent sur votre appareil et bloquent les images distantes.
+- **Retrouvez vos échanges passés :** Sélectionnez un contact pour parcourir tous vos fils de discussion en commun. Des étiquettes de dossier indiquent les messages situés dans Boîte de réception, Envoyés ou Archives ; les spams et la corbeille sont exclus.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Onglets et sessions</Badge>
+
+## Reprenez là où vous vous étiez arrêté
+
+Redémarrez Meron et retrouvez aussitôt vos conversations ouvertes. Les fils et les brouillons partagent la même barre d'onglets pour passer facilement de la lecture à l'écriture.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Vue de conversation Meron avec des onglets de navigateur de largeur égale dans l'en-tête affichant les fils actifs et les brouillons" caption="Gardez vos conversations et vos brouillons réunis dans la barre d'onglets." width={1280} height={820} />
+
+- **Glissez pour réorganiser les onglets :** Glissez les fils et brouillons le long de la barre d'onglets pour garder les échanges liés côte à côte.
+- **Restauration des onglets après redémarrage :** Meron restaure vos onglets ouverts et votre conversation active après un redémarrage de l'application ou du système.
+- **Conservation des brouillons à la fermeture des onglets :** Fermer un onglet de rédaction ou quitter Meron enregistre automatiquement votre texte dans le dossier Brouillons.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Automatisation de la boîte de réception</Badge>
+
+## Supprimez automatiquement les messages après les avoir lus
+
+Un code de vérification n'est utile que quelques minutes ; une lettre d'information peut mériter d'être gardée un mois. Les règles différées ajoutent une gestion temporelle aux règles de boîte de réception introduites dans la 0.4.10.
+
+Ouvrez **Paramètres → Règles** pour choisir les messages ciblés, une action et le moment de son exécution.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Immédiatement
+
+</CardTitle>
+
+S'exécute dès que de nouveaux messages arrivent dans votre boîte de réception.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Après lecture
+
+</CardTitle>
+
+Déclenche un compte à rebours après lecture (ex. 5 min). Marquer comme non lu l'annule.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Si plus ancien que
+
+</CardTitle>
+
+Évalue l'âge du message (ex. 30 jours) pour archiver automatiquement les anciens e-mails.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Éditeur de règles Meron montrant les conditions de correspondance, les contrôles horaires avec Après lecture réglé sur 5 minutes et l'action Déplacer vers la corbeille" caption="Configurez des règles à exécuter après lecture pour envoyer automatiquement les codes 2FA ou alertes ponctuelles à la corbeille." width={1280} height={820} />
+
+- **Exécuter après lecture :** Pour les e-mails de vérification, filtrez sur l'objet, réglez « Après lecture » sur 5 minutes et choisissez « Déplacer vers la corbeille ». Marquer à nouveau le message comme non lu annule le compte à rebours.
+- **Exécuter lorsqu'il est plus ancien que :** Pour les newsletters ou les reçus de commande, réglez « Si plus ancien que » sur 30 jours et choisissez « Déplacer vers les archives ». Vous pouvez définir la durée en minutes, heures ou jours.
+- **Éditeur de règles dédié :** L'éditeur dispose désormais de sa propre page. Exécutez manuellement les règles depuis la liste et consultez le journal d'activité pour vérifier les actions réalisées.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Paramètres Meron montrant les règles actives avec descriptions des minuteries différées, boutons d'exécution manuelle et journal d'activité récent" caption="Règles actives dans Paramètres → Règles avec minuteries différées et journal d'activité." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Rédaction et raccourcis</Badge>
+
+## Collez une liste de destinataires et répondez à tous avec A
+
+Copiez des adresses depuis un tableur dans À, Cc ou Cci, ou utilisez le clavier pour répondre à tout un groupe.
+
+- **Collez des adresses depuis un tableur :** Collez des lignes ou des colonnes depuis Google Sheets, Excel ou un fichier CSV. Meron convertit les adresses en destinataires individuels et accepte aussi les listes séparées par des espaces.
+- **Appuyez sur A pour répondre à tous :** Appuyez sur A lors de la consultation d'un fil pour ouvrir « Répondre à tous ». Vous pouvez également ajouter des destinataires directement depuis la réponse rapide intégrée.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Finitions et langues</Badge>
+
+## Également dans cette version
+
+Le russe est désormais disponible sur ordinateur, iOS et Android. Cette version améliore également le comportement de la touche Échap dans les aperçus d'images et les réponses Kanban, déplace la barre de défilement de l'éditeur en texte brut vers le bord du panneau et corrige le rendu SVG ainsi que la mise en cache des images RSS.
+
+</PostSection>
+
+<ReleaseCTA heading="Essayez Meron 0.4.11" text="Téléchargez Meron 0.4.11 pour prendre des notes sur vos contacts, restaurer vos onglets et programmer le nettoyage de votre boîte de réception. Meron est gratuit et open source." download="Télécharger Meron" changelog="Voir le journal des modifications" github="GitHub Releases" />

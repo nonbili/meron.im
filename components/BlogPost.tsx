@@ -3,9 +3,9 @@ import Link from "next/link";
 import { evaluate } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
 import {
-  ArrowLeft, ArrowRightLeft, BellRing, CalendarDays, Clock, Columns3,
-  Download, FolderTree, Github, HardDrive, Image as ImageIcon, Keyboard,
-  Languages, LayoutList, ListFilter, Search, Sparkles, Table, Tag, Terminal, Users,
+  AppWindow, ArrowLeft, ArrowRightLeft, BellRing, CalendarDays, Clock, Columns3,
+  Download, FileText, FolderTree, Github, HardDrive, Image as ImageIcon, Keyboard,
+  Languages, LayoutList, ListFilter, Lock, Search, ShieldCheck, Sparkles, Table, Tag, Terminal, Users,
 } from "lucide-react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
@@ -15,8 +15,10 @@ import { Locale, defaultLocale, localizePath } from "@/lib/i18n";
 import { GITHUB_URL, RELEASES_URL } from "@/lib/site";
 import { notFound } from "next/navigation";
 
-const icons = { ArrowRightLeft, BellRing, CalendarDays, Clock, Columns3, FolderTree,
-  HardDrive, ImageIcon, Keyboard, Languages, LayoutList, ListFilter, Search, Sparkles, Table, Tag, Terminal, Users };
+const icons = {
+  AppWindow, ArrowRightLeft, BellRing, CalendarDays, Clock, Columns3, FileText, FolderTree,
+  HardDrive, ImageIcon, Keyboard, Languages, LayoutList, ListFilter, Lock, Search, ShieldCheck, Sparkles, Table, Tag, Terminal, Users,
+};
 
 function Icon({ name, size = 14 }: { name: keyof typeof icons; size?: number }) {
   const Component = icons[name];

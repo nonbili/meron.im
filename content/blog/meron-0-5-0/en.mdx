@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP Encryption, Detached Windows, and Standalone EML Reader"
+publishedAt: "2026-11-09"
+readingTime: "4 min read"
+summary: "Send and receive end-to-end encrypted mail with OpenPGP and Autocrypt, move conversations and drafts into separate windows, and preview saved EML files directly on your desktop."
+highlights: ["OpenPGP email encryption with Autocrypt key exchange","Separate windows for conversations and drafts","Standalone EML file reader with attachment support","New message window from the system tray","Conversation tabs that keep your place when switching","Composer link dialog for inserting and editing links","Mark all messages in a Kanban column as read","PolicyKit authorization for Linux desktop updates"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Release · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 adds OpenPGP email encryption, separate windows for conversations and drafts, and a reader for saved `.eml` files. Keep a reference email beside your draft, open a composer from the system tray, and switch between tabs without losing your place.
+
+<PlatformNote>The features below are available in desktop 0.5.0. PolicyKit authorization applies to Linux updates.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Security &amp; Privacy</Badge>
+
+## End-to-end OpenPGP encryption with Autocrypt
+
+Send and receive end-to-end encrypted email with OpenPGP. Autocrypt shares public keys through email headers to help compatible clients exchange encrypted messages.
+
+Start under **Settings → Encrypted email**. Generate a key pair for your account or import your existing secret keys from GnuPG, Thunderbird, or OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron Settings showing Encrypted email settings, Autocrypt composing toggle, contact key management, and key discovery servers including WKD and keys.openpgp.org"
+  caption="Manage OpenPGP keys, Autocrypt defaults, and key discovery in Settings → Encrypted email."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt exchange
+
+</CardTitle>
+
+Shares your public key in email headers and stores keys received from contacts using compatible clients.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Key discovery
+
+</CardTitle>
+
+Look up a contact's public key through Web Key Directory (WKD) or a key server such as keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Encrypted storage
+
+</CardTitle>
+
+Keys and decrypted messages are stored in an encrypted SQLCipher database. Decrypted attachments use a separate session folder that is cleared when Meron quits.
+
+</Card>
+
+</CardGrid>
+
+- **Choose encryption in the composer:** Once Meron has a key for every recipient, you can send an encrypted message. Use the lock toggle to turn encryption on or off for each message, or enable it by default when keys are available. Replies to encrypted threads use encryption automatically.
+- **Check signatures and key status:** Message badges show whether incoming mail is encrypted or signed. Key status labels include Verified, Known, Key changed, and Revoked. Compare a contact's fingerprint with them before marking their key as verified.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Multi-Window Workflow</Badge>
+
+## Spread conversations and drafts across screens
+
+Keep an earlier email beside the proposal you're writing, or move a conversation to a second monitor. Conversations and drafts can now open in separate desktop windows.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meron desktop showing browser-style conversation tabs with a context menu open on a composer tab highlighting the Move tab to new window option"
+  caption="Right-click any conversation or draft tab to detach it into its own independent window."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Open threads in new windows
+
+</CardTitle>
+
+Right-click a conversation in your inbox or Kanban board and select **Open in new window**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Move tabs to windows
+
+</CardTitle>
+
+Right-click any tab in the conversation tab bar and choose **Move tab to new window** to detach it from the main window.
+
+</Card>
+
+</CardGrid>
+
+- **Compose from the system tray:** Click the Meron system tray icon and choose **New Message** to open a composer without opening your inbox.
+- **Keep your place in each tab:** Switch between conversations without losing your scroll position, text selection, or unfinished input.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML Reader</Badge>
+
+## Open saved emails without importing them
+
+Double-click a saved `.eml` file to open it in a dedicated reader window. Read the formatted message, inspect attachments, and check headers without adding the message to an account.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Meron standalone EML reader window displaying a formatted quarterly performance report with sender metadata, date, HTML/Plain toggles, and downloadable attachment cards"
+  caption="Preview saved .eml files directly from disk with full HTML styling, headers, and attachments."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composer &amp; Platform</Badge>
+
+## Link dialog, board shortcuts, and system polish
+
+The composer, boards, and desktop updates also get a few improvements:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron composer showing the formatting toolbar and the new Link insertion dialog with Link URL input and Save button"
+  caption="Insert and customize hyperlink destinations with the new composer link dialog (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Composer link dialog:** Press <kbd>⌘K</kbd> (or <kbd>Ctrl+K</kbd>) or click the link icon in the formatting toolbar to insert or edit links with custom display text and destination URLs.
+- **Mark a board column as read:** Right-click a Kanban board column header to mark all messages in that column as read.
+- **Consistent draft menus:** Edit and discard actions now use consistent menus across message bubbles, thread rows, and composers.
+- **PolicyKit on Linux:** Authorize desktop update installation through a PolicyKit prompt without running Meron itself with elevated privileges.
+- **Security fixes:** This release tightens how Meron handles email links, cached attachments, and access to desktop runtime handlers from email content.
+
+</PostSection>
+
+<ReleaseCTA heading="Try Meron 0.5.0" text="Download Meron 0.5.0 to protect your communications with OpenPGP, work across multiple windows, and open local EML files. Meron is free and open source." download="Download Meron" changelog="View changelog" github="GitHub releases" />

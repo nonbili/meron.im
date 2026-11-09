@@ -79,6 +79,12 @@ export const BLOG_INDEX_STRINGS: Record<Locale, BlogIndexStrings> = {
     readPost: "Przeczytaj wpis",
     allPosts: "Wszystkie wpisy",
   },
+  ru: {
+    title: "Блог",
+    description: "Примечания к выпускам, подробные разборы и новости о создании более спокойного почтового клиента с упором на локальное хранение.",
+    readPost: "Читать запись",
+    allPosts: "Все записи",
+  },
   sv: {
     title: "Blogg",
     description: "Versionsnyheter, fördjupningar och uppdateringar från bygget av en lugnare, lokal-först e-postklient.",

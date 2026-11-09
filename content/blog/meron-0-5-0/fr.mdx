@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0 : chiffrement OpenPGP, fenêtres détachées et lecteur EML autonome"
+publishedAt: "2026-11-09"
+readingTime: "4 min de lecture"
+summary: "Envoyez et recevez des e-mails chiffrés de bout en bout avec OpenPGP et Autocrypt, détachez vos conversations et brouillons dans des fenêtres distinctes, et prévisualisez vos fichiers EML directement sur votre bureau."
+highlights: ["Chiffrement des e-mails OpenPGP avec échange de clés Autocrypt","Fenêtres séparées pour les conversations et les brouillons","Lecteur de fichiers EML autonome avec gestion des pièces jointes","Fenêtre de nouveau message accessible depuis la zone de notification","Onglets de conversation préservant votre position lors de la navigation","Boîte de dialogue de lien dans la fenêtre de rédaction pour insérer et modifier des liens","Marquer d'un clic tous les messages d'une colonne Kanban comme lus","Autorisation PolicyKit pour les mises à jour sur Linux"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Publication · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 intègre le chiffrement des e-mails avec OpenPGP, la prise en charge de fenêtres distinctes pour les conversations et brouillons, ainsi qu'un lecteur dédié aux fichiers `.eml` enregistrés. Gardez un e-mail de référence à côté de votre brouillon, ouvrez une fenêtre de rédaction depuis la zone de notification et passez d'un onglet à l'autre sans perdre le fil.
+
+<PlatformNote>Les fonctionnalités ci-dessous sont disponibles dans la version bureau 0.5.0. L'autorisation PolicyKit s'applique aux mises à jour sous Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Sécurité &amp; Confidentialité</Badge>
+
+## Chiffrement de bout en bout OpenPGP avec Autocrypt
+
+Envoyez et recevez des e-mails chiffrés de bout en bout avec OpenPGP. Autocrypt partage automatiquement les clés publiques via les en-têtes d'e-mail afin de permettre aux clients compatibles d'échanger des messages chiffrés sans friction.
+
+Rendez-vous dans **Paramètres → E-mail chiffré**. Générez une paire de clés pour votre compte ou importez vos clés secrètes existantes depuis GnuPG, Thunderbird ou OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Paramètres de Meron affichant les réglages d'e-mail chiffré, l'option Autocrypt pour la rédaction, la gestion des clés de contact et les serveurs de découverte de clés dont WKD et keys.openpgp.org"
+  caption="Gérez les clés OpenPGP, les options par défaut d'Autocrypt et la découverte de clés dans Paramètres → E-mail chiffré."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Échange Autocrypt
+
+</CardTitle>
+
+Partage votre clé publique dans les en-têtes d'e-mail et enregistre les clés reçues des contacts utilisant des clients compatibles.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Découverte de clés
+
+</CardTitle>
+
+Recherchez la clé publique d'un contact via Web Key Directory (WKD) ou un serveur de clés comme keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Stockage chiffré
+
+</CardTitle>
+
+Les clés et les messages déchiffrés sont stockés dans une base de données chiffrée SQLCipher. Les pièces jointes déchiffrées utilisent un dossier de session temporaire supprimé à la fermeture de Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Choisir le chiffrement lors de la rédaction :** Dès que Meron dispose d'une clé pour chaque destinataire, vous pouvez envoyer un message chiffré. Utilisez l'icône de cadenas pour activer ou désactiver le chiffrement par message, ou activez-le par défaut lorsque les clés sont disponibles. Les réponses aux fils chiffrés utilisent automatiquement le chiffrement.
+- **Vérifier les signatures et l'état des clés :** Les badges de message indiquent si le courrier reçu est chiffré ou signé. Les états de clé comprennent Vérifié, Connu, Clé modifiée et Révoqué. Comparez l'empreinte avec votre contact avant de marquer sa clé comme vérifiée.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Flux multi-fenêtres</Badge>
+
+## Répartissez conversations et brouillons sur plusieurs écrans
+
+Consultez un échange précédent à côté de la proposition que vous rédigez, ou déplacez une conversation sur un second écran. Les conversations et brouillons peuvent désormais s'ouvrir dans des fenêtres de bureau indépendantes.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Bureau Meron affichant des onglets de conversation inspirés des navigateurs avec un menu contextuel ouvert sur un onglet de rédaction mettant en surbrillance l'option Déplacer l'onglet vers une nouvelle fenêtre"
+  caption="Faites un clic droit sur n'importe quel onglet de conversation ou de brouillon pour le détacher dans sa propre fenêtre indépendante."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Ouvrir un fil dans une nouvelle fenêtre
+
+</CardTitle>
+
+Faites un clic droit sur une conversation dans votre boîte de réception ou votre tableau Kanban et choisissez **Ouvrir dans une nouvelle fenêtre**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Déplacer l'onglet vers une fenêtre
+
+</CardTitle>
+
+Faites un clic droit sur un onglet dans la barre d'onglets de conversation et choisissez **Déplacer l'onglet vers une nouvelle fenêtre** pour le détacher de la fenêtre principale.
+
+</Card>
+
+</CardGrid>
+
+- **Rédiger depuis la zone de notification :** Cliquez sur l'icône de Meron dans la zone de notification et sélectionnez **Nouveau message** pour ouvrir une fenêtre de rédaction sans afficher votre boîte de réception.
+- **Conserver sa position dans chaque onglet :** Basculez d'une conversation à l'autre sans perdre votre position de défilement, votre sélection de texte ou votre saisie en cours.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Lecteur EML</Badge>
+
+## Ouvrez des e-mails enregistrés sans les importer
+
+Double-cliquez sur un fichier `.eml` enregistré pour l'ouvrir dans une fenêtre de lecture dédiée. Consultez le message mis en forme, examinez les pièces jointes et inspectez les en-têtes sans ajouter l'e-mail à un compte.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Fenêtre de lecteur EML autonome de Meron affichant un rapport de performance trimestriel mis en forme avec métadonnées de l'expéditeur, date, sélecteurs HTML/Texte brut et cartes de pièces jointes téléchargeables"
+  caption="Prévisualisez les fichiers .eml directement depuis votre disque avec mise en forme HTML complète, en-têtes et pièces jointes."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Rédaction &amp; Plateforme</Badge>
+
+## Dialogue de lien, raccourcis de tableau et finitions système
+
+La fenêtre de rédaction, les tableaux et les mises à jour bureau bénéficient également de plusieurs améliorations :
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Fenêtre de rédaction de Meron montrant la barre d'outils de formatage et la nouvelle boîte de dialogue d'insertion de lien avec champ URL et bouton Enregistrer"
+  caption="Insérez et personnalisez des hyperliens grâce à la nouvelle boîte de dialogue de lien (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Boîte de dialogue de lien :** Appuyez sur <kbd>⌘K</kbd> (ou <kbd>Ctrl+K</kbd>) ou cliquez sur l'icône de lien dans la barre d'outils de mise en forme pour insérer ou modifier des liens avec un texte d'affichage et une URL personnalisés.
+- **Marquer une colonne Kanban comme lue :** Faites un clic droit sur l'en-tête d'une colonne de tableau Kanban pour marquer tous ses messages comme lus d'un seul geste.
+- **Menus de brouillons harmonisés :** Les actions de modification et de suppression utilisent désormais des menus cohérents dans les bulles de messages, les lignes de fils et la fenêtre de rédaction.
+- **PolicyKit sous Linux :** Autorisez l'installation des mises à jour du bureau via une invite PolicyKit sécurisée sans avoir à lancer Meron lui-même avec des privilèges élevés.
+- **Correctifs de sécurité :** Cette version renforce la sécurité autour des liens dans les e-mails, des pièces jointes en cache et de l'accès aux gestionnaires d'exécution du bureau depuis le contenu des e-mails.
+
+</PostSection>
+
+<ReleaseCTA heading="Essayez Meron 0.5.0" text="Téléchargez Meron 0.5.0 pour sécuriser vos échanges avec OpenPGP, travailler sur plusieurs fenêtres et ouvrir vos fichiers EML locaux. Meron est gratuit et open source." download="Télécharger Meron" changelog="Voir le journal des modifications" github="GitHub Releases" />

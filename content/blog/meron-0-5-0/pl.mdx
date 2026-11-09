@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: Szyfrowanie OpenPGP, odłączane okna i samodzielny czytnik EML"
+publishedAt: "2026-11-09"
+readingTime: "4 min czytania"
+summary: "Wysyłaj i odbieraj pocztę szyfrowaną end-to-end z OpenPGP i Autocrypt, przenoś wątki i wersje robocze do osobnych okien oraz przeglądaj pliki EML bezpośrednio na pulpicie."
+highlights: ["Szyfrowanie poczty OpenPGP z wymianą kluczy Autocrypt","Osobne okna dla wątków i wersji roboczych","Samodzielny czytnik plików EML z obsługą załączników","Nowe okno tworzenia wiadomości z zasobnika systemowego","Karty wątków zachowujące pozycję podczas przełączania","Okno dialogowe linku w edytorze do wstawiania i edycji odnośników","Oznaczanie wszystkich wiadomości w kolumnie Kanban jako przeczytane","Autoryzacja PolicyKit dla aktualizacji na Linuksie"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Wydanie · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 wprowadza szyfrowanie poczty z użyciem OpenPGP, możliwość otwierania wątków i wersji roboczych w osobnych oknach oraz czytnik zapisanych plików `.eml`. Trzymaj wiadomość referencyjną obok tworzonego szkicu, otwieraj edytor wprost z zasobnika systemowego i przełączaj się między kartami bez utraty pozycji.
+
+<PlatformNote>Poniższe funkcje są dostępne w wersji desktopowej 0.5.0. Autoryzacja PolicyKit dotyczy aktualizacji w systemie Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Bezpieczeństwo i prywatność</Badge>
+
+## Szyfrowanie end-to-end OpenPGP z Autocrypt
+
+Wysyłaj i odbieraj wiadomości e-mail szyfrowane metodą end-to-end za pomocą OpenPGP. Autocrypt udostępnia klucze publiczne w nagłówkach wiadomości, co pozwala kompatybilnym programom bezproblemowo wymieniać zaszyfrowaną pocztę.
+
+Zacznij w **Ustawienia → Zaszyfrowana poczta**. Wygeneruj parę kluczy dla swojego konta lub zaimportuj istniejące klucze prywatne z programów GnuPG, Thunderbird lub OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Ustawienia Meron prezentujące opcje zaszyfrowanej poczty, przełącznik tworzenia z Autocrypt, zarządzanie kluczami kontaktów oraz serwery odkrywania kluczy, w tym WKD i keys.openpgp.org"
+  caption="Zarządzaj kluczami OpenPGP, ustawieniami domyślnymi Autocrypt i odkrywaniem kluczy w Ustawienia → Zaszyfrowana poczta."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Wymiana Autocrypt
+
+</CardTitle>
+
+Udostępnia Twój klucz publiczny w nagłówkach wiadomości i zapisuje klucze otrzymane od kontaktów korzystających ze zgodnych klientów.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Odkrywanie kluczy
+
+</CardTitle>
+
+Wyszukuj klucze publiczne kontaktów przez Web Key Directory (WKD) lub serwery kluczy, takie jak keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Szyfrowany magazyn danych
+
+</CardTitle>
+
+Klucze i odszyfrowane wiadomości przechowywane są w szyfrowanej bazie SQLCipher. Odszyfrowane załączniki trafiają do tymczasowego folderu sesji usuwanego przy zamykaniu programu Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Wybieraj szyfrowanie w oknie tworzenia:** Gdy Meron posiada klucz dla każdego z odbiorców, możesz wysłać zaszyfrowaną wiadomość. Użyj ikony kłódki, aby włączyć lub wyłączyć szyfrowanie dla pojedynczej wiadomości, albo włącz je domyślnie, gdy klucze są dostępne. Odpowiedzi w zaszyfrowanych wątkach są szyfrowane automatycznie.
+- **Sprawdzaj podpisy i status kluczy:** Etykiety przy wiadomościach informują, czy poczta przychodząca jest zaszyfrowana lub podpisana. Statusy kluczy obejmują: Zweryfikowany, Znany, Klucz zmieniony oraz Odwołany. Porównaj odcisk klucza (fingerprint) z kontaktem przed oznaczeniem go jako zweryfikowany.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Praca w wielu oknach</Badge>
+
+## Rozmieść wątki i wersje robocze na wielu ekranach
+
+Trzymaj wcześniejszego maila obok przygotowywanej oferty albo przenieś wątek na drugi monitor. Wątki i wersje robocze można teraz otwierać w oddzielnych oknach programu.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Pulpit aplikacji Meron z kartami wątków w stylu przeglądarki i menu kontekstowym otwartym na karcie edytora z wyróżnioną opcją Przenieś kartę do nowego okna"
+  caption="Kliknij prawym przyciskiem myszy dowolną kartę wątku lub wersji roboczej, aby odłączyć ją do niezależnego okna."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Otwieraj wątki w nowych oknach
+
+</CardTitle>
+
+Kliknij prawym przyciskiem myszy wątek w skrzynce odbiorczej lub na tablicy Kanban i wybierz **Otwórz w nowym oknie**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Przenoś karty do okien
+
+</CardTitle>
+
+Kliknij prawym przyciskiem myszy kartę na pasku kart i wybierz **Przenieś kartę do nowego okna**, aby odłączyć ją od okna głównego.
+
+</Card>
+
+</CardGrid>
+
+- **Twórz wiadomości z zasobnika systemowego:** Kliknij ikonę Meron w zasobniku systemowym (tray) i wybierz **Nowa wiadomość**, aby otworzyć edytor bez wyświetlania skrzynki odbiorczej.
+- **Zachowuj stan w każdej karcie:** Przełączaj się między wątkami bez utraty pozycji przewijania, zaznaczenia tekstu czy niedokończonych wpisów.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Czytnik EML</Badge>
+
+## Otwieraj zapisane wiadomości bez konieczności ich importowania
+
+Kliknij dwukrotnie zapisany plik `.eml`, aby otworzyć go w dedykowanym oknie czytnika. Czytaj sformatowaną wiadomość, sprawdzaj załączniki i przeglądaj nagłówki bez dodawania maila do żadnego konta.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Samodzielne okno czytnika EML w Meron wyświetlające sformatowany kwartalny raport wydajności z metadanymi nadawcy, datą, przełącznikami widoku HTML/Zwykły tekst i kartami załączników do pobrania"
+  caption="Przeglądaj zapisane pliki .eml bezpośrednio z dysku z pełnym formatowaniem HTML, nagłówkami i załącznikami."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Edytor i platforma</Badge>
+
+## Okno wstawiania linku, skróty tablicy i szlify systemowe
+
+Edytor, tablice oraz aktualizacje pulpitu zyskały również kilka istotnych usprawnień:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Edytor wiadomości Meron z paskiem narzędzi formatowania i nowym oknem wstawiania linku z polem adresu URL oraz przyciskiem Zapisz"
+  caption="Wstawiaj i dostosowuj hiperłącza za pomocą nowego okna dialogowego edytora (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Okno dialogowe linku w edytorze:** Naciśnij <kbd>⌘K</kbd> (lub <kbd>Ctrl+K</kbd>) albo kliknij ikonę odnośnika na pasku formatowania, aby wstawić lub edytować link z własnym tekstem wyświetlanym i adresem docelowym.
+- **Oznaczanie kolumny tablicy jako przeczytanej:** Kliknij prawym przyciskiem myszy nagłówek kolumny tablicy Kanban, aby oznaczyć wszystkie znajdujące się w niej wiadomości jako przeczytane.
+- **Spójne menu wersji roboczych:** Akcje edycji i odrzucania korzystają teraz ze spójnego menu w dymkach wiadomości, wierszach wątków i oknach tworzenia.
+- **PolicyKit w systemie Linux:** Autoryzuj instalację aktualizacji aplikacji za pomocą systemowego monitu PolicyKit bez potrzeby uruchamiania programu Meron z uprawnieniami roota.
+- **Poprawki bezpieczeństwa:** Wydanie to wzmacnia obsługę odnośników w wiadomościach, buforowanych załączników oraz dostęp do procedur systemowych z poziomu treści wiadomości.
+
+</PostSection>
+
+<ReleaseCTA heading="Wypróbuj Meron 0.5.0" text="Pobierz Meron 0.5.0, aby zabezpieczyć korespondencję dzięki OpenPGP, pracować w wielu oknach i otwierać lokalne pliki EML. Meron jest darmowy i otwartoźródłowy." download="Pobierz Meron" changelog="Zobacz listę zmian" github="Wydania na GitHubie" />

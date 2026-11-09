@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: Mã hóa OpenPGP, Cửa sổ riêng biệt và Trình đọc tệp EML độc lập"
+publishedAt: "2026-11-09"
+readingTime: "Thời gian đọc 4 phút"
+summary: "Gửi và nhận thư mã hóa đầu cuối với OpenPGP và Autocrypt, di chuyển cuộc trò chuyện và thư nháp sang các cửa sổ riêng biệt, cùng xem trước tệp EML trực tiếp trên máy tính."
+highlights: ["Mã hóa email OpenPGP với cơ chế trao đổi khóa Autocrypt","Cửa sổ riêng biệt cho cuộc trò chuyện và thư nháp","Trình đọc tệp EML độc lập hỗ trợ xem tệp đính kèm","Cửa sổ soạn thư mới trực tiếp từ khay hệ thống","Các tab trò chuyện giữ nguyên vị trí khi chuyển đổi","Hộp thoại chèn và chỉnh sửa liên kết trong trình soạn thảo","Đánh dấu đã đọc tất cả thư trong một cột Kanban","Xác thực PolicyKit cho cập nhật máy tính trên Linux"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Phát hành · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 bổ sung tính năng mã hóa email bằng OpenPGP, tách cuộc trò chuyện và thư nháp thành các cửa sổ độc lập, cùng trình đọc cho các tệp `.eml` đã lưu. Giữ một email tham khảo bên cạnh bản nháp đang soạn, mở trình soạn thư ngay từ khay hệ thống và chuyển đổi giữa các tab mà không mất vị trí làm việc.
+
+<PlatformNote>Các tính năng dưới đây đã có trên phiên bản máy tính 0.5.0. Xác thực PolicyKit áp dụng cho các bản cập nhật trên Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Bảo mật &amp; Quyền riêng tư</Badge>
+
+## Mã hóa đầu cuối OpenPGP với Autocrypt
+
+Gửi và nhận email được mã hóa đầu cuối bằng OpenPGP. Autocrypt tự động chia sẻ khóa công khai qua tiêu đề email để giúp các ứng dụng tương thích trao đổi thư mã hóa một cách liền mạch.
+
+Bắt đầu tại **Cài đặt → Thư mã hóa**. Tạo một cặp khóa cho tài khoản của bạn hoặc nhập khóa bí mật hiện có từ GnuPG, Thunderbird hoặc OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Cài đặt Meron hiển thị tùy chọn Thư mã hóa, nút bật Autocrypt khi soạn thư, quản lý khóa liên hệ và máy chủ khám phá khóa gồm WKD và keys.openpgp.org"
+  caption="Quản lý khóa OpenPGP, mặc định Autocrypt và khám phá khóa trong Cài đặt → Thư mã hóa."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Trao đổi Autocrypt
+
+</CardTitle>
+
+Chia sẻ khóa công khai trong tiêu đề email và tự động lưu khóa nhận được từ các liên hệ dùng ứng dụng tương thích.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Khám phá khóa
+
+</CardTitle>
+
+Tra cứu khóa công khai của liên hệ qua Web Key Directory (WKD) hoặc máy chủ khóa như keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Lưu trữ mã hóa
+
+</CardTitle>
+
+Khóa và các thư đã giải mã được bảo vệ an toàn trong cơ sở dữ liệu SQLCipher có mã hóa. Tệp đính kèm đã giải mã sử dụng thư mục phiên tạm thời và sẽ bị xóa sạch khi đóng Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Tùy chọn mã hóa trong trình soạn thảo:** Khi Meron đã có khóa của tất cả người nhận, bạn có thể gửi thư mã hóa. Sử dụng biểu tượng ổ khóa để bật hoặc tắt mã hóa cho từng thư, hoặc bật mặc định khi đã có sẵn khóa. Các thư trả lời trong chuỗi thư đã mã hóa sẽ tự động dùng mã hóa.
+- **Kiểm tra chữ ký và trạng thái khóa:** Huy hiệu thư cho biết thư đến có được mã hóa hoặc ký số hay không. Các trạng thái khóa gồm: Đã xác minh, Đã biết, Khóa đã đổi và Đã thu hồi. Hãy so khớp dấu vân tay khóa (fingerprint) với liên hệ trước khi đánh dấu khóa là đã xác minh.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Quy trình đa cửa sổ</Badge>
+
+## Phân bố cuộc trò chuyện và bản nháp trên nhiều màn hình
+
+Đặt một email cũ bên cạnh bản thảo đề xuất bạn đang viết, hoặc chuyển một cuộc trò chuyện sang màn hình phụ. Giờ đây, các cuộc trò chuyện và thư nháp đều có thể mở trong những cửa sổ riêng biệt.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Màn hình Meron hiển thị các tab trò chuyện kiểu trình duyệt cùng menu ngữ cảnh mở trên tab soạn thư làm nổi bật tùy chọn Di chuyển tab sang cửa sổ mới"
+  caption="Nhấp chuột phải vào bất kỳ tab trò chuyện hoặc thư nháp nào để tách sang một cửa sổ riêng biệt."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Mở chuỗi thư trong cửa sổ mới
+
+</CardTitle>
+
+Nhấp chuột phải vào một cuộc trò chuyện trong Hộp thư đến hoặc bảng Kanban và chọn **Mở trong cửa sổ mới**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Chuyển tab thành cửa sổ
+
+</CardTitle>
+
+Nhấp chuột phải vào tab bất kỳ trên thanh tab trò chuyện rồi chọn **Di chuyển tab sang cửa sổ mới** để tách tab khỏi cửa sổ chính.
+
+</Card>
+
+</CardGrid>
+
+- **Soạn thư từ khay hệ thống:** Nhấp vào biểu tượng Meron trên khay hệ thống và chọn **Thư mới** để mở trình soạn thảo mà không cần mở giao diện hộp thư đến.
+- **Giữ nguyên trạng thái trên từng tab:** Chuyển đổi qua lại giữa các cuộc trò chuyện mà không sợ mất vị trí cuộn, vùng chọn văn bản hay nội dung đang nhập dở.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Trình đọc EML</Badge>
+
+## Mở email đã lưu mà không cần nhập vào tài khoản
+
+Nhấp đúp vào tệp `.eml` đã lưu để mở trong cửa sổ đọc riêng. Đọc nội dung thư có đầy đủ định dạng, xem các tệp đính kèm và kiểm tra tiêu đề mà không cần thêm thư vào bất kỳ tài khoản nào.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Cửa sổ trình đọc EML độc lập của Meron hiển thị báo cáo hiệu suất quý có định dạng, dữ liệu người gửi, ngày tháng, nút chuyển đổi HTML/Văn bản thuần và thẻ tệp đính kèm có thể tải về"
+  caption="Xem trước các tệp .eml đã lưu trực tiếp từ ổ đĩa với đầy đủ kiểu dáng HTML, tiêu đề thư và tệp đính kèm."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Soạn thư &amp; Nền tảng</Badge>
+
+## Hộp thoại liên kết, phím tắt bảng và hoàn thiện hệ thống
+
+Trình soạn thảo, bảng Kanban và tính năng cập nhật máy tính cũng nhận được nhiều cải tiến:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Trình soạn thảo Meron hiển thị thanh công cụ định dạng và hộp thoại chèn liên kết mới với ô nhập URL và nút Lưu"
+  caption="Chèn và tùy chỉnh liên kết dễ dàng với hộp thoại liên kết mới trong trình soạn thư (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Hộp thoại liên kết khi soạn thư:** Nhấn <kbd>⌘K</kbd> (hoặc <kbd>Ctrl+K</kbd>) hoặc nhấp vào biểu tượng liên kết trên thanh định dạng để chèn hoặc chỉnh sửa liên kết với văn bản hiển thị và URL đích tùy chỉnh.
+- **Đánh dấu cột bảng là đã đọc:** Nhấp chuột phải vào tiêu đề cột trên bảng Kanban để đánh dấu tất cả thư trong cột đó là đã đọc cùng lúc.
+- **Menu thư nháp đồng nhất:** Các thao tác chỉnh sửa và hủy bỏ bản nháp giờ đây sử dụng menu nhất quán giữa bong bóng thư, hàng danh sách chuỗi và khung soạn thảo.
+- **PolicyKit trên Linux:** Ủy quyền cài đặt bản cập nhật ứng dụng thông qua lời nhắc PolicyKit an toàn mà không cần chạy bản thân Meron với quyền quản trị viên cao nhất.
+- **Vá lỗi bảo mật:** Bản phát hành này thắt chặt việc xử lý các liên kết trong thư, tệp đính kèm lưu trong bộ nhớ đệm và quyền truy cập vào trình xử lý thời gian chạy máy tính từ nội dung email.
+
+</PostSection>
+
+<ReleaseCTA heading="Trải nghiệm Meron 0.5.0" text="Tải Meron 0.5.0 để bảo vệ thư từ của bạn với OpenPGP, làm việc linh hoạt trên nhiều cửa sổ và mở trực tiếp các tệp EML cục bộ. Meron là phần mềm miễn phí và nguồn mở." download="Tải Meron" changelog="Xem nhật ký thay đổi" github="Bản phát hành GitHub" />

@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP暗号化、独立ウィンドウ、スタンドアロンEMLリーダー"
+publishedAt: "2026-11-09"
+readingTime: "4分で読めます"
+summary: "OpenPGPとAutocryptによるエンドツーエンド暗号化メールの送受信、スレッドや下書きの別ウィンドウ表示、デスクトップ上でのEMLファイル直接プレビューに対応しました。"
+highlights: ["Autocrypt鍵交換に対応したOpenPGPメール暗号化","スレッドと下書きの独立ウィンドウ表示","添付ファイルに対応したスタンドアロンEMLファイルリーダー","システムトレイからの新規メッセージ作成ウィンドウ","切り替え時にも作業状態を保持する会話タブ","リンクの挿入・編集ができる作成画面のリンクダイアログ","かんばん列の全メッセージを一括既読にする機能","Linuxデスクトップ更新時のPolicyKit認証"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "リリース · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0では、OpenPGPによるメール暗号化、スレッドや下書きを別ウィンドウで開く機能、保存された `.eml` ファイルの専用リーダーが追加されました。参照用メールを下書きの横に並べたり、システムトレイから作成ウィンドウを開いたり、タブを切り替えても作業位置を見失わずに作業できます。
+
+<PlatformNote>以下の機能はデスクトップ版0.5.0でご利用いただけます。PolicyKit認証はLinux版のアップデートに適用されます。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">セキュリティ &amp; プライバシー</Badge>
+
+## Autocrypt対応のOpenPGPエンドツーエンド暗号化
+
+OpenPGPでエンドツーエンドの暗号化メールを送受信できます。Autocryptはメールヘッダーを通じて公開鍵を共有し、互換性のあるクライアント間でスムーズに暗号化メッセージをやり取りできるよう支援します。
+
+「<Strong>設定 → 暗号化メール</Strong>」から設定を始めましょう。お使いのアカウント用の鍵ペアを生成するか、GnuPG、Thunderbird、OpenKeychainなどから既存の秘密鍵をインポートできます。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="暗号化メール設定、Autocrypt作成トグル、連絡先の鍵管理、WKDやkeys.openpgp.orgを含む鍵検索サーバーを表示したMeronの設定画面"
+  caption="「設定 → 暗号化メール」でOpenPGP鍵、Autocryptのデフォルト動作、鍵検索を設定できます。"
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt鍵交換
+
+</CardTitle>
+
+メールヘッダーで公開鍵を共有し、互換クライアントを使う連絡先から届いた鍵を自動保存します。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />鍵検索
+
+</CardTitle>
+
+Web Key Directory (WKD) や keys.openpgp.org などの鍵サーバーから連絡先の公開鍵を検索できます。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />暗号化ストレージ
+
+</CardTitle>
+
+鍵と復号されたメッセージは暗号化されたSQLCipherデータベースに保存されます。復号された添付ファイルは一時セッションフォルダを使用し、Meron終了時に自動削除されます。
+
+</Card>
+
+</CardGrid>
+
+- <Strong>作成画面で暗号化を選択：</Strong>全受信者の鍵が揃うと、暗号化メールを送信できます。鍵アイコンのトグルでメッセージごとに暗号化を切り替えられるほか、鍵がある場合はデフォルトで有効にすることも可能です。暗号化スレッドへの返信には自動で暗号化が適用されます。
+- <Strong>署名と鍵ステータスの確認：</Strong>受信メールが暗号化または署名されているかがメッセージバッジで分かります。鍵ステータスには「検証済み」「既知」「鍵変更」「失効」があります。連絡先の鍵を検証済みにする前に、相手と指紋（フィンガープリント）を確認しましょう。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">マルチウィンドウワークフロー</Badge>
+
+## スレッドや下書きをマルチモニターに配置
+
+作成中の提案書の横に過去のメールを並べて置いたり、スレッドをセカンドモニターに移動したりできます。スレッドと下書きが独立したデスクトップウィンドウで開けるようになりました。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="作成タブの右クリックメニューで「タブを新しいウィンドウへ移動」が強調表示されたMeronデスクトップのブラウザ風会話タブ"
+  caption="スレッドや下書きのタブを右クリックして、独立したウィンドウに切り離せます。"
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />スレッドを新しいウィンドウで開く
+
+</CardTitle>
+
+受信トレイやかんばんボードでスレッドを右クリックし、「<Strong>新しいウィンドウで開く</Strong>」を選択します。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />タブをウィンドウへ移動
+
+</CardTitle>
+
+会話タブバーのタブを右クリックし、「<Strong>タブを新しいウィンドウへ移動</Strong>」を選択してメインウィンドウから切り離します。
+
+</Card>
+
+</CardGrid>
+
+- <Strong>システムトレイから作成：</Strong>Meronのシステムトレイアイコンをクリックして「<Strong>新規メッセージ</Strong>」を選ぶと、受信トレイを開くことなく作成画面を開けます。
+- <Strong>各タブの作業状態を保持：</Strong>会話間を切り替えても、スクロール位置やテキスト選択、入力途中のテキストはそのまま維持されます。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EMLリーダー</Badge>
+
+## アカウントに追加せずに保存メールを開く
+
+保存された `.eml` ファイルをダブルクリックすると、専用のリーダーウィンドウで開きます。アカウントにメッセージを追加することなく、整形された本文を読み、添付ファイルを調べ、ヘッダーを確認できます。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="送信者メタデータ、日付、HTML/プレーン切り替え、ダウンロード可能な添付ファイルカードを備えた、整形済み四半期実績レポートを表示するMeronのスタンドアロンEMLリーダーウィンドウ"
+  caption="ディスク上に保存された.emlファイルを、完全なHTMLスタイル、ヘッダー、添付ファイル付きで直接プレビュー。"
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">作成画面とプラットフォーム</Badge>
+
+## リンクダイアログ、ボードのショートカット、細部の向上
+
+作成画面、ボード、デスクトップアップデートにもいくつかの改良が加わりました：
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="書式設定ツールバーとリンクURL入力欄・保存ボタンを備えた新しいリンク挿入ダイアログを表示するMeronのメッセージ作成画面"
+  caption="新しい作成画面リンクダイアログ（⌘K / Ctrl+K）でハイパーリンクを自在に挿入・編集。"
+  width={1280}
+  height={820}
+/>
+
+- <Strong>作成画面リンクダイアログ：</Strong><kbd>⌘K</kbd>（または <kbd>Ctrl+K</kbd>）を押すか、書式ツールバーのリンクアイコンをクリックして、表示テキストやリンク先URLを指定したリンクを挿入・編集できます。
+- <Strong>かんばんの列を一括既読に：</Strong>かんばんボードの列ヘッダーを右クリックして、その列のすべてのメッセージを既読にできます。
+- <Strong>下書きメニューの統一：</Strong>メッセージのフキダシ、スレッド一覧、作成画面にわたって、編集および破棄のアクションが統一されたメニューになりました。
+- <Strong>LinuxでのPolicyKit認証：</Strong>Meron本体を管理者権限で動かすことなく、PolicyKitの認証プロンプトを通じてデスクトップアップデートを安全に適用できます。
+- <Strong>セキュリティ修正：</Strong>メール内リンクの取り扱い、キャッシュされた添付ファイル、およびメールコンテンツからデスクトップランタイムへのアクセスに関する保護を強化しました。
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.5.0 を試す" text="Meron 0.5.0をダウンロードして、OpenPGPによる安全な暗号化通信、マルチウィンドウ作業、ローカルEMLファイルの閲覧をご体験ください。Meronは無料のオープンソースアプリです。" download="Meron をダウンロード" changelog="更新履歴を見る" github="GitHub リリース" />

@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP 加密、獨立視窗與獨立 EML 閱讀器"
+publishedAt: "2026-11-09"
+readingTime: "4 分鐘閱讀"
+summary: "透過 OpenPGP 與 Autocrypt 收發端對端加密郵件，將郵件對話和草稿移至獨立視窗，並直接在桌面端預覽儲存的 EML 檔案。"
+highlights: ["支援 Autocrypt 金鑰交換的 OpenPGP 郵件加密","對話與草稿的獨立視窗支援","支援附件預覽的獨立 EML 檔案閱讀器","支援從系統匣快速建立新郵件","切換分頁時保留捲動位置與輸入內容","用於插入與編輯連結的撰寫器連結對話方塊","支援將看板欄中的所有郵件標記為已讀","Linux 桌面更新支援 PolicyKit 授權"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "發布 · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 現已支援 OpenPGP 郵件加密、對話與草稿的獨立視窗，以及本機 `.eml` 檔案閱讀器。在撰寫草稿時隨手把參考郵件放在一旁，直接從系統匣喚出撰寫視窗，並在切換分頁時保留原有進度。
+
+<PlatformNote>以下功能現已在桌面版 0.5.0 提供。PolicyKit 授權適用於 Linux 更新。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">安全與隱私</Badge>
+
+## 基於 Autocrypt 的 OpenPGP 端對端加密
+
+透過 OpenPGP 收發端對端加密郵件。Autocrypt 會在郵件標頭中自動共用公鑰，協助相容的用戶端無縫交換加密郵件。
+
+前往「<Strong>設定 → 加密郵件</Strong>」。為目前帳戶產生金鑰對，或從 GnuPG、Thunderbird 或 OpenKeychain 匯入現有的私鑰。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron 設定展示加密郵件設定、Autocrypt 撰寫開關、聯絡人金鑰管理，以及包括 WKD 與 keys.openpgp.org 在內的金鑰探索伺服器"
+  caption="在「設定 → 加密郵件」中管理 OpenPGP 金鑰、Autocrypt 預設選項與金鑰探索伺服器。"
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt 交換
+
+</CardTitle>
+
+在郵件標頭中共用您的公鑰，並自動儲存相容用戶端傳來的聯絡人金鑰。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />金鑰探索
+
+</CardTitle>
+
+透過 Web Key Directory (WKD) 或 keys.openpgp.org 等公鑰伺服器查詢聯絡人的公鑰。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />加密儲存
+
+</CardTitle>
+
+金鑰與已解密的郵件皆保存在加密的 SQLCipher 資料庫中。解密後的附件存放於獨立的作業階段資料夾中，並在結束 Meron 時自動清除。
+
+</Card>
+
+</CardGrid>
+
+- <Strong>在撰寫器中選擇加密：</Strong>當 Meron 取得所有收件人的金鑰後，即可傳送加密郵件。使用鎖形開關為個別郵件開啟或關閉加密，亦可在金鑰可用時預設啟用加密。回覆已加密的對話時會自動採用加密。
+- <Strong>檢查簽章與金鑰狀態：</Strong>郵件徽章會顯示收件是否經過加密或簽署。金鑰狀態包括已驗證、已知、金鑰已變更和已撤銷。在將聯絡人的金鑰標記為已驗證前，可先與其核對金鑰指紋。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">多視窗工作流程</Badge>
+
+## 在多個螢幕間隨心分布對話與草稿
+
+在撰寫提案的同時把先前的往來郵件並排放在一側，或將重要對話移至第二台螢幕。現在，對話與草稿均可在獨立的桌面視窗中開啟。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meron 桌面端展示瀏覽器風格的對話分頁，在撰寫分頁上右鍵開啟的選單中強調顯示「移動分頁到新視窗」選項"
+  caption="右鍵點擊任何對話或草稿分頁，即可將其獨立為單獨的視窗。"
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />在新視窗中開啟對話
+
+</CardTitle>
+
+在收件匣或看板中右鍵點擊任何對話，並選擇「<Strong>在新視窗中開啟</Strong>」。
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />將分頁移至新視窗
+
+</CardTitle>
+
+右鍵點擊對話分頁列中的任何分頁，選擇「<Strong>移動分頁到新視窗</Strong>」，即可將其從主視窗中獨立出來。
+
+</Card>
+
+</CardGrid>
+
+- <Strong>從系統匣快速撰寫：</Strong>點擊 Meron 系統匣圖示並選擇「<Strong>建立新郵件</Strong>」，無需開啟收件匣主介面即可直接開啟撰寫視窗。
+- <Strong>保留每個分頁的狀態：</Strong>在多個對話之間切換，無需擔心遺失捲動位置、選取文字或未完成的輸入內容。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML 閱讀器</Badge>
+
+## 無需匯入即可開啟已儲存的郵件
+
+按兩下儲存的 `.eml` 檔案即可在專用的閱讀器視窗中開啟。無需將郵件新增至任何帳戶，即可瀏覽格式化內文、檢視附件並查驗郵件標頭。
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Meron 獨立 EML 閱讀器視窗顯示格式化季度業績報告，包含寄件者中繼資料、日期、HTML/純文字切換開關以及可供下載的附件卡片"
+  caption="直接從本機磁碟預覽已儲存的 .eml 檔案，完整支援 HTML 排版樣式、郵件標頭與附件。"
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">撰寫器與平台特性</Badge>
+
+## 連結對話方塊、看板快捷操作與系統打磨
+
+郵件撰寫器、看板與桌面更新亦迎來了多項改進：
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron 撰寫器顯示格式工具列與全新的連結插入對話方塊，包含連結網址輸入框與儲存按鈕"
+  caption="使用全新的撰写器連結對話方塊（⌘K / Ctrl+K）輕鬆插入並自訂超連結目標。"
+  width={1280}
+  height={820}
+/>
+
+- <Strong>撰寫器連結對話方塊：</Strong>按下 <kbd>⌘K</kbd>（或 <kbd>Ctrl+K</kbd>），或點擊格式工具列中的連結圖示，即可插入或編輯包含自訂顯示文字與目標網址的連結。
+- <Strong>將看板欄全部標記為已讀：</Strong>右鍵點擊看板欄標題，即可一鍵將該欄中的所有郵件標記為已讀。
+- <Strong>一致的草稿操作選單：</Strong>在郵件對話框、對話列表項與撰寫器中，編輯與捨棄操作現已採用一致的選單樣式。
+- <Strong>Linux 支援 PolicyKit：</Strong>透過 PolicyKit 提示視窗安全授權桌面版本更新，而無需以超級使用者權限執行 Meron 本身。
+- <Strong>安全性修復：</Strong>此版本強化了 Meron 對郵件連結、快取附件以及從郵件內文存取桌面執行階段處理常式的安全性控制。
+
+</PostSection>
+
+<ReleaseCTA heading="體驗 Meron 0.5.0" text="下載 Meron 0.5.0，體驗 OpenPGP 端對端加密通訊、多視窗平行工作以及本機 EML 檔案預覽。Meron 是一款免費且開源的郵件用戶端。" download="下載 Meron" changelog="檢視更新日誌" github="GitHub Releases" />

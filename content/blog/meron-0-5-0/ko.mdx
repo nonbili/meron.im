@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP 암호화, 독립 창, 독립 실행형 EML 뷰어"
+publishedAt: "2026-11-09"
+readingTime: "4분 분량"
+summary: "OpenPGP 및 Autocrypt를 통한 종단간 암호화 메일 송수신, 스레드와 임시보관함을 별도 창으로 분리, 데스크톱에서 저장된 EML 파일 바로 미리보기를 지원합니다."
+highlights: ["Autocrypt 키 교환을 지원하는 OpenPGP 이메일 암호화","대화와 임시보관함을 위한 별도 독립 창","첨부파일을 지원하는 독립 실행형 EML 파일 뷰어","시스템 트레이에서 바로 새 메시지 창 열기","전환 시에도 작업 위치를 유지하는 대화 탭","링크 삽입 및 편집을 위한 작성기 링크 대화상자","칸반 열의 모든 메시지를 읽음으로 표시하는 기능","Linux 데스크톱 업데이트를 위한 PolicyKit 인증"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "릴리스 · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0에서는 OpenPGP 이메일 암호화, 대화와 임시보관함을 위한 별도 창, 저장된 `.eml` 파일 전용 뷰어가 추가되었습니다. 초안 작성 중 참고할 메일을 나란히 띄우고, 시스템 트레이에서 작성기를 열며, 탭을 전환해도 작업 흐름을 그대로 유지할 수 있습니다.
+
+<PlatformNote>아래 기능은 데스크톱 0.5.0에서 사용할 수 있습니다. PolicyKit 인증은 Linux 업데이트에 적용됩니다.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">보안 및 개인정보 보호</Badge>
+
+## Autocrypt를 지원하는 OpenPGP 종단간 암호화
+
+OpenPGP를 통해 종단간 암호화된 이메일을 주고받으세요. Autocrypt는 이메일 헤더를 통해 공개키를 공유하여 호환 클라이언트 간 암호화 메시지를 원활하게 교환할 수 있도록 돕습니다.
+
+<Strong>설정 → 암호화된 이메일</Strong>에서 시작하세요. 계정용 키 쌍을 새로 생성하거나 GnuPG, Thunderbird, OpenKeychain에서 기존 개인키를 가져올 수 있습니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="암호화된 이메일 설정, Autocrypt 작성 토글, 연락처 키 관리, WKD 및 keys.openpgp.org를 포함한 키 검색 서버를 보여주는 Meron 설정 화면"
+  caption="설정 → 암호화된 이메일에서 OpenPGP 키, Autocrypt 기본값 및 키 검색을 관리하세요."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt 교환
+
+</CardTitle>
+
+이메일 헤더에 내 공개키를 공유하고 호환 클라이언트를 사용하는 연락처로부터 받은 키를 저장합니다.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />키 검색
+
+</CardTitle>
+
+Web Key Directory (WKD) 또는 keys.openpgp.org와 같은 키 서버를 통해 연락처의 공개키를 검색합니다.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />암호화 저장소
+
+</CardTitle>
+
+키와 복호화된 메시지는 암호화된 SQLCipher 데이터베이스에 안전하게 보관됩니다. 복호화된 첨부파일은 별도의 세션 폴더를 사용하며 Meron 종료 시 자동으로 정리됩니다.
+
+</Card>
+
+</CardGrid>
+
+- <Strong>작성기에서 암호화 선택:</Strong> 모든 수신자의 키가 확보되면 암호화된 메시지를 보낼 수 있습니다. 자물쇠 토글로 메시지마다 암호화를 켜거나 끌 수 있고, 키가 있을 때 기본으로 사용하도록 설정할 수도 있습니다. 암호화된 스레드에 답장할 때는 자동으로 암호화가 적용됩니다.
+- <Strong>서명 및 키 상태 확인:</Strong> 메시지 배지를 통해 수신된 메일의 암호화 및 서명 여부를 확인할 수 있습니다. 키 상태 라벨에는 검증됨, 확인됨, 키 변경됨, 폐기됨이 포함됩니다. 연락처의 키를 검증됨으로 표시하기 전에 지문(fingerprint)을 대조해 보세요.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">멀티 윈도우 워크플로</Badge>
+
+## 여러 화면에 대화와 초안 분산 배치
+
+작성 중인 제안서 옆에 이전 메일을 띄워 두거나, 대화 창을 보조 모니터로 이동해 작업하세요. 이제 대화와 초안을 독립된 데스크톱 창으로 열 수 있습니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="작성기 탭의 컨텍스트 메뉴에서 '새 창으로 탭 이동' 옵션이 강조된 Meron 데스크톱의 브라우저 스타일 대화 탭 화면"
+  caption="대화나 초안 탭을 마우스 오른쪽 버튼으로 클릭하여 독립된 별도 창으로 분리하세요."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />새 창에서 스레드 열기
+
+</CardTitle>
+
+받은편지함이나 칸반 보드에서 대화를 마우스 오른쪽 버튼으로 클릭하고 <Strong>새 창에서 열기</Strong>를 선택하세요.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />창으로 탭 이동
+
+</CardTitle>
+
+대화 탭 표시줄의 탭을 마우스 오른쪽 버튼으로 클릭하고 <Strong>새 창으로 탭 이동</Strong>을 선택하여 기본 창에서 분리하세요.
+
+</Card>
+
+</CardGrid>
+
+- <Strong>시스템 트레이에서 바로 작성:</Strong> Meron 시스템 트레이 아이콘을 클릭하고 <Strong>새 메시지</Strong>를 선택하면 받은편지함을 열지 않고도 작성 창을 바로 띄울 수 있습니다.
+- <Strong>각 탭의 상태 유지:</Strong> 대화 사이를 전환해도 스크롤 위치, 텍스트 선택, 작성 중인 입력 내용이 그대로 보존됩니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML 뷰어</Badge>
+
+## 계정에 추가하지 않고 저장된 이메일 열기
+
+저장된 `.eml` 파일을 두 번 클릭하면 전용 뷰어 창에서 바로 열립니다. 계정에 메일을 추가하지 않고도 서식 있는 본문을 읽고, 첨부파일을 확인하며, 헤더를 살펴볼 수 있습니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="발신자 메타데이터, 날짜, HTML/일반 텍스트 토글 및 다운로드 가능한 첨부파일 카드가 있는 서식화된 분기 성과 보고서를 표시하는 Meron 독립 실행형 EML 뷰어 창"
+  caption="전체 HTML 스타일, 헤더, 첨부파일과 함께 디스크에 저장된 .eml 파일을 바로 미리보세요."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">작성기 및 플랫폼</Badge>
+
+## 링크 대화상자, 보드 단축키 및 시스템 개선
+
+작성기, 보드, 데스크톱 업데이트에도 다양한 개선 사항이 반영되었습니다:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="서식 도구 모음과 링크 URL 입력란 및 저장 버튼이 있는 새 링크 삽입 대화상자를 보여주는 Meron 작성기"
+  caption="새로운 작성기 링크 대화상자(⌘K / Ctrl+K)로 하이퍼링크를 손쉽게 삽입하고 수정하세요."
+  width={1280}
+  height={820}
+/>
+
+- <Strong>작성기 링크 대화상자:</Strong> <kbd>⌘K</kbd>(또는 <kbd>Ctrl+K</kbd>)를 누르거나 서식 도구 모음의 링크 아이콘을 클릭하여 맞춤 표시 텍스트와 대상 URL이 포함된 링크를 삽입하거나 편집하세요.
+- <Strong>칸반 열 전체를 읽음으로 표시:</Strong> 칸반 보드 열 머리글을 마우스 오른쪽 버튼으로 클릭하여 해당 열의 모든 메시지를 읽음 상태로 일괄 변경할 수 있습니다.
+- <Strong>일관된 임시보관함 메뉴:</Strong> 메시지 말풍선, 스레드 행, 작성기 전반에서 편집 및 삭제 작업 메뉴가 일관된 형태로 정리되었습니다.
+- <Strong>Linux의 PolicyKit 지원:</Strong> Meron 자체를 관리자 권한으로 실행할 필요 없이 PolicyKit 프롬프트를 통해 데스크톱 업데이트 설치를 안전하게 승인할 수 있습니다.
+- <Strong>보안 수정:</Strong> 이메일 링크 처리, 캐시된 첨부파일, 이메일 콘텐츠에서 데스크톱 런타임 핸들러로의 접근에 대한 보안 제어가 한층 더 강화되었습니다.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.5.0 사용해보기" text="Meron 0.5.0을 다운로드하여 OpenPGP로 통신을 보호하고, 여러 창에서 작업하며, 로컬 EML 파일을 바로 열어보세요. Meron은 무료 오픈소스입니다." download="Meron 다운로드" changelog="변경 이력 보기" github="GitHub Releases" />

@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP Şifreleme, Ayrık Pencereler ve Bağımsız EML Okuyucu"
+publishedAt: "2026-11-09"
+readingTime: "4 dk okuma süresi"
+summary: "OpenPGP ve Autocrypt ile uçtan uca şifreli e-postalar gönderip alın, yazışmaları ve taslakları ayrı pencerelere taşıyın ve kayıtlı EML dosyalarını doğrudan masaüstünüzde önizleyin."
+highlights: ["Autocrypt anahtar değişimiyle OpenPGP e-posta şifreleme","Yazışmalar ve taslaklar için ayrı bağımsız pencereler","Ek desteği sunan bağımsız EML dosya okuyucusu","Sistem tepsisinden doğrudan yeni ileti penceresi açma","Sekmeler arası geçişte kaldığınız yeri koruyan yazışma sekmeleri","Bağlantı eklemek ve düzenlemek için ileti yazma bağlantı iletişim kutusu","Bir Kanban sütunundaki tüm iletileri tek tıkla okundu olarak işaretleme","Linux masaüstü güncellemeleri için PolicyKit yetkilendirmesi"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Sürüm · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0; OpenPGP e-posta şifrelemesi, yazışmalar ve taslaklar için ayrı pencereler ile kayıtlı `.eml` dosyaları için özel bir okuyucu sunuyor. Yazdığınız taslağın yanında bir referans e-postasını açık tutun, sistem tepsisinden ileti yazma penceresi açın ve sekmeler arasında yerinizi kaybetmeden gezinin.
+
+<PlatformNote>Aşağıdaki özellikler masaüstü 0.5.0 sürümünde mevcuttur. PolicyKit yetkilendirmesi Linux güncellemeleri için geçerlidir.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Güvenlik ve Gizlilik</Badge>
+
+## Autocrypt ile OpenPGP uçtan uca şifreleme
+
+OpenPGP ile uçtan uca şifreli e-postalar gönderip alın. Autocrypt, uyumlu istemcilerin şifreli iletileri sorunsuzca değiş tokuş edebilmesi için açık anahtarları e-posta başlıkları üzerinden paylaşır.
+
+**Ayarlar → Şifreli e-posta** bölümünden başlayın. Hesabınız için bir anahtar çifti oluşturun veya GnuPG, Thunderbird ya da OpenKeychain'deki mevcut gizli anahtarlarınızı içe aktarın.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Şifreli e-posta ayarlarını, ileti yazarken Autocrypt geçişini, kişi anahtarı yönetimini ve WKD ile keys.openpgp.org gibi anahtar keşif sunucularını gösteren Meron Ayarları"
+  caption="Ayarlar → Şifreli e-posta bölümünden OpenPGP anahtarlarını, Autocrypt varsayılanlarını ve anahtar keşfini yönetin."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt değişimi
+
+</CardTitle>
+
+Açık anahtarınızı e-posta başlıklarında paylaşır ve uyumlu istemcileri kullanan kişilerden alınan anahtarları saklar.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Anahtar keşfi
+
+</CardTitle>
+
+Bir kişinin açık anahtarını Web Key Directory (WKD) veya keys.openpgp.org gibi bir anahtar sunucusu üzerinden sorgulayın.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Şifreli depolama
+
+</CardTitle>
+
+Anahtarlar ve şifresi çözülmüş iletiler şifreli bir SQLCipher veritabanında saklanır. Şifresi çözülen ekler, Meron kapatıldığında temizlenen ayrı bir oturum klasörünü kullanır.
+
+</Card>
+
+</CardGrid>
+
+- **İleti yazarken şifrelemeyi seçin:** Meron tüm alıcılar için bir anahtara sahip olduğunda şifreli ileti gönderebilirsiniz. Şifrelemeyi her ileti için kilit simgesiyle açıp kapatabilir veya anahtarlar mevcut olduğunda varsayılan olarak etkinleştirebilirsiniz. Şifreli başlıklara verilen yanıtlar otomatik olarak şifrelenir.
+- **İmzaları ve anahtar durumunu denetleyin:** İleti rozetleri gelen postanın şifreli veya imzalı olup olmadığını gösterir. Anahtar durum etiketleri şunları içerir: Doğrulandı, Biliniyor, Anahtar değişti ve İptal edildi. Bir kişinin anahtarını doğrulandı olarak işaretlemeden önce parmak izini kendisiyle karşılaştırın.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Çok Pencereli İş Akışı</Badge>
+
+## Yazışmaları ve taslakları ekranlara dağıtın
+
+Yazdığınız teklifin yanında önceki bir e-postayı açık tutun veya bir yazışmayı ikinci bir monitöre taşıyın. Yazışmalar ve taslaklar artık ayrı masaüstü pencerelerinde açılabilir.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Bir ileti yazma sekmesinde Sekmeyi yeni pencereye taşı seçeneğini vurgulayan açık bir bağlam menüsüyle tarayıcı tarzı yazışma sekmelerini gösteren Meron masaüstü görünümü"
+  caption="Herhangi bir yazışma veya taslak sekmesini bağımsız bir pencereye ayırmak için üzerine sağ tıklayın."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Yazışmaları yeni pencerelerde açın
+
+</CardTitle>
+
+Gelen kutunuzda veya Kanban panosunda bir yazışmaya sağ tıklayın ve **Yeni pencerede aç**'ı seçin.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Sekmeleri pencerelere taşıyın
+
+</CardTitle>
+
+Yazışma sekme çubuğundaki herhangi bir sekmeye sağ tıklayın ve ana pencereden ayırmak için **Sekmeyi yeni pencereye taşı**'yı seçin.
+
+</Card>
+
+</CardGrid>
+
+- **Sistem tepsisinden yazın:** Gelen kutunuzu açmadan ileti yazma penceresi açmak için Meron sistem tepsisi simgesine tıklayın ve **Yeni İleti**'yi seçin.
+- **Her sekmede yerinizi koruyun:** Kaydırma konumunuzu, seçtiğiniz metni veya yarım kalan girişinizi kaybetmeden yazışmalar arasında geçiş yapın.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML Okuyucu</Badge>
+
+## Kayıtlı e-postaları içe aktarmadan açın
+
+Kayıtlı bir `.eml` dosyasını özel bir okuyucu penceresinde açmak için üzerine çift tıklayın. İletiyi herhangi bir hesaba eklemeden biçimlendirilmiş iletiyi okuyun, ekleri inceleyin ve başlıkları denetleyin.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Gönderen meta verileri, tarih, HTML/Düz metin geçişleri ve indirilebilir ek kartları ile biçimlendirilmiş üç aylık performans raporunu görüntüleyen Meron bağımsız EML okuyucu penceresi"
+  caption="Diskte kayıtlı .eml dosyalarını tam HTML biçimlendirmesi, başlıklar ve eklerle doğrudan önizleyin."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">İleti Yazma ve Platform</Badge>
+
+## Bağlantı iletişim kutusu, pano kısayolları ve sistem iyileştirmeleri
+
+İleti yazma aracı, panolar ve masaüstü güncellemeleri de bir dizi iyileştirme alıyor:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Biçimlendirme araç çubuğunu ve Bağlantı URL'si girişi ile Kaydet düğmesini içeren yeni Bağlantı ekleme iletişim kutusunu gösteren Meron ileti yazma aracı"
+  caption="Yeni ileti yazma bağlantı iletişim kutusuyla (⌘K / Ctrl+K) köprü hedefleri ekleyin ve özelleştirin."
+  width={1280}
+  height={820}
+/>
+
+- **İleti yazma bağlantı kutusu:** Özel metin ve hedef URL içeren bağlantılar eklemek veya düzenlemek için <kbd>⌘K</kbd> (veya <kbd>Ctrl+K</kbd>) tuşlarına basın ya da biçimlendirme çubuğundaki bağlantı simgesine tıklayın.
+- **Bir pano sütununu okundu olarak işaretleme:** Bir Kanban panosu sütun başlığına sağ tıklayarak o sütundaki tüm iletileri bir kerede okundu olarak işaretleyin.
+- **Tutarlı taslak menüleri:** Düzenleme ve silme işlemleri artık ileti balonlarında, yazışma satırlarında ve ileti yazma alanlarında tutarlı menüler kullanır.
+- **Linux'ta PolicyKit:** Meron uygulamasını yetkili kullanıcı haklarıyla çalıştırmak zorunda kalmadan masaüstü güncelleme kurulumunu güvenli bir PolicyKit istemiyle onaylayın.
+- **Güvenlik düzeltmeleri:** Bu sürüm; e-posta bağlantılarının, önbelleğe alınmış eklerin ve e-posta içeriğinden masaüstü çalışma zamanı işleyicilerine erişimin güvenliğini sıkılaştırır.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.5.0'ı Deneyin" text="İletişiminizi OpenPGP ile korumak, birden çok pencerede çalışmak ve yerel EML dosyalarını açmak için Meron 0.5.0'ı indirin. Meron ücretsiz ve açık kaynaklıdır." download="Meron'u İndir" changelog="Değişiklik Günlüğünü Gör" github="GitHub Sürümleri" />

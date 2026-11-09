@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP šifrēšana, atdalīti logi un patstāvīgs EML lasītājs"
+publishedAt: "2026-11-09"
+readingTime: "4 min lasīšanai"
+summary: "Sūtiet un saņemiet tiešsaistē šifrētu (end-to-end) e-pastu ar OpenPGP un Autocrypt, pārvietojiet sarakstes un melnrakstus uz atsevišķiem logiem un priekšskatiet saglabātos EML failus tieši datorā."
+highlights: ["OpenPGP e-pasta šifrēšana ar Autocrypt atslēgu apmaiņu","Atsevišķi logi sarakstēm un melnrakstiem","Patstāvīgs EML failu lasītājs ar pielikumu atbalstu","Jauns ziņojuma logs tieši no sistēmas teknes","Sarakstes cilnes, kas saglabā jūsu vietu pārslēdzoties","Saišu ievietošanas un rediģēšanas dialogs ziņojumu sastādītājā","Iespēja atzīmēt visus Kanban kolonnas ziņojumus kā izlasītus","PolicyKit autorizācija Linux darbvirsmas atjauninājumiem"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Laidiens · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 pievieno OpenPGP e-pasta šifrēšanu, atsevišķus logus sarakstēm un melnrakstiem, kā arī saglabāto `.eml` failu lasītāju. Turiet atsauces e-pastu blakus rakstāmajam melnrakstam, atveriet ziņojumu sastādītāju no sistēmas teknes un pārslēdzieties starp cilnēm, nezaudējot darba vietu.
+
+<PlatformNote>Tālāk aprakstītās funkcijas ir pieejamas darbvirsmas versijā 0.5.0. PolicyKit autorizācija attiecas uz Linux atjauninājumiem.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Drošība un privātums</Badge>
+
+## No gala līdz galam OpenPGP šifrēšana ar Autocrypt
+
+Sūtiet un saņemiet no gala līdz galam šifrētu e-pastu ar OpenPGP. Autocrypt automātiski kopīgo publiskās atslēgas e-pasta galvenēs, palīdzot saderīgām programmām netraucēti apmainīties ar šifrētiem ziņojumiem.
+
+Sāciet sadaļā **Iestatījumi → Šifrēts e-pasts**. Izveidojiet atslēgu pāri savam kontam vai importējiet esošās slepenās atslēgas no GnuPG, Thunderbird vai OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron iestatījumi ar šifrēta e-pasta iespējām, Autocrypt sastādīšanas slēdzi, kontaktu atslēgu pārvaldību un atslēgu meklēšanas serveriem, tostarp WKD un keys.openpgp.org"
+  caption="Pārvaldiet OpenPGP atslēgas, Autocrypt noklusējumus un atslēgu meklēšanu sadaļā Iestatījumi → Šifrēts e-pasts."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt apmaiņa
+
+</CardTitle>
+
+Kopīgo jūsu publisko atslēgu e-pasta galvenēs un saglabā atslēgas, kas saņemtas no kontaktiem ar saderīgām programmām.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Atslēgu atklāšana
+
+</CardTitle>
+
+Meklējiet kontakta publisko atslēgu, izmantojot Web Key Directory (WKD) vai atslēgu serveri, piemēram, keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Šifrēta krātuve
+
+</CardTitle>
+
+Atslēgas un atšifrētie ziņojumi tiek glabāti šifrētā SQLCipher datubāzē. Atšifrētie pielikumi izmanto atsevišķu sesijas mapi, kas tiek notīrīta, aizverot Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Izvēlieties šifrēšanu sastādītājā:** Tiklīdz Meron rīcībā ir atslēga katram saņēmējam, varat nosūtīt šifrētu ziņojumu. Izmantojiet slēdzenes pārslēgu, lai ieslēgtu vai izslēgtu šifrēšanu atsevišķam ziņojumam, vai ieslēdziet to pēc noklusējuma, kad atslēgas ir pieejamas. Atbildes uz šifrētām sarakstēm automātiski tiek šifrētas.
+- **Pārbaudiet parakstus un atslēgas statusu:** Ziņojumu žetoni rāda, vai ienākošais e-pasts ir šifrēts vai parakstīts. Atslēgu statusu iezīmes: Verificēta, Zināma, Atslēga mainīta un Atsaukta. Pirms atzīmējat kontakta atslēgu kā verificētu, salīdziniet ar viņu kontrolsummas nospiedumu (fingerprint).
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Vairāku logu darbplūsma</Badge>
+
+## Sadaliet sarakstes un melnrakstus vairākos ekrānos
+
+Turiet iepriekšējo e-pastu līdzās projektam, kuru rakstāt, vai pārvietojiet saraksti uz otru monitoru. Sarakstes un melnrakstus tagad var atvērt atsevišķos datora logos.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meron darbvirsma ar pārlūka stila sarakstes cilnēm un atvērtu konteksta izvēlni sastādītāja cilnē, izceļot opciju Pārvietot cilni uz jaunu logu"
+  caption="Noklikšķiniet ar peles labo pogu uz jebkuras sarakstes vai melnraksta cilnes, lai to atdalītu atsevišķā logā."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Atveriet sarakstes jaunos logos
+
+</CardTitle>
+
+Noklikšķiniet ar peles labo pogu uz sarakstes iesūtnē vai Kanban dēlī un izvēlieties **Atvērt jaunā logā**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Pārvietojiet cilnes uz logiem
+
+</CardTitle>
+
+Noklikšķiniet ar peles labo pogu uz jebkuras cilnes ciļņu joslā un izvēlieties **Pārvietot cilni uz jaunu logu**, lai to atdalītu no galvenā loga.
+
+</Card>
+
+</CardGrid>
+
+- **Rakstiet no sistēmas teknes:** Noklikšķiniet uz Meron ikonas sistēmas teknē un izvēlieties **Jauns ziņojums**, lai atvērtu sastādītāju, neatverot iesūtni.
+- **Saglabājiet vietu katrā cilnē:** Pārslēdzieties starp sarakstēm, nezaudējot ritināšanas pozīciju, iezīmēto tekstu vai nepabeigto ievadi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML lasītājs</Badge>
+
+## Atveriet saglabātos e-pastus bez importēšanas
+
+Veiciet dubultklikšķi uz saglabāta `.eml` faila, lai to atvērtu īpašā lasītāja logā. Lasiet noformēto ziņojumu, pārbaudiet pielikumus un aplūkojiet galvenes, nepievienojot ziņojumu nevienam kontam.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Meron patstāvīgais EML lasītāja logs ar formatētu ceturkšņa pārskatu, sūtītāja metadatiem, datumu, HTML/parastā teksta pārslēgiem un lejupielādējamām pielikumu kartītēm"
+  caption="Priekšskatiet saglabātos .eml failus tieši no diska ar pilnu HTML stilu, galvenēm un pielikumiem."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Sastādītājs un platforma</Badge>
+
+## Saišu dialogs, dēļa saīsnes un sistēmas uzlabojumi
+
+Ziņojumu sastādītājs, dēļi un datora atjauninājumi ir saņēmuši arī vairākus uzlabojumus:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron sastādītājs ar formatēšanas rīkjoslu un jauno saites ievietošanas dialoglodziņu ar saites URL ievadi un pogu Saglabāt"
+  caption="Ievietojiet un pielāgojiet hipersaites ar jauno sastādītāja saišu dialogu (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Saišu dialogs sastādītājā:** Nospiediet <kbd>⌘K</kbd> (vai <kbd>Ctrl+K</kbd>) vai noklikšķiniet uz saites ikonas rīkjoslā, lai ievietotu vai rediģētu saiti ar pielāgotu tekstu un mērķa URL.
+- **Atzīmēt dēļa kolonnu kā izlasītu:** Noklikšķiniet ar peles labo pogu uz Kanban dēļa kolonnas galvenes, lai visus šīs kolonnas ziņojumus uzreiz atzīmētu kā izlasītus.
+- **Vienotas melnrakstu izvēlnes:** Rediģēšanas un atmešanas darbības tagad izmanto vienotu izvēlņu stilu ziņojumu burbuļos, sarakstes rindās un sastādītājā.
+- **PolicyKit operētājsistēmā Linux:** Apstipriniet datora atjauninājumu instalēšanu ar drošu PolicyKit uzvedni, nepalaižot pašu Meron ar administratora tiesībām.
+- **Drošības labojumi:** Šis laidiens nostiprina to, kā Meron apstrādā e-pasta saites, kešatmiņā saglabātos pielikumus un piekļuvi sistēmas izpildes apdarinātājiem no e-pasta satura.
+
+</PostSection>
+
+<ReleaseCTA heading="Izmēģiniet Meron 0.5.0" text="Lejupielādējiet Meron 0.5.0, lai aizsargātu saziņu ar OpenPGP, strādātu vairākos logos un atvērtu lokālos EML failus. Meron ir bezmaksas un atvērtā koda programma." download="Lejupielādēt Meron" changelog="Skatīt izmaiņu žurnālu" github="GitHub laidieni" />

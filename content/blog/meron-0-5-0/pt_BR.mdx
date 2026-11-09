@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: Criptografia OpenPGP, Janelas Separadas e Leitor EML Independente"
+publishedAt: "2026-11-09"
+readingTime: "Leitura de 4 min"
+summary: "Envie e receba e-mails criptografados de ponta a ponta com OpenPGP e Autocrypt, mova conversas e rascunhos para janelas separadas e visualize arquivos EML diretamente na sua área de trabalho."
+highlights: ["Criptografia de e-mail OpenPGP com troca de chaves Autocrypt","Janelas separadas para conversas e rascunhos","Leitor de arquivos EML independente com suporte a anexos","Janela de nova mensagem a partir da bandeja do sistema","Abas de conversa que mantêm sua posição ao alternar","Caixa de diálogo no editor para inserir e editar links","Marcar todas as mensagens de uma coluna Kanban como lidas","Autorização PolicyKit para atualizações de desktop no Linux"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Lançamento · v0.5.0"
+---
+
+<PostSection>
+
+O Meron 0.5.0 adiciona criptografia de e-mail com OpenPGP, janelas separadas para conversas e rascunhos, e um leitor para arquivos `.eml` salvos. Mantenha um e-mail de referência ao lado do rascunho que está escrevendo, abra o editor a partir da bandeja do sistema e alterne entre abas sem perder sua posição.
+
+<PlatformNote>Os recursos abaixo estão disponíveis na versão para computador 0.5.0. A autorização via PolicyKit se aplica a atualizações no Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Segurança e Privacidade</Badge>
+
+## Criptografia de ponta a ponta OpenPGP com Autocrypt
+
+Envie e receba e-mails criptografados de ponta a ponta com OpenPGP. O Autocrypt compartilha chaves públicas nos cabeçalhos de e-mail para permitir que clientes compatíveis troquem mensagens criptografadas sem complicações.
+
+Comece em **Configurações → E-mail criptografado**. Gere um par de chaves para a sua conta ou importe suas chaves secretas existentes do GnuPG, Thunderbird ou OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Configurações do Meron mostrando opções de e-mail criptografado, controle de Autocrypt ao compor, gerenciamento de chaves de contatos e servidores de busca como WKD e keys.openpgp.org"
+  caption="Gerencie chaves OpenPGP, padrões do Autocrypt e descoberta de chaves em Configurações → E-mail criptografado."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Troca Autocrypt
+
+</CardTitle>
+
+Compartilha sua chave pública nos cabeçalhos de e-mail e armazena as chaves recebidas de contatos que utilizam clientes compatíveis.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Descoberta de chaves
+
+</CardTitle>
+
+Consulte a chave pública de um contato via Web Key Directory (WKD) ou em servidores como keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Armazenamento criptografado
+
+</CardTitle>
+
+Chaves e mensagens descriptografadas são guardadas em um banco de dados SQLCipher criptografado. Anexos descriptografados usam uma pasta de sessão temporária excluída ao sair do Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Escolha a criptografia no editor:** Quando o Meron tiver a chave de todos os destinatários, você poderá enviar uma mensagem criptografada. Use o ícone de cadeado para ativar ou desativar a criptografia em cada mensagem, ou deixe-a habilitada por padrão quando houver chaves disponíveis. Respostas a tópicos criptografados usam criptografia automaticamente.
+- **Verifique assinaturas e status das chaves:** Selos nas mensagens informam se o e-mail recebido é criptografado ou assinado. Os status das chaves incluem Verificada, Conhecida, Chave alterada e Revogada. Compare a impressão digital com seu contato antes de marcar a chave como verificada.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Fluxo de Trabalho Multijanela</Badge>
+
+## Espalhe conversas e rascunhos por várias telas
+
+Mantenha uma mensagem anterior ao lado da proposta que está escrevendo ou mova uma conversa para um segundo monitor. Conversas e rascunhos agora podem ser abertos em janelas independentes no desktop.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Área de trabalho do Meron com abas de conversa em estilo de navegador e menu de contexto aberto em uma aba de editor destacando Mover aba para nova janela"
+  caption="Clique com o botão direito em qualquer aba de conversa ou rascunho para destacá-la em sua própria janela independente."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Abrir conversas em novas janelas
+
+</CardTitle>
+
+Clique com o botão direito em uma conversa na caixa de entrada ou no quadro Kanban e escolha **Abrir em nova janela**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Mover abas para janelas
+
+</CardTitle>
+
+Clique com o botão direito em qualquer aba da barra de conversas e selecione **Mover aba para nova janela** para separá-la da janela principal.
+
+</Card>
+
+</CardGrid>
+
+- **Escreva a partir da bandeja do sistema:** Clique no ícone do Meron na bandeja do sistema e selecione **Nova mensagem** para abrir um editor sem precisar abrir a caixa de entrada.
+- **Mantenha seu lugar em cada aba:** Alterne entre conversas sem perder a rolagem, a seleção de texto ou o rascunho em andamento.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Leitor EML</Badge>
+
+## Abra e-mails salvos sem precisar importá-los
+
+Dê um duplo clique em um arquivo `.eml` salvo para abri-lo em uma janela de leitura dedicada. Veja a mensagem formatada, examine anexos e inspecione os cabeçalhos sem precisar associar a mensagem a uma conta.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Janela do leitor EML independente do Meron exibindo relatório de desempenho trimestral com metadados do remetente, data, alternadores HTML/Texto simples e cartões de anexos baixáveis"
+  caption="Visualize arquivos .eml salvos direto do disco com estilo HTML completo, cabeçalhos e anexos."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Editor e Plataforma</Badge>
+
+## Diálogo de links, atalhos de quadro e melhorias gerais
+
+O editor de mensagens, os quadros e as atualizações para desktop também receberam novidades:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Editor do Meron exibindo barra de ferramentas de formatação e nova caixa de diálogo de inserção de links com campo de URL e botão Salvar"
+  caption="Insira e personalize hiperlinks com a nova caixa de diálogo do editor (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Diálogo de links no editor:** Pressione <kbd>⌘K</kbd> (ou <kbd>Ctrl+K</kbd>) ou clique no ícone de link na barra de formatação para inserir ou editar links com texto visível e URLs de destino personalizados.
+- **Marcar coluna do quadro como lida:** Clique com o botão direito no cabeçalho de uma coluna no quadro Kanban para marcar todas as mensagens dela como lidas.
+- **Menus de rascunhos unificados:** As ações de editar e descartar agora utilizam menus consistentes em balões de mensagens, listas de conversas e editores.
+- **PolicyKit no Linux:** Autorize a instalação de atualizações para desktop por meio de uma janela do PolicyKit sem precisar executar o Meron com privilégios de administrador.
+- **Correções de segurança:** Esta versão reforça a forma como o Meron trata links em mensagens, anexos em cache e o acesso a manipuladores do sistema a partir do conteúdo dos e-mails.
+
+</PostSection>
+
+<ReleaseCTA heading="Experimente o Meron 0.5.0" text="Baixe o Meron 0.5.0 para proteger suas comunicações com OpenPGP, trabalhar em várias janelas e abrir arquivos EML locais. O Meron é gratuito e de código aberto." download="Baixar Meron" changelog="Ver histórico de versões" github="GitHub Releases" />

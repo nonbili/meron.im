@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP krüpteerimine, eraldiseisvad aknad ja iseseisev EML-luger"
+publishedAt: "2026-11-09"
+readingTime: "4 min lugemist"
+summary: "Saatke ja võtke vastu otsast lõpuni krüpteeritud e-kirju OpenPGP ja Autocrypti abil, viige vestlused ja mustandid eraldi akendesse ning vaadake salvestatud EML-faile otse töölaual."
+highlights: ["OpenPGP e-posti krüpteerimine koos Autocrypti võtmevahetusega","Eraldi aknad vestlustele ja mustanditele","Iseseisev EML-failide luger koos manuste toega","Uus kirja koostamise aken otse süsteemisalvest","Vestluste vahekaardid, mis säilitavad vahetamisel teie asukoha","Linkide lisamise ja muutmise dialoog kirja koostajas","Kanbani veeru kõigi kirjade märkimine loetuks","PolicyKiti autentimine Linuxi töölaua uuendustele"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Väljalase · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 lisab OpenPGP e-posti krüpteerimise, eraldi aknad vestlustele ja mustanditele ning lugeri salvestatud `.eml`-failidele. Hoidke võrdluskirja mustandi kõrval lahti, avage koostamisaken süsteemisalvest ja liikuge vahekaartide vahel ilma oma järge kaotamata.
+
+<PlatformNote>Allpool kirjeldatud funktsioonid on saadaval töölauaversioonis 0.5.0. PolicyKiti autentimine kehtib Linuxi uuendustele.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Turvalisus ja privaatsus</Badge>
+
+## Otsast lõpuni OpenPGP krüpteerimine Autocryptiga
+
+Saatke ja võtke vastu otsast lõpuni krüpteeritud e-kirju OpenPGP abil. Autocrypt jagab avalikke võtmeid automaatselt e-kirjade päistes, et toetatud rakendused saaksid vahetada krüpteeritud sõnumeid sujuvalt.
+
+Alustage valikust **Seaded → Krüpteeritud e-post**. Looge oma kontole võtmepaar või importige olemasolevad salajased võtmed GnuPG-st, Thunderbirdist või OpenKeychainist.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meroni seaded, mis näitavad krüpteeritud e-posti valikuid, Autocrypti koostamislülitit, kontaktide võtmehaldust ja võtmeotsingu servereid, sealhulgas WKD ja keys.openpgp.org"
+  caption="Hallake OpenPGP võtmeid, Autocrypti vaikeväärtusi ja võtmeotsingut jaotises Seaded → Krüpteeritud e-post."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypti vahetus
+
+</CardTitle>
+
+Jagab teie avalikku võtit e-kirjade päistes ja salvestab ühilduvatelt kontaktidelt saadud võtmed.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Võtmete otsing
+
+</CardTitle>
+
+Otsige kontakti avalikku võtit Web Key Directory (WKD) või võtmeserveri (nt keys.openpgp.org) kaudu.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Krüpteeritud talletus
+
+</CardTitle>
+
+Võtmed ja dekrüpteeritud kirjad salvestatakse krüpteeritud SQLCipheri andmebaasi. Dekrüpteeritud manused kasutavad eraldi seansikausta, mis tühjendatakse Meronist väljumisel.
+
+</Card>
+
+</CardGrid>
+
+- **Valige krüpteerimine koostajas:** Kui Meronil on võti kõigi adressaatide jaoks, saate saata krüpteeritud kirja. Kasutage tabalukuikooni krüpteerimise sisse- või väljalülitamiseks või lubage see vaikimisi, kui võtmed on olemas. Krüpteeritud vestlustele vastates kasutatakse krüpteerimist automaatselt.
+- **Kontrollige allkirju ja võtme olekut:** Kirjamärgid näitavad, kas sissetulev kiri on krüpteeritud või allkirjastatud. Võtme olekute hulka kuuluvad: Kinnitatud, Teadaolev, Võti muutunud ja Tühistatud. Enne kontakti võtme kinnitatuks märkimist võrrelge temaga sõrmejälge.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Mitme akna töövoog</Badge>
+
+## Jaotage vestlused ja mustandid mitmele ekraanile
+
+Hoidke varasemat e-kirja koostatava pakkumise kõrval või viige vestlus teisele monitorile. Vestlusi ja mustandeid saab nüüd avada eraldi töölauaakendes.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meroni töölauavaade brauseri stiilis vestlusvahekaartidega, kus koostaja vahekaardil on avatud kontekstimenüü ja esile tõstetud valik Teisalda vahekaart uude aknasse"
+  caption="Paremklõpsake suvalist vestluse või mustandi vahekaarti, et eraldada see omaette aknasse."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Avage vestlused uutes akendes
+
+</CardTitle>
+
+Paremklõpsake vestlusel postkastis või Kanbani tahvlil ja valige **Ava uues aknas**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Teisaldage vahekaardid akendesse
+
+</CardTitle>
+
+Paremklõpsake mis tahes vahekaarti vahekaardiribal ja valige **Teisalda vahekaart uude aknasse**, et eraldada see peaaknast.
+
+</Card>
+
+</CardGrid>
+
+- **Koostage süsteemisalvest:** Klõpsake Meroni ikooni süsteemisalves ja valige **Uus kiri**, et avada koostaja ilma postkasti avamata.
+- **Säilitage järg igal vahekaardil:** Liikuge vestluste vahel ilma kerimisasukohta, valitud teksti või pooleliolevat sisestust kaotamata.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML-luger</Badge>
+
+## Avage salvestatud e-kirju ilma neid importimata
+
+Topeltklõpsake salvestatud `.eml`-failil, et avada see eraldi lugeriaknas. Lugege vormindatud kirja, uurige manuseid ja kontrollige päiseid ilma kirja ühelegi kontole lisamata.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Meroni iseseisev EML-lugeri aken, mis kuvab vormindatud kvartaliaruannet koos saatja metaandmete, kuupäeva, HTML/tavateksti lülitite ja allalaaditavate manusekaartidega"
+  caption="Vaadake salvestatud .eml-faile otse kettalt koos täieliku HTML-vormingu, päiste ja manustega."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Koostaja ja platvorm</Badge>
+
+## Lingidialoog, tahvli otseteed ja süsteemi viimistlus
+
+Koostaja, tahvlid ja töölauavärskendused said samuti mitmeid täiustusi:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meroni koostaja, mis näitab vormindamise tööriistariba ja uut lingi lisamise dialoogi koos URL-i sisestusvälja ja nupuga Salvesta"
+  caption="Sisestage ja kohandage hüperlinke koostaja uue lingidialoogiga (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Koostaja lingidialoog:** Vajutage <kbd>⌘K</kbd> (või <kbd>Ctrl+K</kbd>) või klõpsake vormindusribal lingiikooni, et lisada või muuta linke koos kohandatud kuvateksti ja sihtkoha URL-iga.
+- **Kanbani veeru märkimine loetuks:** Paremklõpsake Kanbani veeru päisel, et märkida korraga kõik selle veeru kirjad loetuks.
+- **Ühtsed mustandimenüüd:** Muutmise ja loobumise toimingud kasutavad nüüd ühtseid menüüsid sõnumimullides, teemaridadel ja koostajates.
+- **PolicyKit Linuxis:** Kinnitage töölauauuenduste paigaldamine turvalise PolicyKiti viiba kaudu ilma Meronit ennast administraatoriõigustes käivitamata.
+- **Turvaparandused:** See väljalase tugevdab turvalisust seoses e-kirjade linkide, vahemällu salvestatud manuste ja kirja sisust töölaua käituskeskkonnale ligipääsuga.
+
+</PostSection>
+
+<ReleaseCTA heading="Proovi Meron 0.5.0 versiooni" text="Laadi alla Meron 0.5.0 suhtluse kaitsmiseks OpenPGP-ga, mitmes aknas töötamiseks ja kohalike EML-failide avamiseks. Meron on tasuta ja avatud lähtekoodiga." download="Laadi alla Meron" changelog="Vaata muudatuste logi" github="GitHubi väljalasked" />

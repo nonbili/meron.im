@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP-kryptering, separata fönster och fristående EML-läsare"
+publishedAt: "2026-11-09"
+readingTime: "4 min läsning"
+summary: "Skicka och ta emot end-to-end-krypterad e-post med OpenPGP och Autocrypt, flytta konversationer och utkast till separata fönster och förhandsgranska sparade EML-filer direkt på skrivbordet."
+highlights: ["OpenPGP-kryptering med Autocrypt-nyckelutbyte","Separata fönster för konversationer och utkast","Fristående EML-filläsare med stöd för bilagor","Nytt meddelandefönster direkt från aktivitetsfältet","Konversationsflikar som behåller din plats vid byte","Länkdialog i redigeraren för att infoga och redigera länkar","Markera alla meddelanden i en Kanban-kolumn som lästa","PolicyKit-auktorisering för Linux-skrivbordsuppdateringar"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Utgåva · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 lägger till OpenPGP-kryptering för e-post, separata fönster för konversationer och utkast samt en läsare för sparade `.eml`-filer. Håll ett referensmejl bredvid utkastet du skriver på, öppna redigeraren från aktivitetsfältet och växla mellan flikar utan att förlora din plats.
+
+<PlatformNote>Funktionerna nedan finns tillgängliga i skrivbordsversion 0.5.0. PolicyKit-auktorisering gäller för uppdateringar på Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Säkerhet &amp; integritet</Badge>
+
+## End-to-end-kryptering med OpenPGP och Autocrypt
+
+Skicka och ta emot end-to-end-krypterad e-post med OpenPGP. Autocrypt delar offentliga nycklar via e-posthuvuden så att kompatibla e-postklienter enkelt kan utbyta krypterade meddelanden.
+
+Börja under **Inställningar → Krypterad e-post**. Skapa ett nyckelpar för ditt konto eller importera dina befintliga privata nycklar från GnuPG, Thunderbird eller OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron-inställningar som visar alternativ för krypterad e-post, Autocrypt-växlare vid skrivande, kontakternas nyckelhantering och nyckeluppslagning inklusive WKD och keys.openpgp.org"
+  caption="Hantera OpenPGP-nycklar, Autocrypt-standarder och nyckelsökning i Inställningar → Krypterad e-post."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt-utbyte
+
+</CardTitle>
+
+Delar din offentliga nyckel i e-posthuvuden och sparar nycklar från kontakter med kompatibla klienter.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Nyckelsökning
+
+</CardTitle>
+
+Slå upp en kontakts offentliga nyckel via Web Key Directory (WKD) eller nyckelservrar som keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Krypterad lagring
+
+</CardTitle>
+
+Nycklar och avkrypterade meddelanden sparas i en krypterad SQLCipher-databas. Avkrypterade bilagor använder en separat sessionsmapp som rensas när Meron avslutas.
+
+</Card>
+
+</CardGrid>
+
+- **Välj kryptering i redigeraren:** När Meron har en nyckel för varje mottagare kan du skicka ett krypterat meddelande. Använd låsikonen för att slå på eller av kryptering för enskilda meddelanden, eller aktivera det som standard när nycklar finns. Svar i krypterade trådar krypteras automatiskt.
+- **Kontrollera signaturer och nyckelstatus:** Brickor på meddelanden visar om inkommande e-post är krypterad eller signerad. Nyckelstatusar omfattar Verifierad, Känd, Nyckel ändrad och Återkallad. Jämför fingeravtrycket med din kontakt innan du märker nyckeln som verifierad.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Flerfönsterarbetsflöde</Badge>
+
+## Fördela konversationer och utkast över flera skärmar
+
+Ha ett tidigare mejl öppet bredvid förslaget du skriver, eller flytta en konversation till en extraskärm. Konversationer och utkast kan nu öppnas i separata skrivbordsfönster.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Merons skrivbordsvy med konversationsflikar i webbläsarstil och snabbmeny öppen på en utkastflik med alternativet Flytta flik till nytt fönster markerat"
+  caption="Högerklicka på valfri konversations- eller utkastflik för att koppla loss den till ett eget fristående fönster."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Öppna trådar i nya fönster
+
+</CardTitle>
+
+Högerklicka på en konversation i inkorgen eller Kanban-tavlan och välj **Öppna i nytt fönster**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Flytta flikar till fönster
+
+</CardTitle>
+
+Högerklicka på valfri flik i flikfältet och välj **Flytta flik till nytt fönster** för att skilja den från huvudfönstret.
+
+</Card>
+
+</CardGrid>
+
+- **Skriv från aktivitetsfältet:** Klicka på Meron-ikonen i aktivitetsfältet och välj **Nytt meddelande** för att öppna redigeraren utan att behöva öppna inkorgen.
+- **Behåll din plats i varje flik:** Växla mellan konversationer utan att rullningsposition, markerad text eller påbörjad inmatning nollställs.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML-läsare</Badge>
+
+## Öppna sparade mejl utan att importera dem
+
+Dubbelklicka på en sparad `.eml`-fil för att öppna den i ett särskilt läsfönster. Läs det formaterade meddelandet, granska bilagor och inspektera rubriker utan att behöva lägga till mejlet på något konto.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Merons fristående EML-läsarfönster som visar en formaterad kvartalsrapport med avsändarmetadata, datum, väljare för HTML/ren text och nedladdningsbara bilagekort"
+  caption="Förhandsgranska sparade .eml-filer direkt från disken med fullständig HTML-formatering, rubriker och bilagor."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Redigerare &amp; Plattform</Badge>
+
+## Länkdialog, tavelsnabbval och systemförbättringar
+
+Redigeraren, tavlorna och skrivbordsuppdateringarna får också flera förbättringar:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron-redigeraren som visar formateringsverktygsfältet och den nya dialogrutan för länkinfogning med URL-fält och Spara-knapp"
+  caption="Infoga och anpassa länkar med redigerarens nya länkdialog (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Länkdialog i redigeraren:** Tryck på <kbd>⌘K</kbd> (eller <kbd>Ctrl+K</kbd>) eller klicka på länkikonen i verktygsfältet för att infoga eller redigera länkar med egen länktext och destinationsadress.
+- **Markera en Kanban-kolumn som läst:** Högerklicka på kolumnrubriken på en Kanban-tavla för att markera alla meddelanden i den kolumnen som lästa på en gång.
+- **Enhetliga utkastmenyer:** Redigerings- och raderingsåtgärder använder nu enhetliga menyer över meddelandebubblor, tradrader och redigeraren.
+- **PolicyKit på Linux:** Godkänn skrivbordsuppdateringar via en PolicyKit-dialog utan att köra själva Meron med administratörsbehörighet.
+- **Säkerhetsrättningar:** Denna utgåva skärper skyddet för hur Meron hanterar mejllänkar, cachade bilagor och åtkomst till systemfunktioner från e-postinnehåll.
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.5.0" text="Ladda ner Meron 0.5.0 för att skydda din kommunikation med OpenPGP, arbeta i flera fönster samtidigt och öppna lokala EML-filer. Meron är gratis och har öppen källkod." download="Ladda ner Meron" changelog="Visa ändringslogg" github="GitHub Releases" />

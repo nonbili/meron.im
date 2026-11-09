@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: Crittografia OpenPGP, finestre separate e lettore EML indipendente"
+publishedAt: "2026-11-09"
+readingTime: "4 min di lettura"
+summary: "Invia e ricevi e-mail crittografate end-to-end con OpenPGP e Autocrypt, sposta conversazioni e bozze in finestre separate e visualizza l'anteprima dei file EML salvati direttamente sul desktop."
+highlights: ["Crittografia e-mail OpenPGP con scambio chiavi Autocrypt","Finestre separate per conversazioni e bozze","Lettore autonomo di file EML con supporto allegati","Nuova finestra di composizione dall'area di notifica","Schede di conversazione che mantengono la posizione al passaggio","Finestra di dialogo per inserire e modificare collegamenti nel compositore","Contrassegna come letti tutti i messaggi di una colonna Kanban","Autorizzazione PolicyKit per gli aggiornamenti desktop su Linux"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Rilascio · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 introduce la crittografia e-mail con OpenPGP, finestre separate per conversazioni e bozze e un lettore dedicato ai file `.eml` salvati. Tieni un'e-mail di riferimento accanto alla bozza che stai scrivendo, apri una finestra di composizione dall'area di notifica e passa da una scheda all'altra senza perdere il punto di lettura.
+
+<PlatformNote>Le funzioni descritte sono disponibili nella versione desktop 0.5.0. L'autorizzazione PolicyKit riguarda gli aggiornamenti su Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Sicurezza e privacy</Badge>
+
+## Crittografia end-to-end OpenPGP con Autocrypt
+
+Invia e ricevi e-mail con crittografia end-to-end tramite OpenPGP. Autocrypt condivide le chiavi pubbliche attraverso le intestazioni delle e-mail per consentire ai client compatibili di scambiare messaggi crittografati in modo trasparente.
+
+Inizia da **Impostazioni → E-mail crittografata**. Genera una coppia di chiavi per il tuo account o importa le tue chiavi segrete esistenti da GnuPG, Thunderbird o OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Impostazioni di Meron che mostrano la configurazione per le e-mail crittografate, l'interruttore Autocrypt in composizione, la gestione delle chiavi dei contatti e i server di individuazione chiavi inclusi WKD e keys.openpgp.org"
+  caption="Gestisci le chiavi OpenPGP, i valori predefiniti di Autocrypt e la ricerca delle chiavi in Impostazioni → E-mail crittografata."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Scambio Autocrypt
+
+</CardTitle>
+
+Condivide la tua chiave pubblica nelle intestazioni delle e-mail e memorizza le chiavi ricevute dai contatti con client compatibili.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Individuazione chiavi
+
+</CardTitle>
+
+Cerca la chiave pubblica di un contatto tramite Web Key Directory (WKD) o su un server come keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Archiviazione crittografata
+
+</CardTitle>
+
+Le chiavi e i messaggi decrittografati sono salvati in un database SQLCipher protetto da crittografia. Gli allegati decrittografati usano una cartella di sessione separata che viene svuotata all'uscita da Meron.
+
+</Card>
+
+</CardGrid>
+
+- **Scegli la crittografia nel compositore:** Quando Meron dispone della chiave di ciascun destinatario, puoi inviare il messaggio crittografato. Usa l'icona del lucchetto per attivare o disattivare la crittografia per ogni messaggio, oppure attivala per impostazione predefinita se le chiavi sono disponibili. Le risposte ai thread crittografati applicano automaticamente la crittografia.
+- **Controlla firme e stato delle chiavi:** I badge sui messaggi segnalano se la posta in entrata è crittografata o firmata. Gli stati delle chiavi includono Verificata, Nota, Chiave modificata e Revocata. Confronta l'impronta digitale con il tuo contatto prima di contrassegnare la sua chiave come verificata.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Flusso multi-finestra</Badge>
+
+## Distribuisci conversazioni e bozze su più schermi
+
+Tieni un'e-mail precedente accanto alla proposta che stai scrivendo, oppure sposta una conversazione su un secondo monitor. Conversazioni e bozze ora possono aprirsi in finestre desktop indipendenti.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Desktop di Meron con schede di conversazione in stile browser e menu contestuale aperto su una scheda di composizione con l'opzione Sposta scheda in una nuova finestra in evidenza"
+  caption="Fai clic con il tasto destro su qualsiasi scheda di conversazione o bozza per staccarla nella propria finestra indipendente."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Apri thread in nuove finestre
+
+</CardTitle>
+
+Fai clic con il tasto destro su una conversazione nella posta in arrivo o nella bacheca Kanban e seleziona **Apri in una nuova finestra**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Sposta le schede nelle finestre
+
+</CardTitle>
+
+Fai clic con il tasto destro su qualsiasi scheda nella barra di conversazione e scegli **Sposta scheda in una nuova finestra** per staccarla dalla finestra principale.
+
+</Card>
+
+</CardGrid>
+
+- **Componi dall'area di notifica:** Fai clic sull'icona di Meron nella barra di sistema e seleziona **Nuovo messaggio** per aprire la schermata di composizione senza mostrare la posta in arrivo.
+- **Mantieni la posizione in ogni scheda:** Passa da una conversazione all'altra senza perdere posizione di scorrimento, selezione del testo o bozze incomplete.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Lettore EML</Badge>
+
+## Apri le e-mail salvate senza doverle importare
+
+Fai doppio clic su un file `.eml` salvato per aprirlo in una finestra di lettura dedicata. Leggi il messaggio formattato, visualizza gli allegati ed esamina le intestazioni senza aggiungere il messaggio a un account.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Finestra del lettore EML autonomo di Meron con un report trimestrale formattato, metadati del mittente, data, selettori HTML/Testo normale e schede degli allegati scaricabili"
+  caption="Visualizza l'anteprima dei file .eml direttamente dal disco con formattazione HTML completa, intestazioni e allegati."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Compositore e piattaforma</Badge>
+
+## Finestra di dialogo per i link, scorciatoie della bacheca e rifiniture di sistema
+
+Anche il compositore, le bacheche e gli aggiornamenti desktop ricevono utili miglioramenti:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Compositore di Meron con barra degli strumenti di formattazione e nuova finestra di dialogo per l'inserimento di collegamenti con campo URL e pulsante Salva"
+  caption="Inserisci e personalizza i collegamenti ipertestuali con la nuova finestra di dialogo del compositore (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Finestra di dialogo dei link nel compositore:** Premi <kbd>⌘K</kbd> (o <kbd>Ctrl+K</kbd>) oppure fai clic sull'icona del collegamento nella barra di formattazione per inserire o modificare link con testo visibile e URL di destinazione personalizzati.
+- **Contrassegna una colonna Kanban come letta:** Fai clic con il tasto destro sull'intestazione di una colonna della bacheca Kanban per contrassegnare come letti tutti i messaggi in essa contenuti.
+- **Menu delle bozze coerenti:** Le azioni di modifica ed eliminazione utilizzano ora menu coerenti nei fumetti dei messaggi, nelle righe delle discussioni e nei compositori.
+- **PolicyKit su Linux:** Autorizza l'installazione degli aggiornamenti desktop tramite una richiesta PolicyKit sicura senza dover avviare Meron con privilegi elevati.
+- **Correzioni di sicurezza:** Questo aggiornamento perfeziona la gestione dei collegamenti nei messaggi, degli allegati memorizzati nella cache e dell'accesso ai gestori di runtime desktop dal contenuto delle e-mail.
+
+</PostSection>
+
+<ReleaseCTA heading="Prova Meron 0.5.0" text="Scarica Meron 0.5.0 per proteggere le tue comunicazioni con OpenPGP, lavorare su più finestre contemporaneamente e aprire file EML locali. Meron è gratuito e open source." download="Scarica Meron" changelog="Vedi il changelog" github="GitHub Releases" />

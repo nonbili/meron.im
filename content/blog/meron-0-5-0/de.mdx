@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP-Verschlüsselung, separate Fenster und eigenständiger EML-Reader"
+publishedAt: "2026-11-09"
+readingTime: "4 Min. Lesezeit"
+summary: "Senden und empfangen Sie Ende-zu-Ende-verschlüsselte E-Mails mit OpenPGP und Autocrypt, öffnen Sie Konversationen und Entwürfe in separaten Fenstern und betrachten Sie gespeicherte EML-Dateien direkt auf Ihrem Desktop."
+highlights: ["OpenPGP-E-Mail-Verschlüsselung mit Autocrypt-Schlüsselaustausch","Separate Fenster für Konversationen und Entwürfe","Eigenständiger EML-Dateibetrachter mit Anhangsunterstützung","Neues Nachrichtenfenster direkt aus dem Infobereich (System Tray)","Konversations-Tabs, die Ihre Position beim Wechseln beibehalten","Link-Dialog im Composer zum Einfügen und Bearbeiten von Links","Alle Nachrichten in einer Kanban-Spalte als gelesen markieren","PolicyKit-Autorisierung für Linux-Desktop-Updates"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Release · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 bringt OpenPGP-E-Mail-Verschlüsselung, separate Fenster für Konversationen und Entwürfe sowie einen Reader für gespeicherte `.eml`-Dateien. Behalten Sie eine Referenz-E-Mail neben Ihrem Entwurf im Blick, öffnen Sie den Composer aus dem Infobereich und wechseln Sie zwischen Tabs, ohne Ihre Leseposition zu verlieren.
+
+<PlatformNote>Die folgenden Funktionen sind in Version 0.5.0 für Desktop verfügbar. Die PolicyKit-Autorisierung gilt für Linux-Updates.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Sicherheit &amp; Datenschutz</Badge>
+
+## Ende-zu-Ende-Verschlüsselung mit OpenPGP und Autocrypt
+
+Senden und empfangen Sie Ende-zu-Ende-verschlüsselte E-Mails mit OpenPGP. Autocrypt teilt öffentliche Schlüssel über E-Mail-Header, damit kompatible E-Mail-Programme verschlüsselte Nachrichten nahtlos austauschen können.
+
+Beginnen Sie unter **Einstellungen → Verschlüsselte E-Mails**. Erstellen Sie ein Schlüsselpaar für Ihr Konto oder importieren Sie bestehende private Schlüssel aus GnuPG, Thunderbird oder OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron-Einstellungen mit Optionen für verschlüsselte E-Mails, Autocrypt-Umschalter beim Verfassen, Kontaktschlüsselverwaltung und Schlüssel-Servern wie WKD und keys.openpgp.org"
+  caption="Verwalten Sie OpenPGP-Schlüssel, Autocrypt-Standardwerte und die Schlüsselsuche unter Einstellungen → Verschlüsselte E-Mails."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt-Austausch
+
+</CardTitle>
+
+Teilt Ihren öffentlichen Schlüssel in E-Mail-Headern und speichert Schlüssel von Kontakten mit kompatiblen Clients.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Schlüsselsuche
+
+</CardTitle>
+
+Finden Sie öffentliche Schlüssel von Kontakten über Web Key Directory (WKD) oder Schlüsselserver wie keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Verschlüsselter Speicher
+
+</CardTitle>
+
+Schlüssel und entschlüsselte Nachrichten werden in einer verschlüsselten SQLCipher-Datenbank gespeichert. Entschlüsselte Anhänge nutzen einen separaten Sitzungsordner, der beim Beenden von Meron geleert wird.
+
+</Card>
+
+</CardGrid>
+
+- **Verschlüsselung im Composer wählen:** Sobald Meron über einen Schlüssel für alle Empfänger verfügt, können Sie die Nachricht verschlüsselt senden. Über das Schloss-Symbol schalten Sie die Verschlüsselung für jede Nachricht ein oder aus, oder aktivieren sie standardmäßig, wenn Schlüssel vorhanden sind. Antworten auf verschlüsselte Threads werden automatisch verschlüsselt.
+- **Signaturen und Schlüsselstatus prüfen:** Badges an Nachrichten zeigen an, ob eingehende Post verschlüsselt oder signiert ist. Zu den Statusbezeichnungen gehören Verifiziert, Bekannt, Schlüssel geändert und Widerrufen. Vergleichen Sie den Fingerabdruck mit dem Kontakt, bevor Sie dessen Schlüssel als verifiziert einstufen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Multi-Fenster-Workflow</Badge>
+
+## Konversationen und Entwürfe über Bildschirme verteilen
+
+Behalten Sie eine frühere E-Mail neben dem Angebot im Blick, das Sie gerade schreiben, oder verschieben Sie eine Konversation auf einen zweiten Monitor. Konversationen und Entwürfe können jetzt in separaten Desktop-Fenstern geöffnet werden.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meron-Desktop mit Konversations-Tabs im Browser-Stil und einem geöffneten Kontextmenü auf einem Entwurfs-Tab mit hervorgehobener Option „Tab in neues Fenster verschieben“"
+  caption="Klicken Sie mit der rechten Maustaste auf einen Konversations- oder Entwurfs-Tab, um ihn in ein eigenständiges Fenster auszulagern."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Threads in neuem Fenster öffnen
+
+</CardTitle>
+
+Klicken Sie im Posteingang oder auf dem Kanban-Board mit der rechten Maustaste auf eine Konversation und wählen Sie **In neuem Fenster öffnen**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Tabs in Fenster verschieben
+
+</CardTitle>
+
+Klicken Sie mit der rechten Maustaste auf einen Tab in der Tableiste und wählen Sie **Tab in neues Fenster verschieben**, um ihn vom Hauptfenster zu trennen.
+
+</Card>
+
+</CardGrid>
+
+- **Aus dem Infobereich verfassen:** Klicken Sie auf das Meron-Icon im Infobereich (System Tray) und wählen Sie **Neue Nachricht**, um den Composer ohne den Posteingang zu öffnen.
+- **Position in jedem Tab behalten:** Wechseln Sie zwischen Konversationen, ohne Scrollposition, Textauswahl oder unfertige Eingaben zu verlieren.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML-Reader</Badge>
+
+## Gespeicherte E-Mails öffnen, ohne sie zu importieren
+
+Doppelklicken Sie auf eine gespeicherte `.eml`-Datei, um sie in einem eigenen Reader-Fenster zu öffnen. Lesen Sie formatierte Nachrichten, prüfen Sie Anhänge und untersuchen Sie Header, ohne die E-Mail einem Konto hinzuzufügen.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Eigenständiges EML-Reader-Fenster von Meron mit formatiertem Quartalsbericht, Absendermetadaten, Datum, HTML/Text-Umschaltern und herunterladbaren Anhangskarten"
+  caption="Vorschau gespeicherter .eml-Dateien direkt von der Festplatte mit vollständiger HTML-Formatierung, Headern und Anhängen."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composer &amp; Plattform</Badge>
+
+## Link-Dialog, Board-Kurzbefehle und System-Feinschliff
+
+Auch der Composer, die Boards und Desktop-Updates erhalten praktische Verbesserungen:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron-Composer mit Formatierungsleiste und neuem Link-Dialog mit URL-Eingabe und Speichern-Schaltfläche"
+  caption="Fügen Sie Hyperlinks mit dem neuen Composer-Link-Dialog (⌘K / Strg+K) ein und passen Sie Zieladressen an."
+  width={1280}
+  height={820}
+/>
+
+- **Composer-Link-Dialog:** Drücken Sie <kbd>⌘K</kbd> (oder <kbd>Strg+K</kbd>) oder klicken Sie in der Formatierungsleiste auf das Link-Symbol, um Links mit benutzerdefiniertem Text und Ziel-URLs einzufügen oder zu bearbeiten.
+- **Kanban-Spalte als gelesen markieren:** Klicken Sie mit der rechten Maustaste auf den Spaltenkopf eines Kanban-Boards, um alle Nachrichten in dieser Spalte als gelesen zu markieren.
+- **Einheitliche Entwurfs-Menüs:** Aktionen zum Bearbeiten und Verwerfen nutzen nun einheitliche Menüs über Nachrichtenblasen, Thread-Listen und Composer hinweg.
+- **PolicyKit unter Linux:** Autorisieren Sie Desktop-Updates über einen PolicyKit-Dialog, ohne Meron selbst mit erhöhten Rechten ausführen zu müssen.
+- **Sicherheitskorrekturen:** Diese Version verbessert die Behandlung von E-Mail-Links, zwischengespeicherten Anhängen und den Zugriff auf Desktop-Laufzeit-Handler aus E-Mail-Inhalten.
+
+</PostSection>
+
+<ReleaseCTA heading="Meron 0.5.0 ausprobieren" text="Laden Sie Meron 0.5.0 herunter, um Ihre Kommunikation mit OpenPGP zu schützen, in mehreren Fenstern zu arbeiten und lokale EML-Dateien zu öffnen. Meron ist kostenlos und quelloffen." download="Meron herunterladen" changelog="Changelog ansehen" github="GitHub Releases" />

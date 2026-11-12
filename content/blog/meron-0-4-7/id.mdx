@@ -1,0 +1,103 @@
+---
+slug: "meron-0-4-7"
+version: "0.4.7"
+title: "Meron 0.4.7: Ubah Pencarian Tersimpan Menjadi Kolom Kanban"
+publishedAt: "2026-10-22"
+readingTime: "4 mnt waktu baca"
+summary: "Bangun papan Anda di seputar email yang penting: ubah pencarian bergaya Gmail menjadi kolom Kanban langsung. Ditambah kalender lokal, tanggapan undangan langsung, dan pemindahan utas lintas akun."
+highlights: ["Kolom Kanban dari pencarian tersimpan dan operator pencarian bergaya Gmail","Kalender lokal untuk acara, undangan diterima, dan tugas jatuh tempo","Kartu undangan kalender interaktif dengan tombol Terima, Mungkin, dan Tolak","Pemindahan utas lintas akun dan pintasan folder terbaru","Simpan dan salin gambar sebaris dari pesan dan galeri"]
+image: "/screenshots/kanban-board.png"
+releaseBadge: "Rilis · v0.4.7"
+platformsSubtitle: "Desktop 0.4.7 · iOS dan Android 0.4.6"
+---
+
+<PostSection>
+
+Email belum dibaca dari klien utama. Faktur dari bulan lalu. Utas berbintang yang membutuhkan balasan. Dengan kolom pencarian tersimpan, Anda dapat memberi masing-masing tempat khusus di papan Kanban Anda. Cukup simpan pencarian sekali, dan kolom akan terus diperbarui secara otomatis seiring masuknya email.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanban &amp; Pencarian</Badge>
+
+## Ubah pencarian menjadi kolom langsung
+
+Folder memberi email satu tempat tetap. Pencarian tersimpan memberi Anda lebih banyak sudut pandang: berdasarkan pengirim, tanggal, status dibaca, atau kombinasi apa pun yang cocok dengan alur kerja Anda.
+
+Mulailah dengan pencarian menggunakan **operator bergaya Gmail** yang sudah tidak asing lagi atau pembuat pencarian visual, lalu pilih *Simpan pencarian sebagai kolom*. Utas yang cocok akan muncul dalam kolom langsung, dengan kueri yang dapat diedit di bawah tajuknya.
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Operator pencarian yang didukung
+
+</CardTitle>
+
+<CodeList>
+
+`from:alice` `to:team@example.com` `subject:"Q4 Roadmap"` `is:unread` `is:read` `is:starred` `after:2026-10-01` `before:2026-11-01` `from:(alice OR bob)`
+
+</CodeList>
+
+</Card>
+
+- **Cari tanpa mengetik operator:** Buka opsi pencarian untuk memfilter berdasarkan pengirim, penerima, subjek, kata kunci, rentang tanggal, atau kolom target.
+- **Persempit papan tanpa kehilangan pencarian tersimpan:** Pencarian tingkat papan menambahkan filter ke setiap kolom pencarian tersimpan tanpa mengubah kueri aslinya.
+
+<BlogImage src="/screenshots/blog/meron-047-saved-search.png" alt="Popover opsi pencarian dengan bidang filter dan opsi untuk menyimpan pencarian sebagai kolom Kanban" caption="Susun pencarian, lalu simpan sebagai kolom di papan Anda." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="CalendarDays">Kalender &amp; Undangan</Badge>
+
+## Kalender yang mengutamakan lokal dan kartu undangan interaktif
+
+Undangan kalender kini muncul sebagai kartu di dalam percakapan, lengkap dengan waktu acara dalam zona waktu lokal Anda, lokasi, penyelenggara, dan tanggapan peserta. Anda dapat menanggapi undangan tanpa harus keluar dari utas.
+
+<BlogImage src="/screenshots/blog/meron-047-invite-card.png" alt="Kartu undangan kalender dirender di dalam tampilan percakapan dengan tombol Terima, Mungkin, dan Tolak" caption="Lihat detail acara dan tanggapi langsung di dalam percakapan." width={1280} height={820} />
+
+- **Terima, Mungkin, atau Tolak seketika:** Tanggapan Anda dikirimkan ke penyelenggara dan dicatat di Meron.
+- **Pembaruan otomatis dari penyelenggara:** Meron otomatis menerapkan perubahan jadwal dan pembatalan, termasuk pembaruan pada rapat berulang individual.
+- **Kalender lokal bulanan:** Aktifkan Kalender di Pengaturan untuk melihat acara pribadi, undangan yang diterima, dan tenggat waktu tugas secara bersamaan. Buat acara sepanjang hari, berwaktu, atau berulang, dan lompat kembali dari acara ke utas email asalnya.
+
+Kalender Anda disimpan dengan aman di perangkat Anda dan disertakan dalam cadangan terenkripsi Meron.
+
+<BlogImage src="/screenshots/blog/meron-047-calendar-view.png" alt="Tampilan kalender bulanan di Meron menampilkan acara dan tugas yang dijadwalkan" caption="Acara pribadi, undangan diterima, dan tenggat waktu tugas dalam satu tampilan." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ArrowRightLeft">Penyortiran Utas</Badge>
+
+## Pemindahan lintas akun dan pintasan folder terbaru
+
+Perlu mengarsipkan utas di akun lain? Anda kini dapat **memindahkan utas antar akun email yang berbeda** di desktop maupun perangkat seluler — baik dengan menyeret kartu antar kolom akun di papan Kanban atau memilih *Pindahkan ke…* dari menu utas.
+
+Meron menyalin pesan ke tujuan dan memverifikasi kelengkapan transfer sebelum memindahkan salinan asli ke Sampah.
+
+Menu *Pindahkan ke* dan *Salin ke* kini menampilkan **pintasan tujuan terbaru** di bagian atas, membuat folder yang sering Anda gunakan lebih cepat dijangkau.
+
+<BlogImage src="/screenshots/blog/meron-047-cross-account-move.png" alt="Menu konteks utas menampilkan tindakan Pindahkan ke... dan opsi folder tujuan" caption="Pindahkan utas ke akun lain atau pilih folder terbaru." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ImageIcon">Media &amp; Penyempurnaan</Badge>
+
+## Simpan dan salin gambar sebaris, plus pembaruan desktop
+
+Pengguna desktop juga mendapatkan sejumlah peningkatan praktis:
+
+- **Simpan &amp; salin gambar sebaris:** Klik kanan gambar dalam pesan atau buka di galeri media untuk menyimpannya atau menyalinnya ke papan klip.
+- **Menu dan dialog yang lebih rapi:** Menu dan dialog memiliki fokus keyboard yang lebih konsisten, dengan sorotan submenu yang lebih jelas dan tanpa kedipan.
+- **Pesan kesalahan lebih jelas dan lebih banyak terjemahan:** Kegagalan pemindahan dan penyalinan menyertakan detail lebih rinci tentang penyebabnya. Aplikasi seluler juga mendapatkan terjemahan yang diperluas di seluruh 19 bahasa yang didukung.
+
+</PostSection>
+
+<ReleaseCTA heading="Coba Meron 0.4.7" text="Meron gratis, bersumber terbuka, dan mengutamakan lokal untuk macOS, Windows, Linux, iOS, dan Android. Unduh rilis terbaru atau baca catatan rilis lengkapnya." download="Unduh Meron" changelog="Lihat catatan perubahan" github="Rilis GitHub" />

@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: OpenPGP-versleuteling, losse vensters en losstaande EML-lezer"
+publishedAt: "2026-11-09"
+readingTime: "4 min leestijd"
+summary: "Verzend en ontvang end-to-end versleutelde e-mail met OpenPGP en Autocrypt, verplaats gesprekken en concepten naar afzonderlijke vensters en bekijk opgeslagen EML-bestanden rechtstreeks op je desktop."
+highlights: ["OpenPGP-e-mailversleuteling met Autocrypt-sleuteluitwisseling","Afzonderlijke vensters voor gesprekken en concepten","Losstaande EML-bestandslezer met ondersteuning voor bijlagen","Nieuw berichtvenster vanuit het systeemvak","Gesprekstabbladen die je positie onthouden bij het wisselen","Koppelingendialoog in de editor voor het invoegen en bewerken van links","Alle berichten in een Kanbankolom als gelezen markeren","PolicyKit-autorisatie voor Linux-desktopupdates"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Release · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 voegt OpenPGP-e-mailversleuteling toe, afzonderlijke vensters voor gesprekken en concepten, en een lezer voor opgeslagen `.eml`-bestanden. Houd een referentie-e-mail geopend naast je concept, open een editor direct vanuit het systeemvak en wissel tussen tabbladen zonder je positie kwijt te raken.
+
+<PlatformNote>De onderstaande functies zijn beschikbaar in desktop 0.5.0. PolicyKit-autorisatie is van toepassing op Linux-updates.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Beveiliging &amp; Privacy</Badge>
+
+## End-to-end OpenPGP-versleuteling met Autocrypt
+
+Verzend en ontvang end-to-end versleutelde e-mail met OpenPGP. Autocrypt deelt openbare sleutels via e-mailheaders om compatibele clients automatisch versleutelde berichten te laten uitwisselen.
+
+Begin onder **Instellingen → Versleutelde e-mail**. Genereer een sleutelpaar voor je account of importeer je bestaande geheime sleutels uit GnuPG, Thunderbird of OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Meron-instellingen met instellingen voor Versleutelde e-mail, Autocrypt-schakelaar, contactsleutelbeheer en sleuteldetectieservers waaronder WKD en keys.openpgp.org"
+  caption="Beheer OpenPGP-sleutels, Autocrypt-standaarden en sleuteldetectie in Instellingen → Versleutelde e-mail."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Autocrypt-uitwisseling
+
+</CardTitle>
+
+Deelt je openbare sleutel in e-mailheaders en slaat ontvangen sleutels op van contacten met compatibele clients.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Sleuteldetectie
+
+</CardTitle>
+
+Zoek openbare sleutels op via Web Key Directory (WKD) of sleutelservers zoals keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Versleutelde opslag
+
+</CardTitle>
+
+Sleutels en ontsleutelde berichten worden opgeslagen in een versleutelde SQLCipher-database. Ontsleutelde bijlagen gebruiken een tijdelijke sessiemap die wordt gewist zodra Meron afsluit.
+
+</Card>
+
+</CardGrid>
+
+- **Kies versleuteling in de editor:** Zodra Meron een sleutel heeft voor elke ontvanger, kun je een versleuteld bericht verzenden. Gebruik de slotschakelaar om versleuteling per bericht in of uit te schakelen, of schakel dit standaard in wanneer sleutels beschikbaar zijn. Antwoorden op versleutelde e-maillijnen worden automatisch versleuteld.
+- **Controleer handtekeningen en sleutelstatus:** Berichtbadges tonen of inkomende e-mail is versleuteld of ondertekend. Sleutelstatussen omvatten Geverifieerd, Bekend, Sleutel gewijzigd en Ingetrokken. Vergelijk de vingerafdruk met je contactpersoon voordat je een sleutel als geverifieerd markeert.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Multi-venster werkstroom</Badge>
+
+## Verdeel gesprekken en concepten over meerdere schermen
+
+Houd een eerdere e-mail open naast het voorstel dat je schrijft, of verplaats een gesprek naar een tweede beeldscherm. Gesprekken en concepten kunnen nu in afzonderlijke desktopvensters worden geopend.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Meron-desktop met gesprekstabbladen in browserstijl en een contextmenu op een concepttabblad met de optie Tabblad verplaatsen naar nieuw venster gemarkeerd"
+  caption="Klik met de rechtermuisknop op een gespreks- of concepttabblad om het los te koppelen naar een eigen venster."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Open gesprekken in een nieuw venster
+
+</CardTitle>
+
+Klik met de rechtermuisknop op een gesprek in je postvak of op je Kanbanbord en kies **Openen in nieuw venster**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Verplaats tabbladen naar vensters
+
+</CardTitle>
+
+Klik met de rechtermuisknop op een tabblad in de gespreksbalk en kies **Tabblad verplaatsen naar nieuw venster** om het los te maken van het hoofdvenster.
+
+</Card>
+
+</CardGrid>
+
+- **Schrijf vanuit het systeemvak:** Klik op het Meron-icoon in het systeemvak en kies **Nieuw bericht** om een editor te openen zonder eerst je postvak te openen.
+- **Onthoud je positie per tabblad:** Wissel tussen gesprekken zonder je scrollpositie, tekstselectie of onvoltooide invoer kwijt te raken.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">EML-lezer</Badge>
+
+## Open opgeslagen e-mails zonder ze te importeren
+
+Dubbelklik op een opgeslagen `.eml`-bestand om het direct te openen in een speciaal lezersvenster. Bekijk het opgemaakte bericht, inspecteer bijlagen en controleer headers zonder het bericht aan een account toe te voegen.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Losstaand EML-lezersvenster van Meron met een opgemaakt kwartaalrapport, metadata van afzender, datum, weergave-opties voor HTML/tekst en downloadbare bijlagen"
+  caption="Bekijk opgeslagen .eml-bestanden rechtstreeks vanaf schijf met volledige HTML-opmaak, headers en bijlagen."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Editor &amp; Platform</Badge>
+
+## Koppelingendialoog, bordsneltoetsen en systeemverfijningen
+
+De berichteditor, borden en desktopupdates kregen diverse verfijningen:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Meron-editor met de opmaakwerkbalk en de nieuwe dialoog voor het invoegen van links met URL-invoerveld en Opslaan-knop"
+  caption="Voeg hyperlinks in en pas weergavetekst en doel-URL's aan met de nieuwe linkdialoog (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Koppelingendialoog in editor:** Druk op <kbd>⌘K</kbd> (of <kbd>Ctrl+K</kbd>) of klik op het link-icoon in de werkbalk om links in te voegen of te bewerken met aangepaste weergavetekst en doeladressen.
+- **Markeer een kolom als gelezen:** Klik met de rechtermuisknop op de kop van een Kanbankolom om alle berichten in die kolom als gelezen te markeren.
+- **Consistente conceptmenu's:** Bewerkings- en verwijderacties gebruiken nu dezelfde menu's in berichtbubbels, e-maillijnen en de editor.
+- **PolicyKit op Linux:** Autoriseer desktopupdates via een PolicyKit-venster zonder Meron zelf met verhoogde rechten uit te voeren.
+- **Beveiligingsupdates:** Deze versie versterkt de afhandeling van links in e-mails, gecachte bijlagen en de toegang tot desktop-runtimefuncties vanuit e-mailinhoud.
+
+</PostSection>
+
+<ReleaseCTA heading="Probeer Meron 0.5.0" text="Download Meron 0.5.0 om je communicatie te beveiligen met OpenPGP, in meerdere vensters te werken en lokale EML-bestanden te openen. Meron is gratis en open source." download="Meron downloaden" changelog="Bekijk changelog" github="GitHub-releases" />

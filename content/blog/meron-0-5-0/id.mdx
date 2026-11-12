@@ -1,0 +1,175 @@
+---
+slug: "meron-0-5-0"
+version: "0.5.0"
+title: "Meron 0.5.0: Enkripsi OpenPGP, Jendela Terpisah, dan Pembaca EML Mandiri"
+publishedAt: "2026-11-09"
+readingTime: "4 mnt waktu baca"
+summary: "Kirim dan terima email terenkripsi ujung-ke-ujung dengan OpenPGP dan Autocrypt, pindahkan percakapan dan draf ke jendela terpisah, serta pratinjau berkas EML tersimpan langsung di desktop Anda."
+highlights: ["Enkripsi email OpenPGP dengan pertukaran kunci Autocrypt","Jendela terpisah untuk percakapan dan draf","Pembaca berkas EML mandiri dengan dukungan lampiran","Jendela pesan baru dari baki sistem (system tray)","Tab percakapan yang menjaga posisi Anda saat beralih","Dialog tautan komposer untuk menyisipkan dan mengedit tautan","Tandai semua pesan di kolom Kanban sebagai telah dibaca","Otorisasi PolicyKit untuk pembaruan desktop Linux"]
+image: "/screenshots/blog/meron-050-openpgp.png"
+releaseBadge: "Rilis · v0.5.0"
+---
+
+<PostSection>
+
+Meron 0.5.0 menambahkan enkripsi email OpenPGP, jendela terpisah untuk percakapan dan draf, serta pembaca berkas `.eml` tersimpan. Buka email referensi di samping draf Anda, buka komposer langsung dari baki sistem, dan beralih antar tab tanpa kehilangan posisi Anda.
+
+<PlatformNote>Fitur-fitur di bawah ini tersedia di desktop 0.5.0. Otorisasi PolicyKit berlaku untuk pembaruan Linux.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Lock">Keamanan &amp; Privasi</Badge>
+
+## Enkripsi ujung-ke-ujung OpenPGP dengan Autocrypt
+
+Kirim dan terima email terenkripsi ujung-ke-ujung dengan OpenPGP. Autocrypt membagikan kunci publik melalui header email untuk membantu klien yang kompatibel bertukar pesan terenkripsi secara otomatis.
+
+Mulai dari **Pengaturan → Email terenkripsi**. Buat pasangan kunci untuk akun Anda atau impor kunci rahasia yang ada dari GnuPG, Thunderbird, atau OpenKeychain.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-openpgp.png"
+  alt="Pengaturan Meron menampilkan pengaturan Email terenkripsi, tombol komposisi Autocrypt, manajemen kunci kontak, dan server penemuan kunci termasuk WKD dan keys.openpgp.org"
+  caption="Kelola kunci OpenPGP, default Autocrypt, dan penemuan kunci di Pengaturan → Email terenkripsi."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid columns={3}>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Lock" size={16} />Pertukaran Autocrypt
+
+</CardTitle>
+
+Membagikan kunci publik Anda di header email dan menyimpan kunci yang diterima dari kontak dengan klien yang kompatibel.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Penemuan kunci
+
+</CardTitle>
+
+Cari kunci publik kontak melalui Web Key Directory (WKD) atau server kunci seperti keys.openpgp.org.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ShieldCheck" size={16} />Penyimpanan terenkripsi
+
+</CardTitle>
+
+Kunci dan pesan yang didekripsi disimpan dalam basis data SQLCipher terenkripsi. Lampiran yang didekripsi menggunakan folder sesi sementara yang dihapus saat Meron ditutup.
+
+</Card>
+
+</CardGrid>
+
+- **Pilih enkripsi di komposer:** Setelah Meron memiliki kunci untuk setiap penerima, Anda dapat mengirim pesan terenkripsi. Gunakan tombol alih gembok untuk menyalakan atau mematikan enkripsi untuk tiap pesan, atau aktifkan secara default jika kunci tersedia. Balasan untuk utas terenkripsi otomatis menggunakan enkripsi.
+- **Periksa tanda tangan dan status kunci:** Lencana pesan menunjukkan apakah email masuk terenkripsi atau ditandatangani. Status kunci mencakup Terverifikasi, Diketahui, Kunci berubah, dan Dicabut. Bandingkan sidik jari kunci dengan kontak Anda sebelum menandainya sebagai terverifikasi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Alur Kerja Multi-Jendela</Badge>
+
+## Bentangkan percakapan dan draf di beberapa layar
+
+Buka email sebelumnya di samping proposal yang sedang Anda tulis, atau pindahkan percakapan ke monitor kedua. Percakapan dan draf kini dapat dibuka di jendela desktop terpisah.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-tabs-window.png"
+  alt="Desktop Meron menampilkan tab percakapan bergaya peramban dengan menu konteks terbuka pada tab komposer yang menyorot opsi Pindahkan tab ke jendela baru"
+  caption="Klik kanan pada tab percakapan atau draf mana saja untuk memisahkannya ke jendela mandiri baru."
+  width={1280}
+  height={820}
+/>
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="AppWindow" size={16} />Buka utas di jendela baru
+
+</CardTitle>
+
+Klik kanan percakapan di kotak masuk atau papan Kanban Anda dan pilih **Buka di jendela baru**.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="ArrowRightLeft" size={16} />Pindahkan tab ke jendela
+
+</CardTitle>
+
+Klik kanan tab mana saja di bilah tab percakapan dan pilih **Pindahkan tab ke jendela baru** untuk memisahkannya dari jendela utama.
+
+</Card>
+
+</CardGrid>
+
+- **Menulis dari baki sistem:** Klik ikon Meron di baki sistem dan pilih **Pesan Baru** untuk membuka komposer tanpa harus membuka kotak masuk terlebih dahulu.
+- **Jaga posisi Anda di setiap tab:** Beralih antar percakapan tanpa kehilangan posisi gulir, pilihan teks, atau draf yang belum selesai.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="FileText">Pembaca EML</Badge>
+
+## Buka email tersimpan tanpa mengimpornya
+
+Klik dua kali berkas `.eml` yang tersimpan untuk membukanya di jendela pembaca khusus. Baca pesan terformat, periksa lampiran, dan lihat header tanpa perlu menambahkan berkas ke akun email.
+
+<BlogImage
+  src="/screenshots/blog/meron-050-eml-reader.png"
+  alt="Jendela pembaca EML mandiri Meron menampilkan laporan performa triwulanan terformat dengan metadata pengirim, tanggal, tombol HTML/Teks biasa, dan kartu lampiran yang dapat diunduh"
+  caption="Pratinjau berkas .eml tersimpan langsung dari disk dengan gaya HTML lengkap, header, dan lampiran."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Komposer &amp; Platform</Badge>
+
+## Dialog tautan, pintasan papan, dan peningkatan sistem
+
+Komposer, papan, dan pembaruan desktop juga mendapat sejumlah penyempurnaan:
+
+<BlogImage
+  src="/screenshots/blog/meron-050-link-dialog.png"
+  alt="Komposer Meron menampilkan bilah alat pemformatan dan dialog penyisipan Tautan baru dengan input URL Tautan dan tombol Simpan"
+  caption="Sisipkan dan sesuaikan tujuan hyperlink dengan dialog tautan komposer baru (⌘K / Ctrl+K)."
+  width={1280}
+  height={820}
+/>
+
+- **Dialog tautan komposer:** Tekan <kbd>⌘K</kbd> (atau <kbd>Ctrl+K</kbd>) atau klik ikon tautan di bilah alat pemformatan untuk menyisipkan atau mengedit tautan dengan teks tampilan dan URL tujuan kustom.
+- **Tandai kolom papan sebagai dibaca:** Klik kanan tajuk kolom papan Kanban untuk menandai semua pesan di kolom tersebut sebagai telah dibaca.
+- **Menu draf yang konsisten:** Tindakan edit dan hapus kini menggunakan menu yang konsisten di gelembung pesan, baris utas, dan komposer.
+- **PolicyKit di Linux:** Otorisasi pemasangan pembaruan desktop melalui dialog PolicyKit tanpa harus menjalankan Meron dengan hak akses root.
+- **Peningkatan keamanan:** Rilis ini memperketat penanganan tautan email, lampiran ter-cache, dan akses ke fungsi runtime desktop dari konten email.
+
+</PostSection>
+
+<ReleaseCTA heading="Coba Meron 0.5.0" text="Unduh Meron 0.5.0 untuk mengamankan komunikasi Anda dengan OpenPGP, bekerja di beberapa jendela, dan membuka berkas EML lokal. Meron gratis dan bersumber terbuka." download="Unduh Meron" changelog="Lihat catatan perubahan" github="Rilis GitHub" />

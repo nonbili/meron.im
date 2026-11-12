@@ -121,6 +121,24 @@ export const BLOG_INDEX_STRINGS: Record<Locale, BlogIndexStrings> = {
     readPost: "Lasīt rakstu",
     allPosts: "Visi raksti",
   },
+  id: {
+    title: "Blog",
+    description: "Catatan rilis, ulasan mendalam, dan kabar terbaru dari pembuatan klien email yang lebih tenang dan mengutamakan lokal.",
+    readPost: "Baca artikel",
+    allPosts: "Semua artikel",
+  },
+  nl: {
+    title: "Blog",
+    description: "Releasenotes, diepgaande artikelen en updates over het bouwen van een rustigere, lokaal-eerst e-mailclient.",
+    readPost: "Lees bericht",
+    allPosts: "Alle berichten",
+  },
+  uk: {
+    title: "Блог",
+    description: "Примітки до випусків, детальні огляди та новини розробки спокійнішого поштового клієнта з локальним збереженням.",
+    readPost: "Читати допис",
+    allPosts: "Усі дописи",
+  },
 };
 
 

@@ -5,23 +5,26 @@ import en from "./locales/en.json";
 import es from "./locales/es.json";
 import et from "./locales/et.json";
 import fr from "./locales/fr.json";
+import id from "./locales/id.json";
 import it from "./locales/it.json";
 import ja from "./locales/ja.json";
 import ko from "./locales/ko.json";
 import lv from "./locales/lv.json";
+import nl from "./locales/nl.json";
 import pl from "./locales/pl.json";
 import pt from "./locales/pt.json";
 import pt_BR from "./locales/pt_BR.json";
 import ru from "./locales/ru.json";
 import sv from "./locales/sv.json";
 import tr from "./locales/tr.json";
+import uk from "./locales/uk.json";
 import vi from "./locales/vi.json";
 import zh_Hans from "./locales/zh_Hans.json";
 import zh_Hant from "./locales/zh_Hant.json";
 
 export const locales = [
-  "ar", "de", "el", "en", "es", "et", "fr", "it", "ja", "ko",
-  "lv", "pl", "pt", "pt_BR", "ru", "sv", "tr", "vi", "zh_Hans", "zh_Hant"
+  "ar", "de", "el", "en", "es", "et", "fr", "id", "it", "ja", "ko",
+  "lv", "nl", "pl", "pt", "pt_BR", "ru", "sv", "tr", "uk", "vi", "zh_Hans", "zh_Hant"
 ] as const;
 
 export type Locale = (typeof locales)[number];
@@ -36,24 +39,27 @@ export const localeNames: Record<Locale, string> = {
   es: "Español",
   et: "Eesti",
   fr: "Français",
+  id: "Bahasa Indonesia",
   it: "Italiano",
   ja: "日本語",
   ko: "한국어",
   lv: "Latviešu",
+  nl: "Nederlands",
   pl: "Polski",
   pt: "Português",
   pt_BR: "Português (Brasil)",
   ru: "Русский",
   sv: "Svenska",
   tr: "Türkçe",
+  uk: "Українська",
   vi: "Tiếng Việt",
   zh_Hans: "简体中文",
   zh_Hant: "繁體中文",
 };
 
 const dictionaries: Record<Locale, Record<string, string>> = {
-  ar, de, el, en, es, et, fr, it, ja, ko,
-  lv, pl, pt, pt_BR, ru, sv, tr, vi, zh_Hans, zh_Hant
+  ar, de, el, en, es, et, fr, id, it, ja, ko,
+  lv, nl, pl, pt, pt_BR, ru, sv, tr, uk, vi, zh_Hans, zh_Hant
 };
 
 export function getTranslations(locale: Locale) {

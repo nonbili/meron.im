@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Belum Dibaca Sekilas, Ditandatangani Tanpa Enkripsi"
+publishedAt: "2026-11-12"
+readingTime: "3 mnt waktu baca"
+summary: "Jumlah pesan belum dibaca di Dock macOS, tanda tangan OpenPGP untuk email tanpa enkripsi, dan tombol alih untuk tanda tangan email Anda. Meron 0.5.1 juga menghadirkan tema gelap yang lebih kaya dan tindakan notifikasi Android yang dapat disesuaikan."
+highlights: ["Jumlah email belum dibaca pada ikon Dock macOS","Tandatangani email tanpa enkripsi dengan subkunci tanda tangan OpenPGP","Impor cadangan kunci OpenKeychain","Aktifkan atau nonaktifkan tanda tangan email untuk setiap balasan atau draf","Tautan otomatis untuk URL teks biasa","Bayangan lebih halus dan permukaan berlapis pada tema gelap desktop","Pilih tindakan notifikasi Android, termasuk Hapus","Terjemahan bahasa Belanda, Ukraina, dan Indonesia"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Rilis · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 memberi Anda lebih banyak kemudahan dalam mengelola email tanpa mengganggu alur kerja: pantau pesan yang belum dibaca dari Dock macOS, tandatangani email meskipun tidak dapat dienkripsi, dan hilangkan salam penutup biasa pada balasan singkat.
+
+<PlatformNote>Lencana Dock adalah fitur macOS. Pengaturan tanda tangan dan pembaruan tema gelap adalah peningkatan desktop; pengaturan tindakan notifikasi berlaku untuk Android. Tiga bahasa baru tersedia di desktop dan perangkat seluler.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Periksa email belum dibaca dari Dock
+
+Ikon Dock macOS Meron kini menampilkan jumlah pesan belum dibaca di kotak masuk Anda. Anda dapat melihat apakah ada email yang memerlukan perhatian selagi bekerja di aplikasi lain.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Ikon Dock macOS Meron menampilkan jumlah pesan belum dibaca dari kotak masuk uji coba Mail Lab"
+  caption="Lencana Dock menghitung pesan yang belum dibaca di kotak masuk Anda."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Jika hitungan tidak muncul, periksa **Pengaturan Sistem → Pemberitahuan → Meron** dan izinkan lencana ikon aplikasi.
+
+Ikon aplikasi macOS kini juga lebih presisi mengikuti kisi ikon Dock, dan kontrol jendela memiliki ruang lebih lega di sekelilingnya.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Tandatangani pesan tanpa mengenkripsinya
+
+Kontak Anda tidak memerlukan kunci enkripsi agar Anda dapat mengirimi mereka pesan yang ditandatangani. Meron kini dapat melampirkan tanda tangan OpenPGP ke email yang tidak dienkripsi, sehingga klien email yang kompatibel dapat memverifikasi tanda tangan sementara pesan tetap dapat dibaca tanpa dekripsi.
+
+Buka **Pengaturan**, pilih akun pengirim di bawah **Akun email**, dan temukan bagian **Email terenkripsi**. Setelah membuat atau mengimpor kunci dan mengaktifkannya, nyalakan opsi **Tandatangani email yang tidak dienkripsi**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Akun Mail Lab Elena dipilih di Pengaturan, dengan Enkripsi ujung-ke-ujung dan Tandatangani email yang tidak dienkripsi aktif di atas sidik jari kunci akun"
+  caption="Tandatangani email yang tidak dienkripsi adalah pengaturan akun, bersama dengan kunci OpenPGP Anda sendiri."
+  width={1280}
+  height={820}
+/>
+
+Komposer memiliki kontrol terpisah untuk enkripsi dan tanda tangan digital. Pada contoh di bawah, penerima belum memiliki kunci enkripsi, namun draf keluar tetap ditandatangani dengan kunci pengirim.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Draf antar akun Mail Lab dengan gembok enkripsi terbuka dan kontrol penandatanganan aktif; tooltip bertuliskan Ditandatangani dengan kunci Anda"
+  caption="Enkripsi nonaktif; tanda tangan OpenPGP aktif. Kontrol tanda tangan memungkinkan Anda mengubahnya untuk draf ini."
+  width={870}
+  height={600}
+/>
+
+Meron juga mendukung subkunci penandatanganan khusus dan pengimporan cadangan OpenKeychain, sehingga Anda dapat terus menggunakan identitas OpenPGP yang sudah ada.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Menulis</Badge>
+
+## Hilangkan salam penutup pada balasan singkat
+
+Tanda tangan penutup email Anda kini memiliki tombol alih sendiri di balasan cepat maupun komposer lengkap. Matikan untuk catatan singkat atau nyalakan kembali untuk pesan formal, tanpa perlu mengedit tanda tangan yang tersimpan di Pengaturan.
+
+Di balasan cepat, tanda tangan yang tersimpan tidak akan mengotori kotak input. Tombol alih mengatur apakah Meron akan menyertakannya saat dikirim. Di komposer lengkap, mematikannya akan langsung menghapus tanda tangan dari draf.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Komposer Meron dengan tanda tangan tersimpan Elena dihapus dan tombol tanda tangan menampilkan Tanpa tanda tangan; pesan masih berisi URL yang dapat diklik"
+  caption="Salam penutup dihapus dari draf ini; templat tersimpan tetap tersedia melalui tombol alih."
+  width={870}
+  height={625}
+/>
+
+Ini terpisah dari tanda tangan OpenPGP: yang satu adalah salam penutup tertulis Anda, dan yang lainnya adalah tanda tangan kriptografis.
+
+Alamat web teks biasa juga otomatis berubah menjadi tautan yang dapat diklik pada balasan cepat, komposer lengkap, dan pembaca pesan. Tautan `https://meron.im` di draf ini awalnya hanya teks URL biasa.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Penyempurnaan Desktop</Badge>
+
+## Kedalaman lebih pada tema gelap
+
+Tema gelap desktop kini menggunakan permukaan bertingkat dan bayangan lembut untuk memisahkan kartu, menu, dan panel dengan lebih jelas. Membuka komposer di samping papan Kanban tidak lagi menggeser papan ke samping, dan pembaca email tidak lagi memiliki bilah buram.
+
+Saat email baru tiba di utas yang sedang Anda baca, Meron tetap membuka pesan saat ini agar Anda dapat menyelesaikannya.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Bahasa</Badge>
+
+## Pilih tindakan notifikasi Anda
+
+Notifikasi email baru di Android kini dilengkapi tombol **Hapus**. Di bawah **Pengaturan → Notifikasi**, pilih tombol tindakan mana yang muncul sehingga Anda dapat menangani email masuk langsung dari baki notifikasi.
+
+Tema terang seluler mempertahankan baris email tetap putih dan menggunakan teks tebal untuk membedakan pesan yang belum dibaca. Kontak juga menampilkan avatar profil koresponden atau akun jika tersedia.
+
+Meron kini tersedia dalam bahasa **Belanda**, **Ukraina**, dan **Indonesia**, serta terjemahan yang sebelumnya belum lengkap di berbagai bahasa kini telah diperbarui.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Dapatkan Meron 0.5.1"
+  text="Unduh rilis terbaru untuk lencana Dock, penandatanganan OpenPGP yang lebih fleksibel, dan kontrol balasan baru. Meron gratis dan bersumber terbuka."
+  download="Unduh Meron"
+  changelog="Lihat catatan perubahan"
+  github="Rilis GitHub"
+/>

@@ -1,0 +1,136 @@
+---
+slug: "meron-0-4-11"
+version: "0.4.11"
+title: "Meron 0.4.11: Direktori Kontak, Catatan Markdown, dan Aturan Tertunda"
+publishedAt: "2026-11-05"
+readingTime: "4 mnt waktu baca"
+summary: "Simpan catatan pada kontak Anda, lanjutkan percakapan setelah memulai ulang, dan biarkan aturan tertunda membersihkan email saat Anda tidak lagi membutuhkannya."
+highlights: ["Panel kontak dengan orang-orang yang disematkan, catatan pribadi Markdown, dan riwayat percakapan","Tab percakapan bergaya peramban dengan pengurutan geser dan pemulihan sesi","Aturan tertunda yang berjalan setelah dibaca atau saat email mencapai usia tertentu","Tempel kolom spreadsheet dan daftar berpemisah spasi langsung ke bidang penerima","Balas semua dengan pintasan A dan tambah peserta percakapan dari balasan cepat","Lokalisasi bahasa Rusia lengkap di desktop, iOS, dan Android"]
+image: "/screenshots/blog/meron-0411-contacts-panel.png"
+releaseBadge: "Rilis · v0.4.11"
+---
+
+<PostSection>
+
+Sebelum membalas klien, periksa catatan Anda dari panggilan terakhir dan temukan percakapan sebelumnya — semuanya dari panel Kontak baru. Meron 0.4.11 menambahkan kontak tersemat dan catatan pribadi Markdown, memulihkan tab Anda setelah mulai ulang, dan memungkinkan aturan membersihkan pesan setelah Anda selesai membacanya.
+
+<PlatformNote>Panel kontak dengan catatan Markdown, tab bergaya peramban, dan aturan tertunda tersedia di desktop 0.4.11. Direktori kontak, cache gambar jarak jauh, dan lokalisasi bahasa Rusia juga tersedia di Android dan iOS.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Users">Kontak &amp; Catatan</Badge>
+
+## Simpan catatan dan percakapan masa lalu Anda bersama-sama
+
+Buka panel Kontak di bilah sisi untuk menemukan seseorang berdasarkan nama atau mengurutkan buku alamat Anda berdasarkan yang sering dihubungi, terbaru, atau menurut abjad.
+
+<BlogImage src="/screenshots/blog/meron-0411-contacts-panel.png" alt="Aplikasi desktop Meron menampilkan panel samping Kontak dengan Sarah Jenkins dipilih, catatan pribadi Markdown, dan riwayat percakapan dengan label folder" caption="Periksa catatan dan percakapan sebelumnya sebelum menulis balasan." width={1280} height={820} />
+
+- **Sematkan kontak penting:** Letakkan orang-orang yang paling sering bekerja sama dengan Anda di bagian atas daftar.
+- **Catatan pribadi Markdown:** Catat rangkuman rapat, nomor telepon, atau kesepakatan kerja untuk setiap kontak. Catatan mendukung Markdown dengan tab Tulis dan Pratinjau, tetap berada di perangkat Anda, dan memblokir gambar jarak jauh.
+- **Temukan percakapan terdahulu:** Pilih kontak untuk menelusuri utas bersama. Label folder menunjukkan pesan mana yang berada di Kotak Masuk, Terkirim, atau Arsip; Spam dan Sampah dikecualikan.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="LayoutList">Tab &amp; Sesi</Badge>
+
+## Lanjutkan dari bagian terakhir yang Anda tinggalkan
+
+Mulai ulang Meron dan langsung kembali ke percakapan Anda yang terbuka. Utas dan draf berbagi bilah tab yang sama, sehingga Anda dapat beralih antara membaca dan menulis dengan lancar.
+
+<BlogImage src="/screenshots/blog/meron-0411-tabs-session.png" alt="Tampilan percakapan Meron dengan tab peramban selebar sama di bagian tajuk yang menampilkan utas aktif dan draf" caption="Kelola percakapan dan draf bersama-sama di bilah tab." width={1280} height={820} />
+
+- **Tarik untuk mengatur ulang tab:** Geser tab di sepanjang bilah tab untuk menjaga percakapan yang terkait tetap berdekatan.
+- **Pulihkan tab setelah mulai ulang:** Meron memulihkan tab yang terbuka dan percakapan aktif setelah aplikasi atau sistem dimulai ulang.
+- **Simpan draf saat menutup tab:** Menutup tab komposer atau keluar dari Meron menyimpan tulisan Anda dengan aman ke folder Draf.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Clock">Otomatisasi Kotak Masuk</Badge>
+
+## Bersihkan pesan setelah Anda membacanya
+
+Kode verifikasi hanya berguna selama beberapa menit; buletin mungkin layak disimpan selama sebulan. Aturan tertunda menambahkan pengaturan waktu ke aturan kotak masuk yang diperkenalkan pada versi 0.4.10.
+
+Buka **Pengaturan → Aturan** untuk memilih pesan yang cocok, tindakan, dan kapan aturan tersebut harus dijalankan.
+
+<CardGrid columns={3}>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Sparkles" size={16} />Langsung
+
+</CardTitle>
+
+Dijalankan seketika saat pesan baru tiba di Kotak Masuk Anda.
+
+</Card>
+
+<Card accent>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Setelah dibaca
+
+</CardTitle>
+
+Memulai penghitung waktu setelah dibaca (misalnya 5 menit). Menandai belum dibaca akan membatalkan penghitung waktu.
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Clock" size={16} />Jika lebih lama dari
+
+</CardTitle>
+
+Mengevaluasi usia pesan (misalnya 30 hari) untuk mengarsipkan email lama secara otomatis.
+
+</Card>
+
+</CardGrid>
+
+<BlogImage src="/screenshots/blog/meron-0411-delayed-rules.png" alt="Editor aturan Meron menampilkan kondisi pencocokan, kontrol waktu Kapan dijalankan dengan opsi Setelah dibaca diatur ke 5 menit, dan tindakan Pindahkan ke Sampah" caption="Atur aturan untuk dijalankan setelah dibaca guna membuang kode 2FA atau pemberitahuan satu kali secara otomatis." width={1280} height={820} />
+
+- **Jalankan setelah dibaca:** Untuk email verifikasi, cocokkan subjek, atur Setelah dibaca ke 5 menit, dan pilih Pindahkan ke Sampah. Menandai pesan sebagai belum dibaca akan membatalkan penghitung waktu.
+- **Jalankan jika lebih lama dari:** Untuk buletin atau tanda terima pesanan, atur Jika lebih lama dari ke 30 hari dan pilih Pindahkan ke Arsip. Anda dapat menentukan usia dalam menit, jam, atau hari.
+- **Tinjau aturan Anda:** Editor kini memiliki halaman tersendiri. Jalankan aturan secara manual dari daftar aturan dan periksa log aktivitas untuk melihat apa saja yang telah diproses.
+
+<BlogImage src="/screenshots/blog/meron-0411-rules-list.png" alt="Pengaturan Meron menampilkan aturan aktif dengan deskripsi waktu penundaan, kontrol jalankan manual, dan log aktivitas terkini" caption="Aturan aktif di Pengaturan → Aturan dengan pengatur waktu penundaan dan log aktivitas." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Table">Komposer &amp; Pintasan</Badge>
+
+## Tempel daftar penerima dan balas semua dengan tombol A
+
+Salin alamat dari spreadsheet langsung ke bidang Kepada, Cc, atau Bcc, atau gunakan keyboard untuk membalas ke seluruh grup.
+
+- **Tempel alamat dari spreadsheet:** Tempel baris atau kolom dari Google Spreadsheet, Excel, atau berkas CSV. Meron otomatis mengubah alamat yang ditempelkan menjadi penerima individual dan mendukung daftar berpemisah spasi.
+- **Tekan A untuk balas semua:** Gunakan tombol A saat melihat percakapan untuk membuka Balas Semua. Anda juga dapat menambahkan penerima langsung dari komposer Balasan Cepat.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Languages">Penyempurnaan &amp; Bahasa</Badge>
+
+## Hal baru lainnya dalam rilis ini
+
+Bahasa Rusia kini tersedia di desktop, iOS, dan Android. Rilis ini juga meningkatkan penanganan tombol Esc pada pratinjau gambar dan balasan Kanban, memindahkan bilah gulir komposer teks biasa ke tepi panel, serta memperbaiki rendering SVG dan cache gambar RSS.
+
+</PostSection>
+
+<ReleaseCTA heading="Coba Meron 0.4.11" text="Unduh Meron 0.4.11 untuk menyimpan catatan kontak, memulihkan tab, dan menjadwalkan pembersihan kotak masuk. Meron gratis dan bersumber terbuka." download="Unduh Meron" changelog="Lihat catatan perubahan" github="Rilis GitHub" />

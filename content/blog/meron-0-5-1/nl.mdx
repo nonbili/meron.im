@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Ongelezen in één oogopslag, ondertekend zonder versleuteling"
+publishedAt: "2026-11-12"
+readingTime: "3 min leestijd"
+summary: "Een teller voor ongelezen berichten in het macOS-Dock, OpenPGP-handtekeningen voor onversleutelde e-mails en een schakelaar voor je e-mailafsluiting. Meron 0.5.1 brengt ook diepere donkere thema's en aanpasbare Android-meldingsacties."
+highlights: ["Aantal ongelezen berichten op het macOS-Dock-symbool","Onversleutelde e-mail ondertekenen met OpenPGP-subsleutels","OpenKeychain-sleutelback-ups importeren","Schakel je e-mailafsluiting in of uit voor elk antwoord of concept","Automatische links voor gewone URL's","Zachtere schaduwen en gelaagde oppervlakken in donkere thema's op desktop","Kies Android-meldingsacties, inclusief Verwijderen","Nederlandse, Oekraïense en Indonesische vertalingen"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Release · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 biedt een aantal handige manieren om e-mail af te handelen zonder je werkstroom te onderbreken: controleer ongelezen berichten vanaf het macOS-Dock, onderteken een e-mail zelfs wanneer je deze niet kunt versleutelen, en laat je gebruikelijke afsluiting weg bij een kort antwoord.
+
+<PlatformNote>De Dock-badge is een macOS-functie. Handtekeningbediening en de vernieuwde donkere thema's zijn desktopverbeteringen; meldingsactie-instellingen zijn van toepassing op Android. De drie nieuwe talen zijn beschikbaar op desktop en mobiel.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Bekijk ongelezen e-mail vanuit het Dock
+
+Het macOS-Dock-symbool van Meron toont nu het aantal ongelezen berichten in je postvak. Zo zie je direct of er e-mails zijn die aandacht vereisen terwijl je in een andere app werkt.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Het macOS-Dock-symbool van Meron toont het aantal ongelezen berichten uit de Mail Lab-testinboxen"
+  caption="De Dock-badge telt ongelezen berichten in je postvakken."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Als het aantal niet zichtbaar is, controleer dan **Systeeminstellingen → Berichten → Meron** en sta badges op app-symbolen toe.
+
+Het macOS-app-icoon sluit nu ook nauwkeuriger aan op het Dock-raster, en de vensterknoppen hebben meer ademruimte gekregen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Onderteken een bericht zonder het te versleutelen
+
+Een contactpersoon heeft geen encryptiesleutel nodig om een ondertekend bericht van jou te ontvangen. Meron kan nu een OpenPGP-handtekening toevoegen aan onversleutelde e-mails, zodat compatibele clients de handtekening kunnen verifiëren terwijl het bericht direct leesbaar blijft.
+
+Open **Instellingen**, selecteer je verzendaccount onder **E-mailaccounts** en ga naar het gedeelte **Versleutelde e-mail**. Zodra je een sleutel hebt aangemaakt of geïmporteerd en ingeschakeld, schakel je **Onversleutelde e-mail ondertekenen** in.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Het Mail Lab-account van Elena geselecteerd in Instellingen, met End-to-end-versleuteling en Onversleutelde e-mail ondertekenen ingeschakeld boven de vingerafdruk van de sleutel"
+  caption="Onversleutelde e-mail ondertekenen is een accountinstelling, naast je eigen OpenPGP-sleutel."
+  width={1280}
+  height={820}
+/>
+
+De berichteditor heeft afzonderlijke knoppen voor versleuteling en ondertekening. In het onderstaande voorbeeld heeft de ontvanger geen encryptiesleutel, maar het uitgaande concept wordt nog steeds ondertekend met de sleutel van de afzender.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Een concept tussen Mail Lab-accounts met een open encryptieslot en een ingeschakelde handtekeningknop; de tooltip vermeldt Ondertekend met jouw sleutel"
+  caption="Versleuteling staat uit; OpenPGP-ondertekening staat aan. Met de handtekeningknop pas je dit aan voor dit concept."
+  width={870}
+  height={600}
+/>
+
+Meron ondersteunt ook specifieke ondertekeningssubsleutels en het importeren van OpenKeychain-back-ups, zodat je een bestaande OpenPGP-identiteit kunt blijven gebruiken.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Schrijven</Badge>
+
+## Laat de afsluiting weg bij een kort antwoord
+
+Je e-mailafsluiting heeft nu een eigen schakelaar in snelle antwoorden en de volledige berichteditor. Schakel deze uit voor een kort briefje of weer in voor een formeler bericht, zonder de opgeslagen handtekening in Instellingen aan te passen.
+
+Bij een snel antwoord blijft de opgeslagen handtekening buiten het invoerveld. De schakelaar bepaalt of Meron deze toevoegt bij verzending. In de volledige editor verwijdert uitschakelen de handtekening direct uit het concept.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron-editor waarin de opgeslagen afsluiting van Elena is verwijderd en de handtekeningschakelaar Geen handtekening toont; het bericht bevat nog steeds een klikbare link"
+  caption="De afsluiting is verwijderd uit dit concept; het opgeslagen sjabloon blijft beschikbaar via de schakelaar."
+  width={870}
+  height={625}
+/>
+
+Dit staat los van de OpenPGP-handtekening: het ene is je geschreven groet, het andere een cryptografische handtekening.
+
+Gewone webadressen worden nu ook automatisch klikbare links in snelle antwoorden, de volledige editor en de lezer. De `https://meron.im`-link in deze concepten begon als een platte URL.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Desktop-afwerking</Badge>
+
+## Meer diepte in donkere thema's
+
+Donkere thema's op desktop gebruiken nu gelaagde oppervlakken en zachte schaduwen om kaarten, menu's en panelen duidelijker te scheiden. Het openen van een editor naast een Kanbanbord verschuift het bord niet meer zijwaarts, en de lezer heeft geen matte balk meer.
+
+Wanneer er een nieuwe e-mail binnenkomt in een gesprek dat je leest, houdt Meron het huidige bericht open zodat je het rustig kunt uitlezen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Talen</Badge>
+
+## Kies je meldingsacties
+
+Android-meldingen voor nieuwe e-mail krijgen een **Verwijderen**-knop. Kies onder **Instellingen → Meldingen** welke actieknoppen verschijnen, zodat je binnenkomende e-mail direct vanuit het meldingenpaneel kunt afhandelen.
+
+Lichte thema's op mobiel houden e-mailrijen wit en gebruiken vette tekst om ongelezen berichten te onderscheiden. Contacten tonen nu ook de profielfoto van de afzender of het account wanneer deze beschikbaar is.
+
+Meron is nu beschikbaar in het **Nederlands**, **Oekraïens** en **Indonesisch**, en ontbrekende vertalingen in bestaande talen zijn aangevuld.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Download Meron 0.5.1"
+  text="Download de nieuwste versie voor de Dock-badge, flexibelere OpenPGP-ondertekening en de nieuwe antwoordopties. Meron is gratis en open source."
+  download="Meron downloaden"
+  changelog="Bekijk changelog"
+  github="GitHub-releases"
+/>

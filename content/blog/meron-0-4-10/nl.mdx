@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Labels en regels voor je postvak"
+publishedAt: "2026-11-02"
+readingTime: "3 min leestijd"
+summary: "Geef binnenkomende e-mail direct een vervolgstap. Labels, Kanbankolommen en postvakregels maken van dagelijkse berichten een heldere, visuele werkstroom."
+highlights: ["E-maillabels lokaal opgeslagen en gesynchroniseerd als IMAP-trefwoorden","Kanban-labelkolommen met slepen-en-neerzetten om te labelen en herlabelen","Postvakregels om te labelen, als gelezen te markeren, een ster te geven, te kopiëren of te verplaatsen","Voer regels uit op bestaande e-mail met een recent activiteitenlogboek","has:attachment en tag: zoekoperatoren, plus MCP-labeltools"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Release · v0.4.10"
+---
+
+<PostSection>
+
+Er komt een factuur binnen. Een regel voegt automatisch de labels factuur en actie toe, waardoor het gesprek in je Actie-kolom op het Kanbanbord verschijnt terwijl het netjes in je Postvak IN blijft staan. Zodra het klaar is voor goedkeuring, sleep je het naar Beoordeling. Meron wisselt het actielabel om voor beoordeling, zodat je in één oogopslag ziet wat aandacht vereist. Zo stel je deze werkstroom in Meron 0.4.10 in.
+
+<PlatformNote>Labels, regels en zoeken op bijlagen zijn beschikbaar in desktop 0.4.10 en iOS en Android 0.4.8. MCP-labeltools zijn beschikbaar op desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Labels &amp; Kanban</Badge>
+
+## Geef elk gesprek een volgende stap
+
+Begin met het toevoegen van actie- en factuurlabels via de gesprekskop of het berichtenmenu. Labels worden gesynchroniseerd met je mailserver als standaard IMAP-trefwoorden, zodat ze je berichten op al je apparaten volgen. Ze blijven ook behouden in Lokale mappen en geëxporteerde back-ups.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Meron-kanbanbord met Postvak IN naast kolommen voor tag:todo en tag:review met gekleurde labelchips op kaarten en een ongelezen-badge op het bordicoon in de zijbalk" caption="Postvak IN, Actie en Beoordeling overzichtelijk samen op één bord." width={1280} height={820} />
+
+- **Sleep om te labelen op je bord:** Sla tag:todo- en tag:review-zoekopdrachten op als Kanbankolommen. Sleep een kaart vanuit Postvak IN om een label toe te voegen, of tussen kolommen om het ene werkstroomlabel door het andere te vervangen. Andere labels, zoals factuur, blijven behouden.
+- **Schakel labels direct in of uit:** Gebruik het submenu Labels om meerdere labels aan te vinken zonder het menu telkens opnieuw te openen.
+- **Hernoem of verwijder een label overal:** Onder Instellingen → Berichten → Labels hernoem of verwijder je een label op alle opgeslagen berichten op je apparaat, waardoor regels en Kanbankolommen gelijktijdig worden bijgewerkt.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Contextmenu van gesprek met het Labels-submenu geopend met aangevinkte labels en een Label toevoegen-actie" caption="Schakel meerdere labels direct in vanuit het menu, of klik op een labelchip op een kaart om daarop te filteren." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Postvakregels</Badge>
+
+## Laat de volgende factuur zichzelf sorteren
+
+Om de eerste stap te automatiseren, maak je een regel die zoekt naar onderwerpen met “factuur” en de labels factuur en actie toevoegt. De regel wordt uitgevoerd op nieuwe inkomende berichten, zodat de volgende factuur direct op de juiste plek op je bord verschijnt.
+
+Open **Instellingen → Regels** om accounts, voorwaarden en acties te configureren. Filter op afzender, ontvanger, onderwerp, trefwoorden of bijlagen. Lege voorwaarden zijn van toepassing op alle nieuwe e-mails.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Meron-instellingen met de lijst met regels, sleepgrepen, accountavatars, regelsamenvattingen, Uitvoeren-knoppen en het logboek Recente activiteit" caption="Voer een regel uit op bestaande e-mail in Postvak IN en bekijk Recente activiteit om te zien wat er is uitgevoerd." width={1280} height={820} />
+
+- **Combineer acties in één regel:** Naast labels kan een regel berichten als gelezen markeren, van een ster voorzien, kopiëren of verplaatsen naar een andere map — zelfs tussen verschillende accounts of naar Lokale mappen op desktop.
+- **Sleep om prioriteit te bepalen:** Regels worden van boven naar beneden uitgevoerd. De eerste regel die een bericht verplaatst, bepaalt de bestemming. Wijzig de volgorde eenvoudig met de sleepgrepen of de pijltjestoetsen Omhoog en Omlaag.
+- **Handmatig uitvoeren &amp; activiteit bekijken:** Klik op Uitvoeren bij een willekeurige regel om deze direct toe te passen op berichten in je Postvak IN, en bekijk Recente activiteit onder je regels om te zien wat er wanneer is verwerkt.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Meron-regelbewerker met accountbereik, voorwaarden voor Van, Onderwerp en Heeft bijlage, en acties voor Labels toevoegen, Als gelezen markeren, Kopiëren naar en Verplaatsen naar" caption="Kies welke berichten overeenkomen en wat ermee moet gebeuren in de regelbewerker." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Zoeken &amp; MCP</Badge>
+
+## Vind de e-mail achter je werkstroom
+
+Zoek naar tag:factuur has:attachment om elke factuur met een bijlage terug te vinden, ongeacht in welke fase van de werkstroom deze zich bevindt. Voeg afzender- of ongelezen-filters toe om de resultaten verder te verfijnen.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Zoekvoorbeelden
+
+</CardTitle>
+
+<CodeList>
+
+`tag:actie` `tag:beoordeling` `tag:factuur has:attachment` `tag:factuur AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Nieuwe MCP-tools op desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Labelsuggesties en bijlagenfilter:** Zoekopties biedt labelsuggesties en een selectievakje Heeft bijlage voor wie liever visueel filters samenstelt. Sla de resulterende zoekopdracht op als actieve Kanbankolom.
+- **Labeltools voor MCP-clients:** Op desktop kunnen lokale MCP-clients met beheerdersrechten de functies list\_tags en tag\_messages aanroepen om labels te inspecteren en toe te voegen of te verwijderen bij gesprekken.
+
+</PostSection>
+
+Deze release voegt ook ongelezen-badges toe op het Kanbanbord, sneltoetsen voor de editor en opschoning van meldingen op alle apparaten. [Bekijk changelog](/changelog)
+
+<ReleaseCTA heading="Probeer Meron 0.4.10" text="Download de nieuwste versie om te beginnen met het labelen en automatiseren van je postvak. Meron is gratis en open source, met apps voor macOS, Windows, Linux, iOS en Android." download="Meron downloaden" changelog="Bekijk changelog" github="GitHub-releases" />

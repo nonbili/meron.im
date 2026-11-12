@@ -1,0 +1,110 @@
+---
+slug: "meron-0-4-10"
+version: "0.4.10"
+title: "Meron 0.4.10: Tag dan Aturan untuk Kotak Masuk Anda"
+publishedAt: "2026-11-02"
+readingTime: "3 mnt waktu baca"
+summary: "Berikan langkah selanjutnya untuk email yang masuk. Tag, kolom Kanban, dan aturan kotak masuk mengubah email harian menjadi alur kerja visual yang jelas."
+highlights: ["Tag email disimpan secara lokal dan disinkronkan sebagai kata kunci IMAP","Kolom tag Kanban dengan fitur seret-dan-lepas untuk menandai dan mengganti tag utas","Aturan kotak masuk untuk menandai, menandai telah dibaca, membintangi, menyalin, atau memindahkan email lintas akun","Jalankan aturan pada email Kotak Masuk yang ada dengan log aktivitas terkini","Operator pencarian has:attachment dan tag:, serta alat tag MCP"]
+image: "/screenshots/blog/meron-0410-kanban-tags.png"
+releaseBadge: "Rilis · v0.4.10"
+---
+
+<PostSection>
+
+Faktur tiba. Sebuah aturan otomatis menambahkan tag faktur dan tugas, dan percakapan tersebut muncul di kolom Tugas Anda di papan Kanban selagi tetap berada di Kotak Masuk. Saat siap untuk disetujui, cukup seret ke kolom Tinjauan. Meron mengganti tag tugas dengan tinjauan, dan Anda dapat melihat apa yang memerlukan perhatian sekilas. Berikut cara menyiapkan alur kerja tersebut di Meron 0.4.10.
+
+<PlatformNote>Tag, aturan, dan pencarian lampiran tersedia di desktop 0.4.10 serta iOS dan Android 0.4.8. Alat tag MCP tersedia di desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Tag">Tag &amp; Kanban</Badge>
+
+## Berikan langkah berikutnya untuk setiap percakapan
+
+Mulailah dengan menambahkan tag tugas dan faktur dari tajuk percakapan atau menu utas. Tag disinkronkan ke server email Anda sebagai kata kunci IMAP standar sehingga selalu menyertai pesan Anda di semua perangkat. Tag juga dipertahankan di Folder Lokal dan cadangan yang diekspor.
+
+<BlogImage src="/screenshots/blog/meron-0410-kanban-tags.png" alt="Papan Kanban Meron menampilkan Kotak Masuk di samping kolom tag:todo dan tag:review dengan chip tag berwarna pada kartu dan lencana belum dibaca pada ikon papan di bilah samping" caption="Kotak Masuk, Tugas, dan Tinjauan bersama-sama dalam satu papan." width={1280} height={820} />
+
+- **Tarik untuk menandai di papan Anda:** Simpan pencarian tag:todo dan tag:review sebagai kolom Kanban. Tarik kartu dari Kotak Masuk untuk menambahkan tag, atau antar kolom tersebut untuk mengganti satu tag alur kerja dengan yang lain. Tag lain, seperti faktur, tetap utuh pada utas.
+- **Alihkan tag langsung:** Gunakan submenu Tag untuk mencentang beberapa tag tanpa harus membuka kembali menu setiap kali.
+- **Ganti nama atau hapus tag di mana saja:** Di bawah Pengaturan → Pesan → Tag, ganti nama atau hapus tag di seluruh email yang tersimpan di perangkat Anda, memperbarui aturan dan kolom papan Kanban secara bersamaan.
+
+<BlogImage src="/screenshots/blog/meron-0410-tag-menu.png" alt="Menu konteks utas dengan submenu Tag terbuka menampilkan tag yang dicentang dan tindakan Tambahkan tag" caption="Alihkan beberapa tag langsung dari menu utas, atau klik chip tag pada kartu untuk memfilter berdasarkan tag tersebut." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Aturan Kotak Masuk</Badge>
+
+## Biarkan faktur berikutnya menyortir dirinya sendiri
+
+Untuk mengotomatiskan langkah pertama, buat aturan yang cocok dengan subjek berisi kata “faktur” dan menambahkan tag faktur serta tugas. Aturan ini berjalan pada pesan Kotak Masuk baru, sehingga faktur berikutnya langsung muncul di papan Anda siap untuk ditangani.
+
+Buka **Pengaturan → Aturan** untuk memilih akun, kondisi, dan tindakan. Cocokkan berdasarkan pengirim, penerima, subjek, kata kunci, atau lampiran. Kondisi kosong cocok dengan semua email baru.
+
+<BlogImage src="/screenshots/blog/meron-0410-rules.png" alt="Pengaturan Meron menampilkan daftar Aturan dengan pegangan seret, avatar akun, ringkasan aturan, tombol Jalankan, dan log Aktivitas terkini" caption="Jalankan aturan pada email Kotak Masuk yang ada, lalu periksa Aktivitas terkini untuk melihat apa yang telah diproses." width={1280} height={820} />
+
+- **Gabungkan tindakan dalam satu aturan:** Selain tag, aturan dapat menandai email sebagai telah dibaca, membintanginya, menyalinnya, atau memindahkannya ke folder lain — bahkan lintas akun atau ke Folder Lokal di desktop.
+- **Tarik untuk mengatur urutan prioritas:** Aturan berjalan dari atas ke bawah. Aturan pertama yang memindahkan pesan menentukan tujuannya. Ubah urutan aturan dengan pegangan seret atau tombol panah Atas dan Bawah.
+- **Jalankan pada email lama &amp; periksa aktivitas:** Klik tombol Jalankan pada aturan mana pun untuk menerapkannya pada pesan yang sudah ada di Kotak Masuk Anda, dan periksa log Aktivitas terkini di bawah aturan Anda.
+
+<BlogImage src="/screenshots/blog/meron-0410-rule-editor.png" alt="Editor aturan Meron menampilkan cakupan akun, kondisi pencocokan untuk Dari, Subjek, dan Memiliki lampiran, serta tindakan untuk Tambah tag, Tandai telah dibaca, Salin ke, dan Pindahkan ke" caption="Pilih pesan mana yang cocok dan tindakan yang harus diambil dalam editor aturan." width={1280} height={820} />
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Pencarian &amp; MCP</Badge>
+
+## Temukan email di balik alur kerja Anda
+
+Cari tag:faktur has:attachment untuk menemukan setiap faktur yang memiliki lampiran, terlepas dari tahap alur kerjanya. Tambahkan filter pengirim atau status belum dibaca untuk mempersempit hasil.
+
+<CardGrid>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Search" size={16} />Contoh pencarian
+
+</CardTitle>
+
+<CodeList>
+
+`tag:todo` `tag:review` `tag:invoice has:attachment` `tag:invoice AND is:unread`
+
+</CodeList>
+
+</Card>
+
+<Card>
+
+<CardTitle>
+
+<Icon name="Terminal" size={16} />Alat MCP baru di desktop
+
+</CardTitle>
+
+<CodeList>
+
+`list_tags` `tag_messages`
+
+</CodeList>
+
+</Card>
+
+</CardGrid>
+
+- **Saran tag dan filter lampiran:** Opsi Pencarian menyertakan saran tag dan kotak centang Memiliki lampiran jika Anda lebih suka menyusun filter dengan formulir visual. Simpan pencarian sebagai kolom Kanban aktif.
+- **Alat tag untuk klien MCP:** Di desktop, klien MCP lokal dengan izin pengorganisasian pesan dapat memanggil list\_tags dan tag\_messages untuk memeriksa tag yang digunakan serta menambah atau menghapus tag pada utas.
+
+</PostSection>
+
+Rilis ini juga menambahkan lencana belum dibaca di Kanban, pintasan komposer, dan pembersihan notifikasi di berbagai perangkat. [Lihat catatan perubahan](/changelog)
+
+<ReleaseCTA heading="Coba Meron 0.4.10" text="Unduh build terbaru untuk mulai menandai dan mengotomatiskan kotak masuk Anda. Meron gratis dan bersumber terbuka, dengan aplikasi untuk macOS, Windows, Linux, iOS, dan Android." download="Unduh Meron" changelog="Lihat catatan perubahan" github="Rilis GitHub" />

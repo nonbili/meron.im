@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Unread at a Glance, Signed Without Encryption"
+publishedAt: "2026-11-12"
+readingTime: "3 min read"
+summary: "An unread count in the macOS Dock, OpenPGP signatures for unencrypted mail, and a switch for your email sign-off. Meron 0.5.1 also brings deeper dark themes and configurable Android notification actions."
+highlights: ["Inbox unread count on the macOS Dock icon","Sign unencrypted mail with OpenPGP signing subkeys","Import OpenKeychain key backups","Switch your email sign-off on or off for each reply or draft","Automatic links for bare URLs","Softer shadows and layered surfaces in desktop dark themes","Choose Android notification actions, including Delete","Dutch, Ukrainian, and Indonesian translations"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Release · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 gives you a few more ways to handle mail without breaking your flow: check unread messages from the macOS Dock, sign an email even when you can't encrypt it, and leave your usual sign-off out of a short reply.
+
+<PlatformNote>The Dock badge is a macOS feature. Signature controls and the dark theme refresh are desktop improvements; notification action settings apply to Android. The three new languages are available on desktop and mobile.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Check unread mail from the Dock
+
+Meron's macOS Dock icon now shows your inbox unread count. You can see whether mail needs your attention while working in another app.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Meron's macOS Dock icon displaying the unread count from the Mail Lab test inboxes"
+  caption="The Dock badge counts unread messages in your inboxes."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+If the count is hidden, check **System Settings → Notifications → Meron** and allow app icon badges.
+
+The macOS app icon also fits the Dock's icon grid more closely, and the window controls have more space around them.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Sign a message without encrypting it
+
+A contact doesn't need an encryption key for you to send them a signed message. Meron can now attach an OpenPGP signature to unencrypted mail, letting a compatible mail client check the signature while the message remains readable without decryption.
+
+Open **Settings**, select your sending account under **Mail accounts**, and find its **Encrypted email** section. Once you've created or imported a key and enabled it, turn on **Sign unencrypted mail**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Elena's Mail Lab account selected in Settings, with End-to-end encryption and Sign unencrypted mail enabled above the account's key fingerprint"
+  caption="Sign unencrypted mail is an account setting, alongside your own OpenPGP key."
+  width={1280}
+  height={820}
+/>
+
+The composer has separate encryption and signing controls. Here, the test recipient has no encryption key, but the outgoing draft is still signed with the sender's key.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="A draft between Mail Lab accounts with an open encryption lock and an enabled signing control; its tooltip reads Signed with your key"
+  caption="Encryption is off; OpenPGP signing is on. The signing control lets you change that for this draft."
+  width={870}
+  height={600}
+/>
+
+Meron also supports dedicated signing subkeys and importing OpenKeychain backups, so you can keep using an existing OpenPGP identity.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Writing</Badge>
+
+## Leave the sign-off out of a short reply
+
+Your email sign-off now has its own switch in quick reply and the full composer. Turn it off for a short note or back on for a more formal message, without editing the signature you've saved in Settings.
+
+In quick reply, the saved signature stays out of the input box. The switch controls whether Meron adds it when you send. In the full composer, switching it off removes the signature from the draft, as shown below.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron composer with Elena's saved sign-off removed and the signature switch showing No signature. Click to add it; the message still contains a clickable URL"
+  caption="The sign-off is removed from this draft; the saved template is still available from the switch."
+  width={870}
+  height={625}
+/>
+
+This is separate from the OpenPGP signature: one is your written sign-off, the other is a cryptographic signature.
+
+Bare web addresses also become clickable links in sent quick replies, the full composer, and the reader. The `https://meron.im` link in these drafts started as a plain URL.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Desktop polish</Badge>
+
+## More depth in dark themes
+
+Desktop dark themes now use layered surfaces and soft shadows to separate cards, menus, and panels. Opening a composer beside a Kanban board also keeps the board from shifting sideways, and the reader drops its frosted band.
+
+When new mail arrives in a thread you're reading, Meron keeps the current message open so you can finish it.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Languages</Badge>
+
+## Choose your notification actions
+
+Android new-mail notifications gain a **Delete** button. Under **Settings → Notifications**, choose which action buttons appear so you can handle incoming mail from the notification tray.
+
+Mobile light themes keep mail rows white and use bold text to distinguish unread messages. Contacts also show the correspondent's or account's profile avatar when available.
+
+Meron is now available in **Dutch**, **Ukrainian**, and **Indonesian**, with missing translations filled in across existing languages.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Get Meron 0.5.1"
+  text="Download the latest release for the Dock badge, more flexible OpenPGP signing, and the new reply controls. Meron is free and open source."
+  download="Download Meron"
+  changelog="View changelog"
+  github="GitHub releases"
+/>

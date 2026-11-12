@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Não lidas num relance, assinadas sem criptografia"
+publishedAt: "2026-11-12"
+readingTime: "Leitura de 3 min"
+summary: "Contador de mensagens não lidas no Dock do macOS, assinaturas OpenPGP para e-mails não criptografados e um botão para sua assinatura de e-mail. O Meron 0.5.1 também traz temas escuros mais profundos e ações de notificação configuráveis no Android."
+highlights: ["Contagem de mensagens não lidas no ícone do Dock do macOS", "Assinar e-mails não criptografados com subchaves de assinatura OpenPGP", "Importar backups de chaves do OpenKeychain", "Ativar ou desativar sua assinatura de e-mail para cada resposta ou rascunho", "Links automáticos para URLs simples", "Sombras mais suaves e superfícies em camadas nos temas escuros do desktop", "Escolher ações de notificação no Android, incluindo Excluir", "Traduções em holandês, ucraniano e indonésio"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Lançamento · v0.5.1"
+---
+
+<PostSection>
+
+O Meron 0.5.1 traz novas opções para lidar com seus e-mails sem quebrar o fluxo: acompanhe mensagens não lidas direto do Dock do macOS, assine um e-mail mesmo sem poder criptografá-lo e retire a assinatura padrão de respostas curtas.
+
+<PlatformNote>O badge no Dock é um recurso do macOS. Os controles de assinatura e a renovação dos temas escuros são melhorias no desktop; as configurações de ações de notificação aplicam-se ao Android. Os três novos idiomas estão disponíveis no desktop e no mobile.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Verifique os e-mails não lidos direto do Dock
+
+O ícone do Meron no Dock do macOS agora mostra a quantidade de mensagens não lidas na caixa de entrada. Você pode ver se há novidades pendentes enquanto trabalha em outro aplicativo.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Ícone do Meron no Dock do macOS exibindo o número de não lidas das caixas de teste do Mail Lab"
+  caption="O badge do Dock contabiliza as mensagens não lidas das suas caixas de entrada."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Se o número estiver oculto, verifique em **Ajustes do Sistema → Notificações → Meron** e permita os badges no ícone do aplicativo.
+
+O ícone do app para macOS também se alinha melhor à grade de ícones do Dock, e os controles da janela têm mais espaço ao redor.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Assine uma mensagem sem criptografá-la
+
+Um contato não precisa ter uma chave de criptografia para você enviar a ele uma mensagem assinada. O Meron agora pode anexar uma assinatura OpenPGP a e-mails não criptografados, permitindo que clientes de e-mail compatíveis verifiquem a autenticidade enquanto a mensagem permanece legível sem descriptografia.
+
+Abra as **Configurações**, selecione sua conta de envio em **Contas de e-mail** e encontre a seção **E-mail criptografado**. Depois de criar ou importar uma chave e ativá-la, ligue a opção **Assinar e-mails não criptografados**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Conta Mail Lab da Elena selecionada nas Configurações, com Criptografia de ponta a ponta e Assinar e-mails não criptografados ativados acima da impressão digital da chave"
+  caption="A assinatura de e-mails não criptografados é uma configuração por conta, junto com sua própria chave OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+O editor de mensagens agora tem controles separados de criptografia e assinatura. Neste exemplo, o destinatário de teste não possui chave de criptografia, mas o rascunho enviado continua assinado com a chave do remetente.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Rascunho entre contas Mail Lab com cadeado aberto e controle de assinatura ativado; a dica de ferramenta indica Assinado com sua chave"
+  caption="A criptografia está desligada; a assinatura OpenPGP está ligada. O controle de assinatura permite ajustar isso para este rascunho."
+  width={870}
+  height={600}
+/>
+
+O Meron também oferece suporte a subchaves dedicadas de assinatura e importação de backups do OpenKeychain, para que você possa continuar usando sua identidade OpenPGP atual.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composição</Badge>
+
+## Deixe a assinatura de fora de uma resposta curta
+
+Sua assinatura de e-mail agora tem um botão próprio na resposta rápida e no editor completo. Desative-a para uma nota curta ou reative-a para uma mensagem formal, sem precisar editar a assinatura salva nas Configurações.
+
+Na resposta rápida, a assinatura salva não ocupa a caixa de digitação. O botão controla se o Meron a adiciona no momento do envio. No editor completo, desativá-lo remove a assinatura do rascunho, como mostrado abaixo.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Editor do Meron sem a assinatura salva de Elena e o controle indicando Sem assinatura. Clique para adicionar; a mensagem continua com uma URL clicável"
+  caption="A assinatura foi removida deste rascunho; o modelo salvo continua disponível a qualquer momento pelo botão."
+  width={870}
+  height={625}
+/>
+
+Isso é independente da assinatura OpenPGP: uma é sua assinatura de texto pessoal, a outra é uma assinatura criptográfica.
+
+Endereços web puros também se tornam links clicáveis automaticamente nas respostas rápidas enviadas, no editor completo e no leitor. O link `https://meron.im` nesses rascunhos começou como texto simples.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Melhorias no desktop</Badge>
+
+## Mais profundidade nos temas escuros
+
+Os temas escuros no desktop agora usam superfícies em camadas e sombras suaves para delimitar melhor cartões, menus e painéis. Abrir o editor de mensagens ao lado do quadro Kanban não desloca mais o quadro lateralmente, e o leitor remove a barra fosca.
+
+Quando chega um novo e-mail em uma conversa que você está lendo, o Meron mantém a mensagem atual aberta para que você termine a leitura sem sobressaltos.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android e Idiomas</Badge>
+
+## Escolha as ações das notificações
+
+As notificações de novo e-mail no Android ganharam o botão **Excluir**. Em **Configurações → Notificações**, escolha quais botões de ação devem aparecer para gerenciar o correio diretamente pela barra de notificações.
+
+Os temas claros no mobile mantêm as linhas de e-mail brancas e usam texto em negrito para destacar mensagens não lidas. Os contatos também exibem a foto de perfil do remetente ou da conta, quando disponível.
+
+O Meron agora está disponível em **holandês**, **ucraniano** e **indonésio**, com traduções pendentes complementadas nos idiomas já existentes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Experimente o Meron 0.5.1"
+  text="Baixe a versão mais recente para aproveitar o badge no Dock, assinaturas OpenPGP mais flexíveis e os novos controles de resposta. O Meron é gratuito e de código aberto."
+  download="Baixar Meron"
+  changelog="Ver histórico de versões"
+  github="GitHub Releases"
+/>

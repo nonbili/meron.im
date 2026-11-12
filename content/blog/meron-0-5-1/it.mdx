@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Non letti a colpo d'occhio, firmati senza crittografia"
+publishedAt: "2026-11-12"
+readingTime: "3 min di lettura"
+summary: "Conteggio dei non letti nel Dock di macOS, firme OpenPGP per e-mail non crittografate e un interruttore per la firma di chiusura. Meron 0.5.1 introduce anche temi scuri più profondi e azioni di notifica configurabili su Android."
+highlights: ["Conteggio dei messaggi non letti sull'icona del Dock di macOS", "Firma e-mail non crittografate con sottochiavi di firma OpenPGP", "Importa backup di chiavi OpenKeychain", "Attiva o disattiva la firma dell'e-mail per ogni risposta o bozza", "Link automatici per gli URL semplici", "Ombre più morbide e superfici a strati nei temi scuri desktop", "Scegli le azioni di notifica su Android, inclusa l'eliminazione", "Traduzioni in olandese, ucraino e indonesiano"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Rilascio · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 offre nuovi modi per gestire la posta senza interrompere il tuo ritmo di lavoro: controlla i messaggi non letti direttamente dal Dock di macOS, firma un'e-mail anche quando non puoi crittografarla ed escludi la consueta firma di chiusura da una risposta breve.
+
+<PlatformNote>Il badge del Dock è una funzione specifica di macOS. I controlli della firma e l'aggiornamento del tema scuro sono miglioramenti desktop; le opzioni di notifica si applicano ad Android. Le tre nuove lingue sono disponibili sia su desktop che su mobile.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Controlla la posta non letta dal Dock
+
+L'icona di Meron nel Dock di macOS mostra ora il numero di messaggi non letti nella posta in arrivo. Così puoi verificare all'istante se ci sono novità mentre lavori in un'altra applicazione.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Icona di Meron nel Dock di macOS che mostra il conteggio dei non letti dalle caselle di test di Mail Lab"
+  caption="Il badge del Dock conta i messaggi non letti nelle tue caselle di posta."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Se il numero non compare, controlla in **Impostazioni di Sistema → Notifiche → Meron** e autorizza i badge sull'icona dell'app.
+
+L'icona per macOS si allinea inoltre meglio alla griglia delle icone del Dock e i controlli della finestra hanno maggiore spazio intorno a sé.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Firmare un messaggio senza crittografarlo
+
+Un contatto non ha bisogno di possedere una chiave di crittografia per ricevere un messaggio firmato. Meron può ora allegare una firma OpenPGP anche a e-mail non crittografate, permettendo ai client compatibili di verificare la firma lasciando il messaggio leggibile in chiaro.
+
+Apri **Impostazioni**, seleziona il tuo account di invio sotto **Account e-mail** e individua la sezione **E-mail crittografata**. Dopo aver creato o importato una chiave e averla attivata, abilita **Firma e-mail non crittografate**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Account Mail Lab di Elena selezionato in Impostazioni, con Crittografia end-to-end e Firma e-mail non crittografate abilitate sopra l'impronta della chiave"
+  caption="La firma dei messaggi non crittografati è un'impostazione per account, associata alla tua chiave OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+La schermata di composizione dispone di controlli indipendenti per crittografia e firma. In questo esempio, il destinatario di prova non ha una chiave di crittografia, ma la bozza in uscita è comunque firmata con la chiave del mittente.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Bozza tra account Mail Lab con lucchetto aperto e controllo di firma attivo; il suggerimento indica Firmato con la tua chiave"
+  caption="La crittografia è disattivata; la firma OpenPGP è attiva. Il controllo di firma ti consente di modificarla per questa bozza."
+  width={870}
+  height={600}
+/>
+
+Meron supporta inoltre sottochiavi dedicate alla firma e l'importazione di backup da OpenKeychain, consentendoti di mantenere la tua identità OpenPGP esistente.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composizione</Badge>
+
+## Escludi la firma da una risposta breve
+
+La firma di chiusura della tua e-mail ha ora un proprio interruttore nella risposta rapida e nell'editor completo. Disattivala per una breve nota o riattivala per un messaggio formale, senza dover modificare la firma salvata nelle Impostazioni.
+
+Nella risposta rapida, la firma salvata non occupa la casella di testo. L'interruttore determina se Meron la aggiungerà al momento dell'invio. Nell'editor completo, spegnere l'interruttore rimuove la firma dalla bozza, come mostrato qui sotto.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Compositore di Meron con la firma salvata di Elena rimossa e l'interruttore impostato su Nessuna firma. Fai clic per aggiungerla; il testo include ancora un URL cliccabile"
+  caption="La firma di chiusura è stata rimossa da questa bozza; il modello salvato resta sempre accessibile tramite l'interruttore."
+  width={870}
+  height={625}
+/>
+
+Questo meccanismo è indipendente dalla firma OpenPGP: uno è il tuo saluto scritto, l'altro è una firma crittografica.
+
+Anche gli indirizzi web semplici diventano automaticamente collegamenti ipertestuali cliccabili nelle risposte rapide inviate, nel compositore completo e nel lettore. Il link `https://meron.im` in queste bozze è nato come testo semplice.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Rifiniture desktop</Badge>
+
+## Più profondità nei temi scuri
+
+I temi scuri per desktop adottano ora superfici a strati e ombreggiature morbide per separare con chiarezza schede, menu e pannelli. Aprire un compositore accanto a una bacheca Kanban non provoca più lo slittamento laterale della bacheca e il lettore elimina la fascia satinata.
+
+Quando arriva una nuova e-mail in una conversazione che stai leggendo, Meron mantiene aperto il messaggio attuale per consentirti di completare la lettura.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android e lingue</Badge>
+
+## Scegli le azioni di notifica
+
+Le notifiche di nuova posta su Android si arricchiscono del pulsante **Elimina**. In **Impostazioni → Notifiche**, scegli quali pulsanti di azione mostrare per gestire i messaggi in arrivo direttamente dall'area notifiche.
+
+I temi chiari su mobile mantengono le righe dei messaggi bianche e usano il grassetto per evidenziare i non letti. I contatti mostrano anche l'avatar del profilo dell'interlocutore o dell'account, quando presente.
+
+Meron è ora disponibile in **olandese**, **ucraino** e **indonesiano**, con l'integrazione delle traduzioni mancanti nelle altre lingue supportate.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Prova Meron 0.5.1"
+  text="Scarica l'ultima versione per provare il badge del Dock, la firma OpenPGP più versatile e i nuovi controlli per le risposte. Meron è gratuito e open source."
+  download="Scarica Meron"
+  changelog="Vedi il changelog"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: 한눈에 보는 안 읽은 메일, 암호화 없는 서명 지원"
+publishedAt: "2026-11-12"
+readingTime: "3분 분량"
+summary: "macOS Dock의 안 읽은 메일 배지, 암호화되지 않은 메일에 대한 OpenPGP 서명, 이메일 서명 온/오프 스위치 지원. Meron 0.5.1은 더욱 깊이 있는 다크 테마와 사용자 맞춤 Android 알림 작업도 제공합니다."
+highlights: ["macOS Dock 아이콘의 받은편지함 안 읽은 메일 수 표시", "OpenPGP 서명 서브키를 통한 미암호화 메일 서명", "OpenKeychain 키 백업 가져오기", "답장 및 초안별 이메일 서명 토글 스위치", "일반 텍스트 URL의 자동 링크 변환", "데스크톱 다크 테마의 부드러운 그림자와 계층화된 서피스", "삭제를 포함한 Android 알림 작업 설정", "네덜란드어, 우크라이나어, 인도네시아어 번역 추가"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "릴리스 · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1은 작업 흐름을 방해하지 않고 메일을 처리할 수 있는 몇 가지 유용한 방법을 새롭게 제공합니다. macOS Dock에서 안 읽은 메시지를 확인하고, 메일을 암호화할 수 없을 때도 디지털 서명을 첨부하며, 짧은 답장에서는 평소 서명을 간편하게 제외할 수 있습니다.
+
+<PlatformNote>Dock 배지는 macOS 전용 기능입니다. 서명 제어와 다크 테마 개선은 데스크톱 기능이며, 알림 작업 설정은 Android에 적용됩니다. 새로 추가된 3개 언어는 데스크톱과 모바일 모두에서 지원됩니다.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Dock에서 안 읽은 메일 확인
+
+이제 Meron의 macOS Dock 아이콘에 받은편지함의 안 읽은 메일 수가 표시됩니다. 다른 앱에서 작업하는 중에도 확인할 메일이 있는지 한눈에 알 수 있습니다.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Mail Lab 테스트 받은편지함의 안 읽은 메일 수를 표시하는 Meron macOS Dock 아이콘"
+  caption="Dock 배지는 받은편지함의 안 읽은 메일 수를 집계합니다."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+숫자가 보이지 않는다면 **시스템 설정 → 알림 → Meron**에서 앱 아이콘 배지 허용 여부를 확인하세요.
+
+macOS 앱 아이콘 또한 Dock의 아이콘 그리드에 더욱 자연스럽게 맞추어졌으며, 창 제어 버튼 주변 공간도 더욱 여유로워졌습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## 암호화 없이 메시지에 서명하기
+
+상대방에게 암호화 키가 없더라도 서명된 메시지를 보낼 수 있습니다. 이제 Meron은 암호화되지 않은 메일에 OpenPGP 서명을 첨부할 수 있어, 호환되는 메일 클라이언트에서 서명을 확인하는 동시에 복호화 과정 없이 일반 텍스트로 메일을 읽을 수 있습니다.
+
+**설정**을 열고 **메일 계정**에서 보내는 계정을 선택한 후 **암호화된 이메일** 섹션으로 이동하세요. 키를 생성하거나 가져와 활성화한 다음, **암호화되지 않은 메일에 서명**을 켭니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="설정에서 선택된 Elena의 Mail Lab 계정. 키 지문 위에 종단간 암호화 및 암호화되지 않은 메일에 서명이 활성화된 모습"
+  caption="암호화되지 않은 메일 서명은 고유 OpenPGP 키와 함께 계정별로 설정할 수 있습니다."
+  width={1280}
+  height={820}
+/>
+
+작성기에는 암호화와 서명 제어가 별도로 분리되어 있습니다. 아래 예시에서 테스트 수신자에게는 암호화 키가 없지만, 발송되는 초안에는 발신자의 키로 서명이 적용됩니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="열린 암호화 자물쇠와 활성화된 서명 제어가 표시된 Mail Lab 계정 간의 초안. 툴팁에 내 키로 서명됨이 표시됨"
+  caption="암호화는 꺼져 있고, OpenPGP 서명은 켜져 있습니다. 서명 제어를 통해 해당 초안의 설정을 변경할 수 있습니다."
+  width={870}
+  height={600}
+/>
+
+Meron은 전용 서명 서브키와 OpenKeychain 백업 가져오기도 지원하므로 기존의 OpenPGP 신원을 그대로 유지할 수 있습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">작성</Badge>
+
+## 짧은 답장에서 서명 제외하기
+
+빠른 답장과 전체 작성기 모두에 이메일 서명 전용 스위치가 추가되었습니다. 짧은 메모를 보낼 때는 끄고 격식 있는 메시지에서는 다시 켤 수 있으며, 설정에 저장해 둔 서명을 일일이 수정할 필요가 없습니다.
+
+빠른 답장에서는 저장된 서명이 입력 상자를 차지하지 않으며, 스위치를 통해 전송 시 Meron이 서명을 추가할지 여부를 제어합니다. 전체 작성기에서는 아래처럼 스위치를 끄면 초안에서 서명이 즉시 제거됩니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Elena의 저장된 서명이 제거되고 서명 스위치에 서명 없음이 표시된 Meron 작성기. 클릭하여 추가할 수 있으며 클릭 가능한 URL이 남아 있음"
+  caption="이 초안에서는 서명이 제거되었으며, 저장된 서명 서식은 스위치에서 언제든 다시 사용할 수 있습니다."
+  width={870}
+  height={625}
+/>
+
+이는 OpenPGP 서명과는 별개의 기능입니다. 하나는 텍스트로 된 서명 맺음말이고, 다른 하나는 암호학적 디지털 서명입니다.
+
+또한 보낸 빠른 답장, 전체 작성기 및 메일 읽기 화면에서 일반 웹 주소가 클릭 가능한 링크로 자동 변환됩니다. 초안에 있는 `https://meron.im` 링크도 일반 텍스트 URL로 입력된 것입니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">데스크톱 개선</Badge>
+
+## 다크 테마의 깊이감 향상
+
+데스크톱 다크 테마는 레이어드 서피스와 부드러운 그림자를 적용하여 카드, 메뉴, 패널을 보다 명확히 구분합니다. 칸반 보드 옆에 작성기를 열 때 보드가 옆으로 밀리지 않으며, 리더의 반투명 띠도 제거되었습니다.
+
+읽고 있는 스레드에 새 메일이 도착하더라도 Meron은 현재 메시지를 그대로 열어두어 끝까지 읽을 수 있게 돕습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android 및 언어</Badge>
+
+## 원하는 알림 작업 선택
+
+Android 새 메일 알림에 **삭제** 버튼이 추가되었습니다. **설정 → 알림**에서 원하는 작업 버튼을 선택하여 알림 창에서 바로 수신 메일을 처리할 수 있습니다.
+
+모바일 라이트 테마는 메일 목록 행을 깔끔한 흰색으로 유지하고 굵은 글씨로 안 읽은 메시지를 구분합니다. 연락처 목록에서도 상대방이나 계정의 프로필 아바타가 있는 경우 표시됩니다.
+
+Meron은 이제 **네덜란드어**, **우크라이나어**, **인도네시아어**를 지원하며 기존 언어의 누락된 번역도 모두 보완되었습니다.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.1 사용해보기"
+  text="최신 버전을 다운로드하여 Dock 배지, 유연한 OpenPGP 서명, 새로운 답장 제어 기능을 경험해 보세요. Meron은 무료 오픈소스입니다."
+  download="Meron 다운로드"
+  changelog="변경 이력 보기"
+  github="GitHub Releases"
+/>

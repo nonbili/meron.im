@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Ungelesenes auf einen Blick, signiert ohne Verschlüsselung"
+publishedAt: "2026-11-12"
+readingTime: "3 Min. Lesezeit"
+summary: "Ungelesene E-Mails im macOS-Dock, OpenPGP-Signaturen für unverschlüsselte Nachrichten und ein Schalter für Ihre E-Mail-Signatur. Meron 0.5.1 bringt außerdem tiefere Dark Themes und konfigurierbare Benachrichtigungsaktionen für Android."
+highlights: ["Anzeige ungelesener E-Mails im macOS-Dock-Icon", "Unverschlüsselte E-Mails mit OpenPGP-Signatur-Subkeys signieren", "OpenKeychain-Schlüssel-Backups importieren", "E-Mail-Signatur für jede Antwort oder jeden Entwurf ein- oder ausschalten", "Automatische Links für reine URLs", "Sanftere Schatten und mehrschichtige Oberflächen in Desktop-Dark-Themes", "Android-Benachrichtigungsaktionen auswählen, einschließlich Löschen", "Niederländische, ukrainische und indonesische Übersetzungen"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Release · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 bietet Ihnen praktische neue Möglichkeiten, E-Mails ohne Unterbrechung Ihres Arbeitsablaufs zu bearbeiten: Behalten Sie ungelesene Nachrichten direkt über das macOS-Dock im Blick, signieren Sie E-Mails auch ohne Verschlüsselung und lassen Sie Ihre Grußformel bei kurzen Antworten einfach weg.
+
+<PlatformNote>Das Dock-Badge ist eine macOS-Funktion. Die Signatursteuerung und das aufgefrischte Dark Theme sind Verbesserungen für den Desktop; die Einstellungen für Benachrichtigungsaktionen gelten für Android. Die drei neuen Sprachen stehen auf Desktop und Mobilgeräten zur Verfügung.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Ungelesene E-Mails direkt im Dock im Blick
+
+Das macOS-Dock-Icon von Meron zeigt nun die Anzahl ungelesener Nachrichten im Posteingang an. So sehen Sie sofort, ob E-Mails Ihre Aufmerksamkeit erfordern, während Sie in einer anderen App arbeiten.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="macOS-Dock-Icon von Meron mit Anzeige der ungelesenen Nachrichten aus den Mail-Lab-Testpostfächern"
+  caption="Das Dock-Badge zählt die ungelesenen Nachrichten in Ihren Posteingängen."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Falls die Zahl nicht angezeigt wird, prüfen Sie unter **Systemeinstellungen → Benachrichtigungen → Meron**, ob App-Symbol-Badges erlaubt sind.
+
+Das macOS-App-Icon fügt sich zudem harmonischer in das Dock-Icon-Raster ein, und die Fenster-Bedienelemente haben mehr Freiraum erhalten.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Nachrichten signieren, ohne sie zu verschlüsseln
+
+Kontakte benötigen keinen Verschlüsselungsschlüssel, damit Sie ihnen signierte Nachrichten senden können. Meron kann nun auch unverschlüsselten E-Mails eine OpenPGP-Signatur anfügen, sodass kompatible E-Mail-Clients die Signatur prüfen können, während die Nachricht ohne Entschlüsselung lesbar bleibt.
+
+Öffnen Sie die **Einstellungen**, wählen Sie unter **E-Mail-Konten** Ihr Absenderkonto und wechseln Sie in den Bereich **Verschlüsselte E-Mails**. Sobald ein Schlüssel erstellt oder importiert und aktiviert wurde, schalten Sie **Unverschlüsselte E-Mails signieren** ein.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Elenas Mail-Lab-Konto in den Einstellungen ausgewählt, mit aktivierter Ende-zu-Ende-Verschlüsselung und Signierung unverschlüsselter E-Mails oberhalb des Schlüssel-Fingerprints"
+  caption="Das Signieren unverschlüsselter E-Mails ist eine Kontoeinstellung neben Ihrem eigenen OpenPGP-Schlüssel."
+  width={1280}
+  height={820}
+/>
+
+Im Editor sind Verschlüsselung und Signatur voneinander getrennt. In diesem Beispiel besitzt der Testempfänger keinen Verschlüsselungsschlüssel, der ausgehende Entwurf ist jedoch trotzdem mit dem Schlüssel des Absenders signiert.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Entwurf zwischen Mail-Lab-Konten mit geöffnetem Schloss und aktiviertem Signatur-Schalter; der Tooltip lautet Mit Ihrem Schlüssel signiert"
+  caption="Verschlüsselung ist aus, OpenPGP-Signatur ist an. Über den Signatur-Schalter lässt sich dies für den aktuellen Entwurf anpassen."
+  width={870}
+  height={600}
+/>
+
+Meron unterstützt zudem dedizierte Signatur-Subkeys sowie den Import von OpenKeychain-Backups, sodass Sie Ihre bestehende OpenPGP-Identität nahtlos weiterverwenden können.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Verfassen</Badge>
+
+## Signatur bei kurzen Antworten aussparen
+
+Ihre E-Mail-Signatur besitzt jetzt einen eigenen Schalter in der Schnellantwort und im vollständigen Editor. Schalten Sie sie für kurze Notizen einfach ab oder für formelle Nachrichten wieder ein – ohne Ihre in den Einstellungen gespeicherte Signatur bearbeiten zu müssen.
+
+In der Schnellantwort belegt die gespeicherte Signatur nicht das Eingabefeld. Der Schalter bestimmt, ob Meron sie beim Absenden anfügt. Im vollständigen Editor entfernt das Ausschalten die Signatur direkt aus dem Entwurf, wie unten zu sehen.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron-Editor ohne Elenas gespeicherte Signatur; der Signatur-Schalter zeigt Keine Signatur. Klicken zum Hinzufügen; die Nachricht enthält weiterhin eine klickbare URL"
+  caption="Die Signatur wurde aus diesem Entwurf entfernt; die gespeicherte Vorlage bleibt über den Schalter jederzeit abrufbar."
+  width={870}
+  height={625}
+/>
+
+Dies ist unabhängig von der OpenPGP-Signatur: Das eine ist Ihre persönliche Grußformel, das andere eine kryptografische Signatur.
+
+Reine Webadressen werden in gesendeten Schnellantworten, im vollständigen Editor und in der Leseansicht nun automatisch zu klickbaren Links. Auch der Link `https://meron.im` in diesen Entwürfen begann als einfacher Klartext.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Desktop-Feinschliff</Badge>
+
+## Mehr Tiefe in den Dark Themes
+
+Desktop-Dark-Themes nutzen nun mehrschichtige Oberflächen und weiche Schatten, um Karten, Menüs und Seitenleisten klarer voneinander abzugrenzen. Wird der Editor neben einem Kanban-Board geöffnet, verschiebt sich das Board nicht mehr seitlich, und die Leseansicht verzichtet auf den Milchglasstreifen.
+
+Geht während des Lesens eine neue E-Mail im selben Thread ein, hält Meron die aktuelle Nachricht geöffnet, damit Sie ungestört zu Ende lesen können.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Sprachen</Badge>
+
+## Benachrichtigungsaktionen selbst bestimmen
+
+Android-Benachrichtigungen für neue E-Mails erhalten eine **Löschen**-Schaltfläche. Unter **Einstellungen → Benachrichtigungen** können Sie festlegen, welche Aktionsbuttons angezeigt werden, um eingehende Post direkt aus der Benachrichtigungsleiste zu verwalten.
+
+In den mobilen Light Themes bleiben E-Mail-Zeilen weiß und heben ungelesene Nachrichten mit Fettschrift hervor. Kontakte zeigen das Profilbild des Absenders oder des Kontos an, sofern verfügbar.
+
+Meron ist jetzt auch auf **Niederländisch**, **Ukrainisch** und **Indonesisch** verfügbar, und fehlende Übersetzungen in bestehenden Sprachen wurden ergänzt.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.1 ausprobieren"
+  text="Laden Sie die neueste Version herunter und nutzen Sie das Dock-Badge, flexibleres OpenPGP-Signieren und die neuen Antwort-Bedienelemente. Meron ist kostenlos und Open Source."
+  download="Meron herunterladen"
+  changelog="Changelog ansehen"
+  github="GitHub Releases"
+/>

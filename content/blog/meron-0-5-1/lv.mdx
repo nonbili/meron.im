@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Nelasītās vēstules īsumā, parakstītas bez šifrēšanas"
+publishedAt: "2026-11-12"
+readingTime: "3 min lasīšanai"
+summary: "Nelasīto vēstuļu skaits macOS Dock ikonā, OpenPGP paraksti nešifrētām vēstulēm un e-pasta nobeiguma paraksta slēdzis. Meron 0.5.1 piedāvā arī dziļākas tumšās tēmas un konfigurējamas Android paziņojumu darbības."
+highlights: ["Iesūtnes nelasīto vēstuļu skaits macOS Dock ikonā", "Nešifrēta e-pasta parakstīšana ar OpenPGP parakstīšanas apakšatslēgām", "OpenKeychain atslēgu rezerves kopiju importēšana", "E-pasta paraksta ieslēgšana vai izslēgšana katrai atbildei vai melnrakstam", "Automātiskas saites vienkāršām URL adresēm", "Mīkstākas ēnas un slāņveida virsmas darbvirsmas tumšajās tēmās", "Android paziņojumu darbību izvēle, tostarp Dzēst", "Tulkojumi holandiešu, ukraiņu un indonēziešu valodās"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Laidiens · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 piedāvā jaunus ērtus veidus, kā pārvaldīt e-pastu, nepārtraucot darba plūsmu: pārbaudiet nelasītās vēstules no macOS Dock, parakstiet e-pastu pat tad, ja to nevarat šifrēt, un īsās atbildēs viegli izlaidiet ierasto nobeiguma parakstu.
+
+<PlatformNote>Dock nozīmīte ir macOS funkcija. Paraksta vadīklas un atsvaidzinātās tumšās tēmas ir darbvirsmas uzlabojumi; paziņojumu darbību iestatījumi attiecas uz Android. Trīs jaunās valodas ir pieejamas gan datorā, gan mobilajās ierīcēs.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Pārbaudiet nelasītās vēstules tieši no Dock
+
+Meron macOS Dock ikona tagad rāda nelasīto vēstuļu skaitu iesūtnē. Varat uzreiz redzēt, vai pastam nepieciešama uzmanība, kamēr strādājat citā lietotnē.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Meron macOS Dock ikona, kurā redzams nelasīto vēstuļu skaits no Mail Lab testa iesūtnēm"
+  caption="Dock nozīmīte uzskaita nelasītās vēstules jūsu iesūtnēs."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Ja skaitlis nav redzams, pārbaudiet sadaļu **Sistēmas iestatījumi → Paziņojumi → Meron** un atļaujiet lietotnes ikonas nozīmītes.
+
+macOS lietotnes ikona tagad precīzāk iekļaujas Dock ikonu režģī, un loga vadīklām apkārt ir vairāk vietas.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Parakstiet vēstuli bez tās šifrēšanas
+
+Kontaktpersonai nav nepieciešama šifrēšanas atslēga, lai jūs varētu tai nosūtīt parakstītu ziņojumu. Meron tagad var pievienot OpenPGP parakstu arī nešifrētam e-pastam, ļaujot saderīgam e-pasta klientam pārbaudīt parakstu, kamēr vēstule paliek salasāma vienkāršā tekstā bez atšifrēšanas.
+
+Atveriet **Iestatījumi**, sadaļā **E-pasta konti** atlasiet savu sūtītāja kontu un atrodiet sadaļu **Šifrēts e-pasts**. Kad atslēga ir izveidota vai importēta un iespējota, ieslēdziet **Parakstīt nešifrētu e-pastu**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Elenas Mail Lab konts atlasīts Iestatījumos, virs atslēgas nospieduma iespējota Galapunkta šifrēšana un Parakstīt nešifrētu e-pastu"
+  caption="Nešifrēta e-pasta parakstīšana ir atsevišķa konta konfigurācija līdzās jūsu OpenPGP atslēgai."
+  width={1280}
+  height={820}
+/>
+
+Sastādītājā šifrēšanas un parakstīšanas vadīklas ir nodalītas. Šajā piemērā testa saņēmējam nav šifrēšanas atslēgas, taču izejošais melnraksts vienalga tiek parakstīts ar sūtītāja atslēgu.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Melnraksts starp Mail Lab kontiem ar atvērtu šifrēšanas slēdzeni un aktīvu paraksta vadīklu; tās rīka padoms vēsta Parakstīts ar jūsu atslēgu"
+  caption="Šifrēšana ir izslēgta; OpenPGP parakstīšana ir ieslēgta. Paraksta vadīkla ļauj to mainīt konkrētajam melnrakstam."
+  width={870}
+  height={600}
+/>
+
+Meron atbalsta arī īpašas parakstīšanas apakšatslēgas un OpenKeychain rezerves kopiju importēšanu, ļaujot turpināt izmantot esošo OpenPGP identitāti.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Rakstīšana</Badge>
+
+## Izlaidiet parakstu īsās atbildēs
+
+Jūsu e-pasta nobeiguma parakstam tagad ir savs slēdzis gan ātrajā atbildē, gan pilnajā sastādītājā. Izslēdziet to īsai piezīmei vai ieslēdziet atpakaļ oficiālai vēstulei, nemainot Iestatījumos saglabāto parakstu.
+
+Ātrajā atbildē saglabātais paraksts neaizņem ievades lauku. Slēdzis nosaka, vai Meron to pievienos nosūtīšanas brīdī. Pilnajā sastādītājā izslēgšana noņem parakstu tieši no melnraksta, kā parādīts zemāk.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron sastādītājs bez Elenas saglabātā paraksta un paraksta slēdzis rāda Nav paraksta. Noklikšķiniet, lai pievienotu; ziņojumā joprojām ir klikšķināms URL"
+  caption="Paraksts no šī melnraksta ir noņemts; saglabātā veidne jebkurā laikā ir pieejama, izmantojot slēdzi."
+  width={870}
+  height={625}
+/>
+
+Tas ir pilnīgi neatkarīgi no OpenPGP paraksta: viens ir jūsu teksta noslēguma paraksts, bet otrs ir kriptogrāfisks digitālais paraksts.
+
+Vienkāršas tīmekļa adreses nosūtītajās ātrajās atbildēs, pilnajā sastādītājā un lasītājā automātiski kļūst par klikšķināmām saitēm. Saite `https://meron.im` šajos melnrakstos sākumā bija vienkāršs teksts.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Darbvirsmas uzlabojumi</Badge>
+
+## Vairāk dziļuma tumšajās tēmās
+
+Darbvirsmas tumšajās tēmās tagad izmantotas slāņveida virsmas un mīkstas ēnas, lai skaidrāk nodalītu kartītes, izvēlnes un paneļus. Sastādītāja atvēršana blakus Kanban dēlim vairs nenobīda dēli uz sāniem, un lasītājs atsakās no matētās joslas.
+
+Kad lasāmajā sarakstē pienāk jauns e-pasts, Meron atstāj pašreizējo ziņojumu atvērtu, lai jūs varētu mierīgi pabeigt lasīšanu.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android un valodas</Badge>
+
+## Izvēlieties paziņojumu darbības
+
+Android jauno e-pastu paziņojumi papildināti ar pogu **Dzēst**. Sadaļā **Iestatījumi → Paziņojumi** izvēlieties, kuras darbību pogas rādīt, lai apstrādātu ienākošo pastu tieši no paziņojumu joslas.
+
+Mobilās gaišās tēmas saglabā e-pasta rindas baltas un izmanto treknrakstu, lai izceltu nelasītās vēstules. Kontakti rāda arī sūtītāja vai konta profila attēlu, ja tas ir pieejams.
+
+Meron tagad ir pieejams **holandiešu**, **ukraiņu** un **indonēziešu** valodās, kā arī aizpildīti trūkstošie tulkojumi esošajās valodās.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Izmēģiniet Meron 0.5.1"
+  text="Lejupielādējiet jaunāko laidienu, lai izmantotu Dock nozīmīti, elastīgāku OpenPGP parakstīšanu un jaunās atbilžu vadīklas. Meron ir bezmaksas un atvērtā koda programma."
+  download="Lejupielādēt Meron"
+  changelog="Skatīt izmaiņu žurnālu"
+  github="GitHub laidieni"
+/>

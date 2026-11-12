@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1：未讀一目了然，未加密郵件亦可簽名"
+publishedAt: "2026-11-12"
+readingTime: "3 分鐘閱讀"
+summary: "macOS Dock 未讀標記、未加密郵件的 OpenPGP 簽名，以及快速簽名開關。Meron 0.5.1 還帶來了更具層次感的深色主題與可自訂的 Android 通知快捷操作。"
+highlights: ["macOS Dock 圖示顯示收件匣未讀計數", "使用 OpenPGP 簽名子金鑰為未加密郵件簽名", "匯入 OpenKeychain 金鑰備份", "在每封回覆或草稿中自由開啟或關閉郵件結尾簽名", "純文字網址自動轉為可點擊連結", "桌面端深色主題採用更柔和的陰影與分層介面", "自由選擇 Android 通知操作，包括刪除", "新增荷蘭語、烏克蘭語和印尼語支援"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "發布 · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 為你提供了多種更順暢的方式處理郵件，而不打斷當前工作流程：在 macOS Dock 中直接查看未讀郵件，即使無法加密也能為郵件進行數位簽名，以及在簡短回覆中快速略過日常結尾簽名。
+
+<PlatformNote>Dock 標記是 macOS 專屬功能。簽名開關與深色主題優化屬於桌面端體驗提升；通知快捷操作設定適用於 Android。三種新增語言在桌面端和行動端均已提供。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## 在 Dock 中查看未讀郵件
+
+Meron 的 macOS Dock 圖示現已支援顯示收件匣未讀數量。在其他應用程式中工作時，一眼即可掌握是否有郵件需要處理。
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="顯示來自 Mail Lab 測試收件匣未讀計數的 Meron macOS Dock 圖示"
+  caption="Dock 標記會統計收件匣中的未讀郵件數量。"
+  width={230}
+  height={58}
+/>
+
+</div>
+
+若未顯示數字，請檢查 **系統設定 → 通知 → Meron** 並允許標記 App 圖示。
+
+macOS 應用程式圖示也更加貼合 Dock 的圖示網格，視窗控制按鈕四周也留出了更多舒適空間。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## 無需加密即可簽名郵件
+
+即使聯絡人沒有加密金鑰，你依然可以向其傳送帶有簽名的郵件。Meron 現已支援為未加密郵件附帶 OpenPGP 簽名，相容的郵件用戶端可以驗證其真實性，而郵件內容仍保持明文可讀，無需解密。
+
+開啟 **設定**，在 **郵件帳號** 下選擇你的寄件帳號，找到其 **加密郵件** 選項。在建立或匯入金鑰並啟用後，開啟 **為未加密郵件簽名**。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="在設定中選取的 Elena Mail Lab 帳號，在帳號金鑰指紋上方啟用了端對端加密和為未加密郵件簽名"
+  caption="為未加密郵件簽名是一項獨立的帳號設定，與你自己的 OpenPGP 金鑰並列。"
+  width={1280}
+  height={820}
+/>
+
+撰寫器現已將加密與簽名控制完全分開。在此範例中，測試收件人沒有加密金鑰，但寄出的草稿依然使用寄件人的金鑰完成了簽名。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Mail Lab 帳號之間的草稿，顯示未加密狀態與已啟用的簽名控制項；其工具提示顯示使用您的金鑰簽名"
+  caption="加密處於關閉狀態；OpenPGP 簽名已開啟。簽名控制項允許你針對目前草稿隨時調整。"
+  width={870}
+  height={600}
+/>
+
+Meron 還支援專用的簽名子金鑰以及匯入 OpenKeychain 備份，方便你無縫沿用現有的 OpenPGP 身分。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">撰寫</Badge>
+
+## 簡短回覆時略過結尾簽名
+
+快速回覆和完整撰寫器中現已為郵件結尾簽名配備了專屬開關。傳送簡短便簽時即可隨手關閉，傳送正式郵件時再行開啟，無需再去設定中反覆修改儲存的簽名。
+
+在快速回覆中，儲存的結尾簽名不會預先占用輸入框。開關將決定 Meron 傳送時是否附加簽名。而在完整撰寫器中，關閉開關會直接將簽名從草稿中移除，如下圖所示。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron 撰寫器移除了 Elena 儲存的結尾簽名，簽名開關顯示無簽名。點擊即可新增；內文中依然包含可點擊的網址"
+  caption="結尾簽名已從目前草稿中移除；儲存的簽名範本依然可隨時透過開關新增。"
+  width={870}
+  height={625}
+/>
+
+這與 OpenPGP 簽名是相互獨立的：一個是書面簽名落款，另一個是密碼學數位簽名。
+
+此外，純文字網址也會在傳送後的快速回覆、完整撰寫器和閱讀器中自動轉為可點擊的超連結。這些草稿中的 `https://meron.im` 連結最初就是純文字網址。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">桌面端優化</Badge>
+
+## 深色主題層次更鮮明
+
+桌面端深色主題現已引進分層介面與柔和陰影，以清晰劃分卡片、選單和面板。在看板旁邊開啟撰寫器時也不會再導致看板橫向偏移，且閱讀器去除了半透明毛玻璃底欄。
+
+當你正在閱讀某一郵件主題時若有新郵件送達，Meron 會保持目前正在閱讀的訊息展開，方便你讀完。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android 與多語言</Badge>
+
+## 自訂通知快捷操作
+
+Android 新郵件通知新增了 **刪除** 按鈕。在 **設定 → 通知** 下，你可以自由勾選顯示的快捷操作按鈕，直接在通知匣中處理來信。
+
+行動端淺色主題保持郵件列表列白色背景，並以粗體字凸顯未讀郵件。聯絡人列表在有頭像時也會顯示聯絡人或帳號的個人頭像。
+
+Meron 現已支援 **荷蘭語**、**烏克蘭語** 與 **印尼語**，並補齊了現有語言中缺失的翻譯。
+
+</PostSection>
+
+<ReleaseCTA
+  heading="體驗 Meron 0.5.1"
+  text="下載最新版本，體驗 Dock 未讀標記、更靈活的 OpenPGP 簽名以及全新的回覆簽名開關。Meron 是一款免費且開源的郵件用戶端。"
+  download="下載 Meron"
+  changelog="檢視更新日誌"
+  github="GitHub Releases"
+/>

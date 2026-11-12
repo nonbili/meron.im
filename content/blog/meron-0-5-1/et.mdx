@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Lugemata kirjad ühe pilguga, allkirjastatud ilma krüpteerimiseta"
+publishedAt: "2026-11-12"
+readingTime: "3 min lugemist"
+summary: "Lugemata kirjade loendur macOS Dockis, OpenPGP allkirjad krüpteerimata kirjadele ja lüliti e-posti allkirja jaoks. Meron 0.5.1 toob kaasa ka sügavamad tumedad teemad ja seadistatavad Androidi teavituste toimingud."
+highlights: ["Postkasti lugemata kirjade arv macOS Docki ikoonil", "Krüpteerimata e-kirjade allkirjastamine OpenPGP allkirjastamise alamvõtmetega", "OpenKeychaini võtmete varukoopiate importimine", "E-posti allkirja sisse- ja väljalülitamine iga vastuse või mustandi puhul", "Automaatsed lingid tavalistele URL-idele", "Pehmemad varjud ja kihilised pinnad töölaua tumedates teemades", "Androidi teavitustoimingute valimine, sealhulgas Kustuta", "Hollandi, ukraina ja indoneesia keele tõlked"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Väljalase · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 pakub uusi mugavaid viise kirjade haldamiseks ilma tööhoogu katkestamata: jälgige lugemata kirju otse macOS Dockist, allkirjastage e-kiri ka siis, kui te ei saa seda krüpteerida, ja jätke tavapärane allkiri lühikesest vastusest kergesti välja.
+
+<PlatformNote>Docki märk on macOS-i funktsioon. Allkirja juhtnupud ja uuendatud tumedad teemad on töölauaversiooni täiustused; teavituste toimingute sätted kehtivad Androidile. Kolm uut keelt on saadaval nii lauaarvutis kui ka mobiilis.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Vaadake lugemata kirju otse Dockist
+
+Meroni macOS Docki ikoon näitab nüüd teie postkasti lugemata kirjade arvu. Näete kohe teises rakenduses töötades, kas mõni e-kiri vajab teie tähelepanu.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Meroni macOS Docki ikoon, mis kuvab Mail Labi testpostkastide lugemata kirjade arvu"
+  caption="Docki märk loendab teie postkastides olevaid lugemata kirju."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Kui numbrit ei kuvata, kontrollige jaotist **Süsteemi sätted → Teavitused → Meron** ning lubage rakenduse ikoonimärgid.
+
+macOS-i rakenduseikoon sobitub nüüd ka paremini Docki ruudustikuga ja akna juhtnuppude ümber on rohkem vaba ruumi.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Kirja allkirjastamine ilma krüpteerimiseta
+
+Kontaktil ei pea olema krüpteerimisvõtit, et saaksite talle allkirjastatud kirja saata. Meron saab nüüd lisada OpenPGP allkirja krüpteerimata kirjadele, võimaldades ühilduval e-posti kliendil allkirja kontrollida, samal ajal kui kirja saab lugeda tavatekstina ilma lahtikrükkimiseta.
+
+Avage **Seaded**, valige jaotises **E-posti kontod** oma saatjakonto ja leidke jaotis **Krüpteeritud e-post**. Kui võti on loodud või imporditud ja lubatud, lülitage sisse **Allkirjasta krüpteerimata kirjad**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Elena Mail Labi konto valitud Seadetes, kus võtme sõrmejälje kohal on lubatud Otsast lõpuni krüpteerimine ja Allkirjasta krüpteerimata kirjad"
+  caption="Krüpteerimata kirjade allkirjastamine on kontopõhine seadistus teie enda OpenPGP võtme kõrval."
+  width={1280}
+  height={820}
+/>
+
+Kirja koostamise aknas on nüüd krüpteerimisel ja allkirjastamisel eraldi juhtnupud. Selles näites puudub testsaajal krüpteerimisvõti, kuid väljaminev mustand on sellest hoolimata saatja võtmega allkirjastatud.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Mail Labi kontode vaheline mustand avatud krüpteerimisluku ja aktiivse allkirjanupuga; selle kohtspikker ütleb Allkirjastatud teie võtmega"
+  caption="Krüpteerimine on väljas; OpenPGP allkirjastamine on sees. Allkirja juhtnupu abil saate seda konkreetse mustandi puhul muuta."
+  width={870}
+  height={600}
+/>
+
+Meron toetab ka spetsiaalseid allkirjastamise alamvõtmeid ja OpenKeychaini varukoopiate importimist, võimaldades teil jätkata olemasoleva OpenPGP identiteedi kasutamist.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Kirjutamine</Badge>
+
+## Jätke allkiri lühikesest vastusest välja
+
+Teie e-posti allkirjal on nüüd oma lüliti nii kiirvastuses kui ka täielikus kirja koostajas. Lülitage see lühikese teate puhul välja või ametlikuma kirja jaoks uuesti sisse, ilma et peaksite Seadetes salvestatud malli muutma.
+
+Kiirvastuses ei võta salvestatud allkiri tekstikastis ruumi. Lüliti määrab, kas Meron lisab selle saatmisel. Täielikus kirja koostajas eemaldab väljalülitamine allkirja otse mustandist, nagu allpool näha.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meroni kirja koostaja, kust Elena salvestatud allkiri on eemaldatud ja allkirjalüliti näitab Allkiri puudub. Klõpsake lisamiseks; kiri sisaldab endiselt klõpsatavat URL-i"
+  caption="Allkiri on sellest mustandist eemaldatud; salvestatud mall on lüliti kaudu igal ajal uuesti kättesaadav."
+  width={870}
+  height={625}
+/>
+
+See on täiesti lahus OpenPGP allkirjast: üks on teie kirjalik lõputervitus, teine krüptograafiline digitaalallkiri.
+
+Tavalised veebiaadressid muutuvad saadetud kiirvastustes, kirja koostajas ja lugemisvaates nüüd automaatselt klõpsatavateks linkideks. Nendes mustandites olev link `https://meron.im` algas lihtsa tekstina.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Töölaua viimistlus</Badge>
+
+## Rohkem sügavust tumedates teemades
+
+Töölaua tumedad teemad kasutavad nüüd kihilisi pindu ja pehmeid varje, et kaarte, menüüsid ja paneele selgemalt eraldada. Kirja koostaja avamine Kanbani tahvli kõrval ei nihuta tahvlit enam küljele ning lugemisvaade loobub matistatud ribast.
+
+Kui loetavasse kirjalõime saabub uus e-kiri, hoiab Meron praeguse kirja lahti, et saaksite selle rahulikult lõpuni lugeda.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android ja keeled</Badge>
+
+## Valige oma teavituste toimingud
+
+Androidi uute kirjade teavitused saavad nupu **Kustuta**. Jaotises **Seaded → Teavitused** valige, millised tegevusnupud kuvatakse, et sissetulevaid kirju otse teavitusribalt hallata.
+
+Mobiili heledad teemad säilitavad e-kirjade ridadel valge tausta ja kasutavad lugemata kirjade esiletõstmiseks paksus kirjas teksti. Kontaktid kuvavad võimaluse korral ka saatja või konto profiilipilti.
+
+Meron on nüüd saadaval **hollandi**, **ukraina** ja **indoneesia** keeles ning olemasolevates keeltes täiendati puuduvaid tõlkeid.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Proovi Meron 0.5.1 versiooni"
+  text="Laadige alla uusim versioon Docki märgi, paindlikuma OpenPGP allkirjastamise ja uute vastuse juhtnuppude kasutamiseks. Meron on tasuta ja avatud lähtekoodiga."
+  download="Laadi alla Meron"
+  changelog="Vaata muudatuste logi"
+  github="GitHubi väljalasked"
+/>

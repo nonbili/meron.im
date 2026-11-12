@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Xem nhanh thư chưa đọc, ký thư không cần mã hóa"
+publishedAt: "2026-11-12"
+readingTime: "Thời gian đọc 3 phút"
+summary: "Số lượng thư chưa đọc trên Dock của macOS, chữ ký OpenPGP cho thư không mã hóa và công tắc bật/tắt chữ ký email. Meron 0.5.1 cũng mang đến giao diện tối có chiều sâu hơn và các thao tác thông báo Android tùy chỉnh."
+highlights: ["Đếm số thư chưa đọc trên biểu tượng Dock macOS", "Ký thư chưa mã hóa bằng khóa phụ ký OpenPGP", "Nhập bản sao lưu khóa từ OpenKeychain", "Bật hoặc tắt chữ ký thư cho từng câu trả lời hoặc bản nháp", "Tự động tạo liên kết cho các URL thuần", "Đổ bóng mềm mại hơn và các bề mặt xếp lớp trong giao diện tối trên máy tính", "Tùy chọn các thao tác thông báo Android, bao gồm Xóa", "Bổ sung bản dịch tiếng Hà Lan, tiếng Ukraina và tiếng Indonesia"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Phát hành · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 mang đến cho bạn những phương thức mới mẻ để xử lý thư từ mà không làm ngắt quãng dòng suy nghĩ: kiểm tra thư chưa đọc từ thanh Dock macOS, ký thư ngay cả khi không thể mã hóa và dễ dàng lược bỏ chữ ký quen thuộc trong các câu trả lời ngắn.
+
+<PlatformNote>Huy hiệu trên Dock là tính năng dành riêng cho macOS. Các nút điều khiển chữ ký và cải tiến giao diện tối áp dụng cho máy tính; cài đặt thao tác thông báo dành cho Android. Ba ngôn ngữ mới hiện đã có mặt trên cả máy tính lẫn thiết bị di động.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Kiểm tra thư chưa đọc từ thanh Dock
+
+Biểu tượng Dock của Meron trên macOS hiện hiển thị số lượng thư chưa đọc trong hộp thư đến. Bạn có thể biết ngay liệu có thư cần xử lý hay không trong khi đang làm việc trên ứng dụng khác.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Biểu tượng Dock macOS của Meron hiển thị số thư chưa đọc từ các hộp thư thử nghiệm của Mail Lab"
+  caption="Huy hiệu Dock đếm số thư chưa đọc trong các hộp thư đến của bạn."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Nếu số lượng chưa hiển thị, hãy kiểm tra tại **Cài đặt Hệ thống → Thông báo → Meron** và cho phép huy hiệu trên biểu tượng ứng dụng.
+
+Biểu tượng ứng dụng trên macOS cũng được căn chỉnh vừa vặn hơn với lưới biểu tượng của Dock, các nút điều khiển cửa sổ cũng có thêm khoảng cách thoáng đãng.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Ký thư mà không cần mã hóa
+
+Người nhận không nhất thiết phải có khóa mã hóa thì bạn mới gửi được thư có chữ ký. Meron hiện có thể đính kèm chữ ký OpenPGP vào thư không mã hóa, cho phép các ứng dụng email tương thích kiểm tra tính xác thực trong khi nội dung thư vẫn đọc được bình thường mà không cần giải mã.
+
+Mở **Cài đặt**, chọn tài khoản gửi tại **Tài khoản thư** và tìm đến mục **Thư mã hóa**. Sau khi tạo hoặc nhập khóa và bật lên, hãy kích hoạt **Ký thư không mã hóa**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Tài khoản Mail Lab của Elena được chọn trong Cài đặt, bật Mã hóa đầu cuối và Ký thư không mã hóa phía trên vân tay khóa"
+  caption="Ký thư không mã hóa là cài đặt theo từng tài khoản, song hành cùng khóa OpenPGP của chính bạn."
+  width={1280}
+  height={820}
+/>
+
+Trình soạn thảo có các nút điều khiển riêng biệt cho mã hóa và chữ ký. Trong ví dụ này, người nhận thử nghiệm không có khóa mã hóa nhưng bản nháp gửi đi vẫn được ký bằng khóa của người gửi.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Bản nháp giữa các tài khoản Mail Lab với ổ khóa mã hóa đang mở và nút ký đã bật; chú thích hiển thị Đã ký bằng khóa của bạn"
+  caption="Mã hóa đang tắt; ký OpenPGP đang bật. Nút điều khiển chữ ký cho phép bạn thay đổi điều này cho bản nháp hiện tại."
+  width={870}
+  height={600}
+/>
+
+Meron cũng hỗ trợ các khóa phụ chuyên dụng để ký và nhập các bản sao lưu từ OpenKeychain, giúp bạn tiếp tục sử dụng danh tính OpenPGP hiện có.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Soạn thảo</Badge>
+
+## Lược bỏ chữ ký trong câu trả lời ngắn
+
+Chữ ký email của bạn hiện có công tắc riêng trong cả tính năng trả lời nhanh lẫn trình soạn thảo đầy đủ. Bạn có thể tắt đi khi gửi mẩu tin ngắn hoặc bật lại cho thư trang trọng mà không cần phải chỉnh sửa mẫu chữ ký đã lưu trong Cài đặt.
+
+Ở chế độ trả lời nhanh, chữ ký đã lưu không chiếm diện tích trong ô nhập liệu. Công tắc sẽ điều khiển việc Meron có thêm chữ ký khi gửi hay không. Trong trình soạn thảo đầy đủ, tắt công tắc sẽ loại bỏ chữ ký khỏi bản nháp như hình dưới đây.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Trình soạn Meron đã lược bỏ chữ ký của Elena và công tắc chữ ký hiển thị Không có chữ ký. Nhấp để thêm; thư vẫn chứa URL có thể nhấp"
+  caption="Chữ ký đã được lược bỏ khỏi bản nháp này; mẫu chữ ký đã lưu vẫn luôn sẵn sàng thông qua công tắc."
+  width={870}
+  height={625}
+/>
+
+Điều này hoàn toàn độc lập với chữ ký OpenPGP: một bên là lời chào kết thúc dạng văn bản, bên còn lại là chữ ký điện tử mật mã.
+
+Các địa chỉ web thuần cũng tự động chuyển thành liên kết có thể nhấp trong các câu trả lời nhanh đã gửi, trình soạn thảo đầy đủ và trình đọc. Liên kết `https://meron.im` trong các bản nháp này ban đầu chỉ là văn bản URL thông thường.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Tinh chỉnh trên máy tính</Badge>
+
+## Giao diện tối có chiều sâu hơn
+
+Giao diện tối trên máy tính hiện sử dụng các bề mặt xếp lớp và hiệu ứng đổ bóng mềm mại để phân tách rõ ràng giữa các thẻ, menu và bảng điều khiển. Mở trình soạn thảo bên cạnh bảng Kanban sẽ không còn làm bảng bị trượt sang bên, và trình đọc cũng lược bỏ dải mờ phía dưới.
+
+Khi có thư mới đến trong luồng thư bạn đang xem, Meron sẽ giữ nguyên thư hiện tại đang mở để bạn đọc xong mà không bị gián đoạn.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Ngôn ngữ</Badge>
+
+## Tùy chọn thao tác trên thông báo
+
+Thông báo thư mới trên Android được bổ sung thêm nút **Xóa**. Trong **Cài đặt → Thông báo**, bạn có thể chọn các nút thao tác nào sẽ xuất hiện để xử lý thư đến ngay từ thanh thông báo.
+
+Giao diện sáng trên di động giữ cho các dòng thư nền trắng tinh tế và dùng chữ in đậm để phân biệt thư chưa đọc. Danh bạ cũng hiển thị ảnh đại diện của người liên hệ hoặc tài khoản khi có sẵn.
+
+Meron hiện đã hỗ trợ tiếng **Hà Lan**, tiếng **Ukraina** và tiếng **Indonesia**, đồng thời bổ sung đầy đủ các bản dịch còn thiếu ở các ngôn ngữ hiện có.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Trải nghiệm Meron 0.5.1"
+  text="Tải bản phát hành mới nhất để trải nghiệm huy hiệu Dock, chữ ký OpenPGP linh hoạt hơn và các tùy chọn phản hồi mới. Meron là phần mềm miễn phí và nguồn mở."
+  download="Tải Meron"
+  changelog="Xem nhật ký thay đổi"
+  github="Bản phát hành GitHub"
+/>

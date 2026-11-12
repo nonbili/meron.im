@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: No leídos de un vistazo, firmados sin cifrado"
+publishedAt: "2026-11-12"
+readingTime: "Lectura de 3 min"
+summary: "Contador de no leídos en el Dock de macOS, firmas OpenPGP para correos no cifrados y un interruptor para tu firma de correo. Meron 0.5.1 también incorpora temas oscuros más profundos y acciones de notificación configurables en Android."
+highlights: ["Contador de no leídos en el icono del Dock de macOS", "Firmar correos no cifrados con subclaves de firma OpenPGP", "Importar copias de seguridad de claves de OpenKeychain", "Activar o desactivar tu firma de correo para cada respuesta o borrador", "Enlaces automáticos para URLs sin formato", "Sombras más suaves y superficies por capas en temas oscuros de escritorio", "Elegir acciones de notificación en Android, incluyendo Eliminar", "Traducciones al neerlandés, ucraniano e indonesio"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Lanzamiento · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 te ofrece nuevas formas de gestionar el correo sin interrumpir tu flujo de trabajo: consulta los mensajes no leídos desde el Dock de macOS, firma correos electrónicos aunque no puedas cifrarlos y omite tu firma habitual en respuestas breves.
+
+<PlatformNote>El globo del Dock es una función de macOS. Los controles de firma y la renovación del tema oscuro son mejoras de escritorio; las acciones de notificación aplican a Android. Los tres nuevos idiomas están disponibles tanto en escritorio como en móviles.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Consulta el correo no leído desde el Dock
+
+El icono de Meron en el Dock de macOS ahora muestra el recuento de mensajes no leídos en la bandeja de entrada. Así puedes ver si hay correo pendiente mientras trabajas en otra aplicación.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Icono de Meron en el Dock de macOS mostrando el recuento de no leídos de las bandejas de prueba de Mail Lab"
+  caption="El globo del Dock cuenta los mensajes no leídos de tus bandejas de entrada."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Si el número no aparece, revisa **Ajustes del Sistema → Notificaciones → Meron** y permite los globos en el icono de la app.
+
+El icono de la aplicación para macOS también se ajusta con mayor precisión a la cuadrícula del Dock, y los controles de ventana disponen de más espacio a su alrededor.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Firma mensajes sin cifrarlos
+
+Un contacto no necesita tener una clave de cifrado para que puedas enviarle un mensaje firmado. Meron ahora puede adjuntar una firma OpenPGP a correos no cifrados, permitiendo que un cliente compatible verifique la firma mientras el mensaje sigue siendo legible sin descifrado.
+
+Abre **Configuración**, selecciona tu cuenta de envío en **Cuentas de correo** y busca la sección **Correo cifrado**. Una vez creada o importada tu clave y habilitada, activa **Firmar correo no cifrado**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Cuenta Mail Lab de Elena seleccionada en Configuración, con Cifrado de extremo a extremo y Firmar correo no cifrado activados sobre la huella de la clave"
+  caption="Firmar correo no cifrado es una opción por cuenta, junto con tu propia clave OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+El redactor cuenta ahora con controles independientes de cifrado y firma. En este ejemplo, el destinatario de prueba no tiene clave de cifrado, pero el borrador saliente sigue estando firmado con la clave del remitente.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Borrador entre cuentas de Mail Lab con candado abierto y control de firma activado; la descripción indica Firmado con tu clave"
+  caption="El cifrado está desactivado; la firma OpenPGP está activada. El control de firma te permite modificarlo para este borrador."
+  width={870}
+  height={600}
+/>
+
+Meron también admite subclaves dedicadas a firma e importación de copias de seguridad de OpenKeychain, para que puedas mantener tu identidad OpenPGP actual.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Redacción</Badge>
+
+## Omite la firma en respuestas breves
+
+Tu firma de despedida dispone ahora de un interruptor dedicado tanto en la respuesta rápida como en el redactor completo. Desactívala para una nota rápida o vuelve a activarla para un mensaje más formal, sin necesidad de editar la firma guardada en Configuración.
+
+En la respuesta rápida, la firma guardada no ocupa espacio en el campo de texto. El interruptor decide si Meron la añade al enviar. En el redactor completo, desactivarlo retira la firma del borrador, como se aprecia a continuación.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Redactor de Meron sin la firma guardada de Elena y con el interruptor mostrando Sin firma. Haz clic para añadirla; el mensaje sigue conteniendo una URL enlazada"
+  caption="La firma se ha eliminado de este borrador; la plantilla guardada sigue disponible desde el interruptor."
+  width={870}
+  height={625}
+/>
+
+Esto es totalmente independiente de la firma OpenPGP: una es tu firma textual de despedida y la otra una firma criptográfica.
+
+Las direcciones web sin formato también se convierten automáticamente en enlaces interactivos en las respuestas rápidas enviadas, el redactor y el lector. El enlace `https://meron.im` en estos borradores comenzó como una URL de texto simple.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Detalles de escritorio</Badge>
+
+## Mayor profundidad en temas oscuros
+
+Los temas oscuros de escritorio ahora emplean superficies por capas y sombras suaves para separar con claridad tarjetas, menús y paneles. Abrir un redactor junto a un tablero Kanban ya no desplaza el tablero hacia los lados, y el lector prescinde de la franja esmerilada.
+
+Cuando llega un correo nuevo en un hilo que estás leyendo, Meron mantiene abierto el mensaje actual para que puedas terminarlo.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android e idiomas</Badge>
+
+## Elige tus acciones de notificación
+
+Las notificaciones de correo nuevo en Android incorporan el botón **Eliminar**. En **Configuración → Notificaciones**, elige qué botones de acción mostrar para gestionar el correo entrante directamente desde el panel de notificaciones.
+
+Los temas claros para móviles mantienen las filas de correo en color blanco y utilizan texto en negrita para resaltar los mensajes no leídos. Los contactos también muestran el avatar de perfil del remitente o de la cuenta cuando está disponible.
+
+Meron ya está disponible en **neerlandés**, **ucraniano** e **indonesio**, habiéndose completado traducciones pendientes en los idiomas existentes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Prueba Meron 0.5.1"
+  text="Descarga la última versión para disfrutar del globo del Dock, firma OpenPGP más flexible y nuevos controles de respuesta. Meron es gratuito y de código abierto."
+  download="Descargar Meron"
+  changelog="Ver registro de cambios"
+  github="GitHub Releases"
+/>

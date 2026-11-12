@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Olästa i ett ögonkast, signerade utan kryptering"
+publishedAt: "2026-11-12"
+readingTime: "3 min läsning"
+summary: "Olästa-räknare i macOS Dock, OpenPGP-signaturer för okrypterad e-post och en brytare för din e-postsignatur. Meron 0.5.1 bjuder även på djupare mörka teman och anpassningsbara aviseringsåtgärder i Android."
+highlights: ["Räknare för olästa meddelanden på Dock-ikonen i macOS", "Signera okrypterad e-post med OpenPGP-signeringsunderdelnycklar", "Importera säkerhetskopior av nycklar från OpenKeychain", "Slå på eller av din e-postsignatur för varje svar eller utkast", "Automatiska länkar för enkla URL:er", "Mjukare skuggor och skiktade ytor i mörka skrivbordsteman", "Välj aviseringsåtgärder i Android, inklusive Radera", "Översättningar till nederländska, ukrainska och indonesiska"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Utgåva · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 ger dig smidiga nya sätt att hantera e-post utan att bryta ditt arbetsflöde: håll koll på olästa meddelanden via macOS Dock, signera e-post även när den inte kan krypteras och utelämna din vanliga signatur vid korta svar.
+
+<PlatformNote>Dock-märket är en macOS-funktion. Signaturkontroller och den uppdaterade mörka färgskalan är förbättringar för skrivbordet; inställningar för aviseringsåtgärder gäller Android. De tre nya språken finns tillgängliga på både dator och mobil.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Håll koll på oläst e-post från Dock
+
+Merons macOS Dock-ikon visar nu antalet olästa meddelanden i din inkorg. Du ser direkt om du har meddelanden att ta hand om medan du arbetar i ett annat program.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Merons macOS Dock-ikon som visar antalet olästa meddelanden från Mail Labs testinkorgar"
+  caption="Dock-märket räknar olästa meddelanden i dina inkorgar."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Om antalet inte syns, kontrollera under **Systeminställningar → Notiser → Meron** att brickor på appsymboler är tillåtna.
+
+macOS-appikonen matchar dessutom Dockans ikonrutnät mer exakt, och fönsterknapparna har fått mer luft omkring sig.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Signera meddelanden utan att kryptera dem
+
+En kontakt behöver inte ha en krypteringsnyckel för att du ska kunna skicka ett signerat meddelande. Meron kan nu bifoga en OpenPGP-signatur till okrypterad e-post, vilket gör att kompatibla e-postklienter kan verifiera signaturen medan innehållet förblir läsbart i klartext.
+
+Öppna **Inställningar**, välj ditt avsändarkonto under **E-postkonton** och gå till avsnittet **Krypterad e-post**. När du har skapat eller importerat en nyckel och aktiverat den slår du på **Signera okrypterad e-post**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Elenas Mail Lab-konto markerat i Inställningar, med End-to-end-kryptering och Signera okrypterad e-post aktiverat ovanför nyckelns fingeravtryck"
+  caption="Att signera okrypterad e-post är en kontoinställning vid sidan av din egen OpenPGP-nyckel."
+  width={1280}
+  height={820}
+/>
+
+Skrivfönstret har separata reglage för kryptering och signering. I detta exempel saknar testmottagaren krypteringsnyckel, men det utgående utkastet signeras ändå med avsändarens nyckel.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Utkast mellan Mail Lab-konton med öppet hänglås och aktiv signaturkontroll; dess verktygstips lyder Signerat med din nyckel"
+  caption="Kryptering är avstängd; OpenPGP-signering är påslagen. Signaturkontrollen låter dig ändra detta för det aktuella utkastet."
+  width={870}
+  height={600}
+/>
+
+Meron stöder även dedikerade signeringsundernycklar och import av säkerhetskopior från OpenKeychain, så att du kan fortsätta använda din befintliga OpenPGP-identitet.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Skriva</Badge>
+
+## Utelämna signaturen i korta svar
+
+Din e-postsignatur har nu en egen brytare i snabbsvar och i det fullständiga skrivfönstret. Slå av den för en snabb kommentar eller slå på den för ett mer formellt brev, utan att behöva redigera mallen i Inställningar.
+
+Vid snabbsvar tar den sparade signaturen inte upp plats i textrutan. Brytaren styr om Meron lägger till den vid avsändning. I det fullständiga skrivfönstret tar avstängningen bort signaturen ur utkastet, som visas nedan.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Merons skrivfönster där Elenas sparade signatur tagits bort och signaturbrytaren visar Ingen signatur. Klicka för att lägga till; meddelandet innehåller fortfarande en klickbar URL"
+  caption="Signaturen har tagits bort från detta utkast; den sparade mallen finns alltid till hands via brytaren."
+  width={870}
+  height={625}
+/>
+
+Detta är helt separat från OpenPGP-signaturen: det ena är din skrivna hälsningsfras, det andra en kryptografisk signatur.
+
+Enkla webbadresser omvandlas också automatiskt till klickbara länkar i skickade snabbsvar, skrivfönstret och läsaren. Länken `https://meron.im` i dessa utkast började som en ren text-URL.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Finjusteringar på skrivbordet</Badge>
+
+## Mer djup i mörka teman
+
+Mörka skrivbordsteman använder nu skiktade ytor och mjuka skuggor för att tydligare avgränsa kort, menyer och paneler. Att öppna skrivfönstret bredvid en Kanban-tavla förskjuter inte längre tavlan i sidled, och läsaren slipper sin frostade list.
+
+När ett nytt mejl anländer i en tråd du läser håller Meron det aktuella meddelandet öppet så att du kan läsa klart i lugn och ro.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android och språk</Badge>
+
+## Välj dina aviseringsåtgärder
+
+Aviseringar om ny e-post på Android får en **Radera**-knapp. Under **Inställningar → Notiser** väljer du vilka åtgärdsknappar som ska visas för att hantera inkommande post direkt från aviseringsfältet.
+
+Ljusa mobila teman behåller vita mejlrader och använder fetstil för att framhäva olästa meddelanden. Kontakter visar även avsändarens eller kontots profilbild när sådan finns tillgänglig.
+
+Meron finns nu tillgängligt på **nederländska**, **ukrainska** och **indonesiska**, och saknade översättningar har fyllts i för övriga språk.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Prova Meron 0.5.1"
+  text="Ladda ner den senaste versionen för att ta del av Dock-märket, flexiblare OpenPGP-signering och de nya svarskontrollerna. Meron är gratis och har öppen källkod."
+  download="Ladda ner Meron"
+  changelog="Visa ändringslogg"
+  github="GitHub Releases"
+/>

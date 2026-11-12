@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Okunmamışlara Bir Bakışta Ulaşın, Şifrelemesiz İmzalayın"
+publishedAt: "2026-11-12"
+readingTime: "3 dk okuma süresi"
+summary: "macOS Dock'ta okunmamış sayısı, şifrelenmemiş postalar için OpenPGP imzaları ve e-posta imzanız için bir geçiş anahtarı. Meron 0.5.1 ayrıca daha derin koyu temalar ve yapılandırılabilir Android bildirim eylemleri getiriyor."
+highlights: ["macOS Dock simgesinde gelen kutusu okunmamış sayısı", "OpenPGP imza alt anahtarlarıyla şifrelenmemiş postaları imzalama", "OpenKeychain anahtar yedeklerini içe aktarma", "Her yanıt veya taslak için e-posta imzanızı açıp kapatma", "Yalın URL'ler için otomatik bağlantılar", "Masaüstü koyu temalarında daha yumuşak gölgeler ve katmanlı yüzeyler", "Sil dahil Android bildirim eylemlerini seçme", "Felemenkçe, Ukraynaca ve Endonezce çeviriler"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Sürüm · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1, dikkatinizi dağıtmadan e-postalarınızı yönetmeniz için yeni kolaylıklar sunuyor: macOS Dock'tan okunmamış iletileri takip edin, şifreleyemediğiniz durumlarda bile iletilerinizi imzalayın ve kısa yanıtlarda imzanızı tek dokunuşla hariç tutun.
+
+<PlatformNote>Dock işareti bir macOS özelliğidir. İmza denetimleri ve yenilenen koyu tema masaüstü iyileştirmeleridir; bildirim eylemi ayarları Android için geçerlidir. Üç yeni dil hem masaüstünde hem mobilde kullanıma sunulmuştur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Okunmamış postaları Dock'tan kontrol edin
+
+Meron'un macOS Dock simgesi artık gelen kutunuzdaki okunmamış ileti sayısını gösteriyor. Başka bir uygulamada çalışırken ilgilenmeniz gereken bir posta olup olmadığını bir bakışta görebilirsiniz.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Mail Lab test gelen kutularındaki okunmamış sayısını gösteren Meron macOS Dock simgesi"
+  caption="Dock işareti gelen kutularınızdaki okunmamış iletileri sayar."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Sayı görünmüyorsa **Sistem Ayarları → Bildirimler → Meron** bölümünden uygulama simgesi işaretlerine izin verildiğinden emin olun.
+
+macOS uygulama simgesi Dock ızgarasına daha uyumlu hale getirildi ve pencere denetimlerinin etrafında daha ferah bir alan bırakıldı.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## İletileri şifrelemeden imzalayın
+
+Bir kişiye imzalı ileti göndermek için karşı tarafın şifreleme anahtarına sahip olması gerekmez. Meron artık şifrelenmemiş postalara da OpenPGP imzası ekleyebiliyor; böylece uyumlu e-posta istemcileri imzayı doğrulayabilirken ileti şifre çözme gerektirmeden açık metin olarak okunabilir.
+
+**Ayarlar**'ı açın, **Posta hesapları** altından gönderici hesabınızı seçin ve **Şifreli e-posta** bölümüne gidin. Bir anahtar oluşturup veya içe aktarıp etkinleştirdikten sonra **Şifrelenmemiş postaları imzala** seçeneğini açın.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Ayarlar'da seçilmiş Elena'nın Mail Lab hesabı; anahtar parmak izi üzerinde Uçtan uca şifreleme ve Şifrelenmemiş postaları imzala açık"
+  caption="Şifrelenmemiş postaları imzalama, kendi OpenPGP anahtarınızın yanında yer alan bir hesap ayarıdır."
+  width={1280}
+  height={820}
+/>
+
+İleti yazma ekranında şifreleme ve imzalama denetimleri birbirinden ayrılmıştır. Bu örnekte test alıcısının şifreleme anahtarı yoktur, ancak giden taslak göndericinin anahtarıyla imzalanmıştır.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Mail Lab hesapları arasında açık kilit ve etkin imza denetimi bulunan taslak; ipucunda Anahtarınızla imzalandı yazıyor"
+  caption="Şifreleme kapalı, OpenPGP imzası açık. İmza denetimi bu taslak özelinde ayarı değiştirmenize olanak tanır."
+  width={870}
+  height={600}
+/>
+
+Meron ayrıca özel imzalama alt anahtarlarını ve OpenKeychain yedeklerini içe aktarmayı destekler; böylece mevcut OpenPGP kimliğinizi kullanmaya devam edebilirsiniz.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Yazma</Badge>
+
+## Kısa yanıtlarda imzanızı hariç tutun
+
+E-posta imzanız artık hem hızlı yanıtta hem de tam ileti yazma penceresinde kendi geçiş düğmesine sahip. Ayarlar'da kayıtlı imzanızı değiştirmek zorunda kalmadan, kısa bir not için imzanızı kapatabilir veya resmi bir ileti için tekrar açabilirsiniz.
+
+Hızlı yanıtta kayıtlı imza giriş kutusunu kaplamaz; geçiş anahtarı Meron'un gönderim sırasında imzayı ekleyip eklemeyeceğini belirler. Tam ileti yazıcısında ise düğmeyi kapatmak imzayı doğrudan taslaktan kaldırır (aşağıda gösterildiği gibi).
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Elena'nın kayıtlı imzası kaldırılmış ve imza geçişinde İmza yok yazan Meron ileti yazıcısı. Eklemek için tıklayın; ileti tıklanabilir bir URL içerir"
+  caption="İmza bu taslaktan kaldırılmıştır; kayıtlı şablon geçiş düğmesi üzerinden dilediğiniz an kullanılabilir."
+  width={870}
+  height={625}
+/>
+
+Bu özellik OpenPGP imzasından tamamen bağımsızdır: biri metinsel kapanış imzanız, diğeri ise kriptografik dijital imzadır.
+
+Yalın web adresleri de gönderilen hızlı yanıtlarda, ileti yazma penceresinde ve okuyucuda otomatik olarak tıklanabilir bağlantılara dönüştürülür. Bu taslaklardaki `https://meron.im` bağlantısı da ilk olarak düz metin URL olarak girilmiştir.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Masaüstü İyileştirmeleri</Badge>
+
+## Koyu temalarda daha fazla derinlik
+
+Masaüstü koyu temaları artık kartları, menüleri ve panelleri belirginleştirmek için katmanlı yüzeyler ve yumuşak gölgeler kullanıyor. Bir Kanban panosunun yanında ileti yazıcısı açıldığında pano artık yana kaymıyor ve okuyucudaki buzlu cam şerit kaldırıldı.
+
+Okumakta olduğunuz bir ileti dizisine yeni bir posta geldiğinde Meron, okumanızı kesintiye uğratmamak için mevcut iletiyi açık tutar.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android ve Diller</Badge>
+
+## Bildirim eylemlerinizi seçin
+
+Android yeni posta bildirimlerine **Sil** düğmesi eklendi. **Ayarlar → Bildirimler** altından hangi eylem düğmelerinin görüneceğini seçebilir, gelen postaları doğrudan bildirim çekmecesinden yönetebilirsiniz.
+
+Mobil açık temalar posta satırlarını beyaz tutar ve okunmamış iletileri vurgulamak için kalın yazı tipi kullanır. Kişiler listesinde mevcut olduğunda gönderenin veya hesabın profil avatarı da gösterilir.
+
+Meron artık **Felemenkçe**, **Ukraynaca** ve **Endonezce** dillerinde de kullanılabilir; mevcut dillerdeki eksik çeviriler de tamamlanmıştır.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.1'i Deneyin"
+  text="Dock işareti, daha esnek OpenPGP imzalama ve yeni yanıt denetimleri için en son sürümü indirin. Meron ücretsiz ve açık kaynaklıdır."
+  download="Meron'u İndir"
+  changelog="Değişiklik Günlüğünü Gör"
+  github="GitHub Sürümleri"
+/>

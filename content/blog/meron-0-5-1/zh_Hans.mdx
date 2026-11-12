@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1：未读一目了然，未加密邮件亦可签名"
+publishedAt: "2026-11-12"
+readingTime: "3 分钟阅读"
+summary: "macOS 程序坞未读标记、未加密邮件的 OpenPGP 签名，以及快捷签名开关。Meron 0.5.1 还带来了更具层次感的深色主题与可自定义的 Android 通知快捷操作。"
+highlights: ["macOS 程序坞图标显示收件箱未读计数", "使用 OpenPGP 签名子密钥为未加密邮件签名", "导入 OpenKeychain 密钥备份", "在每条回复或草稿中自由开启或关闭邮件落款签名", "纯文本网址自动转为可点击链接", "桌面端深色主题采用更柔和的阴影与分层界面", "自由选择 Android 通知操作，包括删除", "新增荷兰语、乌克兰语和印尼语支持"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "发布 · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 为你提供了多种更顺手的方式处理邮件，而不打断当前工作流：在 macOS 程序坞中直接查看未读邮件，即使无法加密也能为邮件进行数字签名，以及在简短回复中快速省略日常落款。
+
+<PlatformNote>程序坞角标是 macOS 专属特性。签名开关与深色主题刷新属于桌面端体验提升；通知快捷操作设置适用于 Android。三门新增语言在桌面端和移动端均已提供。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## 在程序坞中查看未读邮件
+
+Meron 的 macOS 程序坞图标现已支持显示收件箱未读数量。在其他应用中工作时，一眼即可获知是否有邮件需要处理。
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="显示来自 Mail Lab 测试收件箱未读计数的 Meron macOS 程序坞图标"
+  caption="程序坞角标会统计收件箱中的未读邮件数量。"
+  width={230}
+  height={58}
+/>
+
+</div>
+
+若未显示数字，请检查 **系统设置 → 通知 → Meron** 并允许标记 App 图标。
+
+macOS 应用图标也更加贴合程序坞的图标网格，窗口控制按钮四周也留出了更多呼吸感空间。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## 无需加密即可签名邮件
+
+即使联系人没有加密密钥，你依然可以向其发送带有签名的邮件。Meron 现已支持为未加密邮件附带 OpenPGP 签名，兼容的邮件客户端可以验证其真实性，而邮件内容仍保持明文可读，无需解密。
+
+打开 **设置**，在 **邮件账户** 下选择你的发件账户，找到其 **加密邮件** 选项。在创建或导入密钥并启用后，开启 **为未加密邮件签名**。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="在设置中选中的 Elena Mail Lab 账户，在账户密钥指纹上方启用了端到端加密和为未加密邮件签名"
+  caption="为未加密邮件签名是一项独立的账户设置，与你自己的 OpenPGP 密钥并列。"
+  width={1280}
+  height={820}
+/>
+
+撰写器现已将加密与签名控制完全分开。在此示例中，测试收件人没有加密密钥，但发出的草稿依然使用发件人的私钥完成了签名。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Mail Lab 账户之间的草稿，显示未加密状态与已启用的签名控件；其工具提示显示使用您的密钥签名"
+  caption="加密处于关闭状态；OpenPGP 签名已开启。签名控件允许你针对当前草稿随时调整。"
+  width={870}
+  height={600}
+/>
+
+Meron 还支持专用的签名子密钥以及导入 OpenKeychain 备份，方便你无缝沿用现有的 OpenPGP 身份。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">撰写</Badge>
+
+## 简短回复时省略落款签名
+
+快速回复和完整撰写器中现已为邮件落款签名配备了专属开关。发一条简短便签时即可随手关掉，发正式邮件时再行开启，无需再去设置中反复修改保存的签名。
+
+在快速回复中，保存的落款签名不会预先占用输入框。开关将决定 Meron 发送时是否追加签名。而在完整撰写器中，关闭开关会直接将签名从草稿中移除，如下图所示。
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Meron 撰写器移除了 Elena 保存的落款签名，签名开关显示无签名。点击即可添加；正文中依然包含可点击的网址"
+  caption="落款签名已从当前草稿中移除；保存的签名模板依然可随时通过开关添加。"
+  width={870}
+  height={625}
+/>
+
+这与 OpenPGP 签名是相互独立的：一个是书面署名落款，另一个是密码学数字签名。
+
+此外，纯文本网址也会在发送后的快速回复、完整撰写器和阅读器中自动转为可点击的超链接。这些草稿中的 `https://meron.im` 链接最初就是纯网址文本。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">桌面端优化</Badge>
+
+## 深色主题层次更分明
+
+桌面端深色主题现已引入分层界面与柔和阴影，以清晰区分卡片、菜单和面板。在看板旁边打开撰写器时也不会再导致看板横向移位，且阅读器去除了半透明毛玻璃底栏。
+
+当你正在阅读某一邮件主题时若有新邮件送达，Meron 会保持当前正在阅读的消息展开，方便你读完。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android 与多语言</Badge>
+
+## 自定义通知快捷操作
+
+Android 新邮件通知新增了 **删除** 按钮。在 **设置 → 通知** 下，你可以自由勾选出现的快捷操作按钮，直接在通知抽屉中处理来信。
+
+移动端浅色主题保持邮件列表行白色背景，并以粗体字凸显未读邮件。联系人列表在有头像时也会显示联系人或账户的个人头像。
+
+Meron 现已支持 **荷兰语**、**乌克兰语** 和 **印尼语**，并补全了现有语言中缺失的翻译。
+
+</PostSection>
+
+<ReleaseCTA
+  heading="体验 Meron 0.5.1"
+  text="下载最新版本，体验程序坞未读角标、更灵活的 OpenPGP 签名以及全新的回复签名开关。Meron 是一款免费且开源的邮件客户端。"
+  download="下载 Meron"
+  changelog="查看更新日志"
+  github="GitHub Releases"
+/>

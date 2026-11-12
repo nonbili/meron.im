@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Nieprzeczytane na pierwszy rzut oka, podpis bez szyfrowania"
+publishedAt: "2026-11-12"
+readingTime: "3 min czytania"
+summary: "Licznik nieprzeczytanych wiadomości w Docku systemu macOS, podpisy OpenPGP dla niezaszyfrowanej poczty oraz przełącznik podpisu wiadomości. Meron 0.5.1 przynosi także głębsze ciemne motywy i konfigurowalne akcje powiadomień w systemie Android."
+highlights: ["Licznik nieprzeczytanych wiadomości na ikonie w Docku macOS", "Podpisywanie niezaszyfrowanej poczty podkluczami OpenPGP", "Import kopii zapasowych kluczy z OpenKeychain", "Włączanie lub wyłączanie podpisu dla każdej odpowiedzi lub wersji roboczej", "Automatyczne linki dla zwykłych adresów URL", "Łagodniejsze cienie i warstwowe powierzchnie w ciemnych motywach na pulpicie", "Wybór akcji powiadomień w Androidzie, w tym Usuń", "Tłumaczenia na język niderlandzki, ukraiński i indonezyjski"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Wydanie · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 oferuje nowe, wygodne sposoby zarządzania pocztą bez zakłócania rytmu pracy: sprawdzaj nieprzeczytane wiadomości prosto z Docka w macOS, podpisuj e-maile nawet wtedy, gdy nie możesz ich zaszyfrować, oraz łatwo pomijaj tradycyjną stopkę w krótkich odpowiedziach.
+
+<PlatformNote>Plakietka w Docku jest funkcją systemu macOS. Przełącznik podpisu oraz odświeżone ciemne motywy to ulepszenia na komputerze; ustawienia akcji powiadomień dotyczą Androida. Trzy nowe języki są dostępne zarówno na komputerach, jak i na urządzeniach mobilnych.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Sprawdzaj nieprzeczytaną pocztę z poziomu Docka
+
+Ikona aplikacji Meron w Docku systemu macOS wyświetla teraz liczbę nieprzeczytanych wiadomości w skrzynce odbiorczej. Dzięki temu od razu wiesz, czy nowa poczta wymaga uwagi, pracując w innym programie.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Ikona Meron w Docku macOS wyświetlająca liczbę nieprzeczytanych wiadomości ze skrzynek testowych Mail Lab"
+  caption="Plakietka w Docku zlicza nieprzeczytane wiadomości w Twoich skrzynkach odbiorczych."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Jeśli liczba nie jest widoczna, przejdź do **Ustawienia systemowe → Powiadomienia → Meron** i zezwól na plakietki na ikonach aplikacji.
+
+Ikona aplikacji dla macOS lepiej komponuje się z siatką ikon Docka, a elementy sterujące oknem zyskały więcej przestrzeni wokół siebie.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Podpisuj wiadomości bez konieczności szyfrowania
+
+Odbiorca nie musi posiadać klucza szyfrowania, aby otrzymać od Ciebie podpisaną wiadomość. Meron pozwala teraz dołączać podpis OpenPGP do niezaszyfrowanych e-maili, umożliwiając kompatybilnym klientom weryfikację podpisu, podczas gdy treść pozostaje czytelna bez konieczności odszyfrowywania.
+
+Otwórz **Ustawienia**, wybierz konto nadawcze w sekcji **Konta pocztowe** i znajdź pozycję **Zaszyfrowana poczta**. Po utworzeniu lub zaimportowaniu klucza i jego włączeniu zaznacz opcję **Podpisuj niezaszyfrowaną pocztę**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Konto Mail Lab Eleny wybrane w Ustawieniach z włączonym szyfrowaniem end-to-end i podpisywaniem niezaszyfrowanej poczty nad odciskiem klucza"
+  caption="Podpisywanie niezaszyfrowanej poczty to ustawienie indywidualne dla konta, obok Twojego klucza OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+W oknie edytora kontrolki szyfrowania i podpisu zostały rozdzielone. W tym przykładzie odbiorca testowy nie posiada klucza szyfrowania, lecz wersja robocza i tak jest podpisywana kluczem nadawcy.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Wersja robocza między kontami Mail Lab z otwartą kłódką szyfrowania i aktywną kontrolką podpisu; podpowiedź głosi Podpisano Twoim kluczem"
+  caption="Szyfrowanie jest wyłączone; podpis OpenPGP jest włączony. Kontrolka podpisu pozwala dostosować to ustawienie dla danej wersji roboczej."
+  width={870}
+  height={600}
+/>
+
+Meron obsługuje również dedykowane podklucze podpisu oraz import kopii zapasowych z OpenKeychain, pozwalając na bezproblemowe korzystanie z dotychczasowej tożsamości OpenPGP.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Tworzenie wiadomości</Badge>
+
+## Pomiń stopkę w krótkiej odpowiedzi
+
+Twoja stopka e-mail otrzymała dedykowany przełącznik w szybkiej odpowiedzi oraz pełnym edytorze. Wyłącz ją przy krótkiej notatce lub włącz z powrotem przy oficjalnej wiadomości — bez potrzeby edytowania zapisanego wzorca w Ustawieniach.
+
+W szybkiej odpowiedzi zapisana stopka nie zajmuje miejsca w polu tekstowym. Przełącznik decyduje, czy Meron dołączy ją przy wysyłce. W pełnym edytorze wyłączenie przełącznika usuwa stopkę z wersji roboczej, jak pokazano poniżej.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Edytor Meron bez zapisanej stopki Eleny i przełącznik wskazujący Brak podpisu. Kliknij, aby dodać; wiadomość nadal zawiera klikalny URL"
+  caption="Stopka została usunięta z tej wersji roboczej; zapisany wzorzec pozostaje stale pod ręką za pośrednictwem przełącznika."
+  width={870}
+  height={625}
+/>
+
+Jest to całkowicie niezależne od podpisu OpenPGP: jedno to Twoje pisemne zakończenie listu, drugie to kryptograficzny podpis cyfrowy.
+
+Zwykłe adresy internetowe zamieniają się ponadto automatycznie w aktywne linki w wysłanych szybkich odpowiedziach, pełnym edytorze i czytniku. Odnośnik `https://meron.im` w tych wersjach roboczych był z początku zwykłym tekstem URL.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Szlif na pulpicie</Badge>
+
+## Większa głębia w ciemnych motywach
+
+Ciemne motywy na komputerze korzystają teraz z warstwowych powierzchni i miękkich cieni, które czytelniej rozdzielają karty, menu i panele boczne. Otwarcie edytora obok tablicy Kanban nie powoduje już przesuwania tablicy w bok, a czytnik rezygnuje z matowego paska.
+
+Gdy w czytanym wątku pojawi się nowy e-mail, Meron pozostawia aktualnie czytaną wiadomość otwartą, aby można było dokończyć lekturę.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android i języki</Badge>
+
+## Wybieraj własne akcje powiadomień
+
+Powiadomienia o nowej poczcie w systemie Android wzbogaciły się o przycisk **Usuń**. W menu **Ustawienia → Powiadomienia** wybierz, jakie przyciski akcji mają się pojawiać, aby wygodnie zarządzać pocztą prosto z paska powiadomień.
+
+Jasne motywy mobilne zachowują białe tło wierszy wiadomości i stosują pogrubiony tekst dla nieprzeczytanych maili. Kontakty wyświetlają również awatar profilu rozmówcy lub konta, o ile jest dostępny.
+
+Meron jest teraz dostępny w języku **niderlandzkim**, **ukraińskim** i **indonezyjskim**, a brakujące tłumaczenia w pozostałych językach zostały uzupełnione.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Wypróbuj Meron 0.5.1"
+  text="Pobierz najnowsze wydanie, aby skorzystać z plakietki w Docku, elastyczniejszego podpisywania OpenPGP i nowych kontrolek odpowiedzi. Meron jest darmowy i otwartoźródłowy."
+  download="Pobierz Meron"
+  changelog="Zobacz listę zmian"
+  github="Wydania na GitHubie"
+/>

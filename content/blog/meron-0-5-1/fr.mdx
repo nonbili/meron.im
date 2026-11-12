@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1 : Messages non lus d'un coup d'œil, signés sans chiffrement"
+publishedAt: "2026-11-12"
+readingTime: "3 min de lecture"
+summary: "Compteur de messages non lus dans le Dock macOS, signatures OpenPGP pour les e-mails non chiffrés et interrupteur pour votre signature d'e-mail. Meron 0.5.1 apporte également des thèmes sombres plus profonds et des actions de notification Android configurables."
+highlights: ["Nombre de messages non lus sur l'icône du Dock macOS", "Signer des e-mails non chiffrés avec des sous-clés de signature OpenPGP", "Importer des sauvegardes de clés OpenKeychain", "Activer ou désactiver votre signature pour chaque réponse ou brouillon", "Création automatique de liens pour les URL brutes", "Ombres adoucies et surfaces superposées dans les thèmes sombres sur ordinateur", "Choisir les actions de notification Android, y compris Supprimer", "Traductions en néerlandais, ukrainien et indonésien"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Publication · v0.5.1"
+---
+
+<PostSection>
+
+Meron 0.5.1 vous offre de nouvelles façons de gérer votre courrier sans interrompre votre rythme : visualisez vos messages non lus directement depuis le Dock macOS, signez un e-mail même lorsqu'il ne peut pas être chiffré, et retirez facilement votre formule de politesse habituelle d'une réponse rapide.
+
+<PlatformNote>Le badge du Dock est une fonctionnalité réservée à macOS. Les commandes de signature et le rafraîchissement des thèmes sombres améliorent la version de bureau ; les réglages d'actions de notification concernent Android. Les trois nouvelles langues sont disponibles sur ordinateur et mobile.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Consultez vos messages non lus depuis le Dock
+
+L'icône de Meron dans le Dock macOS affiche désormais le nombre de messages non lus de votre boîte de réception. Vous savez en un coup d'œil si un message requiert votre attention tout en travaillant sur une autre application.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Icône de Meron dans le Dock macOS affichant le nombre de messages non lus des boîtes de test de Mail Lab"
+  caption="Le badge du Dock compte les messages non lus de vos boîtes de réception."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Si le compteur n'apparaît pas, vérifiez dans **Réglages Système → Notifications → Meron** que les badges d'icône sont bien autorisés.
+
+L'icône macOS s'intègre également plus fidèlement à la grille d'icônes du Dock, et les commandes de fenêtre bénéficient de plus d'espace autour d'elles.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Signer un message sans le chiffrer
+
+Un contact n'a pas besoin de posséder une clé de chiffrement pour que vous puissiez lui envoyer un message signé. Meron peut désormais joindre une signature OpenPGP à un e-mail non chiffré, permettant aux clients de messagerie compatibles de vérifier la signature tandis que le message reste directement lisible en clair.
+
+Ouvrez les **Paramètres**, sélectionnez votre compte d'envoi sous **Comptes de messagerie**, puis trouvez la section **E-mail chiffré**. Une fois votre clé créée ou importée et activée, activez l'option **Signer les e-mails non chiffrés**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Compte Mail Lab d'Elena sélectionné dans les Paramètres, avec Chiffrement de bout en bout et Signer les e-mails non chiffrés activés au-dessus de l'empreinte de clé du compte"
+  caption="La signature des e-mails non chiffrés est un paramètre propre au compte, associé à votre clé OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+La fenêtre de rédaction sépare désormais clairement les commandes de chiffrement et de signature. Dans cet exemple, le destinataire test ne possède pas de clé de chiffrement, mais le brouillon sortant est tout de même signé avec la clé de l'expéditeur.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Brouillon entre comptes Mail Lab avec un cadenas ouvert et un bouton de signature activé ; son infobulle indique Signé avec votre clé"
+  caption="Le chiffrement est désactivé ; la signature OpenPGP est activée. La commande de signature vous permet d'ajuster ce réglage pour ce brouillon."
+  width={870}
+  height={600}
+/>
+
+Meron prend également en charge les sous-clés dédiées à la signature ainsi que l'importation de sauvegardes OpenKeychain, vous permettant de conserver votre identité OpenPGP existante.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Rédaction</Badge>
+
+## Retirer la signature d'une réponse courte
+
+Votre signature d'e-mail dispose désormais de son propre interrupteur dans la réponse rapide et la fenêtre de rédaction complète. Désactivez-la pour un simple mot ou réactivez-la pour un message formel, sans avoir à modifier votre signature enregistrée dans les Paramètres.
+
+Dans la réponse rapide, la signature enregistrée n'encombre pas la zone de saisie. L'interrupteur détermine si Meron l'ajoute lors de l'envoi. Dans la rédaction complète, la désactiver retire directement la signature du brouillon, comme illustré ci-dessous.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Éditeur de Meron avec la signature enregistrée d'Elena retirée et l'interrupteur indiquant Aucune signature. Cliquez pour l'ajouter ; le message contient toujours une URL cliquable"
+  caption="La signature est retirée de ce brouillon ; le modèle enregistré reste accessible via l'interrupteur à tout moment."
+  width={870}
+  height={625}
+/>
+
+Cette option est bien distincte de la signature OpenPGP : l'une est votre formule de politesse textuelle, l'autre est une signature cryptographique.
+
+Les adresses web brutes se transforment désormais automatiquement en liens cliquables dans les réponses rapides envoyées, la rédaction complète et le lecteur. Le lien `https://meron.im` dans ces brouillons n'était à l'origine qu'une simple URL textuelle.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Finition bureau</Badge>
+
+## Plus de profondeur dans les thèmes sombres
+
+Les thèmes sombres sur ordinateur utilisent désormais des surfaces étagées et des ombres douces pour mieux délimiter les cartes, menus et panneaux. Ouvrir un éditeur à côté d'un tableau Kanban n'entraîne plus de décalage latéral du tableau, et le lecteur abandonne son bandeau dépoli.
+
+Lorsqu'un nouveau message arrive dans un fil de discussion en cours de lecture, Meron maintient le message actuel ouvert afin que vous puissiez terminer votre lecture sereinement.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android &amp; Langues</Badge>
+
+## Personnalisez vos actions de notification
+
+Les notifications de nouveau message sur Android s'enrichissent d'un bouton **Supprimer**. Dans **Paramètres → Notifications**, choisissez les boutons d'action à afficher pour traiter vos e-mails entrants directement depuis le tiroir de notifications.
+
+Les thèmes clairs sur mobile conservent le fond blanc des lignes de messages et mettent en valeur les non lus avec du texte en gras. Les contacts affichent également l'avatar de profil du correspondant ou du compte lorsque disponible.
+
+Meron est désormais disponible en **néerlandais**, **ukrainien** et **indonésien**, avec les traductions manquantes complétées dans les langues existantes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Essayez Meron 0.5.1"
+  text="Téléchargez la dernière version pour profiter du badge de Dock, d'une signature OpenPGP plus souple et des nouvelles options de réponse. Meron est gratuit et open source."
+  download="Télécharger Meron"
+  changelog="Voir le journal des modifications"
+  github="GitHub Releases"
+/>

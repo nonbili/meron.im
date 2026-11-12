@@ -1,0 +1,135 @@
+---
+slug: "meron-0-5-1"
+version: "0.5.1"
+title: "Meron 0.5.1: Mensagens por ler num relance, assinadas sem encriptação"
+publishedAt: "2026-11-12"
+readingTime: "Leitura de 3 min"
+summary: "Contador de mensagens por ler na Dock do macOS, assinaturas OpenPGP para correio não encriptado e um alternador para a sua assinatura de e-mail. O Meron 0.5.1 inclui também temas escuros mais profundos e ações de notificação configuráveis no Android."
+highlights: ["Contador de mensagens por ler no ícone da Dock do macOS", "Assinar correio não encriptado com subchaves de assinatura OpenPGP", "Importar cópias de segurança de chaves do OpenKeychain", "Ativar ou desativar a sua assinatura de e-mail em cada resposta ou rascunho", "Hiperligações automáticas para URLs simples", "Sombras mais suaves e superfícies em camadas nos temas escuros de computador", "Escolher ações de notificação no Android, incluindo Eliminar", "Traduções em neerlandês, ucraniano e indonésio"]
+image: "/screenshots/blog/meron-051-account-signing.png"
+releaseBadge: "Lançamento · v0.5.1"
+---
+
+<PostSection>
+
+O Meron 0.5.1 oferece-lhe novas formas de gerir o correio sem interromper o seu ritmo de trabalho: consulte as mensagens por ler diretamente a partir da Dock do macOS, assine um e-mail mesmo quando não o puder encriptar e retire facilmente a sua assinatura habitual de uma resposta breve.
+
+<PlatformNote>O emblema na Dock é uma funcionalidade exclusiva do macOS. Os controlos de assinatura e a renovação do tema escuro são melhorias para computador; as definições de ações de notificação aplicam-se ao Android. Os três novos idiomas estão disponíveis no computador e em dispositivos móveis.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">macOS</Badge>
+
+## Verifique o correio por ler a partir da Dock
+
+O ícone do Meron na Dock do macOS apresenta agora o número de mensagens por ler na caixa de entrada. Pode ver se tem correio a aguardar a sua atenção enquanto trabalha noutra aplicação.
+
+<div className="max-w-md">
+
+<BlogImage
+  src="/screenshots/blog/meron-051-dock-badge.png"
+  alt="Ícone do Meron na Dock do macOS a apresentar o número de mensagens por ler das caixas de teste do Mail Lab"
+  caption="O emblema da Dock contabiliza as mensagens por ler nas suas caixas de entrada."
+  width={230}
+  height={58}
+/>
+
+</div>
+
+Se a contagem não estiver visível, aceda a **Definições do Sistema → Notificações → Meron** e autorize os avisos nos ícones das aplicações.
+
+O ícone da aplicação para macOS ajusta-se também com maior rigor à grelha de ícones da Dock, e os controlos de janela ganharam mais espaço em redor.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Assine uma mensagem sem a encriptar
+
+Um contacto não precisa de ter uma chave de encriptação para que lhe possa enviar uma mensagem assinada. O Meron consegue agora anexar uma assinatura OpenPGP a correio não encriptado, permitindo que um cliente de correio compatível verifique a assinatura enquanto a mensagem continua a ser lida sem necessidade de desencriptação.
+
+Abra as **Definições**, selecione a sua conta de envio em **Contas de correio** e procure a secção **Correio encriptado**. Depois de criar ou importar uma chave e ativá-la, ative a opção **Assinar correio não encriptado**.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-account-signing.png"
+  alt="Conta Mail Lab da Elena selecionada nas Definições, com Encriptação ponto a ponto e Assinar correio não encriptado ativados sobre a impressão digital da chave"
+  caption="A assinatura de correio não encriptado é uma definição de conta, a par da sua própria chave OpenPGP."
+  width={1280}
+  height={820}
+/>
+
+O compositor tem agora controlos independentes para encriptação e assinatura. Neste exemplo, o destinatário de teste não possui chave de encriptação, mas o rascunho de saída é assinado com a chave do remetente.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signed-composer.png"
+  alt="Rascunho entre contas do Mail Lab com cadeado aberto e controlo de assinatura ativo; a descrição indica Assinado com a sua chave"
+  caption="A encriptação está desativada; a assinatura OpenPGP está ativada. O controlo de assinatura permite alterar isso neste rascunho."
+  width={870}
+  height={600}
+/>
+
+O Meron suporta também subchaves dedicadas à assinatura e a importação de cópias de segurança do OpenKeychain, mantendo a sua identidade OpenPGP atual.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composição</Badge>
+
+## Retire a assinatura de uma resposta curta
+
+A sua assinatura de e-mail dispõe agora de um alternador próprio na resposta rápida e no compositor completo. Desative-a para uma mensagem breve ou volte a ativá-la para um e-mail mais formal, sem necessidade de editar a assinatura gravada nas Definições.
+
+Na resposta rápida, a assinatura gravada não ocupa a caixa de texto. O alternador controla se o Meron a adiciona no momento do envio. No compositor completo, desligá-lo retira de imediato a assinatura do rascunho, como ilustrado abaixo.
+
+<BlogImage
+  src="/screenshots/blog/meron-051-signature-toggle.png"
+  alt="Compositor do Meron sem a assinatura gravada da Elena e o alternador a indicar Sem assinatura. Clique para adicionar; a mensagem mantém um URL clicável"
+  caption="A assinatura foi retirada deste rascunho; o modelo gravado permanece disponível a qualquer momento no alternador."
+  width={870}
+  height={625}
+/>
+
+Esta funcionalidade é independente da assinatura OpenPGP: uma é a sua assinatura de texto pessoal, a outra é uma assinatura criptográfica.
+
+Os endereços web simples passam também automaticamente a hiperligações interativas nas respostas rápidas enviadas, no compositor completo e no leitor. A ligação `https://meron.im` nestes rascunhos começou como texto simples.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Acabamentos para computador</Badge>
+
+## Mais profundidade nos temas escuros
+
+Os temas escuros para computador utilizam agora superfícies em camadas e sombras suaves para delimitar com maior clareza cartões, menus e painéis. Abrir o compositor ao lado de um quadro Kanban já não desloca o quadro lateralmente, e o leitor abandona a barra fosca.
+
+Quando chega novo correio numa conversa que está a ler, o Meron mantém a mensagem atual aberta para que possa concluir a leitura.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="BellRing">Android e Idiomas</Badge>
+
+## Escolha as suas ações de notificação
+
+As notificações de novo correio no Android ganham um botão **Eliminar**. Em **Definições → Notificações**, escolha que botões de ação devem surgir para gerir o correio recebido diretamente a partir do painel de notificações.
+
+Os temas claros para dispositivos móveis mantêm as linhas de correio brancas e usam texto a negrito para destacar as mensagens por ler. Os contactos mostram também a imagem de perfil do remetente ou da conta, quando disponível.
+
+O Meron está agora disponível em **neerlandês**, **ucraniano** e **indonésio**, tendo sido preenchidas traduções em falta nos idiomas já existentes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Experimente o Meron 0.5.1"
+  text="Descarregue a versão mais recente para aproveitar o emblema da Dock, assinaturas OpenPGP mais flexíveis e os novos controlos de resposta. O Meron é gratuito e de código aberto."
+  download="Descarregar Meron"
+  changelog="Ver histórico de versões"
+  github="GitHub Releases"
+/>

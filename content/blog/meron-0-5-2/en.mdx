@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Rules for Sent Mail and Background Startup"
+publishedAt: "2026-11-13"
+readingTime: "3 min read"
+summary: "Automatically tag, star, and copy messages you send—even from another mail client. Start Meron in the background on desktop, with better reply address matching and clearer encryption prompts."
+highlights:
+  - "Mail rules for messages you send, across desktop and mobile"
+  - "Background startup (--background) and CLI help (-h / --help) on desktop"
+  - "Choose a reply address automatically when its domain is the only match"
+  - "Clearer encryption prompts and warnings about aliases missing from your key"
+  - "Better recognition of localized Trash folders and cleanup of sent drafts"
+  - "Stronger protection for stored mail and a fix for an Android conversation crash"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Release · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 lets you automatically tag, star, and copy messages you send—even from another mail client. On desktop, you can also start Meron in the background and keep mail syncing with the main window hidden.
+
+This release also improves how Meron chooses your reply address, clarifies encryption prompts, and fixes problems with drafts, Trash folders, and Android conversations.
+
+<PlatformNote>Sent-mail rules, reply address matching, and OpenPGP improvements are available on desktop and mobile. Background startup is a desktop feature.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Rules</Badge>
+
+## Automate what you send
+
+Mail rules previously only watched incoming mail. In **Settings → Rules**, you can now set **Run on** to **Mail I send** to organize outgoing messages as well.
+
+A sent-mail rule runs as soon as a message you sent appears in your account's **Sent** folder—whether you sent it from Meron or from another mail client. You can use it to:
+
+- Add tags to everything you send to a client or team
+- Star important outgoing threads automatically
+- Copy sent messages into a dedicated project folder
+
+Sent-mail rules always run immediately and leave the original message in **Sent**, so **Move to** and **Mark as read** are not available for them. If you want to apply a new rule to older messages, **Run on existing mail** scans your cached **Sent** folder instead of the Inbox.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Rule editor in Settings with Run on set to Mail I send, matching To @northstar.studio, adding client and follow-up tags, starring, and copying to Projects"
+  caption="Set Run on to Mail I send to tag, star, or copy outgoing messages."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Desktop CLI</Badge>
+
+## Start in the background
+
+On desktop, you can now launch Meron with `--background` to start with the main window hidden while keeping mail sync running. Open the window anytime from the system tray icon or by launching Meron normally. Passing a `mailto:` link still opens a visible compose window as usual.
+
+You can also pass `-h` or `--help` to print the supported command-line options and exit.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composing &amp; Identities</Badge>
+
+## Reply from the right address
+
+When you reply to a message, Meron already picks a matching account alias if the message was sent directly to it.
+
+When there's no exact address match, Meron now looks for a single configured identity whose domain matches one of the message's recipients. If the match is unambiguous, Meron uses that address for your reply. Otherwise, it uses your primary address.
+
+On mobile, this release also fixes recipient suggestions and how Backspace works when editing recipient addresses.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Know which addresses your encryption key includes
+
+When a contact shares an OpenPGP key, Meron's prompt now names your receiving account and explains that accepting will turn on encryption for that account so you can send encrypted mail.
+
+If your account uses multiple aliases, Meron explains when a new key will include all of those addresses. Anyone who receives the key can see the addresses it includes.
+
+Account settings also warn when an existing key is missing some of your aliases.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Elena's Mail Lab account settings showing the Encrypted email section with a warning that the OpenPGP key does not list the account's billing and press aliases"
+  caption="Account settings warn when an existing OpenPGP key doesn't cover all of the account's aliases."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Reliability</Badge>
+
+## Safer storage, cleaner drafts, and Android stability
+
+- **Trash folders:** Meron now recognizes localized Trash folder names when your mail server doesn't identify the folder explicitly.
+- **Draft cleanup:** Fixed a case where a draft could remain in Drafts after you sent the message.
+- **Stored mail:** Added safeguards against replacing the encryption key for an existing local mail database, plus improvements to key recovery.
+- **Android conversations:** Fixed a crash involving message display, transitions, and pull-to-refresh.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Get Meron 0.5.2"
+  text="Update to Meron 0.5.2 for sent-mail rules, desktop background startup, and smoother replies and sync. Meron is free and open source."
+  download="Download Meron"
+  changelog="View changelog"
+  github="GitHub releases"
+/>

@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Regeln für gesendete Mails und Hintergrundstart"
+publishedAt: "2026-11-13"
+readingTime: "3 Min. Lesezeit"
+summary: "Versehen Sie gesendete Nachrichten automatisch mit Tags, Sternen und Kopien – selbst wenn sie aus einem anderen Mail-Client stammen. Starten Sie Meron auf dem Desktop im Hintergrund, mit besserer Antwortadressen-Erkennung und klareren Verschlüsselungshinweisen."
+highlights:
+  - "Mail-Regeln für gesendete Nachrichten auf Desktop und Mobilgeräten"
+  - "Hintergrundstart (--background) und CLI-Hilfe (-h / --help) auf dem Desktop"
+  - "Automatische Wahl der Antwortadresse bei eindeutiger Domain-Übereinstimmung"
+  - "Klarere Verschlüsselungshinweise und Warnungen bei fehlenden Aliasen im Schlüssel"
+  - "Bessere Erkennung lokalisierter Papierkorb-Ordner und Bereinigung gesendeter Entwürfe"
+  - "Stärkerer Schutz für gespeicherte Mails und Behebung eines Absturzes in Android-Konversationen"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Release · v0.5.2"
+---
+
+<PostSection>
+
+Mit Meron 0.5.2 können Sie gesendete Nachrichten automatisch mit Tags versehen, mit Stern markieren und kopieren – selbst wenn sie über einen anderen Mail-Client verschickt wurden. Auf dem Desktop lässt sich Meron zudem im Hintergrund starten, sodass die Synchronisierung weiterläuft, während das Hauptfenster ausgeblendet bleibt.
+
+Dieses Release verbessert außerdem die Auswahl Ihrer Antwortadresse, macht Verschlüsselungshinweise verständlicher und behebt Probleme mit Entwürfen, Papierkorb-Ordnern und Android-Konversationen.
+
+<PlatformNote>Regeln für gesendete Mails, die Antwortadressen-Erkennung und die OpenPGP-Verbesserungen sind auf Desktop und Mobilgeräten verfügbar. Der Hintergrundstart ist eine Desktop-Funktion.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regeln</Badge>
+
+## Automatisieren, was Sie senden
+
+Bisher überwachten Mail-Regeln nur eingehende Nachrichten. Unter **Einstellungen → Regeln** können Sie **Ausführen bei** nun auf **Gesendete E-Mails** setzen, um auch ausgehende Nachrichten zu organisieren.
+
+Eine Regel für gesendete Mails greift, sobald eine von Ihnen verschickte Nachricht im **Gesendet**-Ordner Ihres Kontos erscheint – unabhängig davon, ob Sie sie mit Meron oder einem anderen Mail-Client gesendet haben. Damit können Sie zum Beispiel:
+
+- Alles, was Sie an einen Kunden oder ein Team senden, mit Tags versehen
+- Wichtige ausgehende Konversationen automatisch mit einem Stern markieren
+- Gesendete Nachrichten in einen speziellen Projektordner kopieren
+
+Regeln für gesendete Mails werden immer sofort ausgeführt und belassen die Originalnachricht in **Gesendet**, weshalb **Verschieben nach** und **Als gelesen markieren** hier nicht verfügbar sind. Wenn Sie eine neue Regel auf ältere Nachrichten anwenden möchten, durchsucht **Auf vorhandene E-Mails anwenden** Ihren zwischengespeicherten **Gesendet**-Ordner statt des Posteingangs.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Regel-Editor in den Einstellungen mit Ausführen bei auf Gesendete E-Mails, Bedingung An @northstar.studio, Hinzufügen der Tags client und follow-up, Sternmarkierung und Kopieren nach Projects"
+  caption="Setzen Sie „Ausführen bei“ auf „Gesendete E-Mails“, um ausgehende Nachrichten mit Tags zu versehen, mit Stern zu markieren oder zu kopieren."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Desktop-CLI</Badge>
+
+## Im Hintergrund starten
+
+Auf dem Desktop können Sie Meron jetzt mit `--background` starten, sodass das Hauptfenster verborgen bleibt, während die Mail-Synchronisierung weiterläuft. Sie können das Fenster jederzeit über das System-Tray-Symbol oder durch normales Starten von Meron öffnen. Beim Übergeben eines `mailto:`-Links öffnet sich wie gewohnt direkt ein sichtbares Verfassen-Fenster.
+
+Mit `-h` oder `--help` lassen sich zudem die unterstützten Befehlszeilenoptionen ausgeben.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Verfassen &amp; Identitäten</Badge>
+
+## Von der richtigen Adresse antworten
+
+Wenn Sie auf eine Nachricht antworten, wählt Meron bereits einen passenden Konto-Alias aus, sofern die Nachricht direkt an diesen gesendet wurde.
+
+Gibt es keine exakte Adressübereinstimmung, sucht Meron nun nach einer einzelnen konfigurierten Identität, deren Domain mit einem der Empfänger der Nachricht übereinstimmt. Ist diese Zuordnung eindeutig, verwendet Meron diese Adresse für Ihre Antwort – andernfalls Ihre primäre Adresse.
+
+Auf Mobilgeräten behebt dieses Release außerdem Fehler bei Empfängervorschlägen und beim Verhalten der Rücktaste während der Bearbeitung von Empfängeradressen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Wissen, welche Adressen Ihr Schlüssel enthält
+
+Wenn ein Kontakt einen OpenPGP-Schlüssel teilt, nennt die Abfrage in Meron nun Ihr empfangendes Konto und erklärt, dass durch das Akzeptieren die Verschlüsselung für dieses Konto aktiviert wird, damit Sie verschlüsselte Mails senden können.
+
+Verwendet Ihr Konto mehrere Aliase, weist Meron darauf hin, wenn ein neuer Schlüssel all diese Adressen umfasst. Jeder, der den Schlüssel erhält, kann die darin enthaltenen Adressen sehen.
+
+In den Kontoeinstellungen erscheint zudem eine Warnung, wenn in einem vorhandenen Schlüssel einige Ihrer Aliase fehlen.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Kontoeinstellungen von Elena's Mail Lab mit dem Bereich Verschlüsselte E-Mail und einer Warnung, dass der OpenPGP-Schlüssel die Aliase billing und press des Kontos nicht auflistet"
+  caption="Die Kontoeinstellungen warnen, wenn ein vorhandener OpenPGP-Schlüssel nicht alle Aliase des Kontos abdeckt."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Zuverlässigkeit</Badge>
+
+## Sicherere Speicherung, sauberere Entwürfe und Android-Stabilität
+
+- **Papierkorb-Ordner:** Meron erkennt nun lokalisierte Namen von Papierkorb-Ordnern, wenn Ihr Mailserver den Ordner nicht ausdrücklich kennzeichnet.
+- **Entwurfsbereinigung:** Ein Fehler wurde behoben, bei dem ein Entwurf nach dem Senden der Nachricht im Ordner „Entwürfe“ verbleiben konnte.
+- **Gespeicherte Mails:** Zusätzliche Schutzmechanismen verhindern das Ersetzen des Verschlüsselungsschlüssels für eine bestehende lokale Mail-Datenbank, ergänzt durch Verbesserungen bei der Schlüsselwiederherstellung.
+- **Android-Konversationen:** Ein Absturz im Zusammenhang mit der Nachrichtenanzeige, Übergängen und Pull-to-Refresh wurde behoben.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.2 herunterladen"
+  text="Aktualisieren Sie auf Meron 0.5.2 für Regeln für gesendete Mails, den Hintergrundstart auf dem Desktop sowie flüssigere Antworten und Synchronisierung. Meron ist kostenlos und Open Source."
+  download="Meron herunterladen"
+  changelog="Changelog ansehen"
+  github="GitHub Releases"
+/>

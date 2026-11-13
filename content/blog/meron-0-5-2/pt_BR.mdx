@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Regras para e-mails enviados e inicialização em segundo plano"
+publishedAt: "2026-11-13"
+readingTime: "Leitura de 3 min"
+summary: "Adicione marcadores, estrelas e copie automaticamente mensagens que você envia — mesmo de outro cliente de e-mail. Inicie o Meron em segundo plano no desktop, com melhor seleção de endereço de resposta e avisos de criptografia mais claros."
+highlights:
+  - "Regras de e-mail para mensagens que você envia, no desktop e no celular"
+  - "Inicialização em segundo plano (--background) e ajuda de CLI (-h / --help) no desktop"
+  - "Escolha automática do endereço de resposta quando o domínio for a única correspondência"
+  - "Avisos de criptografia mais claros e alertas sobre aliases ausentes na sua chave"
+  - "Melhor reconhecimento de pastas Lixeira localizadas e limpeza de rascunhos enviados"
+  - "Proteção mais forte para e-mails armazenados e correção de travamento em conversas no Android"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Lançamento · v0.5.2"
+---
+
+<PostSection>
+
+O Meron 0.5.2 permite adicionar marcadores, estrelas e copiar automaticamente mensagens que você envia — mesmo a partir de outro cliente de e-mail. No desktop, você também pode iniciar o Meron em segundo plano e manter a sincronização rodando com a janela principal oculta.
+
+Esta versão também melhora a forma como o Meron escolhe seu endereço de resposta, torna os avisos de criptografia mais claros e corrige problemas com rascunhos, pastas de Lixeira e conversas no Android.
+
+<PlatformNote>Regras para e-mails enviados, correspondência de endereço de resposta e melhorias de OpenPGP estão disponíveis no desktop e no celular. A inicialização em segundo plano é um recurso de desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regras</Badge>
+
+## Automatize o que você envia
+
+Antes, as regras de e-mail monitoravam apenas mensagens recebidas. Em **Configurações → Regras**, agora você pode definir **Executar em** como **E-mails que eu envio** para organizar também as mensagens enviadas.
+
+Uma regra para e-mails enviados é executada assim que uma mensagem enviada por você aparece na pasta **Enviados** da sua conta — seja pelo Meron ou por outro cliente de e-mail. Você pode usá-la para:
+
+- Adicionar marcadores a tudo o que você envia para um cliente ou equipe
+- Marcar com estrela automaticamente conversas enviadas importantes
+- Copiar mensagens enviadas para uma pasta dedicada ao projeto
+
+Regras para e-mails enviados sempre rodam imediatamente e mantêm a mensagem original em **Enviados**, portanto **Mover para** e **Marcar como lido** não ficam disponíveis para elas. Se quiser aplicar uma nova regra a mensagens antigas, **Executar nos e-mails existentes** verifica a pasta **Enviados** em cache em vez da Caixa de Entrada.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Editor de regras em Configurações com Executar em definido como E-mails que eu envio, correspondendo a Para @northstar.studio, adicionando os marcadores client e follow-up, marcando com estrela e copiando para Projects"
+  caption="Defina Executar em como E-mails que eu envio para marcar, favoritar com estrela ou copiar mensagens enviadas."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI do desktop</Badge>
+
+## Iniciar em segundo plano
+
+No desktop, agora você pode iniciar o Meron com `--background` para abrir com a janela principal oculta enquanto a sincronização de e-mails continua rodando. Abra a janela a qualquer momento pelo ícone da bandeja do sistema ou iniciando o Meron normalmente. Passar um link `mailto:` ainda abre uma janela de redação visível como de costume.
+
+Você também pode passar `-h` ou `--help` para exibir as opções de linha de comando suportadas e sair.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Redação e identidades</Badge>
+
+## Responda do endereço certo
+
+Ao responder a uma mensagem, o Meron já escolhe um alias de conta correspondente se a mensagem tiver sido enviada diretamente para ele.
+
+Quando não há correspondência exata de endereço, o Meron agora procura uma única identidade configurada cujo domínio corresponda a um dos destinatários da mensagem. Se a correspondência for inequívoca, o Meron usa esse endereço na resposta. Caso contrário, usa seu endereço principal.
+
+No celular, esta versão também corrige sugestões de destinatários e o comportamento da tecla Backspace ao editar endereços de destinatários.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Saiba quais endereços sua chave de criptografia inclui
+
+Quando um contato compartilha uma chave OpenPGP, o aviso do Meron agora informa sua conta receptora e explica que aceitar ativará a criptografia nessa conta para que você possa enviar e-mails criptografados.
+
+Se a sua conta usa vários aliases, o Meron explica quando uma nova chave incluirá todos esses endereços. Qualquer pessoa que receber a chave poderá ver os endereços incluídos nela.
+
+As configurações da conta também avisam quando uma chave existente não inclui alguns dos seus aliases.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Configurações da conta Elena's Mail Lab mostrando a seção E-mail criptografado com um aviso de que a chave OpenPGP não lista os aliases billing e press da conta"
+  caption="As configurações da conta avisam quando uma chave OpenPGP existente não cobre todos os aliases da conta."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Confiabilidade</Badge>
+
+## Armazenamento mais seguro, rascunhos mais limpos e estabilidade no Android
+
+- **Pastas Lixeira:** O Meron agora reconhece nomes localizados de pastas Lixeira quando o servidor de e-mail não identifica a pasta explicitamente.
+- **Limpeza de rascunhos:** Corrigido um caso em que um rascunho podia permanecer em Rascunhos após o envio da mensagem.
+- **E-mails armazenados:** Adicionadas proteções contra a substituição da chave de criptografia de um banco de dados local de e-mails existente, além de melhorias na recuperação de chaves.
+- **Conversas no Android:** Corrigido um travamento envolvendo a exibição de mensagens, transições e o gesto de puxar para atualizar.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenha o Meron 0.5.2"
+  text="Atualize para o Meron 0.5.2 para usar regras de e-mails enviados, inicialização em segundo plano no desktop e respostas e sincronização mais fluidas. O Meron é gratuito e de código aberto."
+  download="Baixar Meron"
+  changelog="Ver histórico de versões"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Regole per la posta inviata e avvio in background"
+publishedAt: "2026-11-13"
+readingTime: "3 min di lettura"
+summary: "Aggiungi automaticamente tag, stelle e copie ai messaggi che invii, anche da un altro client di posta. Avvia Meron in background su desktop, con una migliore scelta dell'indirizzo di risposta e avvisi di crittografia più chiari."
+highlights:
+  - "Regole di posta per i messaggi che invii, su desktop e mobile"
+  - "Avvio in background (--background) e guida CLI (-h / --help) su desktop"
+  - "Scelta automatica dell'indirizzo di risposta quando il suo dominio è l'unica corrispondenza"
+  - "Avvisi di crittografia più chiari e segnalazioni sugli alias mancanti nella chiave"
+  - "Migliore riconoscimento delle cartelle Cestino localizzate e pulizia delle bozze inviate"
+  - "Maggiore protezione per la posta archiviata e correzione di un arresto anomalo nelle conversazioni su Android"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Rilascio · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 ti consente di aggiungere automaticamente tag, stelle e copie ai messaggi che invii, anche se li hai spediti da un altro client di posta. Su desktop puoi anche avviare Meron in background e mantenere attiva la sincronizzazione della posta con la finestra principale nascosta.
+
+Questa versione migliora inoltre il modo in cui Meron sceglie l'indirizzo di risposta, rende più chiari gli avvisi di crittografia e risolve problemi con le bozze, le cartelle Cestino e le conversazioni su Android.
+
+<PlatformNote>Le regole per la posta inviata, l'abbinamento dell'indirizzo di risposta e i miglioramenti OpenPGP sono disponibili su desktop e mobile. L'avvio in background è una funzione desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regole</Badge>
+
+## Automatizza ciò che invii
+
+In precedenza, le regole di posta controllavano solo i messaggi in arrivo. In **Impostazioni → Regole**, ora puoi impostare **Esegui su** su **Posta che invio** per organizzare anche i messaggi in uscita.
+
+Una regola per la posta inviata viene eseguita non appena un messaggio che hai inviato appare nella cartella **Inviati** del tuo account, che tu l'abbia inviato da Meron o da un altro client di posta. Puoi usarla per:
+
+- Aggiungere tag a tutto ciò che invii a un cliente o a un team
+- Contrassegnare automaticamente con una stella le discussioni importanti in uscita
+- Copiare i messaggi inviati in una cartella dedicata al progetto
+
+Le regole per la posta inviata vengono sempre eseguite subito e lasciano il messaggio originale in **Inviati**, quindi **Sposta in** e **Segna come letto** non sono disponibili. Se vuoi applicare una nuova regola ai messaggi meno recenti, **Esegui sulla posta esistente** analizza la cartella **Inviati** memorizzata nella cache anziché la Posta in arrivo.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Editor delle regole nelle Impostazioni con Esegui su impostato su Posta che invio, corrispondenza A @northstar.studio, aggiunta dei tag client e follow-up, stella e copia in Projects"
+  caption="Imposta Esegui su su Posta che invio per aggiungere tag, stelle o copiare i messaggi in uscita."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI desktop</Badge>
+
+## Avvio in background
+
+Su desktop ora puoi avviare Meron con `--background` per partire con la finestra principale nascosta mantenendo attiva la sincronizzazione della posta. Apri la finestra in qualsiasi momento dall'icona nell'area di notifica o avviando Meron normalmente. Passando un link `mailto:` si apre comunque una finestra di composizione visibile come di consueto.
+
+Puoi anche passare `-h` o `--help` per stampare le opzioni da riga di comando supportate e uscire.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Composizione &amp; Identità</Badge>
+
+## Rispondi dall'indirizzo giusto
+
+Quando rispondi a un messaggio, Meron sceglie già un alias dell'account corrispondente se il messaggio è stato inviato direttamente a quell'indirizzo.
+
+Quando non c'è una corrispondenza esatta dell'indirizzo, Meron ora cerca un'unica identità configurata il cui dominio corrisponda a uno dei destinatari del messaggio. Se la corrispondenza non è ambigua, Meron usa quell'indirizzo per la tua risposta. Altrimenti, usa il tuo indirizzo principale.
+
+Su mobile, questa versione corregge anche i suggerimenti dei destinatari e il funzionamento del tasto Backspace durante la modifica degli indirizzi dei destinatari.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Scopri quali indirizzi include la tua chiave di crittografia
+
+Quando un contatto condivide una chiave OpenPGP, l'avviso di Meron ora nomina il tuo account ricevente e spiega che l'accettazione attiverà la crittografia per quell'account, così potrai inviare posta crittografata.
+
+Se il tuo account utilizza più alias, Meron spiega quando una nuova chiave includerà tutti quegli indirizzi. Chiunque riceva la chiave può vedere gli indirizzi che contiene.
+
+Le impostazioni dell'account avvisano anche quando a una chiave esistente mancano alcuni dei tuoi alias.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Impostazioni dell'account Elena's Mail Lab che mostrano la sezione Email crittografata con un avviso che la chiave OpenPGP non elenca gli alias billing e press dell'account"
+  caption="Le impostazioni dell'account avvisano quando una chiave OpenPGP esistente non copre tutti gli alias dell'account."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Affidabilità</Badge>
+
+## Archiviazione più sicura, bozze più pulite e stabilità su Android
+
+- **Cartelle Cestino:** Meron ora riconosce i nomi localizzati delle cartelle Cestino quando il tuo server di posta non identifica esplicitamente la cartella.
+- **Pulizia delle bozze:** Risolto un caso in cui una bozza poteva rimanere in Bozze dopo l'invio del messaggio.
+- **Posta archiviata:** Aggiunte protezioni contro la sostituzione della chiave di crittografia di un database di posta locale esistente, oltre a miglioramenti al recupero delle chiavi.
+- **Conversazioni Android:** Risolto un arresto anomalo relativo alla visualizzazione dei messaggi, alle transizioni e al trascinamento per aggiornare.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Scarica Meron 0.5.2"
+  text="Aggiorna a Meron 0.5.2 per avere le regole per la posta inviata, l'avvio in background su desktop e risposte e sincronizzazione più fluide. Meron è gratuito e open source."
+  download="Scarica Meron"
+  changelog="Vedi il changelog"
+  github="GitHub Releases"
+/>

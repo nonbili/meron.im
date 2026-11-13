@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Regels voor verzonden mail en opstarten op de achtergrond"
+publishedAt: "2026-11-13"
+readingTime: "3 min leestijd"
+summary: "Label, geef sterren aan en kopieer berichten die je verstuurt automatisch — zelfs vanuit een andere e-mailclient. Start Meron op de achtergrond op desktop, met betere herkenning van het antwoordadres en duidelijkere versleutelingsmeldingen."
+highlights:
+  - "E-mailregels voor berichten die je verstuurt, op desktop en mobiel"
+  - "Opstarten op de achtergrond (--background) en CLI-hulp (-h / --help) op desktop"
+  - "Automatisch een antwoordadres kiezen wanneer het domein de enige overeenkomst is"
+  - "Duidelijkere versleutelingsmeldingen en waarschuwingen over aliassen die in je sleutel ontbreken"
+  - "Betere herkenning van gelokaliseerde Prullenbak-mappen en opschonen van verzonden concepten"
+  - "Sterkere bescherming voor opgeslagen e-mail en een oplossing voor een crash in Android-gesprekken"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Release · v0.5.2"
+---
+
+<PostSection>
+
+Met Meron 0.5.2 kun je berichten die je verstuurt automatisch labelen, een ster geven en kopiëren — zelfs als je ze vanuit een andere e-mailclient hebt verzonden. Op desktop kun je Meron ook op de achtergrond opstarten zodat e-mail blijft synchroniseren terwijl het hoofdvenster verborgen is.
+
+Deze release verbetert ook hoe Meron je antwoordadres kiest, maakt versleutelingsmeldingen duidelijker en lost problemen op met concepten, Prullenbak-mappen en Android-gesprekken.
+
+<PlatformNote>Regels voor verzonden mail, antwoordadres-matching en OpenPGP-verbeteringen zijn beschikbaar op desktop en mobiel. Opstarten op de achtergrond is een desktopfunctie.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regels</Badge>
+
+## Automatiseer wat je verstuurt
+
+Voorheen keken e-mailregels alleen naar inkomende berichten. Onder **Instellingen → Regels** kun je **Uitvoeren op** nu instellen op **E-mail die ik verstuur** om ook uitgaande berichten te ordenen.
+
+Een regel voor verzonden mail wordt uitgevoerd zodra een door jou verzonden bericht in de map **Verzonden** van je account verschijnt — of je het nu vanuit Meron of een andere e-mailclient hebt verstuurd. Je kunt dit gebruiken om:
+
+- Labels toe te voegen aan alles wat je naar een klant of team stuurt
+- Belangrijke uitgaande gesprekken automatisch een ster te geven
+- Verzonden berichten te kopiëren naar een speciale projectmap
+
+Regels voor verzonden mail worden altijd direct uitgevoerd en laten het oorspronkelijke bericht in **Verzonden** staan, dus **Verplaatsen naar** en **Markeren als gelezen** zijn hiervoor niet beschikbaar. Als je een nieuwe regel wilt toepassen op oudere berichten, scant **Uitvoeren op bestaande e-mail** je gecachte map **Verzonden** in plaats van de Inbox.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Regeleditor in Instellingen met Uitvoeren op ingesteld op E-mail die ik verstuur, overeenkomend met Aan @northstar.studio, labels client en follow-up toevoegend, ster gevend en kopiërend naar Projects"
+  caption="Stel Uitvoeren op in op E-mail die ik verstuur om uitgaande berichten te labelen, een ster te geven of te kopiëren."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Desktop-CLI</Badge>
+
+## Opstarten op de achtergrond
+
+Op desktop kun je Meron nu starten met `--background` om te openen met het hoofdvenster verborgen terwijl de e-mailsynchronisatie actief blijft. Open het venster op elk moment via het systeemvakpictogram of door Meron normaal te starten. Het doorgeven van een `mailto:`-link opent nog steeds zoals gebruikelijk een zichtbaar opstelvenster.
+
+Je kunt ook `-h` of `--help` doorgeven om de ondersteunde opdrachtregelopties weer te geven en af te sluiten.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Opstellen &amp; Identiteiten</Badge>
+
+## Antwoorden vanaf het juiste adres
+
+Wanneer je op een bericht reageert, kiest Meron al een bijpassende accountalias als het bericht rechtstreeks naar dat adres is gestuurd.
+
+Wanneer er geen exacte adresovereenkomst is, zoekt Meron nu naar één geconfigureerde identiteit waarvan het domein overeenkomt met een van de ontvangers van het bericht. Als de overeenkomst eenduidig is, gebruikt Meron dat adres voor je antwoord. Anders wordt je primaire adres gebruikt.
+
+Op mobiel lost deze release ook problemen op met ontvangersuggesties en hoe Backspace werkt bij het bewerken van ontvangeradressen.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Weet welke adressen je versleutelingssleutel bevat
+
+Wanneer een contactpersoon een OpenPGP-sleutel deelt, noemt de melding van Meron nu je ontvangende account en legt uit dat accepteren de versleuteling voor dat account inschakelt zodat je versleutelde e-mail kunt sturen.
+
+Als je account meerdere aliassen gebruikt, legt Meron uit wanneer een nieuwe sleutel al die adressen zal bevatten. Iedereen die de sleutel ontvangt, kan de adressen zien die erin staan.
+
+De accountinstellingen waarschuwen ook wanneer er in een bestaande sleutel enkele van je aliassen ontbreken.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Accountinstellingen van Elena's Mail Lab met de sectie Versleutelde e-mail en een waarschuwing dat de OpenPGP-sleutel de aliassen billing en press van het account niet vermeldt"
+  caption="Accountinstellingen waarschuwen wanneer een bestaande OpenPGP-sleutel niet alle aliassen van het account dekt."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Betrouwbaarheid</Badge>
+
+## Veiligere opslag, schonere concepten en Android-stabiliteit
+
+- **Prullenbak-mappen:** Meron herkent nu gelokaliseerde namen voor de map Prullenbak wanneer je mailserver de map niet expliciet aanduidt.
+- **Opschonen van concepten:** Er is een situatie verholpen waarin een concept in Concepten kon blijven staan nadat je het bericht had verzonden.
+- **Opgeslagen e-mail:** Er zijn beveiligingen toegevoegd tegen het vervangen van de versleutelingssleutel van een bestaande lokale e-maildatabase, plus verbeteringen voor sleutelherstel.
+- **Android-gesprekken:** Een crash verholpen rond berichtweergave, overgangen en omlaag trekken om te vernieuwen.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Download Meron 0.5.2"
+  text="Update naar Meron 0.5.2 voor regels voor verzonden mail, opstarten op de achtergrond op desktop en soepelere antwoorden en synchronisatie. Meron is gratis en open source."
+  download="Meron downloaden"
+  changelog="Bekijk changelog"
+  github="GitHub-releases"
+/>

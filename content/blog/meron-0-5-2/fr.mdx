@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2 : Règles pour les messages envoyés et démarrage en arrière-plan"
+publishedAt: "2026-11-13"
+readingTime: "3 min de lecture"
+summary: "Étiquetez, marquez d'une étoile et copiez automatiquement les messages que vous envoyez, même depuis un autre client de messagerie. Démarrez Meron en arrière-plan sur ordinateur, avec une meilleure sélection de l'adresse de réponse et des invites de chiffrement plus claires."
+highlights:
+  - "Règles de messagerie pour les messages que vous envoyez, sur ordinateur et mobile"
+  - "Démarrage en arrière-plan (--background) et aide CLI (-h / --help) sur ordinateur"
+  - "Choix automatique de l'adresse de réponse lorsque son domaine est la seule correspondance"
+  - "Invites de chiffrement plus claires et avertissements sur les alias absents de votre clé"
+  - "Meilleure reconnaissance des dossiers Corbeille localisés et nettoyage des brouillons envoyés"
+  - "Protection renforcée pour les e-mails stockés et correction d'un plantage des conversations sur Android"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Publication · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 vous permet d'étiqueter, de marquer d'une étoile et de copier automatiquement les messages que vous envoyez, même depuis un autre client de messagerie. Sur ordinateur, vous pouvez également démarrer Meron en arrière-plan et laisser la synchronisation tourner avec la fenêtre principale masquée.
+
+Cette version améliore aussi la façon dont Meron choisit votre adresse de réponse, clarifie les invites de chiffrement et corrige des problèmes liés aux brouillons, aux dossiers Corbeille et aux conversations Android.
+
+<PlatformNote>Les règles pour les messages envoyés, la correspondance de l'adresse de réponse et les améliorations OpenPGP sont disponibles sur ordinateur et mobile. Le démarrage en arrière-plan est une fonctionnalité pour ordinateur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Règles</Badge>
+
+## Automatisez ce que vous envoyez
+
+Auparavant, les règles de messagerie ne surveillaient que les messages entrants. Dans **Paramètres → Règles**, vous pouvez désormais régler **Exécuter sur** sur **Messages que j'envoie** pour organiser également les messages sortants.
+
+Une règle pour les messages envoyés s'exécute dès qu'un message que vous avez envoyé apparaît dans le dossier **Envoyés** de votre compte — que vous l'ayez envoyé depuis Meron ou un autre client de messagerie. Vous pouvez l'utiliser pour :
+
+- Ajouter des étiquettes à tout ce que vous envoyez à un client ou une équipe
+- Marquer automatiquement d'une étoile les fils sortants importants
+- Copier les messages envoyés dans un dossier de projet dédié
+
+Les règles pour les messages envoyés s'exécutent toujours immédiatement et laissent le message d'origine dans **Envoyés** ; **Déplacer vers** et **Marquer comme lu** ne sont donc pas disponibles pour elles. Si vous souhaitez appliquer une nouvelle règle aux anciens messages, **Exécuter sur les messages existants** analyse votre dossier **Envoyés** en cache plutôt que la boîte de réception.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Éditeur de règles dans les Paramètres avec Exécuter sur réglé sur Messages que j'envoie, correspondant à À @northstar.studio, ajoutant les étiquettes client et follow-up, marquant d'une étoile et copiant vers Projects"
+  caption="Réglez Exécuter sur sur Messages que j'envoie pour étiqueter, marquer d'une étoile ou copier les messages sortants."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI ordinateur</Badge>
+
+## Démarrer en arrière-plan
+
+Sur ordinateur, vous pouvez désormais lancer Meron avec `--background` pour démarrer avec la fenêtre principale masquée tout en gardant la synchronisation des e-mails active. Ouvrez la fenêtre à tout moment depuis l'icône de la barre d'état système ou en lançant Meron normalement. Passer un lien `mailto:` ouvre toujours une fenêtre de rédaction visible comme d'habitude.
+
+Vous pouvez aussi passer `-h` ou `--help` pour afficher les options de ligne de commande prises en charge et quitter.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Rédaction &amp; Identités</Badge>
+
+## Répondre depuis la bonne adresse
+
+Lorsque vous répondez à un message, Meron choisit déjà un alias de compte correspondant si le message lui a été envoyé directement.
+
+Lorsqu'il n'y a pas de correspondance exacte d'adresse, Meron recherche désormais une seule identité configurée dont le domaine correspond à l'un des destinataires du message. Si la correspondance est sans ambiguïté, Meron utilise cette adresse pour votre réponse. Sinon, il utilise votre adresse principale.
+
+Sur mobile, cette version corrige également les suggestions de destinataires et le fonctionnement de la touche Retour arrière lors de la modification des adresses de destinataires.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Savoir quelles adresses inclut votre clé de chiffrement
+
+Lorsqu'un contact partage une clé OpenPGP, l'invite de Meron nomme désormais votre compte destinataire et explique que l'acceptation activera le chiffrement pour ce compte afin que vous puissiez envoyer des e-mails chiffrés.
+
+Si votre compte utilise plusieurs alias, Meron explique quand une nouvelle clé inclura toutes ces adresses. Toute personne qui reçoit la clé peut voir les adresses qu'elle contient.
+
+Les paramètres du compte avertissent également lorsqu'il manque certains de vos alias dans une clé existante.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Paramètres du compte Elena's Mail Lab affichant la section E-mail chiffré avec un avertissement indiquant que la clé OpenPGP ne répertorie pas les alias billing et press du compte"
+  caption="Les paramètres du compte avertissent lorsqu'une clé OpenPGP existante ne couvre pas tous les alias du compte."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Fiabilité</Badge>
+
+## Stockage plus sûr, brouillons plus propres et stabilité Android
+
+- **Dossiers Corbeille :** Meron reconnaît désormais les noms localisés du dossier Corbeille lorsque votre serveur de messagerie n'identifie pas explicitement le dossier.
+- **Nettoyage des brouillons :** Correction d'un cas où un brouillon pouvait rester dans Brouillons après l'envoi du message.
+- **E-mails stockés :** Ajout de protections contre le remplacement de la clé de chiffrement d'une base de données locale existante, ainsi que des améliorations pour la récupération de clé.
+- **Conversations Android :** Correction d'un plantage lié à l'affichage des messages, aux transitions et au glisser-pour-actualiser.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenir Meron 0.5.2"
+  text="Passez à Meron 0.5.2 pour profiter des règles pour les messages envoyés, du démarrage en arrière-plan sur ordinateur ainsi que de réponses et d'une synchronisation plus fluides. Meron est gratuit et open source."
+  download="Télécharger Meron"
+  changelog="Voir le journal des modifications"
+  github="GitHub Releases"
+/>

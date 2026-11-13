@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Reguły dla wysłanej poczty i uruchamianie w tle"
+publishedAt: "2026-11-13"
+readingTime: "3 min czytania"
+summary: "Automatycznie oznaczaj etykietami, gwiazdką i kopiuj wysyłane wiadomości — nawet z innego klienta poczty. Uruchamiaj Meron w tle na komputerze, z lepszym dopasowaniem adresu odpowiedzi i jaśniejszymi komunikatami szyfrowania."
+highlights:
+  - "Reguły poczty dla wysyłanych wiadomości na komputerze i urządzeniach mobilnych"
+  - "Uruchamianie w tle (--background) i pomoc CLI (-h / --help) na komputerze"
+  - "Automatyczny wybór adresu odpowiedzi, gdy jego domena jest jedynym dopasowaniem"
+  - "Jaśniejsze komunikaty szyfrowania i ostrzeżenia o aliasach brakujących w kluczu"
+  - "Lepsze rozpoznawanie zlokalizowanych folderów Kosz i porządkowanie wysłanych szkiców"
+  - "Silniejsza ochrona przechowywanej poczty i poprawka błędu konwersacji na Androidzie"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Wydanie · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 pozwala automatycznie dodawać etykiety, oznaczać gwiazdką i kopiować wysyłane wiadomości — nawet jeśli zostały wysłane z innego klienta poczty. Na komputerze możesz też uruchomić Meron w tle i utrzymać synchronizację poczty przy ukrytym głównym oknie.
+
+To wydanie ulepsza także wybór adresu odpowiedzi, doprecyzowuje komunikaty szyfrowania oraz rozwiązuje problemy ze szkicami, folderami Kosz i konwersacjami na Androidzie.
+
+<PlatformNote>Reguły dla wysłanej poczty, dopasowywanie adresu odpowiedzi i ulepszenia OpenPGP są dostępne na komputerach i urządzeniach mobilnych. Uruchamianie w tle to funkcja desktopowa.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Reguły</Badge>
+
+## Zautomatyzuj to, co wysyłasz
+
+Wcześniej reguły poczty obserwowały wyłącznie wiadomości przychodzące. W **Ustawienia → Reguły** możesz teraz ustawić **Uruchom dla** na **Wysyłana przeze mnie poczta**, aby porządkować również wiadomości wychodzące.
+
+Reguła dla wysłanej poczty uruchamia się natychmiast po pojawieniu się wysłanej wiadomości w folderze **Wysłane** Twojego konta — niezależnie od tego, czy wysłałeś ją z Meron, czy z innego klienta poczty. Możesz jej użyć, aby:
+
+- Dodawać etykiety do wszystkiego, co wysyłasz do klienta lub zespołu
+- Automatycznie oznaczać gwiazdką ważne wątki wychodzące
+- Kopiować wysłane wiadomości do dedykowanego folderu projektu
+
+Reguły dla wysłanej poczty zawsze działają od razu i pozostawiają oryginalną wiadomość w **Wysłane**, dlatego opcje **Przenieś do** i **Oznacz jako przeczytane** nie są dla nich dostępne. Jeśli chcesz zastosować nową regułę do starszych wiadomości, **Uruchom dla istniejącej poczty** skanuje zapisany w pamięci podręcznej folder **Wysłane** zamiast Odebranych.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Edytor reguł w Ustawieniach z opcją Uruchom dla ustawioną na Wysyłana przeze mnie poczta, dopasowującą Do @northstar.studio, dodającą etykiety client i follow-up, oznaczającą gwiazdką i kopiującą do Projects"
+  caption="Ustaw Uruchom dla na Wysyłana przeze mnie poczta, aby oznaczać etykietami, gwiazdką lub kopiować wychodzące wiadomości."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI na komputer</Badge>
+
+## Uruchamianie w tle
+
+Na komputerze możesz teraz uruchomić Meron z flagą `--background`, aby wystartować z ukrytym oknem głównym przy zachowaniu ciągłej synchronizacji poczty. Okno możesz otworzyć w dowolnym momencie z ikony zasobnika systemowego lub uruchamiając Meron normalnie. Przekazanie linku `mailto:` nadal otwiera widoczne okno tworzenia wiadomości jak zwykle.
+
+Możesz też przekazać `-h` lub `--help`, aby wyświetlić obsługiwane opcje wiersza poleceń i zakończyć działanie.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Tworzenie i tożsamości</Badge>
+
+## Odpowiadaj z właściwego adresu
+
+Gdy odpowiadasz na wiadomość, Meron już wybiera pasujący alias konta, jeśli wiadomość została wysłana bezpośrednio na niego.
+
+Gdy nie ma dokładnego dopasowania adresu, Meron szuka teraz jednej skonfigurowanej tożsamości, której domena pasuje do jednego z odbiorców wiadomości. Jeśli dopasowanie jest jednoznaczne, Meron użyje tego adresu w odpowiedzi. W przeciwnym razie użyje Twojego adresu głównego.
+
+Na urządzeniach mobilnych wydanie to poprawia również podpowiedzi odbiorców oraz działanie klawisza Backspace podczas edycji adresów odbiorców.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Wiedz, które adresy zawiera Twój klucz szyfrowania
+
+Gdy kontakt udostępnia klucz OpenPGP, komunikat Meron podaje teraz nazwę Twojego konta odbiorczego i wyjaśnia, że akceptacja włączy szyfrowanie dla tego konta, abyś mógł wysyłać zaszyfrowane wiadomości.
+
+Jeśli Twoje konto korzysta z wielu aliasów, Meron informuje, kiedy nowy klucz będzie zawierał wszystkie te adresy. Każdy, kto otrzyma klucz, może zobaczyć zawarte w nim adresy.
+
+Ustawienia konta ostrzegają również, gdy w istniejącym kluczu brakuje części Twoich aliasów.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Ustawienia konta Elena's Mail Lab pokazujące sekcję Szyfrowana poczta z ostrzeżeniem, że klucz OpenPGP nie zawiera aliasów billing i press konta"
+  caption="Ustawienia konta ostrzegają, gdy istniejący klucz OpenPGP nie obejmuje wszystkich aliasów konta."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Niezawodność</Badge>
+
+## Bezpieczniejsze przechowywanie, czystsze szkice i stabilność Androida
+
+- **Foldery Kosza:** Meron rozpoznaje teraz zlokalizowane nazwy folderu Kosz, gdy serwer poczty nie identyfikuje folderu wprost.
+- **Porządkowanie szkiców:** Naprawiono sytuację, w której szkic mógł pozostać w Szkicach po wysłaniu wiadomości.
+- **Przechowywana poczta:** Dodano zabezpieczenia przed zastąpieniem klucza szyfrowania istniejącej lokalnej bazy poczty oraz ulepszono odzyskiwanie kluczy.
+- **Konwersacje na Androidzie:** Naprawiono błąd powodujący zamknięcie aplikacji podczas wyświetlania wiadomości, przejść oraz odświeżania przez pociągnięcie.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Pobierz Meron 0.5.2"
+  text="Zaktualizuj do Meron 0.5.2, aby korzystać z reguł dla wysłanej poczty, uruchamiania w tle na komputerze oraz płynniejszych odpowiedzi i synchronizacji. Meron jest darmowy i otwartoźródłowy."
+  download="Pobierz Meron"
+  changelog="Zobacz listę zmian"
+  github="Wydania na GitHubie"
+/>

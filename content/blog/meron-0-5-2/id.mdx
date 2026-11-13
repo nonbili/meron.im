@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Aturan untuk Email Terkirim dan Mulai di Latar Belakang"
+publishedAt: "2026-11-13"
+readingTime: "3 mnt waktu baca"
+summary: "Tandai dengan tag, bintang, dan salin pesan yang Anda kirim secara otomatis—bahkan dari klien email lain. Jalankan Meron di latar belakang pada desktop, dengan pencocokan alamat balasan yang lebih baik dan dialog enkripsi yang lebih jelas."
+highlights:
+  - "Aturan email untuk pesan yang Anda kirim, di desktop dan seluler"
+  - "Mulai di latar belakang (--background) dan bantuan CLI (-h / --help) di desktop"
+  - "Pilih alamat balasan secara otomatis jika domainnya adalah satu-satunya yang cocok"
+  - "Dialog enkripsi yang lebih jelas dan peringatan tentang alias yang tidak ada di kunci Anda"
+  - "Pengenalan folder Sampah yang dilokalkan dengan lebih baik dan pembersihan draf terkirim"
+  - "Perlindungan lebih kuat untuk email tersimpan dan perbaikan crash percakapan di Android"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Rilis · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 memungkinkan Anda memberi tag, membintangi, dan menyalin pesan yang Anda kirim secara otomatis—bahkan jika dikirim dari klien email lain. Di desktop, Anda juga dapat menjalankan Meron di latar belakang dan menjaga sinkronisasi email tetap berjalan dengan jendela utama tersembunyi.
+
+Rilis ini juga menyempurnakan cara Meron memilih alamat balasan Anda, memperjelas dialog enkripsi, dan memperbaiki masalah pada draf, folder Sampah, serta percakapan Android.
+
+<PlatformNote>Aturan email terkirim, pencocokan alamat balasan, dan penyempurnaan OpenPGP tersedia di desktop dan seluler. Mulai di latar belakang adalah fitur desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Aturan</Badge>
+
+## Otomatiskan apa yang Anda kirim
+
+Sebelumnya, aturan email hanya memantau email masuk. Di **Pengaturan → Aturan**, kini Anda dapat mengatur **Jalankan pada** ke **Email yang saya kirim** untuk mengatur pesan keluar juga.
+
+Aturan email terkirim langsung berjalan segera setelah pesan yang Anda kirim muncul di folder **Terkirim** akun Anda—baik Anda mengirimnya dari Meron maupun dari klien email lain. Anda dapat menggunakannya untuk:
+
+- Menambahkan tag ke semua yang Anda kirim ke klien atau tim
+- Membintangi utas keluar yang penting secara otomatis
+- Menyalin pesan terkirim ke folder proyek khusus
+
+Aturan email terkirim selalu berjalan seketika dan membiarkan pesan asli tetap berada di **Terkirim**, sehingga **Pindahkan ke** dan **Tandai sudah dibaca** tidak tersedia untuk aturan ini. Jika Anda ingin menerapkan aturan baru ke pesan yang lebih lama, **Jalankan pada email yang ada** akan memindai folder **Terkirim** yang tersimpan di cache, bukan Kotak Masuk.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Editor aturan di Pengaturan dengan Jalankan pada diatur ke Email yang saya kirim, mencocokkan Kepada @northstar.studio, menambahkan tag client dan follow-up, membintangi, dan menyalin ke Projects"
+  caption="Atur Jalankan pada ke Email yang saya kirim untuk memberi tag, membintangi, atau menyalin pesan keluar."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI Desktop</Badge>
+
+## Mulai di latar belakang
+
+Di desktop, Anda kini dapat meluncurkan Meron dengan `--background` untuk memulai dengan jendela utama tersembunyi sambil tetap menjaga sinkronisasi email berjalan. Buka jendela kapan saja dari ikon baki sistem atau dengan meluncurkan Meron seperti biasa. Membuka tautan `mailto:` tetap akan menampilkan jendela tulis pesan seperti biasa.
+
+Anda juga dapat menggunakan `-h` atau `--help` untuk mencetak opsi baris perintah yang didukung lalu keluar.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Menulis &amp; Identitas</Badge>
+
+## Balas dari alamat yang tepat
+
+Saat Anda membalas pesan, Meron sudah memilih alias akun yang cocok jika pesan tersebut dikirim langsung ke alamat itu.
+
+Jika tidak ada kecocokan alamat yang persis, Meron kini mencari satu identitas terkonfigurasi yang domainnya cocok dengan salah satu penerima pesan. Jika kecocokan tidak ambigu, Meron menggunakan alamat tersebut untuk balasan Anda. Jika tidak, Meron menggunakan alamat utama Anda.
+
+Di seluler, rilis ini juga memperbaiki saran penerima dan cara kerja tombol Backspace saat mengedit alamat penerima.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Ketahui alamat mana yang disertakan kunci enkripsi Anda
+
+Saat kontak membagikan kunci OpenPGP, dialog Meron kini menyebutkan akun penerima Anda dan menjelaskan bahwa menerima akan mengaktifkan enkripsi untuk akun tersebut sehingga Anda dapat mengirim email terenkripsi.
+
+Jika akun Anda menggunakan beberapa alias, Meron menjelaskan kapan kunci baru akan menyertakan semua alamat tersebut. Siapa pun yang menerima kunci tersebut dapat melihat alamat yang disertakan di dalamnya.
+
+Pengaturan akun juga memberi peringatan jika kunci yang ada tidak mencantumkan sebagian alias Anda.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Pengaturan akun Elena's Mail Lab yang menampilkan bagian Email terenkripsi dengan peringatan bahwa kunci OpenPGP tidak mencantumkan alias billing dan press milik akun"
+  caption="Pengaturan akun memberi peringatan ketika kunci OpenPGP yang ada tidak mencakup semua alias akun."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Keandalan</Badge>
+
+## Penyimpanan lebih aman, draf lebih bersih, dan stabilitas Android
+
+- **Folder Sampah:** Meron kini mengenali nama folder Sampah yang dilokalkan ketika server email Anda tidak mengidentifikasi folder tersebut secara eksplisit.
+- **Pembersihan draf:** Memperbaiki kasus di mana draf dapat tetap berada di Draf setelah Anda mengirim pesan.
+- **Email tersimpan:** Menambahkan perlindungan terhadap penggantian kunci enkripsi untuk basis data email lokal yang sudah ada, beserta peningkatan pada pemulihan kunci.
+- **Percakapan Android:** Memperbaiki crash yang berkaitan dengan tampilan pesan, transisi, dan tarik untuk menyegarkan.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Dapatkan Meron 0.5.2"
+  text="Perbarui ke Meron 0.5.2 untuk aturan email terkirim, mulai di latar belakang pada desktop, serta balasan dan sinkronisasi yang lebih lancar. Meron gratis dan bersumber terbuka."
+  download="Unduh Meron"
+  changelog="Lihat catatan perubahan"
+  github="Rilis GitHub"
+/>

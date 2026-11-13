@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Saadetud kirjade reeglid ja taustal käivitamine"
+publishedAt: "2026-11-13"
+readingTime: "3 min lugemist"
+summary: "Sildista, tähista tärniga ja kopeeri saadetud sõnumeid automaatselt — isegi kui saatsid need teisest meilikliendist. Käivita Meron töölaual taustal, koos parema vastuseaadressi valiku ja selgemate krüpteerimisviipadega."
+highlights:
+  - "Meilireeglid saadetud sõnumitele nii töölaual kui ka mobiilis"
+  - "Taustal käivitamine (--background) ja CLI abi (-h / --help) töölaual"
+  - "Vastuseaadressi automaatne valik, kui selle domeen on ainus vaste"
+  - "Selgemad krüpteerimisviibad ja hoiatused võtmest puuduvate aliaste kohta"
+  - "Tõlgitud prügikastikaustade parem tuvastamine ja saadetud mustandite koristamine"
+  - "Tugevam kaitse salvestatud kirjadele ja Androidi vestluste krahhi parandus"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Väljalase · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 võimaldab sul saadetud sõnumeid automaatselt sildistada, tärniga tähistada ja kopeerida — isegi siis, kui saatsid need mõnest teisest meilikliendist. Töölaual saad Meroni käivitada ka taustal, hoides kirjade sünkroonimise töös peidetud põhiaknaga.
+
+See väljalase parandab ka seda, kuidas Meron valib sinu vastuseaadressi, muudab krüpteerimisviibad selgemaks ning lahendab probleemid mustandite, prügikastikaustade ja Androidi vestlustega.
+
+<PlatformNote>Saadetud kirjade reeglid, vastuseaadressi sobitamine ja OpenPGP täiustused on saadaval töölaual ja mobiilis. Taustal käivitamine on töölauafunktsioon.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Reeglid</Badge>
+
+## Automatiseeri seda, mida saadad
+
+Varem jälgisid meilireeglid ainult sissetulevaid kirju. Jaotises **Seaded → Reeglid** saad nüüd määrata **Käivita** väärtuseks **Minu saadetud kirjad**, et korrastada ka väljaminevaid sõnumeid.
+
+Saadetud kirjade reegel käivitub kohe, kui sinu saadetud sõnum ilmub konto **Saadetud** kausta — olenemata sellest, kas saatsid selle Meronist või teisest meilikliendist. Saad seda kasutada, et:
+
+- Lisada silte kõigele, mida saadad kliendile või tiimile
+- Tähistada olulised väljaminevad vestlused automaatselt tärniga
+- Kopeerida saadetud sõnumid eraldi projektikausta
+
+Saadetud kirjade reeglid käivituvad alati kohe ja jätavad algse sõnumi kausta **Saadetud**, mistõttu **Teisalda kausta** ja **Märgi loetuks** pole nende puhul saadaval. Kui soovid rakendada uut reeglit vanematele sõnumitele, skannib **Käivita olemasolevatel kirjadel** sinu vahemällu salvestatud **Saadetud** kausta, mitte sisendkausta.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Reegliredaktor Seadetes, kus Käivita on määratud väärtusele Minu saadetud kirjad, tingimus Saaja @northstar.studio, lisab sildid client ja follow-up, tähistab tärniga ja kopeerib kausta Projects"
+  caption="Määra Käivita väärtuseks Minu saadetud kirjad, et väljaminevaid sõnumeid sildistada, tärniga tähistada või kopeerida."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Töölaua CLI</Badge>
+
+## Käivita taustal
+
+Töölaual saad nüüd Meroni käivitada lipuga `--background`, et alustada peidetud põhiaknaga, hoides kirjade sünkroonimise töös. Ava aken igal ajal süsteemisalve ikoonilt või Meroni tavapärasel käivitamisel. `mailto:` lingi edastamine avab endiselt nähtava koostamisakna.
+
+Võid ka edastada `-h` või `--help`, et kuvada toetatud käsurea valikud ja väljuda.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Koostamine ja identiteedid</Badge>
+
+## Vasta õigelt aadressilt
+
+Sõnumile vastates valib Meron juba sobiva konto aliase, kui sõnum saadeti otse sellele.
+
+Kui täpset aadressivastet pole, otsib Meron nüüd ühte seadistatud identiteeti, mille domeen kattub ühega sõnumi saajatest. Kui vaste on ühene, kasutab Meron vastamiseks seda aadressi. Vastasel juhul kasutab see sinu põhiaadressi.
+
+Mobiilis parandab see väljalase ka saajate soovitused ja Backspace-klahvi toimimise saaja aadresside muutmisel.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Tea, milliseid aadresse sinu krüpteerimisvõti sisaldab
+
+Kui kontakt jagab OpenPGP võtit, nimetab Meroni viip nüüd sinu vastuvõtva konto ja selgitab, et nõustumine lülitab selle konto jaoks krüpteerimise sisse, et saaksid saata krüpteeritud kirju.
+
+Kui sinu konto kasutab mitut aliast, selgitab Meron, millal uus võti sisaldab kõiki neid aadresse. Igaüks, kes võtme saab, näeb selles sisalduvaid aadresse.
+
+Konto seaded hoiatavad ka siis, kui olemasoleval võtmel puuduvad mõned sinu aliased.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Elena's Mail Lab konto seaded, mis näitavad krüpteeritud e-posti jaotist hoiatusega, et OpenPGP võti ei sisalda konto billing ja press aliaseid"
+  caption="Konto seaded hoiatavad, kui olemasolev OpenPGP võti ei kata kõiki konto aliaseid."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Töökindlus</Badge>
+
+## Turvalisem salvestus, puhtamad mustandid ja Androidi stabiilsus
+
+- **Prügikasti kaustad:** Meron tunneb nüüd ära tõlgitud prügikastikaustade nimed, kui sinu meiliserver ei märgi kausta otseselt.
+- **Mustandite koristamine:** Parandati juhtum, kus mustand võis pärast sõnumi saatmist jääda Mustandite kausta.
+- **Salvestatud kirjad:** Lisati kaitsemeetmed olemasoleva kohaliku meiliandmebaasi krüpteerimisvõtme asendamise vastu ning täiustati võtme taastamist.
+- **Androidi vestlused:** Parandati krahh, mis oli seotud sõnumite kuvamise, üleminekute ja värskendamiseks tõmbamisega.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Hangi Meron 0.5.2"
+  text="Uuenda versioonile Meron 0.5.2, et saada saadetud kirjade reeglid, taustal käivitamine töölaual ning sujuvamad vastused ja sünkroonimine. Meron on tasuta ja avatud lähtekoodiga."
+  download="Laadi alla Meron"
+  changelog="Vaata muudatuste logi"
+  github="GitHubi väljalasked"
+/>

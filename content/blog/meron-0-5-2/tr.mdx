@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Gönderilen Postalar için Kurallar ve Arka Planda Başlatma"
+publishedAt: "2026-11-13"
+readingTime: "3 dk okuma süresi"
+summary: "Gönderdiğiniz iletileri başka bir e-posta istemcisinden bile otomatik olarak etiketleyin, yıldızlayın ve kopyalayın. Masaüstünde Meron'u arka planda başlatın; daha iyi yanıt adresi eşleştirme ve daha net şifreleme istemleriyle."
+highlights:
+  - "Masaüstü ve mobilde gönderdiğiniz iletiler için e-posta kuralları"
+  - "Masaüstünde arka planda başlatma (--background) ve CLI yardımı (-h / --help)"
+  - "Alan adı tek eşleşme olduğunda yanıt adresini otomatik seçme"
+  - "Daha net şifreleme istemleri ve anahtarınızda eksik olan takma adlar için uyarılar"
+  - "Yerelleştirilmiş Çöp Kutusu klasörlerini daha iyi tanıma ve gönderilen taslakları temizleme"
+  - "Depolanan postalar için daha güçlü koruma ve Android sohbet çökmesi düzeltmesi"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Sürüm · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2, başka bir e-posta istemcisinden göndermiş olsanız bile gönderdiğiniz iletileri otomatik olarak etiketlemenizi, yıldızlamanızı ve kopyalamanızı sağlar. Masaüstünde Meron'u arka planda başlatabilir ve ana pencere gizliyken posta eşitlemesinin çalışmaya devam etmesini sağlayabilirsiniz.
+
+Bu sürüm ayrıca Meron'un yanıt adresinizi nasıl seçtiğini iyileştirir, şifreleme istemlerini netleştirir ve taslaklar, Çöp Kutusu klasörleri ile Android sohbetlerindeki sorunları giderir.
+
+<PlatformNote>Gönderilen posta kuralları, yanıt adresi eşleştirme ve OpenPGP iyileştirmeleri masaüstü ve mobilde kullanılabilir. Arka planda başlatma masaüstü özelliğidir.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Kurallar</Badge>
+
+## Gönderdiklerinizi otomatikleştirin
+
+Daha önce posta kuralları yalnızca gelen postaları izliyordu. **Ayarlar → Kurallar** bölümünde artık **Çalıştır** seçeneğini **Gönderdiğim postalar** olarak ayarlayarak giden iletileri de düzenleyebilirsiniz.
+
+Gönderilen posta kuralı, gönderdiğiniz bir ileti hesabınızın **Gönderilenler** klasöründe göründüğü anda çalışır — ister Meron'dan ister başka bir e-posta istemcisinden göndermiş olun. Bunu şu amaçlarla kullanabilirsiniz:
+
+- Bir müşteriye veya ekibe gönderdiğiniz her şeye etiket eklemek
+- Önemli giden yazışmaları otomatik olarak yıldızlamak
+- Gönderilen iletileri özel bir proje klasörüne kopyalamak
+
+Gönderilen posta kuralları her zaman hemen çalışır ve özgün iletiyi **Gönderilenler** içinde bırakır; bu nedenle **Taşı** ve **Okundu olarak işaretle** bu kurallar için kullanılamaz. Yeni bir kuralı eski iletilere uygulamak isterseniz, **Mevcut postalarda çalıştır** Gelen Kutusu yerine önbelleğe alınmış **Gönderilenler** klasörünüzü tarar.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Ayarlar'da Çalıştır seçeneği Gönderdiğim postalar olarak ayarlanmış, Alıcı @northstar.studio ile eşleşen, client ve follow-up etiketlerini ekleyen, yıldızlayan ve Projects'e kopyalayan kural düzenleyici"
+  caption="Giden iletileri etiketlemek, yıldızlamak veya kopyalamak için Çalıştır seçeneğini Gönderdiğim postalar olarak ayarlayın."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Masaüstü CLI</Badge>
+
+## Arka planda başlatma
+
+Masaüstünde artık Meron'u `--background` ile başlatarak posta eşitlemesi çalışırken ana pencerenin gizli kalmasını sağlayabilirsiniz. Pencereyi istediğiniz zaman sistem tepsisi simgesinden veya Meron'u normal şekilde başlatarak açabilirsiniz. Bir `mailto:` bağlantısı göndermek her zamanki gibi görünür bir oluşturma penceresi açmaya devam eder.
+
+Desteklenen komut satırı seçeneklerini yazdırmak ve çıkmak için `-h` veya `--help` de geçirebilirsiniz.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Oluşturma ve Kimlikler</Badge>
+
+## Doğru adresten yanıtlayın
+
+Bir iletiyi yanıtlarken, ileti doğrudan hesap takma adınıza gönderilmişse Meron zaten eşleşen bir takma adı seçer.
+
+Tam adres eşleşmesi olmadığında, Meron artık alan adı iletinin alıcılarından biriyle eşleşen tek bir yapılandırılmış kimlik arar. Eşleşme belirsiz değilse, Meron yanıtınız için bu adresi kullanır. Aksi takdirde birincil adresinizi kullanır.
+
+Mobilde bu sürüm ayrıca alıcı önerilerini ve alıcı adreslerini düzenlerken Backspace tuşunun çalışma şeklini düzeltir.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Şifreleme anahtarınızın hangi adresleri içerdiğini bilin
+
+Bir kişi OpenPGP anahtarı paylaştığında, Meron'un istemi artık alıcı hesabınızı adlandırır ve kabul etmenin şifreli posta gönderebilmeniz için o hesapta şifrelemeyi açacağını açıklar.
+
+Hesabınız birden fazla takma ad kullanıyorsa, Meron yeni bir anahtarın tüm bu adresleri ne zaman içereceğini açıklar. Anahtarı alan herkes içerdiği adresleri görebilir.
+
+Hesap ayarları ayrıca mevcut bir anahtarda bazı takma adlarınız eksik olduğunda uyarır.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="OpenPGP anahtarının hesabın billing ve press takma adlarını listelemediğine dair uyarı ile Şifreli e-posta bölümünü gösteren Elena's Mail Lab hesap ayarları"
+  caption="Mevcut bir OpenPGP anahtarı hesabın tüm takma adlarını kapsamadığında hesap ayarları uyarır."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Güvenilirlik</Badge>
+
+## Daha güvenli depolama, daha temiz taslaklar ve Android kararlılığı
+
+- **Çöp Kutusu klasörleri:** Meron artık posta sunucunuz klasörü açıkça belirtmediğinde yerelleştirilmiş Çöp Kutusu klasör adlarını tanır.
+- **Taslak temizliği:** İletiyi gönderdikten sonra bir taslağın Taslaklar'da kalabildiği bir durum düzeltildi.
+- **Depolanan postalar:** Mevcut bir yerel posta veritabanının şifreleme anahtarının değiştirilmesine karşı korumalar ve anahtar kurtarma iyileştirmeleri eklendi.
+- **Android sohbetleri:** İleti görüntüleme, geçişler ve yenilemek için çekme ile ilgili bir çökme düzeltildi.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.2'yi Edinin"
+  text="Gönderilen posta kuralları, masaüstü arka planda başlatma ve daha akıcı yanıtlar ile eşitleme için Meron 0.5.2'ye güncelleyin. Meron ücretsiz ve açık kaynaklıdır."
+  download="Meron'u İndir"
+  changelog="Değişiklik Günlüğünü Gör"
+  github="GitHub Sürümleri"
+/>

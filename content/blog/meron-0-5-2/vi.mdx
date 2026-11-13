@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Quy tắc cho thư đã gửi và khởi chạy ở chế độ nền"
+publishedAt: "2026-11-13"
+readingTime: "3 phút đọc"
+summary: "Tự động gắn thẻ, gắn dấu sao và sao chép thư bạn gửi — ngay cả từ một ứng dụng email khác. Khởi chạy Meron ở chế độ nền trên máy tính, với khả năng khớp địa chỉ trả lời tốt hơn và thông báo mã hóa rõ ràng hơn."
+highlights:
+  - "Quy tắc thư cho các tin nhắn bạn gửi, trên cả máy tính và di động"
+  - "Khởi chạy ở chế độ nền (--background) và trợ giúp CLI (-h / --help) trên máy tính"
+  - "Tự động chọn địa chỉ trả lời khi tên miền của địa chỉ đó là kết quả khớp duy nhất"
+  - "Thông báo mã hóa rõ ràng hơn và cảnh báo về các bí danh còn thiếu trong khóa của bạn"
+  - "Nhận diện tốt hơn các thư mục Thùng rác đã bản địa hóa và dọn dẹp thư nháp đã gửi"
+  - "Bảo vệ mạnh mẽ hơn cho thư đã lưu trữ và sửa lỗi sập ứng dụng ở phần hội thoại trên Android"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Phát hành · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 cho phép bạn tự động gắn thẻ, gắn dấu sao và sao chép các thư bạn gửi — ngay cả khi bạn gửi từ một ứng dụng email khác. Trên máy tính, bạn cũng có thể khởi chạy Meron ở chế độ nền để tiếp tục đồng bộ thư trong khi ẩn cửa sổ chính.
+
+Bản phát hành này cũng cải thiện cách Meron chọn địa chỉ trả lời, làm rõ hơn các thông báo mã hóa và khắc phục các sự cố với thư nháp, thư mục Thùng rác cũng như hội thoại trên Android.
+
+<PlatformNote>Quy tắc thư đã gửi, khớp địa chỉ trả lời và các cải tiến OpenPGP hiện có trên máy tính và di động. Khởi chạy ở chế độ nền là tính năng dành cho máy tính.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Quy tắc</Badge>
+
+## Tự động hóa những gì bạn gửi
+
+Trước đây, quy tắc thư chỉ theo dõi thư đến. Trong **Cài đặt → Quy tắc**, giờ đây bạn có thể đặt **Chạy trên** thành **Thư tôi gửi** để sắp xếp cả thư gửi đi.
+
+Quy tắc thư đã gửi sẽ chạy ngay khi một thư bạn gửi xuất hiện trong thư mục **Đã gửi** của tài khoản — dù bạn gửi từ Meron hay từ một ứng dụng email khác. Bạn có thể dùng nó để:
+
+- Gắn thẻ cho mọi thứ bạn gửi tới một khách hàng hoặc nhóm
+- Tự động gắn dấu sao cho các chuỗi thư gửi đi quan trọng
+- Sao chép thư đã gửi vào một thư mục dự án riêng
+
+Quy tắc thư đã gửi luôn chạy ngay lập tức và giữ nguyên thư gốc trong **Đã gửi**, vì vậy **Chuyển tới** và **Đánh dấu đã đọc** không khả dụng cho loại quy tắc này. Nếu muốn áp dụng quy tắc mới cho các thư cũ hơn, **Chạy trên thư hiện có** sẽ quét thư mục **Đã gửi** đã lưu trong bộ nhớ đệm thay vì Hộp thư đến.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Trình chỉnh sửa quy tắc trong Cài đặt với Chạy trên được đặt thành Thư tôi gửi, khớp Tới @northstar.studio, thêm thẻ client và follow-up, gắn dấu sao và sao chép vào Projects"
+  caption="Đặt Chạy trên thành Thư tôi gửi để gắn thẻ, gắn dấu sao hoặc sao chép thư gửi đi."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI máy tính</Badge>
+
+## Khởi chạy ở chế độ nền
+
+Trên máy tính, giờ đây bạn có thể mở Meron với `--background` để khởi chạy với cửa sổ chính bị ẩn trong khi vẫn duy trì đồng bộ thư. Mở cửa sổ bất kỳ lúc nào từ biểu tượng khay hệ thống hoặc bằng cách mở Meron như bình thường. Việc truyền liên kết `mailto:` vẫn mở một cửa sổ soạn thư hiển thị như thường lệ.
+
+Bạn cũng có thể truyền `-h` hoặc `--help` để in các tùy chọn dòng lệnh được hỗ trợ rồi thoát.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Soạn thư &amp; Danh tính</Badge>
+
+## Trả lời từ đúng địa chỉ
+
+Khi bạn trả lời một thư, Meron vốn đã chọn bí danh tài khoản khớp nếu thư đó được gửi trực tiếp tới bí danh đó.
+
+Khi không có địa chỉ khớp chính xác, Meron giờ đây tìm kiếm một danh tính đã cấu hình duy nhất có tên miền khớp với một trong những người nhận thư. Nếu kết quả khớp là rõ ràng, Meron sẽ dùng địa chỉ đó cho thư trả lời của bạn. Nếu không, ứng dụng sẽ dùng địa chỉ chính của bạn.
+
+Trên di động, bản phát hành này cũng sửa lỗi gợi ý người nhận và cách hoạt động của phím Backspace khi chỉnh sửa địa chỉ người nhận.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Biết rõ khóa mã hóa của bạn bao gồm những địa chỉ nào
+
+Khi một liên hệ chia sẻ khóa OpenPGP, hộp thoại của Meron giờ đây nêu tên tài khoản nhận của bạn và giải thích rằng việc chấp nhận sẽ bật mã hóa cho tài khoản đó để bạn có thể gửi thư được mã hóa.
+
+Nếu tài khoản của bạn sử dụng nhiều bí danh, Meron sẽ giải thích khi nào một khóa mới sẽ bao gồm tất cả các địa chỉ đó. Bất kỳ ai nhận được khóa đều có thể thấy các địa chỉ có trong khóa.
+
+Cài đặt tài khoản cũng cảnh báo khi một khóa hiện có bị thiếu một số bí danh của bạn.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Cài đặt tài khoản Elena's Mail Lab hiển thị mục Email được mã hóa với cảnh báo rằng khóa OpenPGP không liệt kê các bí danh billing và press của tài khoản"
+  caption="Cài đặt tài khoản cảnh báo khi một khóa OpenPGP hiện có không bao gồm tất cả bí danh của tài khoản."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Độ tin cậy</Badge>
+
+## Lưu trữ an toàn hơn, thư nháp gọn gàng hơn và độ ổn định trên Android
+
+- **Thư mục Thùng rác:** Meron giờ đây nhận diện tên thư mục Thùng rác đã bản địa hóa khi máy chủ thư của bạn không chỉ định rõ thư mục.
+- **Dọn dẹp thư nháp:** Đã sửa trường hợp thư nháp có thể vẫn còn trong Thư nháp sau khi bạn gửi thư.
+- **Thư đã lưu trữ:** Đã thêm các biện pháp bảo vệ chống ghi đè khóa mã hóa cho cơ sở dữ liệu thư cục bộ hiện có, cùng với các cải tiến về khôi phục khóa.
+- **Hội thoại trên Android:** Đã sửa lỗi sập ứng dụng liên quan đến hiển thị thư, hiệu ứng chuyển cảnh và thao tác kéo để làm mới.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Tải Meron 0.5.2"
+  text="Cập nhật lên Meron 0.5.2 để sử dụng quy tắc thư đã gửi, khởi chạy ở chế độ nền trên máy tính cùng khả năng trả lời và đồng bộ mượt mà hơn. Meron miễn phí và mã nguồn mở."
+  download="Tải Meron"
+  changelog="Xem nhật ký thay đổi"
+  github="Bản phát hành GitHub"
+/>

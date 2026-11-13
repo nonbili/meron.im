@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Regler för skickad e-post och start i bakgrunden"
+publishedAt: "2026-11-13"
+readingTime: "3 min läsning"
+summary: "Tagga, stjärnmarkera och kopiera meddelanden du skickar automatiskt – även från en annan e-postklient. Starta Meron i bakgrunden på datorn, med bättre val av svarsadress och tydligare krypteringsmeddelanden."
+highlights:
+  - "E-postregler för meddelanden du skickar, på dator och mobil"
+  - "Start i bakgrunden (--background) och CLI-hjälp (-h / --help) på datorn"
+  - "Välj svarsadress automatiskt när dess domän är den enda träffen"
+  - "Tydligare krypteringsmeddelanden och varningar om alias som saknas i din nyckel"
+  - "Bättre igenkänning av lokaliserade papperskorgsmappar och städning av skickade utkast"
+  - "Starkare skydd för lagrad e-post och en lösning för en krasch i Android-konversationer"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Utgåva · v0.5.2"
+---
+
+<PostSection>
+
+Med Meron 0.5.2 kan du automatiskt tagga, stjärnmarkera och kopiera meddelanden du skickar – även om du skickat dem från en annan e-postklient. På datorn kan du också starta Meron i bakgrunden och låta e-postsynkroniseringen fortsätta med huvudfönstret dolt.
+
+Den här utgåvan förbättrar även hur Meron väljer din svarsadress, gör krypteringsmeddelanden tydligare och åtgärdar problem med utkast, papperskorgsmappar och Android-konversationer.
+
+<PlatformNote>Regler för skickad e-post, matchning av svarsadress och OpenPGP-förbättringar är tillgängliga på dator och mobil. Start i bakgrunden är en datorfunktion.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Regler</Badge>
+
+## Automatisera det du skickar
+
+Tidigare bevakade e-postregler bara inkommande e-post. Under **Inställningar → Regler** kan du nu ställa in **Kör på** till **E-post jag skickar** för att organisera även utgående meddelanden.
+
+En regel för skickad e-post körs så snart ett meddelande du skickat dyker upp i kontots mapp **Skickat** – oavsett om du skickade det från Meron eller från en annan e-postklient. Du kan använda den för att:
+
+- Lägga till taggar på allt du skickar till en kund eller ett team
+- Automatiskt stjärnmarkera viktiga utgående trådar
+- Kopiera skickade meddelanden till en särskild projektmapp
+
+Regler för skickad e-post körs alltid direkt och lämnar originalmeddelandet i **Skickat**, så **Flytta till** och **Markera som läst** är inte tillgängliga för dem. Om du vill tillämpa en ny regel på äldre meddelanden söker **Kör på befintlig e-post** igenom din cachade **Skickat**-mapp i stället för Inkorgen.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Regelredigerare i Inställningar med Kör på inställt på E-post jag skickar, som matchar Till @northstar.studio, lägger till taggarna client och follow-up, stjärnmarkerar och kopierar till Projects"
+  caption="Ställ in Kör på till E-post jag skickar för att tagga, stjärnmarkera eller kopiera utgående meddelanden."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">CLI för dator</Badge>
+
+## Starta i bakgrunden
+
+På datorn kan du nu starta Meron med `--background` för att starta med huvudfönstret dolt medan e-postsynkroniseringen körs vidare. Öppna fönstret när som helst från systemfältsikonen eller genom att starta Meron som vanligt. Att skicka med en `mailto:`-länk öppnar fortfarande ett synligt skrivfönster som vanligt.
+
+Du kan också skicka med `-h` eller `--help` för att skriva ut kommandoradsalternativen som stöds och avsluta.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Skriva &amp; identiteter</Badge>
+
+## Svara från rätt adress
+
+När du svarar på ett meddelande väljer Meron redan ett matchande kontoalias om meddelandet skickades direkt till det.
+
+När det inte finns någon exakt adressträff letar Meron nu efter en enda konfigurerad identitet vars domän matchar någon av meddelandets mottagare. Om träffen är entydig använder Meron den adressen för ditt svar. Annars används din primära adress.
+
+På mobilen åtgärdar den här utgåvan också mottagarförslag och hur Backspace fungerar när man redigerar mottagaradresser.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Vet vilka adresser din krypteringsnyckel innehåller
+
+När en kontakt delar en OpenPGP-nyckel anger Merons dialogruta nu ditt mottagande konto och förklarar att godkännande aktiverar kryptering för det kontot så att du kan skicka krypterad e-post.
+
+Om ditt konto använder flera alias förklarar Meron när en ny nyckel kommer att inkludera alla dessa adresser. Alla som tar emot nyckeln kan se adresserna som ingår i den.
+
+Kontoinställningarna varnar också när en befintlig nyckel saknar några av dina alias.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Kontoinställningar för Elena's Mail Lab som visar avsnittet Krypterad e-post med en varning om att OpenPGP-nyckeln inte listar kontots alias billing och press"
+  caption="Kontoinställningarna varnar när en befintlig OpenPGP-nyckel inte täcker alla kontots alias."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Tillförlitlighet</Badge>
+
+## Säkrare lagring, renare utkast och Android-stabilitet
+
+- **Papperskorgsmappar:** Meron känner nu igen lokaliserade namn på papperskorgsmappar när din e-postserver inte anger mappen uttryckligen.
+- **Utkaststädning:** Åtgärdade ett fall där ett utkast kunde ligga kvar i Utkast efter att du skickat meddelandet.
+- **Lagrad e-post:** Lade till skydd mot att ersätta krypteringsnyckeln för en befintlig lokal e-postdatabas, samt förbättringar av nyckelåterställning.
+- **Android-konversationer:** Åtgärdade en krasch kopplad till meddelandevisning, övergångar och dra-för-att-uppdatera.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Skaffa Meron 0.5.2"
+  text="Uppdatera till Meron 0.5.2 för regler för skickad e-post, bakgrundsstart på datorn samt smidigare svar och synkronisering. Meron är gratis och har öppen källkod."
+  download="Ladda ner Meron"
+  changelog="Visa ändringslogg"
+  github="GitHub Releases"
+/>

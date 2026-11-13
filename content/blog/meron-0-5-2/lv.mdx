@@ -1,0 +1,122 @@
+---
+slug: "meron-0-5-2"
+version: "0.5.2"
+title: "Meron 0.5.2: Kārtulas nosūtītajam pastam un palaišana fonā"
+publishedAt: "2026-11-13"
+readingTime: "3 min lasīšanai"
+summary: "Automātiski pievienojiet birkas, zvaigznītes un kopējiet nosūtītos ziņojumus — pat no cita pasta klienta. Palaidiet Meron fonā datorā, ar labāku atbildes adreses izvēli un skaidrākiem šifrēšanas paziņojumiem."
+highlights:
+  - "Pasta kārtulas nosūtītajiem ziņojumiem datorā un mobilajās ierīcēs"
+  - "Palaišana fonā (--background) un komandrindas palīdzība (-h / --help) datorā"
+  - "Automātiska atbildes adreses izvēle, ja tās domēns ir vienīgā atbilstība"
+  - "Skaidrāki šifrēšanas paziņojumi un brīdinājumi par aizstājvārdiem, kas trūkst atslēgā"
+  - "Labāka lokalizēto miskastes mapju atpazīšana un nosūtīto melnrakstu tīrīšana"
+  - "Spēcīgāka aizsardzība saglabātajam pastam un Android sarunu avārijas labojums"
+image: "/screenshots/blog/meron-052-sent-rules.png"
+releaseBadge: "Laidiens · v0.5.2"
+---
+
+<PostSection>
+
+Meron 0.5.2 ļauj automātiski pievienot birkas, atzīmēt ar zvaigznīti un kopēt nosūtītos ziņojumus — pat tad, ja tos nosūtījāt no cita pasta klienta. Datorā varat arī palaist Meron fonā, saglabājot pasta sinhronizāciju aktīvu ar paslēptu galveno logu.
+
+Šis laidiens uzlabo arī to, kā Meron izvēlas jūsu atbildes adresi, padara skaidrākus šifrēšanas paziņojumus un novērš problēmas ar melnrakstiem, miskastes mapēm un Android sarunām.
+
+<PlatformNote>Nosūtīto ziņojumu kārtulas, atbildes adreses piemeklēšana un OpenPGP uzlabojumi ir pieejami datorā un mobilajās ierīcēs. Palaišana fonā ir datora funkcija.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ListFilter">Kārtulas</Badge>
+
+## Automatizējiet to, ko sūtāt
+
+Iepriekš pasta kārtulas uzraudzīja tikai ienākošo pastu. Sadaļā **Iestatījumi → Kārtulas** tagad varat iestatīt **Izpildīt uz** vērtību **Mans nosūtītais pasts**, lai sakārtotu arī izejošos ziņojumus.
+
+Nosūtītā pasta kārtula tiek izpildīta, tiklīdz jūsu nosūtītais ziņojums parādās konta mapē **Nosūtītie** — neatkarīgi no tā, vai to nosūtījāt no Meron vai no cita pasta klienta. Varat to izmantot, lai:
+
+- Pievienotu birkas visam, ko sūtāt klientam vai komandai
+- Automātiski atzīmētu ar zvaigznīti svarīgas izejošās sarakstes
+- Kopētu nosūtītos ziņojumus īpašā projekta mapē
+
+Nosūtītā pasta kārtulas vienmēr tiek izpildītas nekavējoties un atstāj sākotnējo ziņojumu mapē **Nosūtītie**, tāpēc darbības **Pārvietot uz** un **Atzīmēt kā lasītu** tām nav pieejamas. Ja vēlaties piemērot jaunu kārtulu vecākiem ziņojumiem, **Izpildīt esošajam pastam** iesūtnes vietā skenē jūsu kešatmiņā saglabāto mapi **Nosūtītie**.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-sent-rules.png"
+  alt="Kārtulu redaktors Iestatījumos ar Izpildīt uz iestatītu uz Mans nosūtītais pasts, kas atbilst Saņēmējs @northstar.studio, pievieno birkas client un follow-up, atzīmē ar zvaigznīti un kopē uz Projects"
+  caption="Iestatiet Izpildīt uz kā Mans nosūtītais pasts, lai pievienotu birkas, atzīmētu ar zvaigznīti vai kopētu izejošos ziņojumus."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Terminal">Datora CLI</Badge>
+
+## Palaišana fonā
+
+Datorā tagad varat palaist Meron ar karodziņu `--background`, lai startētu ar paslēptu galveno logu, vienlaikus saglabājot aktīvu pasta sinhronizāciju. Atveriet logu jebkurā laikā no sistēmas teknes ikonas vai palaižot Meron kā parasti. `mailto:` saites nodošana joprojām atver redzamu rakstīšanas logu kā ierasts.
+
+Varat arī padot `-h` vai `--help`, lai izdrukātu atbalstītās komandrindas opcijas un izietu.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Sparkles">Rakstīšana un identitātes</Badge>
+
+## Atbildiet no pareizās adreses
+
+Atbildot uz ziņojumu, Meron jau izvēlas atbilstošu konta aizstājvārdu, ja ziņojums tika nosūtīts tieši uz to.
+
+Ja nav precīzas adreses atbilstības, Meron tagad meklē vienu konfigurētu identitāti, kuras domēns atbilst kādam no ziņojuma saņēmējiem. Ja atbilstība ir viennozīmīga, Meron atbildei izmanto šo adresi. Pretējā gadījumā tiek izmantota jūsu primārā adrese.
+
+Mobilajās ierīcēs šis laidiens novērš arī saņēmēju ieteikumu un Backspace taustiņa darbības problēmas, rediģējot saņēmēju adreses.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">OpenPGP</Badge>
+
+## Ziniet, kuras adreses ietver jūsu šifrēšanas atslēga
+
+Kad kontaktpersona kopīgo OpenPGP atslēgu, Meron paziņojums tagad nosauc jūsu saņēmēja kontu un paskaidro, ka piekrišana ieslēgs šifrēšanu šim kontam, lai varētu sūtīt šifrētu pastu.
+
+Ja jūsu konts izmanto vairākus aizstājvārdus, Meron paskaidro, kad jauna atslēga ietvers visas šīs adreses. Ikviens, kurš saņem atslēgu, var redzēt tajā iekļautās adreses.
+
+Konta iestatījumi arī brīdina, ja esošajā atslēgā trūkst dažu jūsu aizstājvārdu.
+
+<BlogImage
+  src="/screenshots/blog/meron-052-alias-coverage.png"
+  alt="Elena's Mail Lab konta iestatījumi, kuros redzama sadaļa Šifrēts e-pasts ar brīdinājumu, ka OpenPGP atslēgā nav norādīti konta aizstājvārdi billing un press"
+  caption="Konta iestatījumi brīdina, ja esošā OpenPGP atslēga neaptver visus konta aizstājvārdus."
+  width={1280}
+  height={820}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Uzticamība</Badge>
+
+## Drošāka glabāšana, tīrāki melnraksti un Android stabilitāte
+
+- **Miskastes mapes:** Meron tagad atpazīst lokalizētus miskastes mapju nosaukumus, ja pasta serveris mapi neidentificē tieši.
+- **Melnrakstu tīrīšana:** Novērsts gadījums, kad melnraksts pēc ziņojuma nosūtīšanas varēja palikt mapē Melnraksti.
+- **Saglabātais pasts:** Pievienoti drošības mehānismi pret šifrēšanas atslēgas nomaiņu esošai lokālajai pasta datubāzei, kā arī atslēgas atkopšanas uzlabojumi.
+- **Android sarunas:** Novērsta avārija saistībā ar ziņojumu attēlošanu, pārejām un vilkšanu, lai atsvaidzinātu.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Iegūstiet Meron 0.5.2"
+  text="Atjauniniet uz Meron 0.5.2, lai izmantotu nosūtītā pasta kārtulas, palaišanu fonā datorā, kā arī vienmērīgākas atbildes un sinhronizāciju. Meron ir bezmaksas un atvērtā koda programma."
+  download="Lejupielādēt Meron"
+  changelog="Skatīt izmaiņu žurnālu"
+  github="GitHub laidieni"
+/>

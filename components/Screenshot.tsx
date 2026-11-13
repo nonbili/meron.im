@@ -14,13 +14,17 @@ export function Screenshot({
   priority?: boolean;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border/80 bg-card shadow-2xl shadow-black/[0.06] dark:shadow-black/45 transition-all duration-300">
+    <div
+      data-lightbox=""
+      className="relative overflow-hidden rounded-2xl border border-border/80 bg-card shadow-2xl shadow-black/[0.06] dark:shadow-black/45 transition-all duration-300"
+    >
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
         priority={priority}
+        loading={priority ? "eager" : "lazy"}
         className="h-auto w-full"
       />
       {/* Subtle screen reflection shine overlay */}

@@ -4,7 +4,8 @@ import { useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const SELECTOR = "article figure img, article .screenshot-frame img, article img";
+const SELECTOR =
+  "article figure img, article .screenshot-frame img, article img, [data-lightbox] img, img[data-lightbox]";
 
 export function ImageLightbox() {
   const pathname = usePathname();

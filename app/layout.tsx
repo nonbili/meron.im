@@ -11,7 +11,7 @@ const inter = Inter({
 
 const siteUrl = "https://meron.im";
 const description =
-  "Meron is a calmer, chat-style email client — a unified inbox, a kanban board for your mail, a visual media gallery, and beautiful themes. Open source and local-first.";
+  "Meron is a calmer, local-first email client — chat-style unified inbox, Kanban board with saved searches and tags, inbox & sent-mail rules, local calendar, OpenPGP encryption, and beautiful themes. Open source for macOS, Windows, Linux, iOS, and Android.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

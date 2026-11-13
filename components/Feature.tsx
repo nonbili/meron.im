@@ -1,43 +1,51 @@
-import type { LucideIcon } from "lucide-react";
 import { Screenshot } from "./Screenshot";
 
 export function Feature({
-  icon: Icon,
   eyebrow,
   title,
   body,
+  points,
   src,
   alt,
   reverse = false,
 }: {
-  icon: LucideIcon;
   eyebrow: string;
   title: string;
   body: string;
+  points?: string[];
   src: string;
   alt: string;
   reverse?: boolean;
 }) {
   return (
-    <div className="feature-scroll-reveal grid items-center gap-10 md:grid-cols-2 md:gap-16">
-      <div className={reverse ? "md:order-2" : ""}>
-        <div className="flex items-center gap-2 text-sm font-medium text-muted">
-          <Icon size={14} className="stroke-[2.5]" />
+    <div className="feature-scroll-reveal grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+      <div className={`min-w-0 lg:col-span-5 ${reverse ? "lg:order-2" : ""}`}>
+        <p className="text-xs font-semibold uppercase tracking-wider text-accent">
           {eyebrow}
-        </div>
-        <h3 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+        </p>
+        <h3 className="mt-4 text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-[34px] lg:leading-[1.15]">
           {title}
         </h3>
-        <p className="mt-4 text-[17px] leading-relaxed text-muted">{body}</p>
+        <p className="mt-4 text-pretty text-[16px] leading-relaxed text-muted sm:text-[17px]">
+          {body}
+        </p>
+        {points && points.length > 0 && (
+          <ul className="mt-6 space-y-2.5">
+            {points.map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground/90"
+              >
+                <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-      <div className={`${reverse ? "md:order-1" : ""} group relative`}>
-        {/* Glow backdrop on hover */}
-        <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-tr from-accent/5 to-accent/10 opacity-0 blur-xl group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="transition-all duration-500 ease-out group-hover:scale-[1.015] group-hover:-translate-y-1">
-          <Screenshot src={src} alt={alt} />
-        </div>
+      <div className={`min-w-0 lg:col-span-7 ${reverse ? "lg:order-1" : ""}`}>
+        <Screenshot src={src} alt={alt} width={1280} height={820} />
       </div>
     </div>
   );
 }
-

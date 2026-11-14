@@ -6,6 +6,7 @@ export function Feature({
   body,
   points,
   src,
+  darkSrc,
   alt,
   reverse = false,
 }: {
@@ -14,6 +15,7 @@ export function Feature({
   body: string;
   points?: string[];
   src: string;
+  darkSrc?: string;
   alt: string;
   reverse?: boolean;
 }) {
@@ -44,7 +46,7 @@ export function Feature({
         )}
       </div>
       <div className={`min-w-0 lg:col-span-7 ${reverse ? "lg:order-1" : ""}`}>
-        <Screenshot src={src} alt={alt} width={1280} height={820} />
+        <Screenshot src={src} darkSrc={darkSrc} alt={alt} width={1280} height={820} />
       </div>
     </div>
   );

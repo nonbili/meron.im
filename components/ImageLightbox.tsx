@@ -149,7 +149,7 @@ export function ImageLightbox() {
         const container = img.closest("article") || img.closest(".screenshot-gallery") || document;
         currentGroupRef.current = Array.from(
           container.querySelectorAll<HTMLImageElement>(SELECTOR)
-        ).filter((el) => el instanceof HTMLImageElement);
+        ).filter((el) => el instanceof HTMLImageElement && el.getClientRects().length > 0);
         showAt(Math.max(0, currentGroupRef.current.indexOf(img)));
       };
 

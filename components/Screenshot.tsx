@@ -2,12 +2,14 @@ import Image from "next/image";
 
 export function Screenshot({
   src,
+  darkSrc,
   alt,
   width = 1200,
   height = 800,
   priority = false,
 }: {
   src: string;
+  darkSrc?: string;
   alt: string;
   width?: number;
   height?: number;
@@ -25,8 +27,19 @@ export function Screenshot({
         height={height}
         priority={priority}
         loading={priority ? "eager" : "lazy"}
-        className="h-auto w-full"
+        className={darkSrc ? "h-auto w-full block dark:hidden" : "h-auto w-full"}
       />
+      {darkSrc && (
+        <Image
+          src={darkSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          priority={priority}
+          loading={priority ? "eager" : "lazy"}
+          className="h-auto w-full hidden dark:block"
+        />
+      )}
       {/* Subtle screen reflection shine overlay */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.03] to-white/[0.08] dark:via-white/[0.01] dark:to-white/[0.03]" />
     </div>

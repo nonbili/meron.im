@@ -43,7 +43,8 @@ export function SecuritySection({ locale = "en" }: { locale?: Locale }) {
         </div>
         <div className="min-w-0 lg:col-span-7">
           <Screenshot
-            src="/screenshots/blog/meron-050-openpgp.png"
+            src="/screenshots/openpgp.png"
+            darkSrc="/screenshots/openpgp-dark.png"
             alt={t("security.alt")}
             width={1280}
             height={820}

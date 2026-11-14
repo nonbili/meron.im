@@ -8,6 +8,7 @@ export type HeroTab = {
   id: string;
   label: string;
   src: string;
+  darkSrc?: string;
   alt: string;
   icon: "kanban" | "inbox" | "calendar" | "windows";
 };
@@ -90,6 +91,7 @@ export function HeroShowcase({ tabs }: { tabs: HeroTab[] }) {
         >
           <Screenshot
             src={tab.src}
+            darkSrc={tab.darkSrc}
             alt={tab.alt}
             width={1280}
             height={820}

@@ -3,12 +3,37 @@ import { Locale, getTranslations } from "@/lib/i18n";
 
 export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
   const { t } = getTranslations(locale);
-  const features = [
-    { key: "contacts", src: "/screenshots/blog/meron-0411-contacts-panel.png", span: "md:col-span-3" },
+  const features: Array<{
+    key: string;
+    src: string;
+    darkSrc?: string;
+    span: string;
+  }> = [
+    {
+      key: "contacts",
+      src: "/screenshots/contacts.png",
+      darkSrc: "/screenshots/contacts-dark.png",
+      span: "md:col-span-3",
+    },
     { key: "gallery", src: "/screenshots/media-gallery.png", span: "md:col-span-3" },
-    { key: "localFolders", src: "/screenshots/blog/meron-048-local-folders.png", span: "md:col-span-2" },
-    { key: "eml", src: "/screenshots/blog/meron-050-eml-reader.png", span: "md:col-span-2" },
-    { key: "composer", src: "/screenshots/blog/meron-051-signature-toggle.png", span: "md:col-span-2" },
+    {
+      key: "localFolders",
+      src: "/screenshots/local-folders.png",
+      darkSrc: "/screenshots/local-folders-dark.png",
+      span: "md:col-span-2",
+    },
+    {
+      key: "eml",
+      src: "/screenshots/unified-inbox.png",
+      darkSrc: "/screenshots/unified-inbox-dark.png",
+      span: "md:col-span-2",
+    },
+    {
+      key: "composer",
+      src: "/screenshots/compose.png",
+      darkSrc: "/screenshots/compose-dark.png",
+      span: "md:col-span-2",
+    },
   ];
 
   return (
@@ -26,7 +51,7 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
           </p>
         </div>
         <div className="mt-12 grid gap-10 md:grid-cols-6 md:gap-8">
-          {features.map(({ key, src, span }) => (
+          {features.map(({ key, src, darkSrc, span }) => (
             <div key={key} className={`screenshot-card flex flex-col ${span}`}>
               <div
                 data-lightbox=""
@@ -38,8 +63,22 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
                   width={1280}
                   height={820}
                   loading="eager"
-                  className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                  className={
+                    darkSrc
+                      ? "h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02] block dark:hidden"
+                      : "h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                  }
                 />
+                {darkSrc && (
+                  <Image
+                    src={darkSrc}
+                    alt={t(`bento.${key}.alt`)}
+                    width={1280}
+                    height={820}
+                    loading="eager"
+                    className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02] hidden dark:block"
+                  />
+                )}
               </div>
               <h3 className="screenshot-card__title mt-5 text-lg font-semibold tracking-tight text-foreground">
                 {t(`bento.${key}.title`)}

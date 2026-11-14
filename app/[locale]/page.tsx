@@ -47,7 +47,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 t("features.inbox.point2"),
                 t("features.inbox.point3"),
               ]}
-              src="/screenshots/blog/meron-0411-tabs-session.png"
+              src="/screenshots/chat-view.png"
+              darkSrc="/screenshots/chat-view-dark.png"
               alt={t("features.inbox.alt")}
             />
             <Feature
@@ -59,7 +60,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 t("features.kanban.point2"),
                 t("features.kanban.point3"),
               ]}
-              src="/screenshots/blog/meron-047-saved-search.png"
+              src="/screenshots/kanban-board.png"
+              darkSrc="/screenshots/kanban-board-dark.png"
               alt={t("features.kanban.alt")}
               reverse
             />
@@ -72,7 +74,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 t("features.rules.point2"),
                 t("features.rules.point3"),
               ]}
-              src="/screenshots/blog/meron-052-sent-rules.png"
+              src="/screenshots/rules.png"
+              darkSrc="/screenshots/rules-dark.png"
               alt={t("features.rules.alt")}
             />
             <Feature
@@ -84,7 +87,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 t("features.calendar.point2"),
                 t("features.calendar.point3"),
               ]}
-              src="/screenshots/blog/meron-047-invite-card.png"
+              src="/screenshots/calendar.png"
+              darkSrc="/screenshots/calendar-dark.png"
               alt={t("features.calendar.alt")}
               reverse
             />

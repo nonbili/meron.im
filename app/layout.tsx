@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: siteUrl,
     siteName: "Meron",
-    images: [{ url: "/screenshots/kanban-board.png", width: 1200, height: 800 }],
+    images: [{ url: "/screenshots/kanban-board.png", width: 2560, height: 1600 }],
     type: "website",
   },
   twitter: {

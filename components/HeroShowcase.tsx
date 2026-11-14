@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
-import { Columns3, Inbox, CalendarDays, AppWindow } from "lucide-react";
+import { Columns3, MessagesSquare } from "lucide-react";
 import { Screenshot } from "./Screenshot";
 
 export type HeroTab = {
@@ -10,20 +10,18 @@ export type HeroTab = {
   src: string;
   darkSrc?: string;
   alt: string;
-  icon: "kanban" | "inbox" | "calendar" | "windows";
+  icon: "conversations" | "kanban";
 };
 
 const ICONS = {
+  conversations: MessagesSquare,
   kanban: Columns3,
-  inbox: Inbox,
-  calendar: CalendarDays,
-  windows: AppWindow,
 };
 
 export function HeroShowcase({ tabs }: { tabs: HeroTab[] }) {
   const instanceId = useId();
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const [activeId, setActiveId] = useState(tabs[0]?.id ?? "kanban");
+  const [activeId, setActiveId] = useState(tabs[0]?.id ?? "conversations");
   const activeTab = tabs.find((tab) => tab.id === activeId) ?? tabs[0];
 
   if (!activeTab) return null;

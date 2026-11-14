@@ -7,32 +7,23 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
     key: string;
     src: string;
     darkSrc?: string;
-    span: string;
   }> = [
     {
       key: "contacts",
-      src: "/screenshots/contacts.png",
-      darkSrc: "/screenshots/contacts-dark.png",
-      span: "md:col-span-3",
+      src: "/screenshots/contacts.webp",
+      darkSrc: "/screenshots/contacts-dark.webp",
     },
-    { key: "gallery", src: "/screenshots/media-gallery.png", span: "md:col-span-3" },
+    // The gallery opens as a dark lightbox in every theme, so one image serves both.
+    { key: "gallery", src: "/screenshots/media-gallery.webp" },
     {
       key: "localFolders",
-      src: "/screenshots/local-folders.png",
-      darkSrc: "/screenshots/local-folders-dark.png",
-      span: "md:col-span-2",
-    },
-    {
-      key: "eml",
-      src: "/screenshots/unified-inbox.png",
-      darkSrc: "/screenshots/unified-inbox-dark.png",
-      span: "md:col-span-2",
+      src: "/screenshots/local-folders.webp",
+      darkSrc: "/screenshots/local-folders-dark.webp",
     },
     {
       key: "composer",
-      src: "/screenshots/compose.png",
-      darkSrc: "/screenshots/compose-dark.png",
-      span: "md:col-span-2",
+      src: "/screenshots/compose.webp",
+      darkSrc: "/screenshots/compose-dark.webp",
     },
   ];
 
@@ -50,9 +41,9 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
             {t("bento.subtitle")}
           </p>
         </div>
-        <div className="mt-12 grid gap-10 md:grid-cols-6 md:gap-8">
-          {features.map(({ key, src, darkSrc, span }) => (
-            <div key={key} className={`screenshot-card flex flex-col ${span}`}>
+        <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12">
+          {features.map(({ key, src, darkSrc }) => (
+            <div key={key} className="screenshot-card flex flex-col">
               <div
                 data-lightbox=""
                 className="aspect-[16/10] overflow-hidden rounded-xl border border-border bg-card"
@@ -62,7 +53,7 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
                   alt={t(`bento.${key}.alt`)}
                   width={1280}
                   height={820}
-                  loading="eager"
+                  loading="lazy"
                   className={
                     darkSrc
                       ? "h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02] block dark:hidden"
@@ -75,7 +66,7 @@ export function FeatureBento({ locale = "en" }: { locale?: Locale }) {
                     alt={t(`bento.${key}.alt`)}
                     width={1280}
                     height={820}
-                    loading="eager"
+                    loading="lazy"
                     className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02] hidden dark:block"
                   />
                 )}

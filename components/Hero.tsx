@@ -1,43 +1,34 @@
 import { ArrowRight, Download, Github, Sparkles } from "lucide-react";
 import { GITHUB_URL } from "@/lib/site";
 import { Locale, getTranslations, localizePath } from "@/lib/i18n";
+import { getBlogPosts } from "@/lib/blog";
 import { HeroShowcase, type HeroTab } from "./HeroShowcase";
 
 export function Hero({ locale = "en" }: { locale?: Locale }) {
   const { t } = getTranslations(locale);
 
+  // The badge follows the newest release post, so it never needs a manual bump.
+  const latest = getBlogPosts(locale)[0];
+  const releaseBadge = latest
+    ? `v${latest.version} · ${latest.title.replace(/^[^:：]*[:：]\s*/, "")}`
+    : null;
+
   const tabs: HeroTab[] = [
+    {
+      id: "conversations",
+      label: t("features.inbox.eyebrow"),
+      src: "/screenshots/chat-view.webp",
+      darkSrc: "/screenshots/chat-view-dark.webp",
+      alt: t("features.inbox.alt"),
+      icon: "conversations",
+    },
     {
       id: "kanban",
       label: t("hero.tabs.kanban"),
-      src: "/screenshots/kanban-board.png",
-      darkSrc: "/screenshots/kanban-board-dark.png",
+      src: "/screenshots/kanban-board.webp",
+      darkSrc: "/screenshots/kanban-board-dark.webp",
       alt: t("features.kanban.alt"),
       icon: "kanban",
-    },
-    {
-      id: "inbox",
-      label: t("hero.tabs.inbox"),
-      src: "/screenshots/unified-inbox.png",
-      darkSrc: "/screenshots/unified-inbox-dark.png",
-      alt: t("features.inbox.alt"),
-      icon: "inbox",
-    },
-    {
-      id: "calendar",
-      label: t("hero.tabs.calendar"),
-      src: "/screenshots/calendar.png",
-      darkSrc: "/screenshots/calendar-dark.png",
-      alt: t("features.calendar.alt"),
-      icon: "calendar",
-    },
-    {
-      id: "windows",
-      label: t("hero.tabs.windows"),
-      src: "/screenshots/chat-view.png",
-      darkSrc: "/screenshots/chat-view-dark.png",
-      alt: t("features.inbox.alt"),
-      icon: "windows",
     },
   ];
 
@@ -54,19 +45,21 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
       />
 
       <div className="mx-auto max-w-6xl px-5 text-center">
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <a
-            href={localizePath("/blog/meron-0-5-2", locale)}
-            className="group inline-flex max-w-full items-center gap-2 rounded-full border border-accent/25 bg-accent/8 px-3.5 py-1.5 text-xs font-medium text-foreground transition-all hover:border-accent/50 hover:bg-accent/12"
-          >
-            <Sparkles size={13} className="shrink-0 text-accent" />
-            <span className="truncate">{t("hero.releaseBadge")}</span>
-            <ArrowRight
-              size={13}
-              className="shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-foreground"
-            />
-          </a>
-        </div>
+        {latest && (
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={localizePath(`/blog/${latest.slug}`, locale)}
+              className="group inline-flex max-w-full items-center gap-2 rounded-full border border-accent/25 bg-accent/8 px-3.5 py-1.5 text-xs font-medium text-foreground transition-all hover:border-accent/50 hover:bg-accent/12"
+            >
+              <Sparkles size={13} className="shrink-0 text-accent" />
+              <span className="truncate">{releaseBadge}</span>
+              <ArrowRight
+                size={13}
+                className="shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-foreground"
+              />
+            </a>
+          </div>
+        )}
 
         <h1 className="mx-auto mt-7 max-w-3xl text-balance text-5xl font-extrabold leading-[1.08] tracking-[-0.03em] md:text-6xl lg:text-7xl bg-gradient-to-br from-foreground via-foreground to-muted bg-clip-text text-transparent">
           {t("hero.titleFirst")}{" "}
@@ -99,7 +92,7 @@ export function Hero({ locale = "en" }: { locale?: Locale }) {
         </div>
 
         <p className="mt-4 text-xs font-medium text-muted">
-          {t("hero.badge")}
+          macOS · Windows · Linux · iOS · Android
         </p>
 
         <HeroShowcase tabs={tabs} />

@@ -45,10 +45,9 @@ export function HomePage({ locale }: { locale: Locale }) {
               points={[
                 t("features.inbox.point1"),
                 t("features.inbox.point2"),
-                t("features.inbox.point3"),
               ]}
-              src="/screenshots/chat-view.png"
-              darkSrc="/screenshots/chat-view-dark.png"
+              src="/screenshots/tabs-windows.webp"
+              darkSrc="/screenshots/tabs-windows-dark.webp"
               alt={t("features.inbox.alt")}
             />
             <Feature
@@ -58,10 +57,9 @@ export function HomePage({ locale }: { locale: Locale }) {
               points={[
                 t("features.kanban.point1"),
                 t("features.kanban.point2"),
-                t("features.kanban.point3"),
               ]}
-              src="/screenshots/kanban-board.png"
-              darkSrc="/screenshots/kanban-board-dark.png"
+              src="/screenshots/kanban-board.webp"
+              darkSrc="/screenshots/kanban-board-dark.webp"
               alt={t("features.kanban.alt")}
               reverse
             />
@@ -72,10 +70,9 @@ export function HomePage({ locale }: { locale: Locale }) {
               points={[
                 t("features.rules.point1"),
                 t("features.rules.point2"),
-                t("features.rules.point3"),
               ]}
-              src="/screenshots/rules.png"
-              darkSrc="/screenshots/rules-dark.png"
+              src="/screenshots/rules.webp"
+              darkSrc="/screenshots/rules-dark.webp"
               alt={t("features.rules.alt")}
             />
             <Feature
@@ -85,21 +82,20 @@ export function HomePage({ locale }: { locale: Locale }) {
               points={[
                 t("features.calendar.point1"),
                 t("features.calendar.point2"),
-                t("features.calendar.point3"),
               ]}
-              src="/screenshots/calendar.png"
-              darkSrc="/screenshots/calendar-dark.png"
+              src="/screenshots/calendar.webp"
+              darkSrc="/screenshots/calendar-dark.webp"
               alt={t("features.calendar.alt")}
               reverse
             />
           </div>
         </section>
 
+        {/* Privacy, encryption & open source */}
+        <SecuritySection locale={locale} />
+
         {/* Everyday Power Features Bento */}
         <FeatureBento locale={locale} />
-
-        {/* Security & Open Source */}
-        <SecuritySection locale={locale} />
 
         {/* Interactive Theme Simulator */}
         <section

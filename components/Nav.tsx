@@ -20,7 +20,6 @@ export function Nav({
     { href: localizePath("/#security", locale), label: t("nav.security") },
     { href: localizePath("/#themes", locale), label: t("nav.themes") },
     { href: localizePath("/blog", locale), label: blogTitle },
-    { href: "/changelog", label: t("nav.changelog") },
   ];
 
   return (

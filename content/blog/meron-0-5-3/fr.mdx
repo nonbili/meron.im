@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3 : Recherche dans les paramètres, icônes personnalisées et connexion simplifiée"
+publishedAt: "2026-11-16"
+readingTime: "3 min de lecture"
+summary: "Accédez directement à un paramètre depuis la palette de commandes, choisissez la couleur de l'icône de l'application sur ordinateur et copiez les codes de connexion depuis les messages et les notifications. Profitez aussi de noms de flux personnalisés et de correctifs sur ordinateur et mobile."
+highlights:
+  - "Trouvez des paramètres spécifiques depuis la palette de commandes sur ordinateur"
+  - "Choisissez la couleur de l'icône de l'application sur ordinateur, avec davantage de variantes d'icônes système sur mobile"
+  - "Copiez les codes de connexion directement depuis les messages et les notifications"
+  - "Renommez les flux RSS et abonnez-vous depuis les colonnes Kanban"
+  - "Glissez vers le haut au-delà du bas pour fermer un message ou une conversation sur mobile"
+  - "Correctifs pour le démarrage sous Linux, les images sous Android et la synchronisation des e-mails"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Publication · v0.5.3"
+---
+
+<PostSection>
+
+Modifier une préférence devrait être rapide, même si vous ne vous souvenez plus où elle se trouve. Dans Meron 0.5.3, la palette de commandes sur ordinateur vous mène directement à chaque paramètre. Cette version apporte également des couleurs d'icône d'application, la copie en un clic des codes de connexion, ainsi que plusieurs changements utiles pour les flux et la navigation mobile.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Recherche dans les paramètres</Badge>
+
+## Trouvez le paramètre, évitez les détours
+
+Ouvrez la palette de commandes et commencez à saisir le nom d'un paramètre. Les résultats incluent désormais les options individuelles des préférences générales, de compte et de tableau. Sélectionnez-en une pour ouvrir les **Paramètres** directement sur cette option.
+
+Lorsque la recherche est vide, la palette conserve sa liste compacte d'actions. Les paramètres s'affichent au fil de votre saisie, afin de rester à portée de main sans encombrer le menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Palette de commandes recherchant signature au-dessus d'une boîte de réception fictive, affichant Settings: Signature, Settings: Personal › Signature et Settings: Studio › Signature"
+  caption="Saisissez le nom d'un paramètre dans la palette de commandes pour accéder directement aux préférences générales ou de compte."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>La recherche dans les paramètres est disponible sur ordinateur.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Apparence</Badge>
+
+## Choisissez une couleur pour l'icône de votre application
+
+Sur ordinateur, rendez-vous dans **Paramètres → Apparence → Couleur de l'icône** pour sélectionner un préréglage ou définir une couleur personnalisée. Sur macOS et Windows, la nouvelle couleur s'affiche dans le Dock ou la barre des tâches pendant l'exécution de Meron. Sur Linux, elle met à jour l'icône du lanceur et du dock.
+
+Les icônes mobiles s'adaptent également mieux à votre écran d'accueil : variantes sombre et teintée sur iOS, et icônes thématiques monochromes et nuit sur Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Section Apparence des Paramètres avec l'option Couleur personnalisée de l'icône de l'application activée et le sélecteur de couleur d'icône ouvert avec une couleur violette sélectionnée"
+  caption="Choisissez une couleur prédéfinie ou personnalisée pour l'icône de l'application sur ordinateur sous Paramètres → Apparence."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Codes de connexion</Badge>
+
+## Copiez le code et revenez à la connexion
+
+Lorsqu'un e-mail de vérification contient un code à usage unique, Meron affiche une carte **Copier le code** au-dessus du corps du message. Vous pouvez le copier en un seul clic au lieu de sélectionner les chiffres manuellement.
+
+Les notifications de nouveaux messages incluent également une action **Copier le code**, et les notifications sur ordinateur affichent le code dans leur texte. La détection des codes est disponible sur ordinateur et mobile ; vous pouvez la désactiver sous **Paramètres → Confidentialité → Détecter les codes à usage unique**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Flux et Kanban</Badge>
+
+## Donnez aux flux des noms qui ont du sens pour vous
+
+Vous pouvez désormais renommer un flux RSS lors de sa modification dans la liste des flux, sur ordinateur ou mobile. Laissez le champ vide pour utiliser le titre d'origine du flux.
+
+Sur le tableau Kanban sur ordinateur, les colonnes RSS disposent d'un bouton **+** dans l'en-tête pour vous abonner à un autre flux sous ce compte. Les cartes répondent également plus rapidement aux clics et clics droits.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Autres améliorations</Badge>
+
+## De petits correctifs pour le quotidien
+
+- **Navigation mobile :** Glissez vers le haut au-delà du bas d'un message ou d'une conversation pour le fermer.
+- **Android :** Correction des plantages lors de l'affichage de très grandes images et amélioration de la stabilité du lecteur.
+- **Linux :** Amélioration du déverrouillage du trousseau au démarrage, redirection des clics de notification vers le bon espace de travail et correction de l'intégration du lanceur AppImage.
+- **Synchronisation des e-mails :** Résolution des retards au démarrage sur ordinateur et d'un cas où de nouveaux messages pouvaient être manqués lors de la reconnexion IMAP IDLE.
+- **Réponses et sécurité :** Tailles d'images corrigées dans les réponses rapides et mise à jour du filtre HTML pour corriger un avis de sécurité.
+
+Le [journal des modifications complet](/changelog) contient tous les détails restants.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenir Meron 0.5.3"
+  text="Meron est gratuit et open source. Mettez-le à jour pour tester la recherche dans les paramètres, les couleurs d'icône personnalisées et la copie simplifiée des codes de connexion."
+  download="Télécharger Meron"
+  changelog="Voir le journal des modifications"
+  github="GitHub Releases"
+/>

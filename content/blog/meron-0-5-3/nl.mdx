@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Zoeken in instellingen, aangepaste iconen en eenvoudiger inloggen"
+publishedAt: "2026-11-16"
+readingTime: "3 min leestijd"
+summary: "Spring vanuit het opdrachtenpalet direct naar een instelling, kies de kleur van je app-icoon op desktop en kopieer inlogcodes uit berichten en meldingen. Plus aangepaste feednamen en oplossingen voor desktop en mobiel."
+highlights:
+  - "Vind individuele instellingen via het opdrachtenpalet op desktop"
+  - "Kies de kleur van je app-icoon op desktop, met meer systeemicoonvarianten op mobiel"
+  - "Kopieer inlogcodes rechtstreeks uit berichten en meldingen"
+  - "Hernoem RSS-feeds en neem een abonnement vanuit Kanban-kolommen"
+  - "Veeg omhoog voorbij het einde om een bericht of gesprek op mobiel te sluiten"
+  - "Oplossingen voor Linux-opstart, Android-afbeeldingen en e-mailsynchronisatie"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Release · v0.5.3"
+---
+
+<PostSection>
+
+Het wijzigen van een voorkeur hoort snel te gaan, zelfs als je niet meer weet waar deze zich bevindt. In Meron 0.5.3 brengt het opdrachtenpalet op desktop je direct naar afzonderlijke instellingen. Deze release introduceert ook kleuren voor het app-icoon, kopiëren met één klik voor inlogcodes en verschillende handige aanpassingen voor feeds en mobiele navigatie.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Zoeken in instellingen</Badge>
+
+## Vind de instelling zonder te hoeven zoeken
+
+Open het opdrachtenpalet en begin de naam van een instelling te typen. De resultaten bevatten nu afzonderlijke opties uit de algemene voorkeuren, accountvoorkeuren en bordvoorkeuren. Kies er een om **Instellingen** direct bij die optie te openen.
+
+Wanneer de zoekopdracht leeg is, behoudt het palet de compacte lijst met acties. Instellingen verschijnen terwijl je typt, zodat ze binnen handbereik zijn zonder het menu te overladen.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Opdrachtenpalet zoekend naar handtekening over een fictieve inbox, met weergave van Instellingen: Handtekening, Instellingen: Personal › Handtekening en Instellingen: Studio › Handtekening"
+  caption="Typ de naam van een instelling in het opdrachtenpalet om direct naar algemene voorkeuren of accountvoorkeuren te gaan."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Zoeken in instellingen is beschikbaar op desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Weergave</Badge>
+
+## Kies een kleur voor je app-icoon
+
+Ga op desktop naar **Instellingen → Weergave → Icoonkleur** om een voorinstelling te kiezen of een aangepaste kleur in te stellen. Op macOS en Windows is de nieuwe kleur te zien in het Dock of de taakbalk terwijl Meron actief is. Op Linux werkt dit het startprogramma- en dock-icoon bij.
+
+Mobiele iconen bieden ook meer mogelijkheden om bij je startscherm te passen: donkere en getinte varianten op iOS, en gethematiseerde monochrome en nachticonen op Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Sectie Weergave in Instellingen met Eigen kleur voor het app-icoon ingeschakeld en de icoonkleurkiezer geopend met een paarse kleur geselecteerd"
+  caption="Kies een voorinstelling of een aangepaste kleur voor het desktop-app-icoon onder Instellingen → Weergave."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Inlogcodes</Badge>
+
+## Kopieer de code en ga direct door met inloggen
+
+Wanneer een verificatie-e-mail een eenmalige code bevat, toont Meron een kaartje met **Code kopiëren** boven het bericht. Je kunt deze met één klik kopiëren in plaats van de cijfers handmatig te selecteren.
+
+Meldingen van nieuwe e-mail bevatten nu ook de actie **Code kopiëren**, en desktopmeldingen tonen de code in hun tekst. Codeherkenning is beschikbaar op desktop en mobiel; je kunt dit uitschakelen onder **Instellingen → Privacy → Eenmalige codes herkennen**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Feeds &amp; Kanban</Badge>
+
+## Geef feeds namen die logisch voor je zijn
+
+Je kunt een RSS-feed nu hernoemen wanneer je deze bewerkt in de feedlijst, zowel op desktop als op mobiel. Laat de naam leeg om de oorspronkelijke titel van de feed te behouden.
+
+Op het desktop-Kanban-bord hebben RSS-kolommen een **+**-knop in de koptekst om je te abonneren op een andere feed onder dat account. Kaarten reageren bovendien sneller op klikken en rechtermuisklikken.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Overige verbeteringen</Badge>
+
+## Kleine oplossingen voor dagelijks gebruik
+
+- **Mobiele navigatie:** Veeg omhoog voorbij het einde van een bericht of gesprek om het te sluiten.
+- **Android:** Oplossingen voor crashes bij het bekijken van zeer grote afbeeldingen en verbeterde stabiliteit van de lezer.
+- **Linux:** Verbeterde ontgrendeling van de sleutelbos bij het opstarten, meldingklikken blijven op de juiste werkruimte en de integratie met het AppImage-startprogramma is hersteld.
+- **E-mailsynchronisatie:** Opstartvertragingen op desktop verholpen en een situatie opgelost waarin nieuwe e-mail kon worden gemist wanneer een IMAP IDLE-verbinding opnieuw startte.
+- **Antwoorden en beveiliging:** Afbeeldingsformaten in snelle antwoorden gecorrigeerd en het HTML-opschoningsprogramma bijgewerkt vanwege een beveiligingsadvies.
+
+Het [volledige changelog](/changelog) bevat de overige details.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Download Meron 0.5.3"
+  text="Meron is gratis en open source. Update om te zoeken in instellingen, aangepaste icoonkleuren te proberen en inlogcodes eenvoudiger te kopiëren."
+  download="Meron downloaden"
+  changelog="Bekijk changelog"
+  github="GitHub-releases"
+/>

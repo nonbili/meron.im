@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3：设置搜索、自定义图标与更便捷的登录"
+publishedAt: "2026-11-16"
+readingTime: "3 分钟阅读"
+summary: "从命令面板直达具体设置项，自定义桌面端应用图标颜色，并直接从邮件和通知中复制登录验证码。此外还带来了自定义订阅源名称以及覆盖桌面端与移动端的多项修复。"
+highlights:
+  - "直接从桌面端命令面板查找具体设置项"
+  - "选择桌面端应用图标颜色，移动端提供更多系统图标样式"
+  - "直接从邮件与通知中复制登录验证码"
+  - "为 RSS 订阅源重命名，并直接从看板列添加订阅"
+  - "在移动端向上拉动越过底部即可关闭邮件或会话"
+  - "针对 Linux 启动、Android 图片显示以及邮件同步的修复"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "发布 · v0.5.3"
+---
+
+<PostSection>
+
+修改偏好设置本应迅速快捷，即便一时记不清它位于何处也应如此。在 Meron 0.5.3 中，桌面端命令面板可以直接带你直达具体的设置选项。本次更新还带来了应用图标颜色自定义、登录验证码一键复制，以及针对订阅源与移动端导航的多项实用改进。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">设置搜索</Badge>
+
+## 直达设置项，无需反复查找
+
+打开命令面板并开始输入设置项的名称。搜索结果现已包含常规、账户以及看板偏好中的具体选项。选择其中一项，即可在对应选项处打开 <Strong>设置</Strong>。
+
+在搜索框为空时，命令面板会保持紧凑的操作列表。设置项将在你输入时即时显示，触手可及且不会让菜单显得拥挤。
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="在虚拟收件箱上方使用命令面板搜索 signature，显示 Settings: Signature、Settings: Personal › Signature 以及 Settings: Studio › Signature"
+  caption="在命令面板中输入设置项名称，即可直接跳转至常规或账户偏好设置。"
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>设置搜索功能仅在桌面端提供。</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">外观</Badge>
+
+## 为你的应用图标挑选颜色
+
+在桌面端，前往 <Strong>设置 → 外观 → 图标颜色</Strong>，即可选择预设色彩或设定自定义颜色。在 macOS 和 Windows 上，当 Meron 运行时，新颜色会显示在程序坞（Dock）或任务栏中。在 Linux 上，它会同时更新应用程序启动器和任务栏/dock 图标。
+
+移动端图标也获得了更多契合主屏幕的选择：iOS 新增了深色与着色变体，Android 则新增了单色主题图标与夜间图标。
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="设置中的外观部分已启用自定义应用图标颜色，且图标颜色选择器已打开并选中了紫色"
+  caption="在“设置 → 外观”下为桌面端应用图标选择预设色彩或自定义颜色。"
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">登录验证码</Badge>
+
+## 复制验证码，快速返回登录流程
+
+当验证邮件中包含一次性验证码时，Meron 会在邮件正文上方显示一张 <Strong>复制代码</Strong> 卡片。只需一键即可完成复制，无需手动选取数字。
+
+新邮件通知中同样包含 <Strong>复制代码</Strong> 操作，且桌面端通知会在正文中直接显示该验证码。验证码检测功能在桌面端与移动端均可使用；你可以在 <Strong>设置 → 隐私 → 检测一次性验证码</Strong> 下将其关闭。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">订阅源与看板</Badge>
+
+## 为订阅源设定更清晰易懂的名称
+
+无论在桌面端还是移动端，现在在订阅列表中编辑 RSS 订阅源时都可以为其重命名。若将名称留空，则会使用订阅源的原始标题。
+
+在桌面端看板上，RSS 列的标题栏新增了 <Strong>+</Strong> 按钮，可直接在该账户下订阅新的源。卡片对点击与右键点击的响应也变得更加迅速。
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">其他改进</Badge>
+
+## 针对日常体验的细节修复
+
+- <Strong>移动端导航：</Strong>向上拉动越过邮件或会话底部即可将其关闭。
+- <Strong>Android：</Strong>修复了查看超大图片时的崩溃问题，并提升了阅读器稳定性。
+- <Strong>Linux：</Strong>改进了启动时的密钥环解锁，确保点击通知能停留在正确的工作区，并修复了 AppImage 启动器集成。
+- <Strong>邮件同步：</Strong>修复了桌面端启动延迟，以及 IMAP IDLE 连接重启时可能遗漏新邮件的问题。
+- <Strong>回复与安全性：</Strong>校正了快速回复中的图片尺寸，并更新了 HTML 清理器以应对安全通告。
+
+查看[完整更新日志](/changelog)了解更多详情。
+
+</PostSection>
+
+<ReleaseCTA
+  heading="获取 Meron 0.5.3"
+  text="Meron 是一款免费且开源的软件。立即更新以体验设置搜索、自定义图标颜色以及更便捷的登录验证码复制。"
+  download="下载 Meron"
+  changelog="查看更新日志"
+  github="GitHub Releases"
+/>

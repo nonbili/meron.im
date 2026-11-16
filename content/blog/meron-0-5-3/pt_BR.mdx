@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Busca nas Configurações, ícones personalizados e login mais fácil"
+publishedAt: "2026-11-16"
+readingTime: "Leitura de 3 min"
+summary: "Acesse uma configuração pela paleta de comandos, escolha a cor do ícone do aplicativo no desktop e copie códigos de login de mensagens e notificações. Além de nomes personalizados para feeds e correções no desktop e no celular."
+highlights:
+  - "Encontre configurações individuais na paleta de comandos do desktop"
+  - "Escolha a cor do ícone do aplicativo no desktop, com mais variantes de ícones do sistema no celular"
+  - "Copie códigos de login diretamente de mensagens e notificações"
+  - "Renomeie feeds RSS e assine a partir de colunas do Kanban"
+  - "Puxe para cima além do final para fechar uma mensagem ou conversa no celular"
+  - "Correções para inicialização no Linux, imagens no Android e sincronização de e-mails"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Lançamento · v0.5.3"
+---
+
+<PostSection>
+
+Mudar uma preferência deve ser rápido, mesmo quando você não lembra onde ela fica. No Meron 0.5.3, a paleta de comandos no desktop pode levar você direto para configurações individuais. Esta versão também traz cores para o ícone do aplicativo, cópia de códigos de login em um clique e algumas mudanças úteis para feeds e navegação no celular.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Busca nas Configurações</Badge>
+
+## Encontre a configuração sem ter que caçar
+
+Abra a paleta de comandos e comece a digitar o nome de uma configuração. Os resultados agora incluem opções individuais das preferências gerais, de conta e do quadro. Escolha uma para abrir as **Configurações** nessa opção.
+
+Quando a busca está vazia, a paleta mantém sua lista compacta de ações. As configurações aparecem conforme você digita, ficando ao seu alcance sem poluir o menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Paleta de comandos buscando por assinatura sobre uma caixa de entrada fictícia, mostrando Configurações: Assinatura, Configurações: Pessoal › Assinatura e Configurações: Studio › Assinatura"
+  caption="Digite o nome de uma configuração na paleta de comandos para ir direto às preferências gerais ou de conta."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>A busca nas Configurações está disponível no desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Aparência</Badge>
+
+## Escolha uma cor para o ícone do aplicativo
+
+No desktop, acesse **Configurações → Aparência → Cor do ícone** para escolher uma predefinição ou definir uma cor personalizada. No macOS e no Windows, a nova cor aparece no Dock ou na barra de tarefas enquanto o Meron estiver em execução. No Linux, ela atualiza o inicializador e o ícone do dock.
+
+Os ícones no celular também ganham mais maneiras de se adequar à sua tela inicial: variantes escuras e coloridas no iOS, e ícones temáticos monocromáticos e noturnos no Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Seção Aparência das Configurações com Cor personalizada do ícone do aplicativo ativada e o seletor de cor do ícone aberto com a cor roxa selecionada"
+  caption="Escolha uma cor predefinida ou personalizada para o ícone do aplicativo no desktop em Configurações → Aparência."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Códigos de login</Badge>
+
+## Copie o código e volte ao login
+
+Quando um e-mail de verificação contém um código de uso único, o Meron exibe um cartão **Copiar código** acima do corpo da mensagem. Você pode copiá-lo em um clique em vez de selecionar os dígitos manualmente.
+
+As notificações de novos e-mails também incluem uma ação **Copiar código**, e as notificações do desktop mostram o código em seu texto. A detecção de códigos está disponível no desktop e no celular; você pode desativá-la em **Configurações → Privacidade → Detectar códigos de uso único**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Feeds e Kanban</Badge>
+
+## Dê aos feeds nomes que façam sentido para você
+
+Agora você pode renomear um feed RSS ao editá-lo na lista de feeds, no desktop ou no celular. Deixe o nome em branco para usar o título original do feed.
+
+No quadro Kanban no desktop, as colunas de RSS têm um botão **+** no cabeçalho para assinar outro feed nessa conta. Os cartões também respondem mais rápido a cliques simples e com o botão direito.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Outras melhorias</Badge>
+
+## Pequenas correções para o dia a dia
+
+- **Navegação no celular:** Puxe para cima além do final de uma mensagem ou conversa para fechá-la.
+- **Android:** Corrigidos travamentos ao visualizar imagens muito grandes e melhorada a estabilidade do leitor.
+- **Linux:** Melhorado o desbloqueio do chaveiro na inicialização, mantidos os cliques em notificações na área de trabalho correta e corrigida a integração do inicializador do AppImage.
+- **Sincronização de e-mails:** Corrigidos atrasos na inicialização do desktop e um caso em que novos e-mails podiam ser perdidos quando uma conexão IMAP IDLE era reiniciada.
+- **Respostas e segurança:** Corrigidos tamanhos de imagens em respostas rápidas e atualizado o sanitizador de HTML para atender a um comunicado de segurança.
+
+O [histórico de versões completo](/changelog) contém os demais detalhes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenha o Meron 0.5.3"
+  text="O Meron é gratuito e de código aberto. Atualize para experimentar a busca nas configurações, cores de ícone personalizadas e cópia mais fácil de códigos de login."
+  download="Baixar Meron"
+  changelog="Ver histórico de versões"
+  github="GitHub Releases"
+/>

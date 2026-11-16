@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Wyszukiwanie w Ustawieniach, własne ikony i łatwiejsze logowanie"
+publishedAt: "2026-11-16"
+readingTime: "3 min czytania"
+summary: "Przejdź do ustawienia z palety poleceń, wybierz kolor ikony aplikacji na komputerze i kopiuj kody logowania z wiadomości oraz powiadomień. Do tego własne nazwy kanałów i poprawki na komputerach i urządzeniach mobilnych."
+highlights:
+  - "Wyszukiwanie poszczególnych ustawień z palety poleceń na komputerze"
+  - "Wybór koloru ikony aplikacji na komputerze oraz więcej wariantów ikon systemowych na urządzeniach mobilnych"
+  - "Kopiowanie kodów logowania bezpośrednio z wiadomości i powiadomień"
+  - "Zmiana nazw kanałów RSS i subskrybowanie z kolumn Kanban"
+  - "Przeciągnięcie w górę za dolną krawędź, aby zamknąć wiadomość lub konwersację na telefonie"
+  - "Poprawki uruchamiania w systemie Linux, obrazów na Androidzie i synchronizacji poczty"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Wydanie · v0.5.3"
+---
+
+<PostSection>
+
+Zmiana preferencji powinna być szybka, nawet gdy nie pamiętasz, gdzie się znajduje. W Meron 0.5.3 paleta poleceń na komputerze pozwala przejść bezpośrednio do poszczególnych ustawień. To wydanie wprowadza także kolory ikony aplikacji, kopiowanie kodów logowania jednym kliknięciem oraz kilka przydatnych zmian w kanałach i nawigacji mobilnej.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Wyszukiwanie w Ustawieniach</Badge>
+
+## Znajdź ustawienie bez szukania po omacku
+
+Otwórz paletę poleceń i zacznij wpisywać nazwę ustawienia. Wyniki obejmują teraz poszczególne opcje z preferencji ogólnych, konta i tablicy. Wybierz jedną z nich, aby otworzyć **Ustawienia** bezpośrednio na tej opcji.
+
+Gdy pole wyszukiwania jest puste, paleta zachowuje swoją zwięzłą listę działań. Ustawienia pojawiają się w trakcie pisania, dzięki czemu są pod ręką bez zaśmiecania menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Paleta poleceń wyszukująca podpis nad fikcyjną skrzynką odbiorczą, pokazująca Ustawienia: Podpis, Ustawienia: Osobiste › Podpis oraz Ustawienia: Studio › Podpis"
+  caption="Wpisz nazwę ustawienia w palecie poleceń, aby przejść bezpośrednio do preferencji ogólnych lub konta."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Wyszukiwanie w Ustawieniach jest dostępne na komputerze.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Wygląd</Badge>
+
+## Wybierz kolor ikony aplikacji
+
+Na komputerze przejdź do **Ustawienia → Wygląd → Kolor ikony**, aby wybrać gotowy zestaw lub ustawić własny kolor. W systemach macOS i Windows nowy kolor pojawia się w Docku lub na pasku zadań podczas działania Meron. W systemie Linux aktualizuje ikonę w programie uruchamiającym i w docku.
+
+Ikony mobilne zyskują również więcej sposobów dopasowania do ekranu głównego: warianty ciemne i barwione na iOS oraz tematyczne ikony monochromatyczne i nocne na Androidzie.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Sekcja Wygląd w Ustawieniach z włączoną opcją Własny kolor ikony aplikacji i otwartym próbnikiem koloru ikony z wybranym kolorem fioletowym"
+  caption="Wybierz gotowy zestaw lub własny kolor ikony aplikacji na komputerze w Ustawienia → Wygląd."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Kody logowania</Badge>
+
+## Skopiuj kod i wróć do logowania
+
+Gdy e-mail weryfikacyjny zawiera kod jednorazowy, Meron wyświetla kartę **Kopiuj kod** nad treścią wiadomości. Możesz go skopiować jednym kliknięciem zamiast ręcznego zaznaczania cyfr.
+
+Powiadomienia o nowej poczcie również zawierają akcję **Kopiuj kod**, a powiadomienia na komputerze pokazują kod w swojej treści. Wykrywanie kodów jest dostępne na komputerach i urządzeniach mobilnych; można je wyłączyć w **Ustawienia → Prywatność → Wykrywaj kody jednorazowe**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Kanały i Kanban</Badge>
+
+## Nadawaj kanałom nazwy, które mają dla Ciebie sens
+
+Możesz teraz zmienić nazwę kanału RSS podczas jego edycji na liście kanałów, na komputerze lub urządzeniu mobilnym. Pozostaw nazwę pustą, aby użyć oryginalnego tytułu kanału.
+
+Na komputerowej tablicy Kanban kolumny RSS mają przycisk **+** w nagłówku, służący do subskrybowania kolejnego kanału w ramach danego konta. Karty reagują także szybciej na kliknięcia lewym i prawym przyciskiem myszy.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Inne ulepszenia</Badge>
+
+## Drobne poprawki do codziennego użytku
+
+- **Nawigacja mobilna:** Przeciągnij w górę za dolną krawędź wiadomości lub konwersacji, aby ją zamknąć.
+- **Android:** Naprawiono awarie podczas wyświetlania bardzo dużych obrazów i poprawiono stabilność czytnika.
+- **Linux:** Usprawniono odblokowywanie bazy kluczy przy starcie, zachowano kliknięcia powiadomień na właściwym obszarze roboczym i naprawiono integrację launchera AppImage.
+- **Synchronizacja poczty:** Usunięto opóźnienia przy uruchamianiu na komputerze oraz problem z pomijaniem nowej poczty przy restarcie połączenia IMAP IDLE.
+- **Odpowiedzi i bezpieczeństwo:** Poprawiono rozmiary obrazów w szybkich odpowiedziach i zaktualizowano moduł sanityzacji HTML w związku z biuletynem bezpieczeństwa.
+
+[Pełna lista zmian](/changelog) zawiera pozostałe szczegóły.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Pobierz Meron 0.5.3"
+  text="Meron jest darmowy i otwartoźródłowy. Zaktualizuj, aby wypróbować wyszukiwanie w Ustawieniach, własne kolory ikon i łatwiejsze kopiowanie kodów logowania."
+  download="Pobierz Meron"
+  changelog="Zobacz listę zmian"
+  github="Wydania na GitHubie"
+/>

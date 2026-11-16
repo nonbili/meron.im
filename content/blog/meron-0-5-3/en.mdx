@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Settings Search, Custom Icons, and Easier Sign-Ins"
+publishedAt: "2026-11-16"
+readingTime: "3 min read"
+summary: "Jump to a setting from the command palette, choose your desktop app icon color, and copy sign-in codes from messages and notifications. Plus custom feed names and fixes across desktop and mobile."
+highlights:
+  - "Find individual settings from the desktop command palette"
+  - "Choose your desktop app icon color, with more system icon variants on mobile"
+  - "Copy sign-in codes directly from messages and notifications"
+  - "Rename RSS feeds and subscribe from Kanban columns"
+  - "Pull up past the bottom to close a message or conversation on mobile"
+  - "Fixes for Linux startup, Android images, and mail sync"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Release · v0.5.3"
+---
+
+<PostSection>
+
+Changing a preference should be quick, even when you don't remember where it lives. In Meron 0.5.3, the desktop command palette can take you straight to individual settings. This release also brings app icon colors, one-click copying for sign-in codes, and a few useful changes to feeds and mobile navigation.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Settings Search</Badge>
+
+## Find the setting, skip the hunt
+
+Open the command palette and start typing the name of a setting. Results now include individual options from general, account, and board preferences. Choose one to open **Settings** at that option.
+
+When the search is empty, the palette keeps its compact list of actions. Settings appear as you type, so they're within reach without crowding the menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Command palette searching for signature over a fictional inbox, showing Settings: Signature, Settings: Personal › Signature, and Settings: Studio › Signature"
+  caption="Type a setting name in the command palette to jump straight to general or account preferences."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Settings search is available on desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Appearance</Badge>
+
+## Pick a color for your app icon
+
+On desktop, go to **Settings → Appearance → Icon color** to choose a preset or set a custom color. On macOS and Windows, the new color appears in the Dock or taskbar while Meron is running. On Linux, it updates the launcher and dock icon.
+
+Mobile icons also gain more ways to fit your home screen: dark and tinted variants on iOS, and themed monochrome and night icons on Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Settings Appearance section with Custom app icon color enabled and the Icon color picker open with a purple color selected"
+  caption="Pick a preset or custom color for the desktop app icon under Settings → Appearance."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Sign-In Codes</Badge>
+
+## Copy the code and get back to signing in
+
+When a verification email contains a one-time code, Meron shows a **Copy code** card above the message body. You can copy it in one click instead of selecting the digits yourself.
+
+New-mail notifications also include a **Copy code** action, and desktop notifications show the code in their text. Code detection is available on desktop and mobile; you can turn it off under **Settings → Privacy → Detect one-time codes**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Feeds &amp; Kanban</Badge>
+
+## Give feeds names that make sense to you
+
+You can now rename an RSS feed when editing it in the feed list, on desktop or mobile. Leave the name empty to use the feed's original title.
+
+On the desktop Kanban board, RSS columns have a **+** button in the header for subscribing to another feed under that account. Cards also respond faster to clicks and right-clicks.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Other Improvements</Badge>
+
+## Small fixes for everyday use
+
+- **Mobile navigation:** Pull up past the bottom of a message or conversation to close it.
+- **Android:** Fixed crashes when viewing very large images and improved reader stability.
+- **Linux:** Improved keyring unlocking at startup, kept notification clicks on the correct workspace, and fixed AppImage launcher integration.
+- **Mail sync:** Fixed desktop startup delays and a case where new mail could be missed when an IMAP IDLE connection restarted.
+- **Replies and security:** Corrected image sizes in quick replies and updated the HTML sanitizer to address a security advisory.
+
+The [full changelog](/changelog) has the remaining details.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Get Meron 0.5.3"
+  text="Meron is free and open source. Update to try settings search, custom icon colors, and easier sign-in code copying."
+  download="Download Meron"
+  changelog="View changelog"
+  github="GitHub releases"
+/>

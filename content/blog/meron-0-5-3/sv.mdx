@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Sök i inställningar, anpassade ikoner och enklare inloggning"
+publishedAt: "2026-11-16"
+readingTime: "3 min läsning"
+summary: "Hoppa till en inställning från kommandopaletten, välj färg på datorns appikon och kopiera inloggningskoder från meddelanden och notiser. Dessutom anpassade flödesnamn och korrigeringar för både dator och mobil."
+highlights:
+  - "Hitta enskilda inställningar från kommandopaletten på datorn"
+  - "Välj färg på datorns appikon, med fler systemikonvarianter på mobilen"
+  - "Kopiera inloggningskoder direkt från meddelanden och notiser"
+  - "Byt namn på RSS-flöden och prenumerera från Kanban-kolumner"
+  - "Dra uppåt förbi nederkanten för att stänga ett meddelande eller en konversation på mobilen"
+  - "Korrigeringar för Linux-uppstart, Android-bilder och e-postsynkronisering"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Utgåva · v0.5.3"
+---
+
+<PostSection>
+
+Att ändra en inställning ska gå snabbt, även när du inte minns var den finns. I Meron 0.5.3 kan datorns kommandopalett ta dig direkt till enskilda inställningar. Den här utgåvan introducerar även färger för appikonen, kopiering av inloggningskoder med ett klick och några praktiska förbättringar av flöden och mobilnavigering.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Sök i inställningar</Badge>
+
+## Hitta inställningen utan att leta runt
+
+Öppna kommandopaletten och börja skriva namnet på en inställning. Resultaten innehåller nu enskilda alternativ från allmänna inställningar, kontoinställningar och tavleinställningar. Välj ett alternativ för att öppna **Inställningar** direkt vid det valet.
+
+När sökfältet är tomt behåller paletten sin kompakta lista med åtgärder. Inställningar visas medan du skriver, så att de är nära till hands utan att göra menyn rörig.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Kommandopaletten vid sökning efter signatur över en fiktiv inkorg, som visar Inställningar: Signatur, Inställningar: Personligt › Signatur och Inställningar: Studio › Signatur"
+  caption="Skriv ett inställningsnamn i kommandopaletten för att hoppa direkt till allmänna inställningar eller kontoinställningar."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Sökning i inställningar är tillgänglig på datorn.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Utseende</Badge>
+
+## Välj färg på din appikon
+
+På datorn går du till **Inställningar → Utseende → Ikonfärg** för att välja en förinställning eller ange en egen färg. På macOS och Windows visas den nya färgen i Dock eller i aktivitetsfältet medan Meron körs. På Linux uppdaterar den programstartaren och dockikonen.
+
+Mobilikoner får också fler sätt att passa din hemskärm: mörka och tonade varianter på iOS, samt temabaserade monokroma ikoner och nattikoner på Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Avsnittet Utseende i Inställningar med Anpassad färg på appikon aktiverat och färgväljaren för ikonfärg öppen med en lila färg vald"
+  caption="Välj en förinställd eller anpassad färg för datorns appikon under Inställningar → Utseende."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Inloggningskoder</Badge>
+
+## Kopiera koden och återgå till inloggningen
+
+När ett verifieringsmeddelande innehåller en engångskod visar Meron ett **Kopiera kod**-kort ovanför meddelandetexten. Du kan kopiera koden med ett klick istället för att markera siffrorna själv.
+
+Notiser om ny e-post innehåller också åtgärden **Kopiera kod**, och skrivbordsnotiser visar koden i sin text. Kodidentifiering är tillgänglig på dator och mobil; du kan stänga av den under **Inställningar → Integritet → Identifiera engångskoder**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Flöden och Kanban</Badge>
+
+## Ge flöden namn som är tydliga för dig
+
+Du kan nu byta namn på ett RSS-flöde när du redigerar det i flödeslistan, på datorn eller mobilen. Lämna namnet tomt för att använda flödets ursprungliga titel.
+
+På datorns Kanban-tavla har RSS-kolumner en **+**-knapp i rubriken för att prenumerera på ytterligare ett flöde under det kontot. Kort svarar även snabbare på klick och högerklick.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Andra förbättringar</Badge>
+
+## Små korrigeringar för vardagsbruk
+
+- **Mobilnavigering:** Dra uppåt förbi nederkanten av ett meddelande eller en konversation för att stänga den.
+- **Android:** Åtgärdade krascher vid visning av mycket stora bilder och förbättrade läsarens stabilitet.
+- **Linux:** Förbättrade upplåsning av nyckelringen vid uppstart, höll notisklick på rätt arbetsyta och åtgärdade AppImage-integrationen i programstartaren.
+- **E-postsynkronisering:** Åtgärdade fördröjningar vid uppstart på datorn och ett fall där ny e-post kunde missas när en IMAP IDLE-anslutning startade om.
+- **Svar och säkerhet:** Korrigerade bildstorlekar i snabbsvar och uppdaterade HTML-saneraren för att hantera en säkerhetsbulletin.
+
+Den [fullständiga ändringsloggen](/changelog) innehåller resten av detaljerna.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Skaffa Meron 0.5.3"
+  text="Meron är gratis och har öppen källkod. Uppdatera för att prova sökning i inställningar, anpassade ikonfärger och enklare kopiering av inloggningskoder."
+  download="Ladda ner Meron"
+  changelog="Visa ändringslogg"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Pencarian Pengaturan, Ikon Kustom, dan Masuk Lebih Mudah"
+publishedAt: "2026-11-16"
+readingTime: "3 mnt waktu baca"
+summary: "Beralih langsung ke pengaturan dari palet perintah, pilih warna ikon aplikasi desktop, dan salin kode masuk dari pesan serta notifikasi. Ditambah nama umpan kustom dan perbaikan di desktop dan seluler."
+highlights:
+  - "Cari setiap pengaturan dari palet perintah di desktop"
+  - "Pilih warna ikon aplikasi desktop, dengan lebih banyak varian ikon sistem di seluler"
+  - "Salin kode masuk langsung dari pesan dan notifikasi"
+  - "Ubah nama umpan RSS dan berlangganan dari kolom Kanban"
+  - "Tarik ke atas melewati bagian bawah untuk menutup pesan atau percakapan di seluler"
+  - "Perbaikan untuk startup Linux, gambar Android, dan sinkronisasi email"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Rilis · v0.5.3"
+---
+
+<PostSection>
+
+Mengubah preferensi seharusnya cepat, bahkan ketika Anda tidak ingat di mana letaknya. Di Meron 0.5.3, palet perintah di desktop dapat membawa Anda langsung ke setiap pengaturan. Rilis ini juga menghadirkan warna ikon aplikasi, penyalinan kode masuk dengan satu klik, serta beberapa perubahan berguna pada umpan dan navigasi seluler.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Pencarian Pengaturan</Badge>
+
+## Temukan pengaturan tanpa perlu mencarinya
+
+Buka palet perintah dan mulailah mengetik nama pengaturan. Hasil kini menyertakan opsi-opsi tersendiri dari preferensi umum, akun, dan papan. Pilih salah satu untuk membuka **Pengaturan** langsung di opsi tersebut.
+
+Saat kotak pencarian kosong, palet tetap menampilkan daftar tindakan ringkasnya. Pengaturan akan muncul saat Anda mengetik, sehingga mudah dijangkau tanpa memenuhi menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Palet perintah mencari tanda tangan di atas kotak masuk fiktif, menampilkan Pengaturan: Tanda tangan, Pengaturan: Personal › Tanda tangan, dan Pengaturan: Studio › Tanda tangan"
+  caption="Ketik nama pengaturan di palet perintah untuk beralih langsung ke preferensi umum atau akun."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Pencarian pengaturan tersedia di desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Tampilan</Badge>
+
+## Pilih warna untuk ikon aplikasi Anda
+
+Di desktop, buka **Pengaturan → Tampilan → Warna ikon** untuk memilih preset atau mengatur warna kustom. Di macOS dan Windows, warna baru akan muncul di Dock atau taskbar saat Meron sedang berjalan. Di Linux, ini memperbarui ikon launcher dan dock.
+
+Ikon di seluler juga mendapatkan lebih banyak opsi agar serasi dengan layar utama Anda: varian gelap dan berwarna di iOS, serta ikon malam dan monokrom bertema di Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Bagian Tampilan di Pengaturan dengan Warna khusus ikon aplikasi diaktifkan dan pemilih warna ikon terbuka dengan warna ungu yang dipilih"
+  caption="Pilih preset atau warna kustom untuk ikon aplikasi desktop di Pengaturan → Tampilan."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Kode Masuk</Badge>
+
+## Salin kode dan kembali ke proses masuk
+
+Ketika email verifikasi berisi kode sekali pakai, Meron menampilkan kartu **Salin kode** di atas isi pesan. Anda dapat menyalinnya dalam satu klik alih-alih memilih angkanya sendiri.
+
+Notifikasi email baru juga menyertakan tindakan **Salin kode**, dan notifikasi desktop menampilkan kode tersebut di dalam teksnya. Deteksi kode tersedia di desktop dan seluler; Anda dapat menonaktifkannya di **Pengaturan → Privasi → Deteksi kode sekali pakai**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Umpan &amp; Kanban</Badge>
+
+## Berikan nama umpan yang lebih bermakna bagi Anda
+
+Kini Anda dapat mengubah nama umpan RSS saat mengeditnya di daftar umpan, baik di desktop maupun seluler. Biarkan nama kosong untuk menggunakan judul asli umpan.
+
+Pada papan Kanban di desktop, kolom RSS memiliki tombol **+** di bagian tajuk untuk berlangganan umpan lain di bawah akun tersebut. Kartu juga merespons klik dan klik kanan dengan lebih cepat.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Peningkatan Lainnya</Badge>
+
+## Perbaikan kecil untuk penggunaan sehari-hari
+
+- **Navigasi seluler:** Tarik ke atas melewati bagian bawah pesan atau percakapan untuk menutupnya.
+- **Android:** Memperbaiki crash saat melihat gambar berukuran sangat besar dan meningkatkan stabilitas pembaca.
+- **Linux:** Peningkatan pembukaan kunci keyring saat startup, memastikan klik notifikasi tetap berada di ruang kerja yang benar, dan memperbaiki integrasi launcher AppImage.
+- **Sinkronisasi email:** Memperbaiki keterlambatan startup di desktop dan kasus di mana email baru bisa terlewat saat koneksi IMAP IDLE dimulai ulang.
+- **Balasan dan keamanan:** Memperbaiki ukuran gambar pada balasan cepat dan memperbarui pembersih HTML untuk mengatasi anjuran keamanan.
+
+[Catatan perubahan lengkap](/changelog) memuat detail selebihnya.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Dapatkan Meron 0.5.3"
+  text="Meron gratis dan bersumber terbuka. Perbarui untuk mencoba pencarian pengaturan, warna ikon kustom, dan penyalinan kode masuk yang lebih mudah."
+  download="Unduh Meron"
+  changelog="Lihat catatan perubahan"
+  github="Rilis GitHub"
+/>

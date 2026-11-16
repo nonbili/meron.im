@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Ricerca nelle impostazioni, icone personalizzate e accessi più semplici"
+publishedAt: "2026-11-16"
+readingTime: "3 min di lettura"
+summary: "Passa direttamente a un'impostazione dalla tavolozza dei comandi, scegli il colore dell'icona dell'app su desktop e copia i codici di accesso da messaggi e notifiche. Inoltre, nomi personalizzati per i feed e correzioni su desktop e mobile."
+highlights:
+  - "Trova le singole impostazioni dalla tavolozza dei comandi su desktop"
+  - "Scegli il colore dell'icona dell'app su desktop, con più varianti per le icone di sistema su mobile"
+  - "Copia i codici di accesso direttamente da messaggi e notifiche"
+  - "Rinomina i feed RSS e iscriviti dalle colonne di Kanban"
+  - "Trascina verso l'alto oltre la fine per chiudere un messaggio o una conversazione su mobile"
+  - "Correzioni per l'avvio su Linux, le immagini su Android e la sincronizzazione della posta"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Rilascio · v0.5.3"
+---
+
+<PostSection>
+
+Modificare una preferenza dovrebbe essere un'operazione rapida, anche quando non ricordi dove si trova. In Meron 0.5.3, la tavolozza dei comandi su desktop ti porta direttamente alle singole impostazioni. Questa versione introduce anche i colori per l'icona dell'app, la copia con un clic dei codici di accesso e diverse utili novità per i feed e la navigazione mobile.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Ricerca nelle impostazioni</Badge>
+
+## Trova l'impostazione senza doverla cercare a lungo
+
+Apri la tavolozza dei comandi e inizia a digitare il nome di un'impostazione. I risultati ora includono le singole opzioni delle preferenze generali, dell'account e della bacheca. Selezionane una per aprire **Impostazioni** direttamente su quell'opzione.
+
+Quando la ricerca è vuota, la tavolozza mantiene il suo elenco compatto di azioni. Le impostazioni compaiono durante la digitazione, rimanendo a portata di mano senza affollare il menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Tavolozza dei comandi che cerca firma sopra una casella di posta fittizia, mostrando Impostazioni: Firma, Impostazioni: Personal › Firma e Impostazioni: Studio › Firma"
+  caption="Digita il nome di un'impostazione nella tavolozza dei comandi per passare direttamente alle preferenze generali o dell'account."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>La ricerca nelle impostazioni è disponibile su desktop.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Aspetto</Badge>
+
+## Scegli un colore per l'icona dell'app
+
+Su desktop, vai in **Impostazioni → Aspetto → Colore dell'icona** per scegliere una preimpostazione o definire un colore personalizzato. Su macOS e Windows, il nuovo colore viene visualizzato nel Dock o nella barra delle applicazioni mentre Meron è in esecuzione. Su Linux, aggiorna l'icona di avvio e del dock.
+
+Anche le icone su mobile offrono più modi per adattarsi alla schermata iniziale: varianti scure e colorate su iOS, e icone notturne e monocromatiche a tema su Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Sezione Aspetto delle Impostazioni con Colore personalizzato dell'icona dell'app abilitato e il selettore del colore dell'icona aperto con un colore viola selezionato"
+  caption="Scegli una preimpostazione o un colore personalizzato per l'icona dell'app su desktop in Impostazioni → Aspetto."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Codici di accesso</Badge>
+
+## Copia il codice e completa l'accesso
+
+Quando un'email di verifica contiene un codice monouso, Meron mostra una scheda **Copia codice** sopra il corpo del messaggio. Puoi copiarlo con un clic anziché selezionare manualmente le cifre.
+
+Anche le notifiche di nuova posta includono l'azione **Copia codice**, e le notifiche su desktop mostrano il codice direttamente nel testo. Il rilevamento dei codici è disponibile su desktop e mobile; puoi disattivarlo in **Impostazioni → Privacy → Rileva codici monouso**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Feed &amp; Kanban</Badge>
+
+## Assegna ai feed nomi più intuitivi
+
+Ora puoi rinominare un feed RSS durante la modifica nell'elenco dei feed, sia su desktop che su mobile. Lascia il campo vuoto per mantenere il titolo originale del feed.
+
+Nella bacheca Kanban su desktop, le colonne RSS dispongono di un pulsante **+** nell'intestazione per iscriversi a un altro feed con quell'account. Le schede rispondono inoltre più rapidamente ai clic e ai clic con il tasto destro.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Altri miglioramenti</Badge>
+
+## Piccole correzioni per l'uso quotidiano
+
+- **Navigazione mobile:** Trascina verso l'alto oltre la fine di un messaggio o di una conversazione per chiuderla.
+- **Android:** Risolti arresti anomali durante la visualizzazione di immagini molto grandi e migliorata la stabilità del lettore.
+- **Linux:** Migliorato lo sblocco del portachiavi all'avvio, mantenuti i clic sulle notifiche nell'area di lavoro corretta e corretta l'integrazione del launcher di AppImage.
+- **Sincronizzazione della posta:** Risolti i ritardi all'avvio su desktop e un caso in cui nuovi messaggi potevano andare persi durante il riavvio di una connessione IMAP IDLE.
+- **Risposte e sicurezza:** Corrette le dimensioni delle immagini nelle risposte rapide e aggiornato il componente di sanificazione HTML per recepire un avviso di sicurezza.
+
+Il [changelog completo](/changelog) contiene tutti gli altri dettagli.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Scarica Meron 0.5.3"
+  text="Meron è gratuito e open source. Aggiorna per provare la ricerca nelle impostazioni, i colori personalizzati per le icone e la copia semplificata dei codici di accesso."
+  download="Scarica Meron"
+  changelog="Vedi il changelog"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Einstellungssuche, eigene App-Icons und einfachere Anmeldungen"
+publishedAt: "2026-11-16"
+readingTime: "3 Min. Lesezeit"
+summary: "Springen Sie über die Befehlspalette direkt zu Einstellungen, wählen Sie die Farbe Ihres Desktop-App-Icons und kopieren Sie Anmeldecodes aus Nachrichten und Benachrichtigungen. Dazu eigene Feed-Namen und Verbesserungen auf Desktop und Mobilgeräten."
+highlights:
+  - "Einzelne Einstellungen direkt über die Desktop-Befehlspalette finden"
+  - "Farbe des Desktop-App-Icons anpassen, mit weiteren System-Icon-Varianten auf Mobilgeräten"
+  - "Anmeldecodes direkt aus Nachrichten und Benachrichtigungen kopieren"
+  - "RSS-Feeds umbenennen und direkt aus Kanban-Spalten abonnieren"
+  - "Durch Hochziehen über das Ende hinaus Nachrichten oder Konversationen auf Mobilgeräten schließen"
+  - "Fehlerbehebungen für den Linux-Start, Android-Bilder und E-Mail-Synchronisierung"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Release · v0.5.3"
+---
+
+<PostSection>
+
+Eine Einstellung zu ändern sollte schnell gehen – auch wenn man nicht mehr genau weiß, wo sie zu finden ist. In Meron 0.5.3 bringt Sie die Desktop-Befehlspalette direkt zu einzelnen Einstellungen. Dieses Release bietet außerdem anpassbare App-Icon-Farben, das Kopieren von Anmeldecodes mit einem Klick sowie nützliche Änderungen bei Feeds und der mobilen Navigation.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Einstellungssuche</Badge>
+
+## Einstellung finden, langes Suchen sparen
+
+Öffnen Sie die Befehlspalette und tippen Sie den Namen einer Einstellung ein. Die Ergebnisse enthalten nun einzelne Optionen aus den allgemeinen, Konto- und Board-Einstellungen. Wählen Sie eine Option aus, um die **Einstellungen** direkt an dieser Stelle zu öffnen.
+
+Wenn das Suchfeld leer ist, behält die Palette ihre kompakte Aktionsliste. Einstellungen werden eingeblendet, sobald Sie tippen – so sind sie schnell erreichbar, ohne das Menü zu überladen.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Befehlspalette bei der Suche nach signature über einem fiktiven Posteingang, mit Anzeige von Settings: Signature, Settings: Personal › Signature und Settings: Studio › Signature"
+  caption="Tippen Sie den Namen einer Einstellung in die Befehlspalette ein, um direkt zu allgemeinen oder Kontoeinstellungen zu springen."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Die Einstellungssuche ist auf dem Desktop verfügbar.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Erscheinungsbild</Badge>
+
+## Wählen Sie eine Farbe für Ihr App-Icon
+
+Gehen Sie auf dem Desktop zu **Einstellungen → Erscheinungsbild → Symbolfarbe**, um eine Vorlage auszuwählen oder eine eigene Farbe festzulegen. Unter macOS und Windows erscheint die neue Farbe im Dock oder in der Taskleiste, während Meron läuft. Unter Linux aktualisiert dies das Starter- und Dock-Symbol.
+
+Auch mobile Icons passen sich noch besser an Ihren Startbildschirm an: dunkle und getönte Varianten unter iOS sowie themenbasierte monochrome und Nacht-Icons unter Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Bereich Erscheinungsbild in den Einstellungen mit aktivierter benutzerdefinierter App-Icon-Farbe und geöffneter Symbol-Farbauswahl mit ausgewählter lila Farbe"
+  caption="Wählen Sie unter Einstellungen → Erscheinungsbild eine Vorlage oder eine benutzerdefinierte Farbe für das Desktop-App-Icon."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Anmeldecodes</Badge>
+
+## Code kopieren und direkt anmelden
+
+Wenn eine Bestätigungs-E-Mail einen Einmalcode enthält, zeigt Meron eine Karte zum **Code kopieren** über dem Nachrichtentext an. So können Sie den Code mit einem Klick kopieren, anstatt die Ziffern manuell zu markieren.
+
+Benachrichtigungen über neue E-Mails enthalten ebenfalls eine Aktion zum **Code kopieren**, und Desktop-Benachrichtigungen zeigen den Code direkt im Text an. Die Code-Erkennung ist auf Desktop und Mobilgeräten verfügbar; Sie können sie unter **Einstellungen → Datenschutz → Einmalcodes erkennen** deaktivieren.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Feeds &amp; Kanban</Badge>
+
+## Geben Sie Feeds Namen, die für Sie Sinn ergeben
+
+Sie können einen RSS-Feed jetzt beim Bearbeiten in der Feed-Liste auf dem Desktop oder Mobilgerät umbenennen. Wenn Sie den Namen leer lassen, wird der ursprüngliche Titel des Feeds verwendet.
+
+Auf dem Desktop-Kanban-Board haben RSS-Spalten nun eine **+**-Schaltfläche in der Kopfzeile, um einen weiteren Feed unter diesem Konto zu abonnieren. Karten reagieren zudem schneller auf Klicks und Rechtsklicks.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Weitere Verbesserungen</Badge>
+
+## Kleine Fehlerbehebungen für den Alltag
+
+- **Mobile Navigation:** Ziehen Sie über das Ende einer Nachricht oder Konversation nach oben, um sie zu schließen.
+- **Android:** Abstürze beim Anzeigen sehr großer Bilder behoben und Stabilität des Readers verbessert.
+- **Linux:** Entsperren des Keyrings beim Systemstart verbessert, Klicks auf Benachrichtigungen öffnen die richtige Arbeitsfläche und AppImage-Starterintegration korrigiert.
+- **Mail-Synchronisierung:** Verzögerungen beim Desktop-Start behoben sowie ein Fall behoben, in dem neue E-Mails beim Neustart einer IMAP-IDLE-Verbindung übersehen werden konnten.
+- **Antworten und Sicherheit:** Bildgrößen in Schnellantworten korrigiert und den HTML-Sanitizer aktualisiert, um einen Sicherheitshinweis zu beheben.
+
+Alle weiteren Details finden Sie im [vollständigen Changelog](/changelog).
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.3 herunterladen"
+  text="Meron ist kostenlos und Open Source. Aktualisieren Sie jetzt, um die Einstellungssuche, eigene Icon-Farben und das einfachere Kopieren von Anmeldecodes auszuprobieren."
+  download="Meron herunterladen"
+  changelog="Changelog ansehen"
+  github="GitHub Releases"
+/>

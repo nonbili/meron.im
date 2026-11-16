@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: 설정 검색, 맞춤 아이콘 및 더 쉬워진 로그인"
+publishedAt: "2026-11-16"
+readingTime: "3분 분량"
+summary: "명령 팔레트에서 설정으로 바로 이동하고, 데스크톱 앱 아이콘 색상을 선택하며, 메시지와 알림에서 로그인 코드를 복사하세요. 여기에 맞춤 피드 이름과 데스크톱 및 모바일에 걸친 다양한 개선 사항이 더해졌습니다."
+highlights:
+  - "데스크톱 명령 팔레트에서 개별 설정 검색"
+  - "데스크톱 앱 아이콘 색상 선택 및 모바일 시스템 아이콘 변형 추가"
+  - "메시지 및 알림에서 로그인 코드 직접 복사"
+  - "RSS 피드 이름 변경 및 칸반 열에서 피드 구독"
+  - "모바일에서 하단 끝을 지나 위로 끌어올려 메시지나 대화 닫기"
+  - "Linux 시작, Android 이미지 및 메일 동기화 관련 수정"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "릴리스 · v0.5.3"
+---
+
+<PostSection>
+
+설정이 어디에 있는지 기억나지 않더라도 원하는 항목을 빠르게 바꿀 수 있어야 합니다. Meron 0.5.3에서는 데스크톱 명령 팔레트를 통해 개별 설정으로 바로 이동할 수 있습니다. 이번 릴리스에는 앱 아이콘 색상 선택, 로그인 코드 원클릭 복사, 피드 및 모바일 탐색에 관한 유용한 개선 사항도 포함되어 있습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">설정 검색</Badge>
+
+## 복잡한 검색 없이 설정으로 바로 이동
+
+명령 팔레트를 열고 설정 이름을 입력해 보세요. 이제 검색 결과에 일반, 계정, 보드 환경설정의 개별 옵션이 포함됩니다. 항목을 선택하면 해당 옵션 위치에서 <Strong>설정</Strong>이 열립니다.
+
+검색어가 비어 있을 때 팔레트는 기존의 간결한 동작 목록을 유지합니다. 타이핑하는 순간 설정이 나타나므로 메뉴가 복잡해지지 않으면서도 필요한 기능에 손쉽게 닿을 수 있습니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="가상의 받은편지함 위에서 서명을 검색하는 명령 팔레트로, 설정: 서명, 설정: Personal › 서명, 설정: Studio › 서명이 표시된 모습"
+  caption="명령 팔레트에 설정 이름을 입력하여 일반 또는 계정 환경설정으로 바로 이동하세요."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>설정 검색은 데스크톱에서 지원됩니다.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">모양</Badge>
+
+## 앱 아이콘 색상 지정
+
+데스크톱에서는 <Strong>설정 → 모양 → 아이콘 색상</Strong>으로 이동하여 사전 설정된 색상을 선택하거나 맞춤 색상을 지정할 수 있습니다. macOS와 Windows에서는 Meron이 실행되는 동안 Dock 또는 작업 표시줄에 새 색상이 표시됩니다. Linux에서는 런처 및 Dock 아이콘이 업데이트됩니다.
+
+모바일 아이콘 역시 홈 화면에 맞추는 방법이 다양해졌습니다. iOS의 다크 및 색조 변형, Android의 테마 모노크롬 및 야간 아이콘을 지원합니다.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="설정의 모양 섹션에서 앱 아이콘 색상 사용자 지정이 활성화되고 보라색이 선택된 상태로 아이콘 색상 선택기가 열려 있는 모습"
+  caption="설정 → 모양에서 데스크톱 앱 아이콘의 색상을 사전 설정 또는 맞춤 색상으로 선택하세요."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">로그인 코드</Badge>
+
+## 코드를 복사하고 빠르게 로그인 완료
+
+인증 이메일에 일회용 코드가 포함되어 있으면 Meron이 메시지 본문 위에 <Strong>코드 복사</Strong> 카드를 표시합니다. 숫자를 직접 선택해서 복사할 필요 없이 클릭 한 번으로 복사할 수 있습니다.
+
+새 메일 알림에도 <Strong>코드 복사</Strong> 동작이 포함되며, 데스크톱 알림에는 텍스트 안에 코드가 표시됩니다. 코드 감지는 데스크톱과 모바일에서 모두 지원되며, <Strong>설정 → 개인 정보 → 일회용 코드 감지</Strong>에서 끌 수 있습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">피드 &amp; 칸반</Badge>
+
+## 기억하기 쉬운 나만의 피드 이름 설정
+
+데스크톱이나 모바일의 피드 목록에서 RSS 피드를 편집할 때 이름을 변경할 수 있습니다. 이름을 비워 두면 피드의 원래 제목이 유지됩니다.
+
+데스크톱 칸반 보드에서는 RSS 열 머리글의 <Strong>+</Strong> 버튼을 눌러 해당 계정에서 다른 피드를 구독할 수 있습니다. 또한 카드 클릭 및 마우스 오른쪽 클릭에 대한 반응 속도도 빨라졌습니다.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">기타 개선 사항</Badge>
+
+## 일상적인 사용을 위한 작은 수정들
+
+- <Strong>모바일 탐색:</Strong> 메시지나 대화 화면 하단을 지나 위로 끌어올려 화면을 닫을 수 있습니다.
+- <Strong>Android:</Strong> 매우 큰 이미지를 볼 때 발생하던 충돌을 수정하고 리더 안정성을 개선했습니다.
+- <Strong>Linux:</Strong> 시작 시 키링 잠금 해제 개선, 알림 클릭 시 올바른 작업 공간 유지, AppImage 런처 통합을 수정했습니다.
+- <Strong>메일 동기화:</Strong> 데스크톱 시작 지연 문제와 IMAP IDLE 연결이 재시작될 때 새 메일을 놓칠 수 있던 문제를 해결했습니다.
+- <Strong>답장 및 보안:</Strong> 빠른 답장의 이미지 크기를 올바르게 조정하고 보안 권고에 따라 HTML 새니타이저를 업데이트했습니다.
+
+자세한 내용은 [전체 변경 이력](/changelog)에서 확인할 수 있습니다.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Meron 0.5.3 받기"
+  text="Meron은 무료 오픈소스입니다. 업데이트하여 설정 검색, 맞춤 아이콘 색상, 더 쉬워진 로그인 코드 복사를 사용해 보세요."
+  download="Meron 다운로드"
+  changelog="변경 이력 보기"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Tìm kiếm cài đặt, biểu tượng tùy chỉnh và đăng nhập dễ dàng hơn"
+publishedAt: "2026-11-16"
+readingTime: "3 phút đọc"
+summary: "Chuyển đến một cài đặt từ bảng lệnh, chọn màu biểu tượng ứng dụng trên máy tính và sao chép mã đăng nhập từ thư cũng như thông báo. Cùng với tên nguồn cấp tùy chỉnh và các bản sửa lỗi trên máy tính và di động."
+highlights:
+  - "Tìm từng cài đặt riêng lẻ từ bảng lệnh trên máy tính"
+  - "Chọn màu biểu tượng ứng dụng trên máy tính, cùng nhiều biến thể biểu tượng hệ thống hơn trên di động"
+  - "Sao chép mã đăng nhập trực tiếp từ thư và thông báo"
+  - "Đổi tên nguồn cấp RSS và đăng ký từ các cột Kanban"
+  - "Kéo lên quá phần dưới cùng để đóng thư hoặc cuộc hội thoại trên di động"
+  - "Các bản sửa lỗi cho khởi động trên Linux, hình ảnh trên Android và đồng bộ hóa thư"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Phát hành · v0.5.3"
+---
+
+<PostSection>
+
+Việc thay đổi một tùy chọn cài đặt cần phải nhanh chóng, ngay cả khi bạn không nhớ nó nằm ở đâu. Trong Meron 0.5.3, bảng lệnh trên máy tính có thể đưa bạn đến thẳng từng cài đặt riêng lẻ. Bản phát hành này cũng mang đến màu sắc biểu tượng ứng dụng, sao chép mã đăng nhập chỉ với một cú nhấp, cùng một vài thay đổi hữu ích cho các nguồn cấp và điều hướng trên di động.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Tìm kiếm cài đặt</Badge>
+
+## Tìm cài đặt, không cần dò tìm
+
+Mở bảng lệnh và bắt đầu nhập tên của cài đặt. Kết quả hiện bao gồm các tùy chọn riêng lẻ từ cài đặt chung, tài khoản và tùy chọn bảng. Chọn một mục để mở **Cài đặt** ngay tại tùy chọn đó.
+
+Khi thanh tìm kiếm trống, bảng lệnh vẫn giữ danh sách tác vụ gọn gàng. Các cài đặt sẽ xuất hiện khi bạn nhập, giúp bạn dễ dàng truy cập mà không làm rối menu.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Bảng lệnh tìm kiếm signature trên hộp thư đến hư cấu, hiển thị Settings: Signature, Settings: Personal › Signature và Settings: Studio › Signature"
+  caption="Nhập tên cài đặt trong bảng lệnh để chuyển thẳng đến tùy chọn chung hoặc tùy chọn tài khoản."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>Tính năng tìm kiếm cài đặt hiện khả dụng trên máy tính.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Giao diện</Badge>
+
+## Chọn màu cho biểu tượng ứng dụng của bạn
+
+Trên máy tính, hãy vào **Cài đặt → Giao diện → Màu biểu tượng** để chọn một cài đặt sẵn hoặc đặt màu tùy chỉnh. Trên macOS và Windows, màu mới sẽ xuất hiện trong Dock hoặc thanh tác vụ khi Meron đang chạy. Trên Linux, tùy chọn này cập nhật biểu tượng trong trình khởi chạy và thanh dock.
+
+Các biểu tượng trên di động cũng có thêm nhiều cách để phù hợp với màn hình chính của bạn: các biến thể tối và phủ màu trên iOS, cùng các biểu tượng đơn sắc theo chủ đề và biểu tượng ban đêm trên Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Mục Giao diện trong Cài đặt đã bật Màu biểu tượng ứng dụng tùy chỉnh và bộ chọn màu biểu tượng đang mở với màu tím được chọn"
+  caption="Chọn một cài đặt sẵn hoặc màu tùy chỉnh cho biểu tượng ứng dụng trên máy tính trong Cài đặt → Giao diện."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Mã đăng nhập</Badge>
+
+## Sao chép mã và quay lại đăng nhập
+
+Khi email xác minh chứa mã một lần, Meron sẽ hiển thị thẻ **Sao chép mã** ngay phía trên nội dung thư. Bạn có thể sao chép mã chỉ bằng một cú nhấp thay vì phải tự chọn từng chữ số.
+
+Thông báo thư mới cũng bao gồm tác vụ **Sao chép mã**, và thông báo trên máy tính hiển thị mã ngay trong nội dung văn bản. Tính năng phát hiện mã khả dụng trên máy tính và di động; bạn có thể tắt tính năng này trong mục **Cài đặt → Quyền riêng tư → Phát hiện mã một lần**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Nguồn cấp &amp; Kanban</Badge>
+
+## Đặt tên nguồn cấp dễ hiểu đối với bạn
+
+Giờ đây bạn có thể đổi tên nguồn cấp RSS khi chỉnh sửa trong danh sách nguồn cấp, trên máy tính hoặc di động. Hãy để trống tên nếu muốn sử dụng tiêu đề gốc của nguồn cấp.
+
+Trên bảng Kanban dành cho máy tính, các cột RSS có nút **+** ở tiêu đề để đăng ký nguồn cấp khác thuộc tài khoản đó. Các thẻ cũng phản hồi nhanh hơn khi nhấp chuột trái và chuột phải.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Cải tiến khác</Badge>
+
+## Những sửa lỗi nhỏ cho trải nghiệm hàng ngày
+
+- **Điều hướng trên di động:** Kéo lên quá phần dưới cùng của thư hoặc cuộc hội thoại để đóng.
+- **Android:** Đã sửa lỗi sập ứng dụng khi xem hình ảnh rất lớn và cải thiện độ ổn định của trình đọc.
+- **Linux:** Cải thiện việc mở khóa chuỗi khóa khi khởi động, giữ cho các lượt nhấp vào thông báo luôn ở đúng không gian làm việc và sửa lỗi tích hợp trình khởi chạy AppImage.
+- **Đồng bộ hóa thư:** Đã khắc phục độ trễ khi khởi động trên máy tính và trường hợp thư mới có thể bị bỏ sót khi kết nối IMAP IDLE khởi động lại.
+- **Phản hồi và bảo mật:** Đã điều chỉnh kích thước hình ảnh trong tính năng trả lời nhanh và cập nhật trình khử trùng HTML để giải quyết một khuyến cáo bảo mật.
+
+Xem [nhật ký thay đổi đầy đủ](/changelog) để biết thêm các chi tiết còn lại.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Tải Meron 0.5.3"
+  text="Meron hoàn toàn miễn phí và là mã nguồn mở. Hãy cập nhật để trải nghiệm tìm kiếm cài đặt, màu biểu tượng tùy chỉnh và sao chép mã đăng nhập dễ dàng hơn."
+  download="Tải Meron"
+  changelog="Xem nhật ký thay đổi"
+  github="Bản phát hành GitHub"
+/>

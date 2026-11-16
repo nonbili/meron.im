@@ -1,0 +1,115 @@
+---
+slug: "meron-0-5-3"
+version: "0.5.3"
+title: "Meron 0.5.3: Búsqueda en ajustes, iconos personalizados e inicio de sesión más fácil"
+publishedAt: "2026-11-16"
+readingTime: "Lectura de 3 min"
+summary: "Salta a un ajuste desde la paleta de comandos, elige el color del icono de la aplicación en escritorio y copia códigos de inicio de sesión desde mensajes y notificaciones. Además de nombres personalizados para canales y correcciones en escritorio y móvil."
+highlights:
+  - "Encuentra ajustes individuales desde la paleta de comandos de escritorio"
+  - "Elige el color del icono de la aplicación en escritorio, con más variantes de iconos del sistema en móvil"
+  - "Copia códigos de inicio de sesión directamente desde mensajes y notificaciones"
+  - "Renombra canales RSS y suscríbete desde columnas de Kanban"
+  - "Desliza hacia arriba más allá del final para cerrar un mensaje o conversación en móvil"
+  - "Correcciones para el inicio en Linux, imágenes en Android y sincronización de correo"
+image: "/screenshots/blog/meron-053-settings-search.webp"
+releaseBadge: "Lanzamiento · v0.5.3"
+---
+
+<PostSection>
+
+Cambiar una preferencia debería ser rápido, incluso cuando no recuerdas dónde se encuentra. En Meron 0.5.3, la paleta de comandos de escritorio puede llevarte directamente a ajustes individuales. Esta versión también añade colores para el icono de la aplicación, copia en un clic de códigos de inicio de sesión y varios cambios útiles en los canales y la navegación móvil.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Search">Búsqueda en ajustes</Badge>
+
+## Encuentra el ajuste, ahórrate la búsqueda
+
+Abre la paleta de comandos y empieza a escribir el nombre de un ajuste. Los resultados ahora incluyen opciones individuales de preferencias generales, de cuenta y de tableros. Elige una para abrir **Ajustes** en esa opción.
+
+Cuando la búsqueda está vacía, la paleta conserva su lista compacta de acciones. Los ajustes aparecen a medida que escribes, de modo que están a tu alcance sin saturar el menú.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-settings-search.webp"
+  darkSrc="/screenshots/blog/meron-053-settings-search-dark.webp"
+  alt="Paleta de comandos buscando signature sobre una bandeja de entrada ficticia, mostrando Settings: Signature, Settings: Personal › Signature y Settings: Studio › Signature"
+  caption="Escribe el nombre de un ajuste en la paleta de comandos para ir directamente a las preferencias generales o de la cuenta."
+  width={1278}
+  height={798}
+/>
+
+<PlatformNote>La búsqueda en ajustes está disponible en escritorio.</PlatformNote>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="AppWindow">Apariencia</Badge>
+
+## Elige un color para el icono de tu aplicación
+
+En escritorio, ve a **Ajustes → Apariencia → Color del icono** para elegir un ajuste predefinido o definir un color personalizado. En macOS y Windows, el nuevo color aparece en el Dock o en la barra de tareas mientras Meron está en ejecución. En Linux, actualiza el icono del lanzador y del dock.
+
+Los iconos en móvil también ganan más formas de integrarse en tu pantalla de inicio: variantes oscura y tintada en iOS, e iconos temáticos monocromáticos y nocturnos en Android.
+
+<BlogImage
+  src="/screenshots/blog/meron-053-icon-color.webp"
+  darkSrc="/screenshots/blog/meron-053-icon-color-dark.webp"
+  alt="Sección Apariencia de Ajustes con el color de icono de la aplicación personalizado activado y el selector de color de icono abierto con un color púrpura seleccionado"
+  caption="Elige un color predefinido o personalizado para el icono de la aplicación en escritorio en Ajustes → Apariencia."
+  width={1278}
+  height={798}
+/>
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="ShieldCheck">Códigos de inicio de sesión</Badge>
+
+## Copia el código y vuelve al inicio de sesión
+
+Cuando un correo de verificación contiene un código de un solo uso, Meron muestra una tarjeta de **Copiar código** encima del cuerpo del mensaje. Puedes copiarlo con un solo clic en lugar de seleccionar los dígitos manualmente.
+
+Las notificaciones de nuevo correo también incluyen la acción **Copiar código**, y las notificaciones de escritorio muestran el código en su texto. La detección de códigos está disponible en escritorio y móvil; puedes desactivarla en **Ajustes → Privacidad → Detectar códigos de un solo uso**.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="Columns3">Canales y Kanban</Badge>
+
+## Asigna a los canales nombres que tengan sentido para ti
+
+Ahora puedes renombrar un canal RSS al editarlo en la lista de canales, en escritorio o móvil. Deja el nombre vacío para utilizar el título original del canal.
+
+En el tablero Kanban de escritorio, las columnas RSS cuentan con un botón **+** en el encabezado para suscribirse a otro canal bajo esa cuenta. Las tarjetas también responden con mayor rapidez a los clics y clics derechos.
+
+</PostSection>
+
+<PostSection>
+
+<Badge icon="HardDrive">Otras mejoras</Badge>
+
+## Pequeñas correcciones para el día a día
+
+- **Navegación móvil:** Desliza hacia arriba más allá del final de un mensaje o conversación para cerrarlo.
+- **Android:** Solucionados los fallos al ver imágenes muy grandes y mejorada la estabilidad del lector.
+- **Linux:** Desbloqueo mejorado del depósito de claves al inicio, clics en notificaciones dirigidos al espacio de trabajo correcto y corregida la integración del lanzador AppImage.
+- **Sincronización de correo:** Solucionados retrasos de inicio en escritorio y un caso en el que se podía perder correo nuevo al reiniciarse una conexión IMAP IDLE.
+- **Respuestas y seguridad:** Corregidos tamaños de imagen en respuestas rápidas y actualizado el sanitizador HTML para abordar un aviso de seguridad.
+
+El [registro de cambios completo](/changelog) contiene el resto de los detalles.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtén Meron 0.5.3"
+  text="Meron es gratuito y de código abierto. Actualiza para probar la búsqueda en ajustes, colores de icono personalizados y una copia más sencilla de códigos de inicio de sesión."
+  download="Descargar Meron"
+  changelog="Ver registro de cambios"
+  github="GitHub Releases"
+/>

@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 and 0.5.5 bring account colors to the unified inbox"
+publishedAt: "2026-11-19"
+readingTime: "2 min read"
+summary: "Tell accounts apart by color, hide avatars for a compact inbox, and right-click selected threads to act on them together."
+highlights:
+  - "Color-code accounts in the unified inbox and hide list avatars"
+  - "Right-click selected threads to open bulk actions on desktop"
+  - "Open links in calendar event and task notes"
+  - "Read HTML emails with foldable quoted replies and wrapping URLs"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Release · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+When work and personal mail share an inbox, a little color can tell you which account a thread belongs to before you open it. This release adds account color bars and an option to hide list avatars. It also brings bulk actions to the desktop right-click menu and makes long email replies easier to read.
+
+The same feature update ships as **0.5.4 on mobile** and **0.5.5 on desktop**. The desktop release also includes a Linux Snap packaging fix.
+
+</PostSection>
+
+<PostSection>
+
+## Tell your accounts apart at a glance
+
+Open **Settings → Mail accounts**, choose an account, and set its **Color**. Pick a preset or use a custom color. In the unified inbox and other lists that combine accounts, a colored bar marks each thread's account.
+
+For more compact rows, turn off **Show avatars in message lists** under **Settings → Appearance**. The account color bars stay visible. Both settings are available on desktop and mobile.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Unified inbox with avatars hidden and blue and violet bars beside threads from the Personal and Studio accounts"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Right-click to act on several threads
+
+On desktop, select the threads you want to work with, then right-click one of them to open the bulk action menu. When you move selected threads, Meron processes the move in a single batch.
+
+On desktop and Android, bulk actions distinguish **Move to Trash** from **Delete forever**. On desktop, Meron also explains why a delete failed.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Desktop unified inbox with three threads selected and the bulk action menu open, showing archive, move, and Move to Trash actions"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Read the reply and open links from your notes
+
+Meron now folds quoted lines that start with `>` in HTML mail, including replies in GitHub notification emails. When a link displays a long URL as its text, the URL can wrap within the message pane.
+
+Links in calendar event and task notes are now clickable on desktop and mobile. You can open a meeting agenda or a reference link directly from the note.
+
+</PostSection>
+
+<PostSection>
+
+## More improvements
+
+- **Desktop lists and boards.** Cards respond faster to clicks and right-clicks on large Kanban boards. Short thread lists and Kanban columns load more threads automatically when there is too little content to scroll.
+- **Archiving and swipes.** If a conversation in Archive still contains unarchived messages, archiving it again files the remaining messages. On mobile, swipe-to-archive and swipe-to-delete work more reliably. Deleted messages disappear from the conversation, and an empty thread closes automatically.
+- **Drafts and folders.** Meron can open encrypted drafts that finish decrypting after they appear in the list. It also handles Trash and Drafts more reliably when folder names and server roles disagree.
+- **Linux launcher.** Meron can replace an existing read-only desktop entry.
+
+See the [full changelog](/changelog) for details.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Get the latest Meron"
+  text="Download Meron 0.5.5 for desktop or 0.5.4 for mobile."
+  download="Download Meron"
+  changelog="View changelog"
+  github="GitHub releases"
+/>

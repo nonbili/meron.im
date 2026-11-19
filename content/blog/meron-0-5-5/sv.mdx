@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 och 0.5.5 ger kontofärger till den samlade inkorgen"
+publishedAt: "2026-11-19"
+readingTime: "2 min läsning"
+summary: "Skilj konton åt med färg, dölj avatarer för en kompakt inkorg och högerklicka på markerade trådar för att agera på dem tillsammans."
+highlights:
+  - "Färgkoda konton i den samlade inkorgen och dölj avatarer i listor"
+  - "Högerklicka på markerade trådar för att öppna massåtgärder på datorn"
+  - "Öppna länkar i anteckningar för kalenderhändelser och uppgifter"
+  - "Läs HTML-mejl med hopfällbara citerade svar och radbrytning av URL:er"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Utgåva · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+När jobb- och privatmejl delar samma inkorg kan lite färg visa vilket konto en tråd tillhör innan du ens öppnar den. Den här utgåvan lägger till kontofärgfält och ett alternativ för att dölja avatarer i listor. Den tar också med massåtgärder till högerklicksmenyn på datorn och gör långa mejlsvar lättare att läsa.
+
+Samma funktionsuppdatering släpps som **0.5.4 på mobilen** och **0.5.5 på datorn**. Datorutgåvan innehåller också en korrigering av Linux Snap-paketeringen.
+
+</PostSection>
+
+<PostSection>
+
+## Skilj dina konton åt med ett ögonkast
+
+Öppna **Inställningar → E-postkonton**, välj ett konto och ange dess **Färg**. Välj en förinställning eller använd en egen färg. I den samlade inkorgen och andra listor som kombinerar konton markerar ett färgfält varje tråds konto.
+
+För mer kompakta rader kan du stänga av **Visa avatarer i meddelandelistor** under **Inställningar → Utseende**. Kontonas färgfält förblir synliga. Båda inställningarna finns på dator och mobil.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Samlad inkorg med dolda avatarer och blå och lila fält bredvid trådar från kontona Personligt och Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Högerklicka för att agera på flera trådar
+
+På datorn markerar du de trådar du vill arbeta med och högerklickar sedan på en av dem för att öppna menyn för massåtgärder. När du flyttar markerade trådar hanterar Meron flytten i ett enda svep.
+
+På dator och Android skiljer massåtgärder mellan **Flytta till papperskorgen** och **Ta bort permanent**. På datorn förklarar Meron också varför en borttagning misslyckades.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Samlad inkorg på datorn med tre markerade trådar och menyn för massåtgärder öppen, som visar åtgärderna arkivera, flytta och Flytta till papperskorgen"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Läs svaret och öppna länkar från dina anteckningar
+
+Meron fäller nu ihop citerade rader som börjar med `>` i HTML-mejl, inklusive svar i GitHub-aviseringar. När en länk visar en lång URL som text kan URL:en radbrytas inom meddelandepanelen.
+
+Länkar i anteckningar för kalenderhändelser och uppgifter är nu klickbara på dator och mobil. Du kan öppna en mötesagenda eller en referenslänk direkt från anteckningen.
+
+</PostSection>
+
+<PostSection>
+
+## Fler förbättringar
+
+- **Listor och tavlor på datorn.** Kort svarar snabbare på klick och högerklick på stora Kanban-tavlor. Korta trådlistor och Kanban-kolumner läser automatiskt in fler trådar när det finns för lite innehåll för att rulla.
+- **Arkivering och svepningar.** Om en konversation i Arkiv fortfarande innehåller oarkiverade meddelanden arkiverar en ny arkivering de återstående meddelandena. På mobilen fungerar svep för att arkivera och svep för att ta bort mer tillförlitligt. Borttagna meddelanden försvinner från konversationen och en tom tråd stängs automatiskt.
+- **Utkast och mappar.** Meron kan öppna krypterade utkast som dekrypteras färdigt efter att de har dykt upp i listan. Det hanterar också Papperskorgen och Utkast mer tillförlitligt när mappnamn och serverroller inte stämmer överens.
+- **Linux-programstartare.** Meron kan ersätta en befintlig skrivbordsgenväg som är skrivskyddad.
+
+Se den [fullständiga ändringsloggen](/changelog) för detaljer.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Skaffa senaste Meron"
+  text="Ladda ner Meron 0.5.5 för dator eller 0.5.4 för mobil."
+  download="Ladda ner Meron"
+  changelog="Visa ändringslogg"
+  github="GitHub Releases"
+/>

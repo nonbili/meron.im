@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 e 0.5.5 portano i colori degli account nella posta in arrivo unificata"
+publishedAt: "2026-11-19"
+readingTime: "2 min di lettura"
+summary: "Distingui gli account per colore, nascondi gli avatar per una posta in arrivo compatta e fai clic con il tasto destro sulle conversazioni selezionate per agire insieme su di esse."
+highlights:
+  - "Assegna un colore agli account nella posta in arrivo unificata e nascondi gli avatar nell'elenco"
+  - "Fai clic con il tasto destro sulle conversazioni selezionate per aprire le azioni in blocco su desktop"
+  - "Apri i link nelle note degli eventi del calendario e delle attività"
+  - "Leggi le email HTML con risposte citate comprimibili e URL con ritorno a capo"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Rilascio · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Quando la posta di lavoro e quella personale condividono la stessa casella, un tocco di colore ti aiuta a capire a quale account appartiene una conversazione ancora prima di aprirla. Questa versione aggiunge le barre colorate degli account e un'opzione per nascondere gli avatar negli elenchi. Porta inoltre le azioni in blocco nel menu contestuale su desktop e rende più leggibili le risposte email lunghe.
+
+Lo stesso aggiornamento delle funzionalità viene distribuito come **0.5.4 su mobile** e **0.5.5 su desktop**. La versione desktop include anche una correzione per il pacchetto Linux Snap.
+
+</PostSection>
+
+<PostSection>
+
+## Distingui i tuoi account a colpo d'occhio
+
+Apri **Impostazioni → Account di posta**, scegli un account e imposta il suo **Colore**. Scegli una preimpostazione o usa un colore personalizzato. Nella posta in arrivo unificata e negli altri elenchi che combinano più account, una barra colorata indica l'account di ciascuna conversazione.
+
+Per righe più compatte, disattiva **Mostra avatar negli elenchi dei messaggi** in **Impostazioni → Aspetto**. Le barre colorate degli account restano visibili. Entrambe le impostazioni sono disponibili su desktop e mobile.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Posta in arrivo unificata con avatar nascosti e barre blu e viola accanto alle conversazioni degli account Personal e Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Fai clic con il tasto destro per agire su più conversazioni
+
+Su desktop, seleziona le conversazioni su cui vuoi intervenire, poi fai clic con il tasto destro su una di esse per aprire il menu delle azioni in blocco. Quando sposti le conversazioni selezionate, Meron elabora lo spostamento in un'unica operazione.
+
+Su desktop e Android, le azioni in blocco distinguono **Sposta nel Cestino** da **Elimina definitivamente**. Su desktop, Meron spiega anche il motivo se un'eliminazione non riesce.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Posta in arrivo unificata su desktop con tre conversazioni selezionate e il menu delle azioni in blocco aperto, che mostra le azioni archivia, sposta e Sposta nel Cestino"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Leggi la risposta e apri i link dalle tue note
+
+Meron ora comprime le righe citate che iniziano con `>` nelle email HTML, comprese le risposte nelle email di notifica di GitHub. Quando un link mostra un URL lungo come testo, l'URL può andare a capo all'interno del riquadro del messaggio.
+
+I link nelle note degli eventi del calendario e delle attività sono ora cliccabili su desktop e mobile. Puoi aprire l'ordine del giorno di una riunione o un link di riferimento direttamente dalla nota.
+
+</PostSection>
+
+<PostSection>
+
+## Altri miglioramenti
+
+- **Elenchi e bacheche su desktop.** Le schede rispondono più rapidamente ai clic e ai clic con il tasto destro nelle bacheche Kanban di grandi dimensioni. Gli elenchi brevi di conversazioni e le colonne Kanban caricano automaticamente altre conversazioni quando il contenuto è troppo scarso per scorrere.
+- **Archiviazione e gesti di scorrimento.** Se una conversazione in Archivio contiene ancora messaggi non archiviati, archiviarla di nuovo archivia i messaggi rimanenti. Su mobile, lo scorrimento per archiviare e lo scorrimento per eliminare funzionano in modo più affidabile. I messaggi eliminati scompaiono dalla conversazione e una conversazione vuota si chiude automaticamente.
+- **Bozze e cartelle.** Meron può aprire le bozze crittografate che completano la decrittazione dopo essere apparse nell'elenco. Gestisce inoltre Cestino e Bozze in modo più affidabile quando i nomi delle cartelle e i ruoli del server non coincidono.
+- **Launcher su Linux.** Meron può sostituire una voce desktop esistente di sola lettura.
+
+Vedi il [changelog completo](/changelog) per tutti i dettagli.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Scarica l'ultimo Meron"
+  text="Scarica Meron 0.5.5 per desktop o 0.5.4 per mobile."
+  download="Scarica Meron"
+  changelog="Vedi il changelog"
+  github="GitHub Releases"
+/>

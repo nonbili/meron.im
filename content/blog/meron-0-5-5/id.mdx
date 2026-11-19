@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 dan 0.5.5 menghadirkan warna akun ke kotak masuk terpadu"
+publishedAt: "2026-11-19"
+readingTime: "2 mnt waktu baca"
+summary: "Bedakan akun berdasarkan warna, sembunyikan avatar untuk kotak masuk yang ringkas, dan klik kanan utas yang dipilih untuk menindaklanjutinya sekaligus."
+highlights:
+  - "Beri kode warna pada akun di kotak masuk terpadu dan sembunyikan avatar daftar"
+  - "Klik kanan utas yang dipilih untuk membuka tindakan massal di desktop"
+  - "Buka tautan di catatan acara kalender dan tugas"
+  - "Baca email HTML dengan balasan kutipan yang dapat dilipat dan URL yang membungkus baris"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Rilis · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Ketika email kerja dan pribadi berbagi satu kotak masuk, sedikit warna dapat langsung memberi tahu akun mana yang memiliki suatu utas sebelum Anda membukanya. Rilis ini menambahkan bilah warna akun dan opsi untuk menyembunyikan avatar daftar. Pembaruan ini juga menghadirkan tindakan massal ke menu klik kanan di desktop serta membuat balasan email yang panjang lebih mudah dibaca.
+
+Pembaruan fitur yang sama hadir sebagai **0.5.4 di seluler** dan **0.5.5 di desktop**. Rilis desktop juga menyertakan perbaikan paket Linux Snap.
+
+</PostSection>
+
+<PostSection>
+
+## Bedakan akun Anda dalam sekejap
+
+Buka **Pengaturan → Akun email**, pilih sebuah akun, lalu atur **Warna**-nya. Pilih preset atau gunakan warna kustom. Di kotak masuk terpadu dan daftar lain yang menggabungkan beberapa akun, bilah berwarna menandai akun masing-masing utas.
+
+Untuk baris yang lebih ringkas, matikan **Tampilkan avatar di daftar pesan** pada **Pengaturan → Tampilan**. Bilah warna akun tetap terlihat. Kedua pengaturan ini tersedia di desktop dan seluler.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Kotak masuk terpadu dengan avatar tersembunyi serta bilah biru dan ungu di samping utas dari akun Personal dan Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Klik kanan untuk menindaklanjuti beberapa utas sekaligus
+
+Di desktop, pilih utas-utas yang ingin Anda kerjakan, lalu klik kanan salah satunya untuk membuka menu tindakan massal. Saat Anda memindahkan utas yang dipilih, Meron memproses pemindahan tersebut dalam satu batch.
+
+Di desktop dan Android, tindakan massal membedakan **Pindahkan ke Sampah** dari **Hapus selamanya**. Di desktop, Meron juga menjelaskan alasan jika penghapusan gagal.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Kotak masuk terpadu desktop dengan tiga utas terpilih dan menu tindakan massal terbuka, menampilkan tindakan arsipkan, pindahkan, dan Pindahkan ke Sampah"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Baca balasan dan buka tautan dari catatan Anda
+
+Meron kini melipat baris kutipan yang diawali dengan `>` pada email HTML, termasuk balasan dalam email notifikasi GitHub. Ketika sebuah tautan menampilkan URL panjang sebagai teksnya, URL tersebut dapat membungkus baris di dalam panel pesan.
+
+Tautan di catatan acara kalender dan tugas kini dapat diklik di desktop dan seluler. Anda dapat membuka agenda rapat atau tautan referensi langsung dari catatan.
+
+</PostSection>
+
+<PostSection>
+
+## Peningkatan lainnya
+
+- **Daftar dan papan desktop.** Kartu merespons klik dan klik kanan dengan lebih cepat pada papan Kanban berukuran besar. Daftar utas yang pendek dan kolom Kanban memuat lebih banyak utas secara otomatis ketika konten terlalu sedikit untuk digulir.
+- **Pengarsipan dan usapan.** Jika percakapan di Arsip masih berisi pesan yang belum diarsipkan, mengarsipkannya lagi akan menyimpan pesan yang tersisa. Di seluler, usap untuk mengarsipkan dan usap untuk menghapus bekerja lebih andal. Pesan yang dihapus menghilang dari percakapan, dan utas yang kosong akan tertutup secara otomatis.
+- **Draf dan folder.** Meron dapat membuka draf terenkripsi yang selesai didekripsi setelah muncul di daftar. Aplikasi juga menangani Sampah dan Draf dengan lebih andal ketika nama folder dan peran server tidak selaras.
+- **Peluncur Linux.** Meron dapat mengganti entri desktop baca-saja yang sudah ada.
+
+Lihat [catatan perubahan lengkap](/changelog) untuk detailnya.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Dapatkan Meron terbaru"
+  text="Unduh Meron 0.5.5 untuk desktop atau 0.5.4 untuk seluler."
+  download="Unduh Meron"
+  changelog="Lihat catatan perubahan"
+  github="Rilis GitHub"
+/>

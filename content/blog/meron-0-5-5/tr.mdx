@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 ve 0.5.5 birleşik gelen kutusuna hesap renkleri getiriyor"
+publishedAt: "2026-11-19"
+readingTime: "2 dk okuma süresi"
+summary: "Hesapları renge göre ayırt edin, kompakt bir gelen kutusu için avatarları gizleyin ve seçili ileti dizilerine sağ tıklayarak birlikte işlem yapın."
+highlights:
+  - "Birleşik gelen kutusunda hesapları renk kodlarıyla ayırın ve liste avatarlarını gizleyin"
+  - "Masaüstünde toplu işlemleri açmak için seçili ileti dizilerine sağ tıklayın"
+  - "Takvim etkinliği ve görev notlarındaki bağlantıları açın"
+  - "Katlanabilir alıntılı yanıtlar ve satır saran URL'lerle HTML e-postaları okuyun"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Sürüm · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+İş ve kişisel postalar aynı gelen kutusunu paylaştığında, küçük bir renk bir ileti dizisini açmadan önce hangi hesaba ait olduğunu gösterebilir. Bu sürüm hesap renk çubukları ve liste avatarlarını gizleme seçeneği ekliyor. Ayrıca masaüstü sağ tık menüsüne toplu işlemleri getiriyor ve uzun e-posta yanıtlarını okumayı kolaylaştırıyor.
+
+Aynı özellik güncellemesi **mobilde 0.5.4** ve **masaüstünde 0.5.5** olarak yayınlanıyor. Masaüstü sürümü ayrıca bir Linux Snap paketleme düzeltmesi içeriyor.
+
+</PostSection>
+
+<PostSection>
+
+## Hesaplarınızı bir bakışta ayırt edin
+
+**Ayarlar → Posta hesapları** bölümünü açın, bir hesap seçin ve **Renk** ayarını yapın. Hazır bir renk seçin veya özel bir renk kullanın. Birleşik gelen kutusunda ve hesapları birleştiren diğer listelerde, renkli bir çubuk her ileti dizisinin hesabını işaretler.
+
+Daha kompakt satırlar için **Ayarlar → Görünüm** altında **İleti listelerinde avatarları göster** seçeneğini kapatın. Hesap renk çubukları görünür kalır. Her iki ayar da masaüstü ve mobilde kullanılabilir.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Avatarların gizlendiği, Personal ve Studio hesaplarından gelen ileti dizilerinin yanında mavi ve mor çubukların bulunduğu birleşik gelen kutusu"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Birden fazla ileti dizisinde işlem yapmak için sağ tıklayın
+
+Masaüstünde, üzerinde işlem yapmak istediğiniz ileti dizilerini seçin, ardından toplu işlem menüsünü açmak için bunlardan birine sağ tıklayın. Seçili ileti dizilerini taşıdığınızda Meron taşıma işlemini tek bir toplu işlemde gerçekleştirir.
+
+Masaüstü ve Android'de toplu işlemler, **Çöp Kutusuna Taşı** ile **Kalıcı olarak sil** seçeneklerini birbirinden ayırır. Masaüstünde Meron ayrıca bir silme işleminin neden başarısız olduğunu da açıklar.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Üç ileti dizisinin seçili olduğu ve arşivle, taşı ile Çöp Kutusuna Taşı eylemlerini gösteren toplu işlem menüsünün açık olduğu masaüstü birleşik gelen kutusu"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Yanıtı okuyun ve notlarınızdaki bağlantıları açın
+
+Meron artık GitHub bildirim e-postalarındaki yanıtlar da dahil olmak üzere HTML postalarda `>` ile başlayan alıntılı satırları katlar. Bir bağlantı metni olarak uzun bir URL gösterdiğinde, URL ileti bölmesi içinde satır sarabilir.
+
+Takvim etkinliği ve görev notlarındaki bağlantılar artık masaüstünde ve mobilde tıklanabilir. Bir toplantı gündemini veya referans bağlantısını doğrudan nottan açabilirsiniz.
+
+</PostSection>
+
+<PostSection>
+
+## Diğer iyileştirmeler
+
+- **Masaüstü listeleri ve panoları.** Kartlar büyük Kanban panolarında tıklamalara ve sağ tıklamalara daha hızlı yanıt verir. Kısa ileti dizisi listeleri ve Kanban sütunları, kaydırma için çok az içerik olduğunda otomatik olarak daha fazla ileti dizisi yükler.
+- **Arşivleme ve kaydırmalar.** Arşivdeki bir sohbette hâlâ arşivlenmemiş iletiler varsa, sohbeti yeniden arşivlemek kalan iletileri de dosyalar. Mobilde kaydırarak arşivleme ve kaydırarak silme daha kararlı çalışır. Silinen iletiler sohbetten kaybolur ve boş kalan ileti dizisi otomatik olarak kapanır.
+- **Taslaklar ve klasörler.** Meron, listede göründükten sonra şifresi çözülen şifreli taslakları açabilir. Ayrıca klasör adları ve sunucu rolleri uyuşmadığında Çöp Kutusu ve Taslakları daha güvenilir şekilde yönetir.
+- **Linux başlatıcısı.** Meron mevcut salt okunur bir masaüstü girdisini değiştirebilir.
+
+Ayrıntılar için [tam değişiklik günlüğü](/changelog) sayfasına göz atın.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="En güncel Meron'u edinin"
+  text="Masaüstü için Meron 0.5.5 veya mobil için 0.5.4 sürümünü indirin."
+  download="Meron'u İndir"
+  changelog="Değişiklik Günlüğünü Gör"
+  github="GitHub Sürümleri"
+/>

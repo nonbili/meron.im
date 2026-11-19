@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 und 0.5.5 bringen Kontofarben in den gemeinsamen Posteingang"
+publishedAt: "2026-11-19"
+readingTime: "2 Min. Lesezeit"
+summary: "Unterscheiden Sie Konten anhand ihrer Farbe, blenden Sie Avatare für einen kompakteren Posteingang aus und klicken Sie ausgewählte Konversationen mit der rechten Maustaste an, um sie gemeinsam zu bearbeiten."
+highlights:
+  - "Konten im gemeinsamen Posteingang farblich kennzeichnen und Listen-Avatare ausblenden"
+  - "Ausgewählte Konversationen auf dem Desktop per Rechtsklick für Sammelaktionen öffnen"
+  - "Links in Notizen von Kalenderterminen und Aufgaben öffnen"
+  - "HTML-E-Mails mit einklappbaren Zitaten und umbrechenden URLs lesen"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Release · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Wenn sich geschäftliche und private E-Mails einen Posteingang teilen, verrät ein wenig Farbe schon vor dem Öffnen, zu welchem Konto eine Konversation gehört. Dieses Release ergänzt Kontofarbbalken sowie eine Option zum Ausblenden von Listen-Avataren. Außerdem bringt es Sammelaktionen ins Desktop-Kontextmenü und macht lange E-Mail-Antworten leichter lesbar.
+
+Dasselbe Funktionsupdate erscheint als **0.5.4 auf Mobilgeräten** und **0.5.5 auf dem Desktop**. Das Desktop-Release enthält zusätzlich eine Korrektur für das Linux-Snap-Paket.
+
+</PostSection>
+
+<PostSection>
+
+## Konten auf einen Blick unterscheiden
+
+Öffnen Sie **Einstellungen → E-Mail-Konten**, wählen Sie ein Konto aus und legen Sie dessen **Farbe** fest. Wählen Sie eine Vorlage oder eine eigene Farbe. Im gemeinsamen Posteingang und in anderen Listen, die Konten zusammenführen, markiert ein Farbbalken das Konto jeder Konversation.
+
+Für kompaktere Zeilen schalten Sie **Avatare in Nachrichtenlisten anzeigen** unter **Einstellungen → Erscheinungsbild** aus. Die Kontofarbbalken bleiben sichtbar. Beide Einstellungen sind auf Desktop und Mobilgeräten verfügbar.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Gemeinsamer Posteingang mit ausgeblendeten Avataren sowie blauen und violetten Balken neben Konversationen der Konten Personal und Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Rechtsklick für Aktionen auf mehrere Konversationen
+
+Wählen Sie auf dem Desktop die Konversationen aus, die Sie bearbeiten möchten, und klicken Sie eine davon mit der rechten Maustaste an, um das Menü für Sammelaktionen zu öffnen. Wenn Sie ausgewählte Konversationen verschieben, führt Meron das Verschieben in einem einzigen Schritt aus.
+
+Auf Desktop und Android unterscheiden Sammelaktionen zwischen **In den Papierkorb verschieben** und **Endgültig löschen**. Auf dem Desktop erklärt Meron außerdem, warum ein Löschvorgang fehlgeschlagen ist.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Gemeinsamer Desktop-Posteingang mit drei ausgewählten Konversationen und geöffnetem Sammelaktionsmenü, das Archivieren, Verschieben und In den Papierkorb verschieben zeigt"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Antworten lesen und Links aus Notizen öffnen
+
+Meron klappt in HTML-E-Mails jetzt zitierte Zeilen ein, die mit `>` beginnen – einschließlich Antworten in GitHub-Benachrichtigungen. Wenn ein Link eine lange URL als Linktext anzeigt, kann die URL innerhalb des Nachrichtenbereichs umbrechen.
+
+Links in Notizen von Kalenderterminen und Aufgaben sind nun auf Desktop und Mobilgeräten anklickbar. Sie können eine Besprechungsagenda oder einen Referenzlink direkt aus der Notiz heraus öffnen.
+
+</PostSection>
+
+<PostSection>
+
+## Weitere Verbesserungen
+
+- **Desktop-Listen und -Boards:** Karten reagieren auf großen Kanban-Boards schneller auf Klicks und Rechtsklicks. Kurze Konversationslisten und Kanban-Spalten laden automatisch weitere Konversationen nach, wenn zu wenig Inhalt zum Scrollen vorhanden ist.
+- **Archivieren und Wischen:** Wenn eine Konversation im Archiv noch nicht archivierte Nachrichten enthält, legt erneutes Archivieren die verbleibenden Nachrichten ab. Auf Mobilgeräten funktionieren Wischen zum Archivieren und Wischen zum Löschen zuverlässiger. Gelöschte Nachrichten verschwinden aus der Konversation, und eine leere Konversation schließt sich automatisch.
+- **Entwürfe und Ordner:** Meron kann verschlüsselte Entwürfe öffnen, deren Entschlüsselung erst abgeschlossen wird, nachdem sie in der Liste erschienen sind. Außerdem geht es zuverlässiger mit Papierkorb und Entwürfen um, wenn Ordnernamen und Serverrollen voneinander abweichen.
+- **Linux-Starter:** Meron kann einen bestehenden schreibgeschützten Desktop-Eintrag ersetzen.
+
+Weitere Details finden Sie im [vollständigen Changelog](/changelog).
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Das neueste Meron herunterladen"
+  text="Laden Sie Meron 0.5.5 für den Desktop oder 0.5.4 für Mobilgeräte herunter."
+  download="Meron herunterladen"
+  changelog="Changelog ansehen"
+  github="GitHub Releases"
+/>

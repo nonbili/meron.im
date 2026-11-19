@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 e 0.5.5 trazem cores de conta para a caixa de entrada unificada"
+publishedAt: "2026-11-19"
+readingTime: "Leitura de 2 min"
+summary: "Diferencie contas por cor, oculte avatares para uma caixa de entrada mais compacta e clique com o botão direito nas conversas selecionadas para agir em conjunto."
+highlights:
+  - "Identifique contas por cor na caixa de entrada unificada e oculte avatares nas listas"
+  - "Clique com o botão direito nas conversas selecionadas para abrir ações em massa no desktop"
+  - "Abra links nas notas de eventos do calendário e de tarefas"
+  - "Leia e-mails em HTML com respostas citadas dobráveis e quebra de linha em URLs"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Lançamento · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Quando o e-mail de trabalho e o pessoal dividem a mesma caixa de entrada, um pouco de cor mostra a qual conta uma conversa pertence antes mesmo de você abri-la. Esta versão adiciona barras de cor por conta e uma opção para ocultar avatares nas listas. Também traz ações em massa para o menu do botão direito no desktop e torna respostas longas mais fáceis de ler.
+
+A mesma atualização de recursos é lançada como **0.5.4 no celular** e **0.5.5 no desktop**. A versão para desktop também inclui uma correção de empacotamento para Linux Snap.
+
+</PostSection>
+
+<PostSection>
+
+## Diferencie suas contas rapidamente
+
+Abra **Configurações → Contas de e-mail**, escolha uma conta e defina sua **Cor**. Escolha uma predefinição ou use uma cor personalizada. Na caixa de entrada unificada e em outras listas que combinam contas, uma barra colorida marca a conta de cada conversa.
+
+Para linhas mais compactas, desative **Mostrar avatares nas listas de mensagens** em **Configurações → Aparência**. As barras de cor das contas continuam visíveis. Ambas as configurações estão disponíveis no desktop e no celular.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Caixa de entrada unificada com avatares ocultos e barras azuis e roxas ao lado das conversas das contas Pessoal e Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Clique com o botão direito para agir em várias conversas
+
+No desktop, selecione as conversas com as quais deseja trabalhar e clique com o botão direito em uma delas para abrir o menu de ações em massa. Quando você move conversas selecionadas, o Meron processa a movimentação em um único lote.
+
+No desktop e no Android, as ações em massa diferenciam **Mover para a Lixeira** de **Excluir permanentemente**. No desktop, o Meron também explica por que uma exclusão falhou.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Caixa de entrada unificada no desktop com três conversas selecionadas e o menu de ações em massa aberto, mostrando as ações arquivar, mover e Mover para a Lixeira"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Leia a resposta e abra links das suas notas
+
+O Meron agora dobra linhas citadas que começam com `>` em e-mails HTML, incluindo respostas em notificações do GitHub. Quando um link exibe uma URL longa como texto, a URL pode quebrar dentro do painel da mensagem.
+
+Links nas notas de eventos do calendário e de tarefas agora são clicáveis no desktop e no celular. Você pode abrir a pauta de uma reunião ou um link de referência diretamente da nota.
+
+</PostSection>
+
+<PostSection>
+
+## Mais melhorias
+
+- **Listas e quadros no desktop.** Os cartões respondem mais rápido a cliques simples e com o botão direito em quadros Kanban grandes. Listas de conversas curtas e colunas Kanban carregam mais conversas automaticamente quando há pouco conteúdo para rolar.
+- **Arquivo e gestos de deslizar.** Se uma conversa no Arquivo ainda contiver mensagens não arquivadas, arquivá-la novamente guarda as mensagens restantes. No celular, os gestos de deslizar para arquivar e excluir funcionam de forma mais confiável. Mensagens excluídas desaparecem da conversa, e uma conversa vazia é fechada automaticamente.
+- **Rascunhos e pastas.** O Meron consegue abrir rascunhos criptografados que terminam de ser descriptografados depois de aparecerem na lista. Ele também lida com a Lixeira e Rascunhos de forma mais confiável quando os nomes das pastas e as funções do servidor divergem.
+- **Inicializador no Linux.** O Meron pode substituir uma entrada de área de trabalho existente somente leitura.
+
+Veja o [histórico de versões completo](/changelog) para mais detalhes.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenha o Meron mais recente"
+  text="Baixe o Meron 0.5.5 para desktop ou 0.5.4 para celular."
+  download="Baixar Meron"
+  changelog="Ver histórico de versões"
+  github="GitHub Releases"
+/>

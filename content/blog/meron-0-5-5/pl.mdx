@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 i 0.5.5 wprowadzają kolory kont w ujednoliconej skrzynce odbiorczej"
+publishedAt: "2026-11-19"
+readingTime: "2 min czytania"
+summary: "Rozróżniaj konta po kolorze, ukrywaj awatary dla bardziej zwartego widoku skrzynki i klikaj prawym przyciskiem wybrane wątki, aby działać na nich wspólnie."
+highlights:
+  - "Oznaczanie kont kolorami w ujednoliconej skrzynce odbiorczej i ukrywanie awatarów na liście"
+  - "Kliknięcie prawym przyciskiem wybranych wątków, aby otworzyć menu akcji zbiorczych na komputerze"
+  - "Otwieranie linków w notatkach do wydarzeń w kalendarzu i zadań"
+  - "Czytanie wiadomości HTML ze zwijanymi cytatami i zawijaniem długich adresów URL"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Wydanie · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Gdy poczta służbowa i prywatna dzielą jedną skrzynkę odbiorczą, odrobina koloru od razu podpowiada, do którego konta należy wątek, jeszcze zanim go otworzysz. To wydanie dodaje paski kolorów kont oraz opcję ukrywania awatarów na liście wiadomości. Wprowadza także akcje zbiorcze w menu kontekstowym na komputerze i ułatwia czytanie długich odpowiedzi e-mail.
+
+Ta sama aktualizacja funkcji trafia jako **0.5.4 na urządzenia mobilne** i **0.5.5 na komputer**. Wydanie na komputer zawiera również poprawkę pakietu Linux Snap.
+
+</PostSection>
+
+<PostSection>
+
+## Rozróżniaj konta na pierwszy rzut oka
+
+Otwórz **Ustawienia → Konta pocztowe**, wybierz konto i ustaw jego **Kolor**. Wybierz jeden z gotowych odcieni lub własny kolor. W ujednoliconej skrzynce odbiorczej i na innych listach łączących wiele kont kolorowy pasek oznacza konto każdego wątku.
+
+Aby uzyskać bardziej zwarte wiersze, wyłącz opcję **Pokaż awatary na listach wiadomości** w **Ustawienia → Wygląd**. Paski kolorów kont pozostaną widoczne. Oba ustawienia są dostępne na komputerach i urządzeniach mobilnych.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Ujednolicona skrzynka odbiorcza z ukrytymi awatarami oraz niebieskimi i fioletowymi paskami obok wątków z kont Osobiste i Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Kliknij prawym przyciskiem, aby działać na kilku wątkach
+
+Na komputerze zaznacz wątki, z którymi chcesz pracować, a następnie kliknij jeden z nich prawym przyciskiem myszy, aby otworzyć menu akcji zbiorczych. Gdy przenosisz wybrane wątki, Meron realizuje przeniesienie w jednej operacji zbiorczej.
+
+Na komputerze i Androidzie akcje zbiorcze rozróżniają **Przenieś do Kosza** i **Usuń na zawsze**. Na komputerze Meron wyjaśnia też, dlaczego usunięcie się nie powiodło.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Komputerowa ujednolicona skrzynka odbiorcza z trzema zaznaczonymi wątkami i otwartym menu akcji zbiorczych pokazującym akcje archiwizacji, przenoszenia oraz Przenieś do Kosza"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Czytaj odpowiedzi i otwieraj linki z notatek
+
+Meron zwija teraz cytowane wiersze zaczynające się od `>` w wiadomościach HTML, w tym odpowiedzi w powiadomieniach z GitHuba. Gdy tekst linku stanowi długi adres URL, adres może się zawijać w obrębie panelu wiadomości.
+
+Linki w notatkach do wydarzeń w kalendarzu i zadań są teraz klikalne na komputerach i urządzeniach mobilnych. Możesz otworzyć agendę spotkania lub link referencyjny bezpośrednio z notatki.
+
+</PostSection>
+
+<PostSection>
+
+## Więcej ulepszeń
+
+- **Listy i tablice na komputerze.** Karty szybciej reagują na kliknięcia lewym i prawym przyciskiem myszy na dużych tablicach Kanban. Krótkie listy wątków i kolumny Kanban automatycznie ładują więcej wątków, gdy treści jest zbyt mało, by przewijać.
+- **Archiwizacja i gesty przesunięcia.** Jeśli konwersacja w Archiwum nadal zawiera niezarchiwizowane wiadomości, ponowna archiwizacja przenosi pozostałe wiadomości. Na urządzeniach mobilnych gesty archiwizacji i usuwania przez przesunięcie działają pewniej. Usunięte wiadomości znikają z konwersacji, a pusty wątek zamyka się automatycznie.
+- **Wersje robocze i foldery.** Meron potrafi otwierać zaszyfrowane wersje robocze, które kończą odszyfrowywanie już po pojawieniu się na liście. Lepiej obsługuje też Kosz i Wersje robocze, gdy nazwy folderów i role serwera się różnią.
+- **Program uruchamiający w systemie Linux.** Meron potrafi zastąpić istniejący wpis pulpitu tylko do odczytu.
+
+Szczegóły znajdziesz w [pełnej liście zmian](/changelog).
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Pobierz najnowszy Meron"
+  text="Pobierz Meron 0.5.5 na komputer lub 0.5.4 na urządzenia mobilne."
+  download="Pobierz Meron"
+  changelog="Zobacz listę zmian"
+  github="Wydania na GitHubie"
+/>

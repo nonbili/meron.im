@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 et 0.5.5 apportent les couleurs de compte à la boîte unifiée"
+publishedAt: "2026-11-19"
+readingTime: "2 min de lecture"
+summary: "Distinguez vos comptes par couleur, masquez les avatars pour une boîte de réception plus compacte et faites un clic droit sur les fils sélectionnés pour agir dessus ensemble."
+highlights:
+  - "Différencier les comptes par couleur dans la boîte unifiée et masquer les avatars de liste"
+  - "Faire un clic droit sur les fils sélectionnés pour ouvrir les actions groupées sur ordinateur"
+  - "Ouvrir des liens depuis les notes d'événements de calendrier et de tâches"
+  - "Lire les e-mails HTML avec citations repliables et retour à la ligne des URL"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Publication · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Lorsque les e-mails professionnels et personnels partagent la même boîte de réception, une touche de couleur vous indique à quel compte appartient un fil avant même de l'ouvrir. Cette version ajoute des barres de couleur par compte et une option pour masquer les avatars dans les listes. Elle intègre également les actions groupées au menu contextuel sur ordinateur et rend les longues réponses par e-mail plus faciles à lire.
+
+La même mise à jour fonctionnelle sort en **0.5.4 sur mobile** et **0.5.5 sur ordinateur**. La version ordinateur inclut aussi un correctif d'empaquetage Linux Snap.
+
+</PostSection>
+
+<PostSection>
+
+## Distinguez vos comptes en un coup d'œil
+
+Ouvrez **Paramètres → Comptes de messagerie**, choisissez un compte et définissez sa **Couleur**. Sélectionnez un préréglage ou utilisez une couleur personnalisée. Dans la boîte unifiée et les autres listes regroupant plusieurs comptes, une barre colorée identifie le compte de chaque fil.
+
+Pour des lignes plus compactes, désactivez **Afficher les avatars dans les listes de messages** sous **Paramètres → Apparence**. Les barres de couleur des comptes restent visibles. Les deux réglages sont disponibles sur ordinateur et mobile.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Boîte de réception unifiée avec les avatars masqués et des barres bleues et violettes à côté des fils des comptes Personal et Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Clic droit pour agir sur plusieurs fils
+
+Sur ordinateur, sélectionnez les fils sur lesquels vous souhaitez agir, puis faites un clic droit sur l'un d'eux pour ouvrir le menu d'actions groupées. Lorsque vous déplacez des fils sélectionnés, Meron traite le déplacement en un seul lot.
+
+Sur ordinateur et Android, les actions groupées distinguent **Déplacer vers la corbeille** de **Supprimer définitivement**. Sur ordinateur, Meron explique également pourquoi une suppression a échoué.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Boîte unifiée sur ordinateur avec trois fils sélectionnés et le menu d'actions groupées ouvert, affichant archiver, déplacer et Déplacer vers la corbeille"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Lisez la réponse et ouvrez des liens depuis vos notes
+
+Meron replie désormais les lignes citées commençant par `>` dans les e-mails HTML, y compris les réponses dans les notifications GitHub. Lorsqu'un lien affiche une longue URL comme texte, l'URL peut passer à la ligne à l'intérieur du volet de message.
+
+Les liens dans les notes d'événements de calendrier et de tâches sont désormais cliquables sur ordinateur et mobile. Vous pouvez ouvrir l'ordre du jour d'une réunion ou un lien de référence directement depuis la note.
+
+</PostSection>
+
+<PostSection>
+
+## Autres améliorations
+
+- **Listes et tableaux sur ordinateur :** Les cartes réagissent plus rapidement aux clics et clics droits sur les grands tableaux Kanban. Les listes de fils courtes et les colonnes Kanban chargent automatiquement davantage de fils lorsqu'il y a trop peu de contenu pour défiler.
+- **Archivage et balayages :** Si une conversation dans Archives contient encore des messages non archivés, l'archiver à nouveau classe les messages restants. Sur mobile, le balayage pour archiver et le balayage pour supprimer fonctionnent de manière plus fiable. Les messages supprimés disparaissent de la conversation, et un fil vide se ferme automatiquement.
+- **Brouillons et dossiers :** Meron peut ouvrir des brouillons chiffrés dont le déchiffrement se termine après leur apparition dans la liste. Il gère également la Corbeille et les Brouillons de manière plus fiable lorsque les noms de dossiers et les rôles du serveur divergent.
+- **Lanceur Linux :** Meron peut remplacer une entrée de bureau existante en lecture seule.
+
+Consultez le [journal des modifications complet](/changelog) pour plus de détails.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtenir la dernière version de Meron"
+  text="Téléchargez Meron 0.5.5 pour ordinateur ou 0.5.4 pour mobile."
+  download="Télécharger Meron"
+  changelog="Voir le journal des modifications"
+  github="GitHub Releases"
+/>

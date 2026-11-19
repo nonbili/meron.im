@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 ja 0.5.5 toovad ühisesse postkasti kontovärvid"
+publishedAt: "2026-11-19"
+readingTime: "2 min lugemist"
+summary: "Erista kontosid värvi järgi, peida avatarid kompaktsema postkasti jaoks ning tee valitud vestlustel paremklõps, et nendega korraga tegutseda."
+highlights:
+  - "Tähista kontod ühises postkastis värvidega ja peida loendi avatarid"
+  - "Tee töölaual valitud vestlustel paremklõps, et avada hulgitoimingud"
+  - "Ava linke kalendrisündmuste ja ülesannete märkmetest"
+  - "Loe HTML-kirju kokkuvolditavate tsitaatide ja murduvate URL-idega"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Väljalase · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Kui töö- ja erameilid jagavad ühist postkasti, aitab väike värvijoon juba enne avamist aru saada, millisele kontole vestlus kuulub. See väljalase lisab kontode värviribad ning võimaluse peita loendites avatarid. Samuti toob see hulgitoimingud töölaua paremklõpsu menüüsse ja muudab pikad meilivastused hõlpsamini loetavaks.
+
+Sama funktsiooniuuendus ilmub **mobiilis versioonina 0.5.4** ja **töölaual versioonina 0.5.5**. Töölauaväljalase sisaldab ka Linuxi Snapi pakendamise parandust.
+
+</PostSection>
+
+<PostSection>
+
+## Erista kontosid ühe pilguga
+
+Ava **Seaded → Meilikontod**, vali konto ja määra selle **Värv**. Vali eelseadistus või kasuta kohandatud värvi. Ühises postkastis ja teistes kontosid ühendavates loendites tähistab värviriba iga vestluse kontot.
+
+Kompaktsemate ridade jaoks lülita jaotises **Seaded → Välimus** välja **Kuva sõnumiloendites avatare**. Kontode värviribad jäävad nähtavaks. Mõlemad seaded on saadaval nii töölaual kui ka mobiilis.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Ühine postkast peidetud avataride ning siniste ja lillade ribadega kontode Personal ja Studio vestluste kõrval"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Tee paremklõps, et tegutseda mitme vestlusega
+
+Vali töölaual vestlused, millega soovid töötada, ja tee ühel neist paremklõps, et avada hulgitoimingute menüü. Valitud vestluste teisaldamisel töötleb Meron teisaldamist üheainsa pakina.
+
+Töölaual ja Androidis eristavad hulgitoimingud valikuid **Teisalda prügikasti** ja **Kustuta jäädavalt**. Töölaual selgitab Meron ka, miks kustutamine ebaõnnestus.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Töölaua ühine postkast kolme valitud vestluse ja avatud hulgitoimingute menüüga, mis näitab arhiveerimise, teisaldamise ja prügikasti teisaldamise toiminguid"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Loe vastust ja ava linke oma märkmetest
+
+Meron voldib nüüd HTML-kirjades kokku tsiteeritud read, mis algavad märgiga `>`, sealhulgas vastused GitHubi teavituskirjades. Kui link kuvab tekstina pikka URL-i, saab URL sõnumipaani sees reale murduda.
+
+Kalendrisündmuste ja ülesannete märkmetes olevad lingid on nüüd klõpsatavad nii töölaual kui ka mobiilis. Saad koosoleku päevakorra või viitelingi avada otse märkmest.
+
+</PostSection>
+
+<PostSection>
+
+## Muud täiustused
+
+- **Töölaua loendid ja tahvlid:** Kaardid reageerivad suurtel Kanbani tahvlitel kiiremini klõpsudele ja paremklõpsudele. Lühikesed vestlusloendid ja Kanbani veerud laadivad automaatselt rohkem vestlusi, kui kerimiseks on liiga vähe sisu.
+- **Arhiveerimine ja viipamine:** Kui arhiivis olev vestlus sisaldab veel arhiveerimata sõnumeid, arhiveerib selle uuesti arhiveerimine ülejäänud sõnumid. Mobiilis töötavad arhiveerimiseks ja kustutamiseks viipamine töökindlamalt. Kustutatud sõnumid kaovad vestlusest ning tühi vestlus sulgub automaatselt.
+- **Mustandid ja kaustad:** Meron suudab avada krüptitud mustandeid, mille dekrüptimine lõpeb pärast loendisse ilmumist. Samuti käsitleb see prügikasti ja mustandeid töökindlamalt, kui kaustanimed ja serveri rollid ei ühti.
+- **Linuxi käivitaja:** Meron saab asendada olemasoleva kirjutuskaitstud töölauakirje.
+
+Üksikasjad leiad [täielikust muudatuste logist](/changelog).
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Hangi uusim Meron"
+  text="Laadi alla Meron 0.5.5 töölauale või 0.5.4 mobiilile."
+  download="Laadi alla Meron"
+  changelog="Vaata muudatuste logi"
+  github="GitHubi väljalasked"
+/>

@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 en 0.5.5 brengen accountkleuren naar de gezamenlijke inbox"
+publishedAt: "2026-11-19"
+readingTime: "2 min leestijd"
+summary: "Houd accounts uit elkaar op kleur, verberg avatars voor een compacte inbox en klik met de rechtermuisknop op geselecteerde threads om er samen actie op te ondernemen."
+highlights:
+  - "Geef accounts een kleur in de gezamenlijke inbox en verberg lijstavatars"
+  - "Klik met de rechtermuisknop op geselecteerde threads om bulkacties op desktop te openen"
+  - "Open links in notities van agenda-afspraken en taken"
+  - "Lees HTML-e-mails met inklapbare geciteerde antwoorden en teruglopende URL's"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Release · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Wanneer werk- en privémail een inbox delen, kan een beetje kleur je al vertellen bij welk account een thread hoort voordat je deze opent. Deze release voegt kleurbalken voor accounts en een optie om lijstavatars te verbergen toe. Daarnaast brengt deze update bulkacties naar het contextmenu op desktop en worden lange e-mailantwoorden beter leesbaar.
+
+Dezelfde functie-update verschijnt als **0.5.4 op mobiel** en **0.5.5 op desktop**. De desktoprelease bevat ook een oplossing voor het Linux Snap-pakket.
+
+</PostSection>
+
+<PostSection>
+
+## Houd je accounts in één oogopslag uit elkaar
+
+Open **Instellingen → E-mailaccounts**, kies een account en stel de **Kleur** in. Kies een voorinstelling of gebruik een eigen kleur. In de gezamenlijke inbox en andere lijsten die accounts combineren, geeft een gekleurde balk het account van elke thread aan.
+
+Voor compactere rijen schakel je **Avatars tonen in berichtenlijsten** uit onder **Instellingen → Weergave**. De kleurbalken van de accounts blijven zichtbaar. Beide instellingen zijn beschikbaar op desktop en mobiel.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Gezamenlijke inbox met verborgen avatars en blauwe en paarse balken naast threads van de accounts Personal en Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Klik met de rechtermuisknop om meerdere threads te bewerken
+
+Selecteer op desktop de threads waarmee je wilt werken en klik vervolgens met de rechtermuisknop op een van die threads om het bulkactiemenu te openen. Wanneer je geselecteerde threads verplaatst, verwerkt Meron de verplaatsing in één batch.
+
+Op desktop en Android maken bulkacties onderscheid tussen **Verplaatsen naar prullenbak** en **Definitief verwijderen**. Op desktop legt Meron ook uit waarom verwijderen is mislukt.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Gezamenlijke inbox op desktop met drie geselecteerde threads en het bulkactiemenu geopend, met acties voor archiveren, verplaatsen en Verplaatsen naar prullenbak"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Lees het antwoord en open links vanuit je notities
+
+Meron klapt nu geciteerde regels die beginnen met `>` in HTML-mail in, inclusief antwoorden in meldingen van GitHub. Wanneer een link een lange URL als tekst weergeeft, kan de URL binnen het berichtenvenster teruglopen naar de volgende regel.
+
+Links in notities van agenda-afspraken en taken zijn nu aanklikbaar op desktop en mobiel. Je kunt een vergaderagenda of referentielink rechtstreeks vanuit de notitie openen.
+
+</PostSection>
+
+<PostSection>
+
+## Overige verbeteringen
+
+- **Lijsten en borden op desktop.** Kaarten reageren sneller op klikken en rechtermuisklikken op grote Kanban-borden. Korte threadlijsten en Kanban-kolommen laden automatisch meer threads wanneer er te weinig inhoud is om te scrollen.
+- **Archiveren en vegen.** Als een gesprek in Archief nog niet-gearchiveerde berichten bevat, archiveert opnieuw archiveren de resterende berichten. Op mobiel werken vegen om te archiveren en vegen om te verwijderen betrouwbaarder. Verwijderde berichten verdwijnen uit het gesprek en een lege thread wordt automatisch gesloten.
+- **Concepten en mappen.** Meron kan versleutelde concepten openen waarvan de ontsleuteling wordt voltooid nadat ze in de lijst zijn verschenen. Daarnaast gaat het programma betrouwbaarder om met Prullenbak en Concepten wanneer mapnamen en serverrollen niet overeenkomen.
+- **Linux-startprogramma.** Meron kan een bestaand alleen-lezen bureaubladitem vervangen.
+
+Bekijk het [volledige changelog](/changelog) voor alle details.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Download de nieuwste Meron"
+  text="Download Meron 0.5.5 voor desktop of 0.5.4 voor mobiel."
+  download="Meron downloaden"
+  changelog="Bekijk changelog"
+  github="GitHub-releases"
+/>

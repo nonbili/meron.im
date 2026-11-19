@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 與 0.5.5 為整合收件匣帶來帳號顏色標示"
+publishedAt: "2026-11-19"
+readingTime: "2 分鐘閱讀"
+summary: "透過顏色區分不同帳號，隱藏頭像讓收件匣更精簡，並在選取多個對話後按右鍵開啟批次操作選單。"
+highlights:
+  - "在整合收件匣中以顏色標記帳號並支援隱藏清單頭像"
+  - "在桌面版對選取的對話按右鍵即可開啟批次操作選單"
+  - "支援直接開啟行事曆活動與任務備註中的連結"
+  - "閱讀 HTML 郵件時支援摺疊引用回覆以及長 URL 自動換行"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "發布 · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+當工作信箱與個人信箱共用同一個收件匣時，一點顏色就能讓你在點開對話前分辨它屬於哪個帳號。本次更新新增了帳號顏色條以及隱藏清單頭像的選項，同時將批次操作帶到了桌面版右鍵選單，也讓長篇郵件回覆更容易閱讀。
+
+同一批功能更新在<Strong>行動版以 0.5.4 發布</Strong>，在<Strong>桌面版以 0.5.5 發布</Strong>。桌面版亦包含一項 Linux Snap 打包修正。
+
+</PostSection>
+
+<PostSection>
+
+## 一眼區分你的各個帳號
+
+開啟 <Strong>設定 → 郵件帳號</Strong>，選擇一個帳號並設定其 <Strong>顏色</Strong>。你可以挑選預設色彩，或指定自訂顏色。在整合收件匣以及其他合併顯示多個帳號的清單中，每則對話旁都會顯示對應帳號的顏色條。
+
+若希望行距更精簡，可以在 <Strong>設定 → 外觀</Strong> 下關閉 <Strong>在郵件清單中顯示頭像</Strong>。帳號顏色條仍會保留顯示。這兩項設定在桌面版與行動版皆有提供。
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="隱藏頭像後的整合收件匣，來自 Personal 與 Studio 帳號的對話旁分別顯示藍色與紫色顏色條"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## 按右鍵即可批次處理多個對話
+
+在桌面版上，選取想要處理的對話，接著對其中任一則按右鍵，即可開啟批次操作選單。當你移動所選對話時，Meron 會將其作為單一批次統一處理。
+
+在桌面版與 Android 上，批次操作會明確區分 <Strong>移至垃圾桶</Strong> 與 <Strong>永久刪除</Strong>。在桌面版上，若刪除失敗，Meron 還會說明具體原因。
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="桌面版整合收件匣中選取了三則對話並開啟了批次操作選單，顯示封存、移動與移至垃圾桶等動作"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## 輕鬆閱讀回覆，直接開啟備註中的連結
+
+Meron 現在會摺疊 HTML 郵件中以 `>` 開頭的引用行，包含 GitHub 通知郵件中的回覆內容。當連結直接以長 URL 作為顯示文字時，URL 可以在郵件窗格內自動換行。
+
+行事曆活動與任務備註中的連結現在無論在桌面版還是行動版上皆可直接點擊。你可以直接從備註開啟會議議程或參考連結。
+
+</PostSection>
+
+<PostSection>
+
+## 其他改進
+
+- <Strong>桌面版清單與看板：</Strong>在大型看板上，卡片對點擊與右鍵點擊的反應更加迅速。當短對話清單或看板欄中的內容不足以捲動時，系統會自動載入更多對話。
+- <Strong>封存與滑動操作：</Strong>若已封存的對話中仍包含未封存的郵件，再次封存會將剩餘郵件一併歸檔。在行動版上，滑動封存與滑動刪除運作更加穩定可靠。已刪除的郵件會從對話中移除，空對話則會自動關閉。
+- <Strong>草稿與資料夾：</Strong>對於出現在清單中之後才完成解密的加密草稿，Meron 現在也能正常開啟。當資料夾名稱與伺服器角色不一致時，對垃圾桶與草稿匣的處理也更加可靠。
+- <Strong>Linux 啟動器：</Strong>Meron 現在可以取代現有的唯讀桌面進入點檔案。
+
+檢視[完整更新日誌](/changelog)了解更多詳情。
+
+</PostSection>
+
+<ReleaseCTA
+  heading="取得最新版 Meron"
+  text="下載桌面版 Meron 0.5.5 或行動版 Meron 0.5.4。"
+  download="下載 Meron"
+  changelog="檢視更新日誌"
+  github="GitHub Releases"
+/>

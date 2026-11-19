@@ -32,6 +32,7 @@ export const DOWNLOADS: Record<"macOS" | "Windows" | "Linux" | "Mobile", readonl
   ],
   Mobile: [
     { label: "Google Play", url: "https://play.google.com/store/apps/details?id=jp.nonbili.meron" },
+    { label: "F-Droid", url: "https://f-droid.org/packages/jp.nonbili.meron/" },
     { label: "App Store", url: "https://apps.apple.com/us/app/meron-mail/id6782740236" },
   ],
 };

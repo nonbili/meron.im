@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 y 0.5.5 llevan los colores de cuenta a la bandeja unificada"
+publishedAt: "2026-11-19"
+readingTime: "2 min de lectura"
+summary: "Distingue las cuentas por color, oculta los avatares para una bandeja más compacta y haz clic derecho en los hilos seleccionados para actuar sobre ellos juntos."
+highlights:
+  - "Diferencia cuentas por color en la bandeja unificada y oculta los avatares de la lista"
+  - "Haz clic derecho en los hilos seleccionados para abrir acciones masivas en escritorio"
+  - "Abre enlaces en notas de eventos de calendario y tareas"
+  - "Lee correos HTML con respuestas citadas plegables y ajuste de línea en URL"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "Lanzamiento · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+Cuando el correo del trabajo y el personal comparten bandeja de entrada, un poco de color te permite saber a qué cuenta pertenece un hilo antes de abrirlo. Esta versión añade barras de color por cuenta y una opción para ocultar los avatares de la lista. También lleva las acciones masivas al menú contextual de escritorio y facilita la lectura de respuestas largas.
+
+La misma actualización de funciones llega como **0.5.4 en móvil** y **0.5.5 en escritorio**. La versión de escritorio también incluye una corrección para el paquete Snap en Linux.
+
+</PostSection>
+
+<PostSection>
+
+## Distingue tus cuentas de un vistazo
+
+Abre **Ajustes → Cuentas de correo**, elige una cuenta y define su **Color**. Selecciona un ajuste predefinido o usa un color personalizado. En la bandeja unificada y otras listas que combinan cuentas, una barra de color marca la cuenta de cada hilo.
+
+Para filas más compactas, desactiva **Mostrar avatares en las listas de mensajes** en **Ajustes → Apariencia**. Las barras de color de las cuentas siguen visibles. Ambos ajustes están disponibles en escritorio y móvil.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="Bandeja unificada con avatares ocultos y barras azul y violeta junto a hilos de las cuentas Personal y Studio"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Haz clic derecho para actuar sobre varios hilos
+
+En escritorio, selecciona los hilos con los que quieras trabajar y haz clic derecho en uno de ellos para abrir el menú de acciones masivas. Cuando mueves hilos seleccionados, Meron procesa el movimiento en un solo lote.
+
+En escritorio y Android, las acciones masivas distinguen **Mover a la papelera** de **Eliminar definitivamente**. En escritorio, Meron también explica por qué falló una eliminación.
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="Bandeja unificada de escritorio con tres hilos seleccionados y el menú de acciones masivas abierto, mostrando las acciones archivar, mover y Mover a la papelera"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## Lee la respuesta y abre enlaces desde tus notas
+
+Meron ahora pliega las líneas citadas que empiezan por `>` en correos HTML, incluidas las respuestas en correos de notificación de GitHub. Cuando un enlace muestra una URL larga como texto, la URL puede ajustarse en varias líneas dentro del panel del mensaje.
+
+Los enlaces en notas de eventos de calendario y tareas ahora se pueden pulsar en escritorio y móvil. Puedes abrir el orden del día de una reunión o un enlace de referencia directamente desde la nota.
+
+</PostSection>
+
+<PostSection>
+
+## Más mejoras
+
+- **Listas y tableros en escritorio:** Las tarjetas responden más rápido a los clics y clics derechos en tableros Kanban grandes. Las listas cortas de hilos y las columnas de Kanban cargan más hilos automáticamente cuando hay demasiado poco contenido para desplazarse.
+- **Archivado y deslizamientos:** Si una conversación en Archivo todavía contiene mensajes sin archivar, archivarla de nuevo archiva los mensajes restantes. En móvil, deslizar para archivar y deslizar para eliminar funcionan de forma más fiable. Los mensajes eliminados desaparecen de la conversación y un hilo vacío se cierra automáticamente.
+- **Borradores y carpetas:** Meron puede abrir borradores cifrados que terminan de descifrarse después de aparecer en la lista. También gestiona Papelera y Borradores de forma más fiable cuando los nombres de carpetas y los roles del servidor no coinciden.
+- **Lanzador de Linux:** Meron puede reemplazar una entrada de escritorio existente de solo lectura.
+
+Consulta el [registro de cambios completo](/changelog) para más detalles.
+
+</PostSection>
+
+<ReleaseCTA
+  heading="Obtén la última versión de Meron"
+  text="Descarga Meron 0.5.5 para escritorio o 0.5.4 para móvil."
+  download="Descargar Meron"
+  changelog="Ver registro de cambios"
+  github="GitHub Releases"
+/>

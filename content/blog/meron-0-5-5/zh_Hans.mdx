@@ -1,0 +1,90 @@
+---
+slug: "meron-0-5-5"
+version: "0.5.5"
+title: "Meron 0.5.4 与 0.5.5 为统一收件箱带来账户颜色标识"
+publishedAt: "2026-11-19"
+readingTime: "2 分钟阅读"
+summary: "按颜色区分不同账户，隐藏头像让收件箱更紧凑，并在选中多个会话后右键打开批量操作菜单。"
+highlights:
+  - "在统一收件箱中用颜色标记账户并支持隐藏列表头像"
+  - "在桌面端右键点击选中的会话即可打开批量操作菜单"
+  - "支持直接打开日历日程和任务备注中的链接"
+  - "阅读 HTML 邮件时支持折叠引用回复以及长 URL 自动换行"
+image: "/screenshots/blog/meron-055-account-colors.webp"
+releaseBadge: "发布 · v0.5.4 & v0.5.5"
+---
+
+<PostSection>
+
+当工作邮箱和个人邮箱共用同一个收件箱时，一点颜色就能让你在点开会话前分清它属于哪个账户。本次更新新增了账户颜色条以及隐藏列表头像的选项，同时将批量操作带到了桌面端右键菜单，也让长篇邮件回复更易于阅读。
+
+同一批功能更新在<Strong>移动端以 0.5.4 发布</Strong>，在<Strong>桌面端以 0.5.5 发布</Strong>。桌面端版本还包含一项 Linux Snap 打包修复。
+
+</PostSection>
+
+<PostSection>
+
+## 一眼区分你的各个账户
+
+打开 <Strong>设置 → 邮件账户</Strong>，选择一个账户并设置其 <Strong>颜色</Strong>。你可以挑选预设色彩，也可以自定义颜色。在统一收件箱以及其他合并显示多个账户的列表中，每条会话旁都会显示对应账户的颜色条。
+
+如果希望行距更紧凑，可以在 <Strong>设置 → 外观</Strong> 下关闭 <Strong>在邮件列表中显示头像</Strong>。账户颜色条仍会保留显示。这两项设置在桌面端和移动端均已提供。
+
+<BlogImage
+  src="/screenshots/blog/meron-055-account-colors.webp"
+  darkSrc="/screenshots/blog/meron-055-account-colors-dark.webp"
+  alt="隐藏头像后的统一收件箱，来自 Personal 和 Studio 账户的会话旁分别显示蓝色和紫色颜色条"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## 右键即可批量处理多个会话
+
+在桌面端，选中想要处理的会话，然后右键点击其中任意一条，即可打开批量操作菜单。当你移动所选会话时，Meron 会将其作为一个批次统一处理。
+
+在桌面端和 Android 上，批量操作会明确区分 <Strong>移至废纸篓</Strong> 与 <Strong>永久删除</Strong>。在桌面端，如果删除失败，Meron 还会说明具体原因。
+
+<BlogImage
+  src="/screenshots/blog/meron-055-bulk-menu.webp"
+  darkSrc="/screenshots/blog/meron-055-bulk-menu-dark.webp"
+  alt="桌面端统一收件箱中选中了三条会话并打开了批量操作菜单，显示归档、移动以及移至废纸篓等操作"
+  width={2550}
+  height={1590}
+/>
+
+</PostSection>
+
+<PostSection>
+
+## 清晰阅读回复，直接打开备注中的链接
+
+Meron 现在会折叠 HTML 邮件中以 `>` 开头的引用行，包括 GitHub 通知邮件中的回复内容。当链接直接显示长 URL 作为文本时，URL 可以在邮件窗格内自动换行。
+
+日历日程与任务备注中的链接现在无论在桌面端还是移动端都可直接点击。你可以直接从备注中打开会议议程或参考链接。
+
+</PostSection>
+
+<PostSection>
+
+## 其他改进
+
+- <Strong>桌面端列表与看板：</Strong>在大型看板上，卡片对点击与右键点击的响应更加迅速。当短会话列表或看板列中的内容不足以滚动时，系统会自动加载更多会话。
+- <Strong>归档与滑动操作：</Strong>如果已归档的对话中仍包含未归档邮件，再次归档会将剩余邮件一并归档。在移动端，左滑/右滑归档与删除更加稳定可靠。已删除的邮件会从对话中移除，空会话则会自动关闭。
+- <Strong>草稿与文件夹：</Strong>对于出现在列表中之后才完成解密的加密草稿，Meron 现在也能正常打开。当文件夹名称与服务器角色不一致时，对废纸篓与草稿箱的处理也更加可靠。
+- <Strong>Linux 启动器：</Strong>Meron 现在可以替换现有的只读桌面入口文件。
+
+查看[完整更新日志](/changelog)了解更多详情。
+
+</PostSection>
+
+<ReleaseCTA
+  heading="获取最新版 Meron"
+  text="下载桌面端 Meron 0.5.5 或移动端 Meron 0.5.4。"
+  download="下载 Meron"
+  changelog="查看更新日志"
+  github="GitHub Releases"
+/>

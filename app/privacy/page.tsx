@@ -1,43 +1,20 @@
-"use client";
+import type { Metadata } from "next";
+import {
+  PrivacyPolicyContent,
+  PrivacyPolicyLayout,
+} from "@/components/PrivacyPolicy";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { locales, defaultLocale } from "@/lib/i18n";
+export const metadata: Metadata = {
+  title: "Privacy Policy: Meron",
+  description:
+    "How Meron accesses, uses, stores, and shares Gmail and Google Calendar data, and how you can delete local copies and revoke access.",
+  alternates: { canonical: "/privacy" },
+};
 
-export default function RootPrivacyPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    const languages = navigator.languages || [navigator.language];
-    let matchedLocale = defaultLocale;
-
-    for (const lang of languages) {
-      const cleanLang = lang.replace("-", "_");
-      
-      let matched = locales.find(
-        (loc) => loc.toLowerCase() === cleanLang.toLowerCase()
-      );
-      if (matched) {
-        matchedLocale = matched;
-        break;
-      }
-      
-      const prefix = cleanLang.split("_")[0];
-      matched = locales.find(
-        (loc) => loc.toLowerCase() === prefix.toLowerCase()
-      );
-      if (matched) {
-        matchedLocale = matched;
-        break;
-      }
-    }
-
-    router.replace(`/${matchedLocale}/privacy`);
-  }, [router]);
-
+export default function PrivacyPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
-      <div className="h-6 w-6 animate-spin rounded-full border-2 border-accent border-t-transparent" />
-    </div>
+    <PrivacyPolicyLayout locale="en">
+      <PrivacyPolicyContent locale="en" />
+    </PrivacyPolicyLayout>
   );
 }

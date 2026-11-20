@@ -30,3 +30,9 @@ next-env.d.ts
 
 # wrangler
 .wrangler/
+
+# AI assistant workspace files.
+/.antigravitycli/
+/.claude/
+/AGENTS.md
+/CLAUDE.md
